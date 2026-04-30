@@ -1,0 +1,728 @@
+[PAGE 1]
+DEWCLAW LAND HOLDINGS
+ LAND VALUATION
+ COMPLETE METHODOLOGY HANDBOOK
+ Deep Understanding Guide for Land Investment Comping
+ Version 3.0 — April 2026
+ Target: Complete each property evaluation in 2.5 minutes
+ Maximum efficiency. Maximum accuracy. No wasted motion.
+
+[PAGE 2]
+TABLE OF CONTENTS
+I. Business Model & Core Strategy
+II. Efficiency Workflow & SOP (2.5-Minute Target)
+III. Land Type Identification
+IV. Comp Verification & Rules
+V. Acreage to PPA Relationship — The Exponential Curve
+VI. Comp Weighting — How To Think About It
+VII. DOM Interpretation
+VIII. Structures — Call Them Out, Don't Price Them
+IX. Waterfront Valuation — Critical Premium Feature
+X. Mobile Homes On Land
+XI. Road Type Hierarchy
+XII. Landlocked vs Flagpole vs Deep Easement
+XIII. Wetlands Evaluation
+XIV. Slope — When It Matters
+XV. Flood Zone — Don't Panic, Look Around First
+XVI. Subdivision Shape Rule — Bowling Alley Lots
+XVII. Views / Elevation Premium
+XVIII. Power Lines & Utility Easements
+XIX. Timbered Land & Recently Logged
+XX. Actively Farmed Land
+XXI. Map Layers — Always Toggle
+XXII. When Seller Already Has It Listed
+XXIII. Cash vs Terms
+XXIV. County Boundaries — Never Cross
+XXV. Sparse Markets — Using What You Have
+XXVI. Proximity to Cities
+XXVII. Area Quality — Always Check
+XXVIII. Owner Multiple Properties
+XXIX. Market Health Metrics
+XXX. Zoning — Don't Overthink It
+XXXI. Pending Listings
+XXXII. Duplicate Subdivision Sales
+XXXIII. Creative Approaches
+XXXIV. Comp Quality Awareness
+XXXV. Comp Listing Photos Warning
+XXXVI. Seller Motivation Signals
+XXXVII. Value-Add Identification
+XXXVIII. Pricing Philosophy — Conservative At Every Step
+XXXIX. Deliverable Format
+
+[PAGE 3]
+XL. Common Mistakes To Avoid
+XLI. Properties Evaluated — Lessons Learned
+
+[PAGE 4]
+I. BUSINESS MODEL & CORE STRATEGY
+Buy vacant rural land at ~50% of market value. Sell slightly below market with elite drone marketing. Target 7–90 day
+sales (~2 weeks average). Primary markets: Mid-US to East Coast. Focus: Rural recreational land.
+The Strategic Purpose of Comping
+Primary goal: Know the market value so we can offer 50 cents on the dollar.
+Backup strategy: Value-add plays. If the seller says NO to the 50% offer on as-is value, we may have identified a
+value-add (subdivision potential, etc.). We pitch a DIFFERENT offer based on the value-add — 50% of the improved
+value — which might equal the seller's ask. The seller doesn't realize the upside; we unlock it.
+Example:
+ As-is market value: $100K → Offer $50K → Seller says NO, wants $80K
+ Subdivision potential identified: $160K after split
+ New pitch: Offer $80K (50% of $160K) = exactly what seller wanted
+ We still get 50% margin on the VALUE-ADD play
+Why we always look for value-adds: Even if we don't need it for the primary offer, it's the BACKUP strategy when
+sellers say no. Most sellers don't know their property can be subdivided. We unlock value they didn't know existed.
+
+[PAGE 5]
+II. EFFICIENCY WORKFLOW & SOP
+[!] TARGET: 2.5 MINUTES PER PROPERTY — COMPLETE EVALUATION
+Every property evaluation — from first glance to final deliverable — should be completed in approximately 2.5
+minutes. This is the standard operating pace. Speed comes from discipline, not shortcuts. Follow the workflow below
+without deviation, narration, or mid-process questions. Work silently, deliver the final product.
+Land Insights Speed Workflow
+ Summary tab: Last purchase price, acreage, APN
+ Parcel tab: Land use classification
+ Owner tab: Out-of-state/county status + ownership length
+ Immediately go to MLS comps. Don't linger.
+Land ID Simultaneous Workflow
+While pulling Land Insights data, simultaneously open Land ID:
+ AI Smart Search (blue button) → Parcel → ID → State/County/APN → Soils
+ Copy URL, paste in Extra Notes as 'Land ID link'
+ Backup: If APN doesn't aggregate, use Owner Name instead
+ If Land ID is blocked, note it and skip — don't waste time
+Street View — MANDATORY
+[!] Drag pegman onto Street View for EVERY property. No exceptions.
+ Look for: entryways/driveways, cleared building spots, mobile homes, sheds, structures
+ Wet areas/standing water, power lines, fencing
+ Note ALL findings in Extra Notes
+Satellite Verification
+Always look at actual satellite imagery on Google Maps AND Land Insights with filters OFF. Never trust filters alone.
+Trust your own eyes always.
+Map Layer Rules
+ Hazards: Keep ON by default. Only toggle OFF to verify clean pond/creek or see structures clearly.
+ MLS Comps: Stay ON. Don't toggle every time.
+ Acreage Range: Always click AUTO (not Manual). If need more comps: below=80%, above=150%. Do NOT
+go into Comp Report — use map view.
+Navigation & Speed
+ Navigate directly to zoom 11–12 URL for county comp view — do NOT scroll-zoom 4–5 times
+ Minimize screenshots — one for property data/insights, one at parcel zoom for land type/water, one at county
+zoom for comps. Three to four is enough.
+
+[PAGE 6]
+ CLOSE ALL MCP TABS after EVERY comp. Delete the tab group completely so browser doesn't lag or
+crash.
+ Deliver full 8-section analysis in ONE response. NO 'continue' breaks. No mid-process narration. No asking
+user for permission.
+Timing Breakdown (2.5 Minutes Total)
+ Initial Assessment: ~45 seconds — Pull property in Land Insights, check acreage/APN/owner/flags, satellite +
+Street View
+ Comp Process: ~75 seconds — Pull comps county-wide, find anchor/floor/ceiling, verify key comps
+ Final Valuation & Deliverable: ~30 seconds — Weight comps, calculate MV, generate offer range, write
+deliverable
+
+[PAGE 7]
+III. LAND TYPE IDENTIFICATION
+Farmland (Yielding Asset — Worth More)
+Actively farmed with visible crop rows, irrigation patterns, tilled soil, distinct field boundaries. This is a YIELDING
+ASSET — it produces income. The price of the land PLUS the value of the agricultural production is baked in. Worth
+significantly MORE than cleared or pasture land. Always identify and call out farmland — it commands a premium
+that other land types do not get. If you see crop rows from satellite, that is farmland. If there is an active farm lease,
+factor that into value.
+Farmers usually know what land is worth. Harder to get at deep discount because of income potential. Warn the
+investor that the seller may be more savvy on pricing.
+Pasture Land
+Open grass with fencing visible, possibly cattle trails, watering areas, livestock signs. Maintained but not actively
+cultivated. Worth less than farmland but more than raw timbered land. Key identifiers: fencing (visible on satellite),
+grazed grass areas (not just mowed), sometimes visible livestock or water troughs.
+Maintained Cleared Land — THE TRICKY ONE
+[!] This distinction is worth thousands of dollars in valuation accuracy.
+Green, flat, mowed/maintained but NOT farmed and NOT grazed. No crop rows, no fencing, no livestock. Looks like
+farmland from satellite but ISN'T — no yielding asset premium. From satellite it can LOOK exactly like farmland
+because it is open and green. When confused, ALWAYS use Google Street View or Google Earth to confirm
+actual land use. Satellite alone can be extremely misleading.
+Timbered Land
+Mature tree cover with value in standing timber. Dense, uniform canopy, established growth. Standing timber can add
+$2,000–$15,000+ depending on species, maturity, and acreage. Always mention timber value to buyers as a bonus.
+Most wooded land is just 'wooded land' — don't automatically assume timber adds value. Only flag as managed
+timber if you see clearly replanted rows of trees (pine plantations, etc.), uniform species and spacing, looks like an
+investment/farming operation, ready to harvest.
+Clear-Cut Land
+Recently logged — debris, irregular patterns, logging roads, stark contrast with surrounding timber. This is a
+temporary state. Distinguish from intentionally maintained cleared land — clear-cut is messy, cleared is clean. Takes
+5–30% off value. Looks ugly, not ready to build (stumps, debris), not wooded (no privacy/recreation), not cleared (not
+clean usable land) — worst of both worlds.
+Toggle between map layers (old vs new satellite). Old imagery shows trees, new shows stumps/cleared. Flag it:
+'Property appears recently timbered' and discount 5–30% depending on severity.
+
+[PAGE 8]
+IV. COMP VERIFICATION & RULES
+Source Hierarchy
+ Closed (MLS) = Gold standard. Verified arms-length transaction. Use as primary anchors.
+ Pending = Discount 5–10% from list price. Hot market = 5%, slow market = 10%.
+ REJECT: Off-market and Sold–Public Records. May be family transfers, partial interest sales, tax sales —
+not arms-length.
+ Never use AI Comp, Zestimate, or any platform estimates.
+Never Cross County Lines
+Each county is its own market. Pink lines on Land Insights = county boundaries = your comp boundaries. Even if a
+comp is physically closer across the county line, don't use it. Buyers search Zillow/Redfin/Realtor by COUNTY —
+they filter to one county and never see adjacent county listings. Over time, each county develops its own pricing
+patterns. Adjacent counties can have DRASTICALLY different prices for the same land.
+Acreage Range
+ Always click AUTO (not Manual)
+ If not enough comps: below=80%, above=150%
+ Always pull wide acreage range to see the PPA curve shape
+APN Lookup
+Use when listing location seems off or photos are missing. Land Insights aggregates data — pins can be wrong. APN
+lookup shows TRUE parcel location, boundaries, flood/wetlands. Always keep original tab open, open NEW tab for
+APN search.
+Comp Evaluation Depth
+ Check description, DOM, full listing history (listed/delisted = red flag)
+ Weight comps closer in acreage + proximity more heavily
+ Use wider range comps to verify the story
+ Open all comps in own tabs, evaluate simultaneously
+Comp Quality Awareness
+Not all waterfront/golf course/amenity comps are equal. A marshy, wetland-heavy 'waterfront' comp that sold low is
+NOT comparable to a clean waterfront. A flood zone riverfront comp is NOT a true reflection of clean riverfront.
+Always assess QUALITY of the comp's features vs subject. Pull APN from Zillow/Redfin and check in Land Insights
+for soil survey, wetlands, flood zone if needed to verify comp quality before using it in your analysis.
+Comp Listing Photos Warning
+[!] Photos in MLS listings may show subdivision/HOA amenities (clubhouse, tennis courts, pool, lake, golf
+course) that are NOT on the actual parcel.
+
+[PAGE 9]
+These are community amenities, not parcel features. Always verify what is on the ACTUAL property using
+satellite/APN/Zillow. Don't inflate comp values based on amenity photos.
+
+[PAGE 10]
+V. ACREAGE TO PPA RELATIONSHIP — THE EXPONENTIAL
+CURVE
+This is NOT a linear relationship. It's EXPONENTIAL. The curve drops STEEPLY from small acreage to medium,
+then flattens out.
+Example Pattern (varies by market):
+ 1 acre: $15,000/ac
+ 2 acres: $12,000/ac
+ 5 acres: $8,000/ac
+ 10 acres: $5,500/ac
+ 20 acres: $4,000/ac
+ 40 acres: $3,200/ac
+ 80 acres: $2,800/ac
+The Inflection Point — WHERE THE MONEY IS
+The steepest part of the curve = the inflection point. This is where subdivision makes the most money. Buy at the
+lower PPA (larger acreage), subdivide into higher PPA lots.
+Steep Curve (Good Subdivide Market)
+Huge PPA difference between small and large lots. Example: 5 acres = $10,000/ac, but 40 acres = $3,000/ac.
+Subdividing 40 acres into 8×5-acre lots = massive value creation.
+Flat/Linear Curve (Bad Subdivide Market)
+Small PPA difference between lot sizes. Example: 5 acres = $5,000/ac, 40 acres = $4,500/ac. Subdividing doesn't
+create much value — not worth the hassle. Focus on simple flips.
+How To Identify Market Type
+Pull comps across a WIDE acreage range (2 to 80+ acres). Plot them mentally or visually. Steep/exponential =
+subdivide opportunity. Flat/linear = simple flip only.
+Regulations can kill a good market. Maryland example: Looks like great exponential curve, BUT strict regulations
+(perc tests, complex approvals) add cost, time, and risk. Always factor in regulatory environment.
+
+[PAGE 11]
+VI. COMP WEIGHTING — HOW TO THINK ABOUT IT
+Core Principle: Not all acres are equal. You're comping USABLE land and CONVENIENCE, not just raw acreage.
+Key Differentiation Factors
+ Access / road frontage
+ Shape of the parcel
+ Usable vs unusable portions
+ Convenience of movement on the property
+Access & Road Frontage
+More road frontage = more value. Can access from multiple points, more flexibility for building, easier to subdivide,
+more convenient to enter/exit.
+Limited frontage (flagpole lots): Narrow access strip (30–50 ft) leading to larger rear area. That 2-acre easement
+on a 10-acre lot = really only 8 usable acres. Farther from road = less convenient. Costs money to build driveway
+through to the buildable area. DISCOUNT vs same acreage with full road frontage.
+Shape — Convenience Factor
+Good shapes: Square or rectangular = easy to use, fence, build, subdivide. Bad shapes: Long skinny strips,
+irregular shapes with unusable corners, flagpole lots.
+How To Comp Flagpole / Limited Access Lots
+ Identify the USABLE portion of the property
+ Recognize the access strip adds minimal value
+ Factor in inconvenience of being far from road + driveway cost
+ Example: 10-acre flagpole with 2-acre access strip → might comp closer to a 7-acre lot with good frontage
+Primary Anchor Approach
+Find the comp MOST similar to your subject — same road type, similar acreage, similar condition, same ACCESS
+type. This is your primary pricing anchor. Then adjust: better road = add value, worse road = subtract, better access =
+add, flagpole = subtract, cleared vs wooded = adjust, larger acreage = lower PPA, etc.
+Comping Lesson — Boon MI (Critical)
+Don't limit yourself to immediate nearby comps if they are all large acreage. Look WIDER in the county for
+similar-acreage comps to get accurate PPA. Compare land types across comps: if inferior land (pasture, timbered,
+dirt road) in a slightly nicer area trades at $X/ac, then farmland (yielding asset) should be equal or MORE.
+Specific example: 9.89ac farmland in Boon, MI (Wexford County). Initially valued at $50,000 based on nearby
+large-acreage comps (37.5ac at $2,400/ac). Looking wider: W 48th Rd — 10ac timbered/dirt road = $110,000
+($11,000/ac). W 46th Rd — 5ac pasture = $50,000 ($10,000/ac). Both INFERIOR to our farmland. Revised to
+$80,000 (~$8,090/ac).
+Framework: Pick comps nearest in acreage. See what the location looks like — nicer, same, or worse than subject?
+Use other comps to construct the full story. If comps are in a nicer area, discount slightly. If subject has advantages
+
+[PAGE 12]
+(farmland, flat, clean DD), weight those up.
+
+[PAGE 13]
+VII. DOM INTERPRETATION
+Low DOM (Under 30 Days) — CRITICAL INSIGHT
+ Property likely sold UNDER market value — use as FLOOR, market value is likely higher
+ This is how YOUR listings should sell (1–2 weeks)
+ Use to calibrate disposition pricing: If comp sold in 14 days at $45K, that's a realistic list price → Work
+backwards: Offer at 50% ($22.5K)
+Normal DOM (30–90 Days)
+Standard market transaction. Use at face value, no adjustment needed.
+High DOM (90–180+ Days)
+Still 100% valid comps — someone actually paid that price. But it took a while, may have been slightly overpriced
+initially. Optional: shave 3–5% if 150–200+ days.
+Always check price history. DOM shown may be TOTAL days, not days from last price drop. Multiple price drops =
+overpriced initially.
+Very High DOM (180+ Days)
+Something was wrong — price, terms, or property issues. Check if bundle deal or had terms requirements. Use
+cautiously, investigate before relying on it.
+
+[PAGE 14]
+VIII. STRUCTURES — CALL THEM OUT, DON'T PRICE THEM
+A structure could add $2,000 or $20,000 — impossible to know from satellite. A dilapidated house could be a
+LIABILITY (demolition costs). ALWAYS call out if a property has a structure visible. Note it as 'has structure —
+needs seller verification.' Price the land AS IF no structure exists. Let the investor call the seller to determine actual
+value/condition.
+Structures on Comps
+ Nice metal warehouse/barn: $10K–$60K+ value. Weight as SUPERIOR / CEILING. Mentally subtract
+estimated structure value.
+ Small house or cabin: Look up on Zillow. Could be $20K–$100K+. Weight heavily as superior.
+ Dilapidated structure (junk): LIABILITY. Costs $5K–$10K+ to remove. Mark as SAME or 5% LESS than raw
+land.
+Don't use comps with structures as direct 1:1 comps. Mentally adjust for structure value.
+
+[PAGE 15]
+IX. WATERFRONT VALUATION — CRITICAL PREMIUM
+FEATURE
+[!] ALWAYS Verify Water Features Yourself
+NEVER assume ponds/lakes/creeks exist just because Land Insights shows surface water or wetlands overlay. Could
+be swamp, seasonal pond, seasonal creek, or wetlands that look like water but aren't.
+MANDATORY PROCESS: 1) Turn OFF all filters. 2) Look at actual satellite imagery with your own eyes. 3) Check
+Google Maps to verify water is actually there. 4) Land Insights MISSES small ponds too — always look yourself. 5)
+Trust your own eyes, not the filters.
+If it even slightly looks like there might be a pond/creek, give BOTH waterfront and non-waterfront evaluations.
+Waterfront Hierarchy
+ 1. Lake — BEST, especially nice lakes. Highest premium, best for recreation (boating, fishing, swimming).
+ 2. River — Big, flowing rivers worth more than ponds. Depending on lake quality, could be comparable.
+ 3. Pond — Size matters significantly. Nice, clean, year-round, fishable pond is RARE and commands
+significant premium.
+ 4. Creek — Smallest premium. Watch out for seasonal creeks that may not be flowing.
+Waterfront Premium Multiplier
+Waterfront commands 2–3x premium over non-waterfront land in the same area. Example: If raw land without water
+goes for $8,000–$10,000/ac, pond front with amenities could be $20,000–$25,000/ac or more.
+Deeded Water Access (Not Direct Frontage)
+Worth ~80% of waterfront premium if real usable easement (50ft deeded lake access = essentially waterfront).
+Narrower/less usable easements = closer to 50%. Linear feet of frontage significantly changes value.
+Usable Shoreline vs Unusable
+Nice beach/gentle slope to water = maximum premium. Steep/swampy/unusable shoreline = reduced premium.
+Compare to other waterfront comps to gauge quality.
+Water Feature Size — The Acreage Problem
+Bigger water = better — that's why lakes beat ponds. BUT if the pond/lake takes up too much of the property's usable
+acreage, discount for lost usable land. Same logic as flagpole easements. You're comping based on usable acreage
+plus the water premium, not total acreage at full waterfront rates.
+Assume Waterfront If Close
+If property butts up to waterfront LLC/owner land, is very close to a lake/pond, or has state land between it and water
+— always evaluate as waterfront AND give non-waterfront value. Incentivizes asking seller about easements/access.
+
+[PAGE 16]
+X. MOBILE HOMES ON LAND
+[!] NEVER trust Land Insights structure data.
+Example: 113 Double Creek Rd showed '0 sqft structures' and 'Mobile Home: No' but Street View clearly showed a
+singlewide. Always verify with Street View (mandatory), Zillow lookup, Google Maps satellite.
+Mobile Home Value Ranges
+Older mobile homes (1980s): 950 sqft, 2bd/1ba: ~$25,000–$35,000 depending on condition. Factors: year built,
+square footage, bedrooms/bathrooms, condition, permanent foundation, utilities connected. Investor needs to verify
+condition with seller.
+Comping Land with Mobile Homes
+ Step 1: Comp the LAND separately as if raw land. Apply waterfront/road/access adjustments.
+ Step 2: Add mobile home value separately based on age, size, bed/bath. Note condition needs verification.
+ Step 3: Total = Land Value + Mobile Home Value
+Example: Land (3.1ac pond front): $80,000 + Mobile home (1980, 950sf, 2/1): $30,000 = Total MV: $110,000
+
+[PAGE 17]
+XI. ROAD TYPE HIERARCHY
+ 1. Paved county road = BEST for most buyers
+ 2. Nice maintained dirt/gravel road = Good for recreational land
+ 3. Seasonal/unmaintained dirt road = Discount
+ 4. Two-track = Significant discount
+ 5. Highway frontage = DISCOUNT (noise, no privacy = negative)
+Why Highway Frontage Is BAD
+Constant traffic noise, no privacy, less desirable for recreational/residential use. Buyers pay LESS, not more, for
+highway exposure.
+Inferring Road Type Without Street View
+Look at nearby SOLD comps on same road. Check satellite for road width and condition. Gravel/maintained shows as
+lighter, wider path. Two-track shows as faint lines through trees.
+
+[PAGE 18]
+XII. LANDLOCKED vs FLAGPOLE vs DEEP EASEMENT
+It's not binary — there's a spectrum. Land Insights flags 'Landlocked: Yes' but this is NOT always accurate. Always
+provide BOTH values if landlocked is flagged.
+The Spectrum
+ 1. Truly Landlocked (No Access): No legal access at all. Offer 10% of market value. High risk, high hassle.
+ 2. Landlocked But Right Next To Road: Probably has easement or data error. Verify with seller. If easement
+exists = normal pricing. If truly no access = 10%.
+ 3. Long Easement Through Neighbor's Property: Legal access but LONG driveway/easement. Between
+flagpole and landlocked pricing. Consider: How far? Through how many properties? Cost to build driveway?
+ 4. Flagpole Lot (Short Easement): Narrow access (30–50 ft) to buildable rear area. Inconvenient but
+workable. Discount for usable acreage + inconvenience.
+Deliverable Format
+MARKET VALUE (assuming access): $50,000
+Offer Range: $25,000 (50%) - $35,000 (70%)
+[!] LANDLOCKED FLAG — If truly landlocked: Offer ~$5,000 (10%)
+Verify access situation with seller
+
+[PAGE 19]
+XIII. WETLANDS EVALUATION
+Core question: Can it perc? If no = 50–80% value killer.
+Location of Wetlands Matters
+ Back of property, under 20%: Barely discount (~5%)
+ Back of property, ~50%: 10–20% discount
+ Front/road: 50–80% discount — can't build near road, very inconvenient
+ 100% wetlands hunting property: Comp against similar wetland sales, discount 30–40%
+Small buildable corner: Doesn't save the whole property. Just helps septic placement. Property still priced as
+overwhelmingly wetlands.
+How To Evaluate
+ Check wetlands % in Land Insights
+ Look at satellite — WHERE are the wetlands?
+ Is there a clear buildable area near the road?
+ Compare to other wetland properties in the market
+ Note for investor — they may need to verify perc test potential
+
+[PAGE 20]
+XIV. SLOPE — WHEN IT MATTERS
+ Under 10%: No issue, price normally
+ 10–20%: Minor discount, 5–10%
+ 20–35%: Noticeable discount, 15–30%
+ 35%+: Major discount, 30–50% — building is difficult/expensive
+Why slope matters: Harder to build, may need retaining walls/special foundations, septic harder to install, driveway
+construction more expensive, less usable flat area.
+CRITICAL: Pull up APN for COMPS and check THEIR slope. Compare subject slope to comp slopes. If comps have
+similar slope, price similarly. If subject is steeper, discount accordingly.
+
+[PAGE 21]
+XV. FLOOD ZONE — DON'T PANIC, LOOK AROUND FIRST
+[!] Do NOT panic-discount for flood zone.
+FIRST look around — are people building houses in the area in the same flood zone? If yes, flood zone is just a cost
+factor (insurance, raised foundation), NOT a value killer.
+Edisto Island Lesson (Critical)
+Mary Seabrook Rd, Charleston Co, SC: 5.64ac, 79% wetlands, 100% flood zone. Initial valuation was $75,000
+(60–70% discount from clean comps). WRONG. The ENTIRE island is in a flood zone and everyone builds there.
+Houses were visible on and near the property. Correct approach: recognize flood zone as cost factor, not deal killer.
+Look around FIRST before discounting.
+Process
+ Toggle hazards OFF to see actual property (structures, land type, water features)
+ Toggle ON to check flood/wetland zones
+ Always check for structures on or near the property
+ Different flood zone types matter
+ Coastal areas commonly have 100% flood zone but entire communities are built within them
+
+[PAGE 22]
+XVI. SUBDIVISION SHAPE RULE — BOWLING ALLEY LOTS
+Width-to-length ratio: Golden ratio = 1:2 to 1:4. Max acceptable = 1:5 or 1:6. Skinnier = 'bowling alley lot' =
+significant value loss.
+Why: Can't build near road because lot is too narrow. Forced to go deep into property — long driveway, utilities run
+farther, building site far from road. Wider lots = more accessible from road = more usable = more valuable.
+Before proposing ANY subdivision, check if splitting creates bowling alley lots — if yes, NO value-add. Also
+consider if the local market supports long/skinny lot sales. Too rural + too skinny = no market.
+Lesson (Buckley Rd, Susquehanna Co, PA): 38.37ac already long and narrow. Splitting would create two
+unsellable bowling alley lots in a rural area with zero demand for that shape. No subdivision recommended.
+
+[PAGE 23]
+XVII. VIEWS / ELEVATION PREMIUM
+ Mediocre view: ~5% premium
+ Good view: 10–15%
+ Superman/panoramic view: 20–30%
+Rare to find true great views — still need to build road up, clear trees, make a pad. Don't overweight this — just flag in
+Extra Notes if contour lines/elevation show high position with potential views.
+
+[PAGE 24]
+XVIII. POWER LINES & UTILITY EASEMENTS — VALUE KILLERS
+High Voltage Power Lines (Big Deal Killer)
+Signs: Huge metal towers, buzzing/humming sound, wide cleared easement through property. Can't build underneath
+or near them (setbacks = couple hundred feet). Takes up usable space, looks ugly, annoying buzzing noise.
+Significantly diminishes value. Flag it immediately.
+Utility Poles
+Not as bad as high voltage lines. Still annoying if right in front/back yard. Note if visible, but less severe.
+Gas Line Easements
+Cleared strip/line cut through property. No power towers but obvious easement path. Can't build on it. Check satellite
+for cleared strips, toggle map layers, check county utility maps if needed.
+
+[PAGE 25]
+XIX. TIMBERED LAND & RECENTLY LOGGED
+Most wooded land = just 'wooded land.' Don't automatically assume timber adds value. Comp as normal wooded
+property.
+When Timber Might Matter
+Signs of a true timber property: clearly replanted rows of trees (pine plantations, etc.), uniform tree species and
+spacing, looks like an investment/farming operation, ready to harvest (mature, tall, consistent). Owners who actively
+manage timber usually know what it's worth — it's a yielding asset, harder to get at deep discount.
+Comp the property as normal (as-is land value). If it LOOKS like managed timber, call it out. Let investor determine
+actual timber value with seller.
+Recently Logged
+Takes 5–30% off value. Not ready to build, not wooded, not cleared — worst of both worlds. Toggle between map
+layers to identify. Flag and discount accordingly.
+
+[PAGE 26]
+XX. ACTIVELY FARMED LAND
+Covered in Land Type Identification (Section III). Farms are YIELDING ASSETS. Farmers usually know what land is
+worth. Harder to get at deep discount. Signs: crop rows, agricultural patterns, farm equipment, active
+planting/harvesting. Comp normally but warn investor that seller may be more savvy on pricing.
+XXI. MAP LAYERS — ALWAYS TOGGLE
+Different map layers have different dates. Satellite imagery could be 1–5+ years old. Things change: houses built,
+timber cut, land cleared.
+ Toggle between available map layers. Compare old vs new imagery.
+ If discrepancy found: flag it for investor. 'Satellite shows [X] but older/newer layer shows [Y] — needs seller
+verification.'
+ Quick toggle, note anything obvious, move on.
+Seasonality doesn't affect comping — land prices don't change by season. BUT winter/snow = harder to sell (can't
+visit property, roads not plowed). This affects HOW LONG it takes to sell, not the PRICE.
+XXII. WHEN SELLER ALREADY HAS IT LISTED — RED FLAG
+[!] Tell the investor immediately if the property is already listed.
+Seller is more knowledgeable about pricing, has talked to a realtor, has a price in their head, psychologically
+anchored to list price. Much harder to negotiate a deep discount. Note it prominently, include their asking price, still
+provide your market value analysis and 50% offer range. Let investor decide how to approach.
+
+[PAGE 27]
+XXIII. CASH VS TERMS — MOSTLY UNKNOWN
+You can't tell if a sale was cash or owner-financed — this info isn't in public record data. Owner financing = potentially
+higher price (buyers pay more for payment flexibility). If a comp seems high AND mentioned owner financing, note:
+'This comp may reflect owner financing premium.' Don't obsess over it.
+XXIV. COUNTY BOUNDARIES — NEVER CROSS
+Covered in Comp Verification (Section IV). Pink lines = county boundaries = your comp boundaries. Each county is its
+own market. No exceptions.
+XXV. SPARSE MARKETS — USING WHAT YOU HAVE
+When sold comps are limited, you still weight SOLDS more heavily, but actives become more important for context.
+Reading Active Listings — Save Ratio
+Views-to-Saves Ratio: High save ratio = listing is priced well, generating interest. Low save ratio = overpriced or has
+issues. Compare save ratios across actives at different price points. Good ratios = realistic market pricing. Bad ratios
+= probably overpriced.
+Sparse Market Approach
+ Widen acreage range to see the FULL story (1ac to 80+ac)
+ Draw the trendline in your head — see how PPA changes across the spectrum
+ Interpolate where your property falls on the curve
+ Price conservatively based on trendline
+ When there's no clear comp, YOU set the price
+ Price below competitive actives — realtors bring buyers to competitive listings first
+Note Format for Scattered Comps
+NOTE: Limited direct comps. Pricing based on trendline:
+5 acres selling ~$7,000/ac / 20 acres selling ~$4,500/ac
+Estimated 10-acre value: ~$5,500/ac
+Recommend conservative list price to ensure quick sale
+
+[PAGE 28]
+XXVI. PROXIMITY TO CITIES — OBSERVE THE MARKET
+No universal rule — every market is different. DON'T apply a rigid rule like '5 miles = X% premium.' DO observe the
+comps and let them tell the story. Compare properties at similar distances from town. Let the market data show you
+the pattern.
+Infill Lots vs Rural Recreational
+These are DIFFERENT markets — don't mix comps. 2 acres in a city = infill lot, different buyer pool. 2 acres rural =
+recreational, different buyer pool. If infill appears in your comps, use as CEILING only, not a direct comp.
+XXVII. AREA QUALITY — ALWAYS CHECK
+Use Street View and satellite to assess surrounding area. Nice homes, new construction, clean properties = supports
+higher pricing. Run-down mobile homes, abandoned properties, trash/junk = lower pricing. Note area quality in
+deliverable.
+XXVIII. OWNER MULTIPLE PROPERTIES
+Just report how many other properties the owner has. Do NOT comp other properties — waste of time if seller isn't
+interested. Say 'Owner has X properties' and move on. Flag rural recreational parcels of potential interest. Investor
+can ask seller if open to selling others; if yes, investor will ask you to comp them then.
+
+[PAGE 29]
+XXIX. MARKET HEALTH METRICS
+ Active count: Current listings on market
+ Pending count: Currently under contract
+ Sold last 90 days: Recent closed sales
+ 1-yr STR (Sell Through Rate): % of listings that sell
+More pending = good demand. More sold than active = healthy. High STR = properties moving.
+BUT: 'Dead markets' don't matter. Elite drone marketing makes properties look better than they are. Aggressive
+pricing creates urgency. A well-marketed, fairly-priced property = mega discount perception to buyers. Dead markets
+can be MORE profitable because acquisition prices are lower and there's less competition.
+XXX. ZONING — DON'T OVERTHINK IT
+Note the zoning code in your deliverable. Don't try to interpret complex rules — let the investor ask the seller. Flag if
+obviously restrictive (conservation, agricultural-only) or if multiple properties have different zoning in same area.
+XXXI. PENDING LISTINGS
+Discount 5–10% from list price. Hot/normal market = 5%. Slower market = 10%. Still highly value them — a pending
+sale is a real buyer making a real commitment, very current market activity. Use common sense on discount amount.
+XXXII. DUPLICATE SUBDIVISION SALES — COUNT AS ONE
+If a seller subdivided 40 acres into 4 lots and all 4 sold, only use ONE as a comp. They are the exact same type of
+property from one parent parcel. Using all 4 would over-weight that one subdivision. Exception: if one lot is clearly
+different (bigger, better access, pond), use it as a separate comp.
+XXXIII. CREATIVE APPROACHES
+Almost EVERYTHING can be worked with. Most investors pass on 'problem' properties — that's where opportunity
+exists.
+ 100% wetlands on large acreage? → Convert to hunting property
+ Landlocked? → Negotiate easement, offer 10%
+ Weird shape? → Find the right buyer
+ Steep slope? → Price accordingly, someone wants a view
+Actual Deal Killers (Very Few)
+ State-owned / Township / County-owned land
+ Quarries (specialized industrial)
+
+[PAGE 30]
+ Storage unit facilities (commercial, different business)
+ Completely unusable swamp — unless large enough for hunting land
+
+[PAGE 31]
+XXXIV. COMP QUALITY AWARENESS
+Covered in Comp Verification (Section IV). Always assess QUALITY of comp features vs subject. Pull APN and check
+soil survey, wetlands, flood zone to verify comp quality before using in analysis.
+XXXV. COMP LISTING PHOTOS WARNING
+Covered in Comp Verification (Section IV). Photos may show community amenities, not parcel features. Always verify
+via satellite/APN/Zillow.
+XXXVI. SELLER MOTIVATION SIGNALS
+Always report ALL signals found:
+ Ownership 5+ years — Land has appreciated, owner may not know current value. 10+ years = even better.
+ Out of state/county — Not using the land, less attachment.
+ Family transfer (inherited) — No emotional attachment, didn't pay for it, any sale is 'profit.'
+ Tax delinquent / high taxes — Strong motivation, ongoing burden.
+ Low cost basis — More room to negotiate.
+Ideal Seller Profile
+Absentee owner (out of state/county), held 5–10+ years, low original cost basis, tax delinquent or high taxes, family
+transfer / inherited, not currently using the property.
+Report Format
+Ownership: X years (purchased MM/YYYY)
+Location: Out of state/county/ZIP or local
+Transfer type: Arms-length / Family transfer
+Tax status: Current / Delinquent
+Annual taxes: $X
+Last purchase price: $X
+Motivation assessment: Low / Medium / High
+
+[PAGE 32]
+XXXVII. VALUE-ADD IDENTIFICATION
+Always Call Out
+ Cleared/open areas (less clearing cost)
+ Gravel or paved driveways (immediate access)
+ Trails through property
+ Ponds/creeks (recreational value)
+ Fencing (shows boundaries, contains livestock)
+ Structures — flag but don't price
+ Lakefront/river access (premium)
+ Proximity to amenities
+Ponds — Nuanced Understanding
+ Premium pond: Year-round, clean, fishable, visually pleasing = RARE, significant premium
+ Average pond: Year-round but some algae/debris = still adds value, less premium
+ Lower value pond: Seasonal, full of muck = still a feature, discount expectations
+Subdivision Potential — When To Analyze
+ 15–20+ acres minimum (varies by market)
+ Sufficient road frontage to create multiple lots
+ Check market type first — exponential or linear curve?
+ If linear = skip subdivision analysis
+ If exponential = analyze the play
+Road Frontage Requirements for Subdivision
+NO HARD RULE. Average is roughly 100–150 ft per lot, but every county and township is completely different. DO
+NOT assume — ALWAYS check the county/township LDR.
+Key items in County LDRs: Minimum lot size, minimum road frontage per lot, plat-exempt threshold, perc test
+requirements, flag lot allowances, road construction standards, utility requirements, setback requirements,
+environmental reviews.
+
+[PAGE 33]
+XXXVIII. PRICING PHILOSOPHY — CONSERVATIVE AT EVERY
+STEP
+Mindset: When I finish a valuation, I want to be 100% confident it's a deal. Build in buffer at every step. Better to
+slightly undervalue than overvalue.
+Offer Ranges
+ 50%: Target for solid deals — MOST ACCURATE
+ 60%: Mid-range
+ 70%: Only when very confident or motivated seller
+ Above 70% (RARE): Only on bigger deals with significant spread. Must have guaranteed, clear profit margin.
+List Price Strategy
+Price 5–10% below calculated market value. This ensures fast sales (1–2 weeks). Elite drone marketing +
+competitive price = dominate the market. Realtors notice and bring buyers when priced right.
+Always Give Specific Prices
+Never give just ranges — always include a specific recommended value. Ranges are okay if uncertain, but the
+investor needs a concrete number to make offers.
+
+[PAGE 34]
+XXXIX. DELIVERABLE FORMAT
+Use this exact format for every evaluation:
+=======================================
+PROPERTY: [Address or Description]
+COUNTY: [County, State]
+ACREAGE: [X acres]
+=======================================
+ 
+1. MARKET VALUE: $XX,XXX (~$X,XXX/ac)
+ 
+2. OFFER PRICE:
+50%: $XX,XXX
+60%: $XX,XXX
+70%: $XX,XXX
+[!] IF LANDLOCKED: $X,XXX (10%)
+ 
+3. VALUE-ADD MARKET VALUE: $XX,XXX (if applicable)
+[Subdivision into X lots, etc.]
+ 
+4. VALUE-ADD OFFER PRICE: (if applicable)
+50%: $XX,XXX / 60%: $XX,XXX / 70%: $XX,XXX
+ 
+5. NEGOTIATION STRATEGIES / LEVERAGE:
+Ownership, location, tax status, transfer type,
+property issues to leverage, questions for seller
+ 
+6. EXTRA NOTES:
+[!] Red flags, structures, zoning, area quality,
+other owner properties, value-adds, comp reasoning
+ 
+7. RECOMMENDED LIST PRICE: $XX,XXX
+[Slight discount from MV for fast sale + elite marketing]
+ 
+8. KEY COMPS USED: (3-5 comps)
+[Ac | Price | PPA | Status | Notes]
+[Brief explanation of weighting if needed]
+
+[PAGE 35]
+Use [!] hazard symbol for anything important: structure on property, already listed, landlocked flag, significant
+wetlands, any deal issue.
+
+[PAGE 36]
+XL. COMMON MISTAKES TO AVOID
+Comp Mistakes
+ Using 'off-market' or 'public records' sales
+ Not verifying Zillow 'Closed' badge
+ Mixing counties (pink lines = boundaries)
+ Ignoring road type differences
+ Not checking price history for true DOM
+Analysis Mistakes
+ Wasting time on subdivision for small parcels
+ Assuming linear PPA relationship (it's exponential)
+ Dividing acreage mathematically instead of looking at shape
+ Missing that highway frontage is a NEGATIVE
+ Not using nearby comps to infer road type
+Pricing Mistakes
+ Anchoring to overpriced active listings
+ Not being conservative enough
+ Pricing structures without seller verification
+ Forgetting the list price needs buffer too
+Communication Mistakes
+ Over-explaining simple properties
+ Not calling out structures for investor follow-up
+ Not being concise
+ Analyzing subdivision when it's clearly not applicable
+
+[PAGE 37]
+XLI. PROPERTIES EVALUATED — LESSONS LEARNED
+1. W Sherman St, Boon, MI (Wexford Co)
+9.89ac FARMLAND. Initial $50K revised to $80K. KEY LESSON: look wider for comps, farmland premium, compare land
+types.
+2. Carter County, OK
+19.55ac pasture. MV: $135,000 (~$6,906/ac). Good example of wide county comp search with clear PPA curve from 1ac
+to 30ac.
+3. Bee Pond Rd, Ninety Six, SC (Greenwood Co)
+7.2ac pasture/cleared. MV: $55,000. Sparse comp area, narrow parcel shape noted.
+4. Kershaw Camden Hwy, Lancaster, SC
+2.72ac GB COMMERCIAL zoned, highway, POND ON PROPERTY (missed initially). Tax sale $1,000. MV: $70,000
+revised after catching pond. LESSONS: always verify water yourself, commercial zoning changes comp pool.
+5. Buckley Rd, Montrose, PA (Susquehanna Co)
+38.37ac timbered, adjacent Salt Springs State Park. MV: $175,000. No subdivision (bowling alley shape). Taught shape
+rule.
+6. Rocky Ridge Rd, Somerset Co, PA
+8.43ac mixed. MV: $75,000. Very sparse comp area.
+7. Old Lake Rd, Riegelwood, NC (Columbus Co)
+3.75ac. MV: $40,000. 'Old Lake' road name — flag potential nearby water.
+8. Chester County, SC
+7ac timbered, creek border, tax delinquent 2024. MV: $77,000.
+9. Mary Seabrook Rd, Edisto Island, SC (Charleston Co)
+5.64ac, 79% wetlands, 100% flood zone. Initial $75K WRONG — over-discounted. Missed house on property. KEY
+LESSON: don't panic-discount flood zone, look around first.
+10. Columbus County, NC
+3.75ac. MV: $40,000. Demonstrated faster workflow with Auto acreage range and direct zoom navigation.
+ END OF COMPLETE METHODOLOGY HANDBOOK — VERSION 3.0
+If Claude ever seems off, paste this entire document back to restore full methodology.

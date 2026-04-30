@@ -1,0 +1,60 @@
+{
+  "retrieval_order": [
+    {
+      "doc_id": "complete_handbook_merged",
+      "category": "core_methodology",
+      "priority_rank": 1,
+      "use_for": "Primary comping methodology and decision framework."
+    },
+    {
+      "doc_id": "pricing_trendline_mastery",
+      "category": "pricing",
+      "priority_rank": 2,
+      "use_for": "Normal flip pricing, trendline construction, and weighting logic."
+    },
+    {
+      "doc_id": "subdivision_mastery",
+      "category": "subdivision",
+      "priority_rank": 3,
+      "use_for": "Subdivision decisions, lot design, and hidden-value analysis."
+    },
+    {
+      "doc_id": "deliverable_format_v3_final",
+      "category": "output_format",
+      "priority_rank": 4,
+      "use_for": "Final evaluation output schema and section ordering."
+    },
+    {
+      "doc_id": "complete_supplemental_reference",
+      "category": "visual_reference",
+      "priority_rank": 5,
+      "use_for": "Visual land-type identification and supporting field heuristics."
+    },
+    {
+      "doc_id": "rural_properties",
+      "category": "special_case",
+      "priority_rank": 6,
+      "use_for": "Rural discount rules and extreme-access adjustments."
+    },
+    {
+      "doc_id": "subdivision_advanced_part10",
+      "category": "special_case",
+      "priority_rank": 7,
+      "use_for": "Advanced subdivision edge cases and hidden value scenarios."
+    }
+  ],
+  "excluded_from_retrieval": [
+    {
+      "doc_id": "complete_handbook_v3_duplicate",
+      "reason": "Very likely redundant with the merged handbook. Keep for audit, not retrieval."
+    }
+  ],
+  "rules": [
+    "Use the merged handbook as the default authority for general comping logic.",
+    "Use the pricing mastery guide to deepen normal flip pricing decisions.",
+    "Use the subdivision mastery guide for split potential, lot layout, and road-access logic.",
+    "Use the deliverable format document to shape the final output, not to make valuation decisions.",
+    "Use rural and advanced subdivision documents as special-case overrides when the subject clearly fits those scenarios.",
+    "Do not retrieve the duplicate handbook copy unless you are auditing changes between versions."
+  ]
+}

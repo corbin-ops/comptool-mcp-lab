@@ -1,0 +1,14 @@
+{
+  "phase2ArtifactId": "local-ui-test",
+  "sourceUrl": "https://example.com/listing",
+  "pageTitle": "Example listing",
+  "pageText": "Visible listing or map text goes here.",
+  "pageKind": "feedback_reference",
+  "reviewerNotes": "Corbin says this comp is too high because visible access is weaker than the tool assumed.",
+  "capturedAt": "2026-04-29T18:11:15.432Z",
+  "links": [
+    "https://example.com/listing"
+  ],
+  "id": "b962d6c4-2377-40e3-bac3-eca055831996",
+  "createdAt": "2026-04-29T18:11:15.432Z"
+}

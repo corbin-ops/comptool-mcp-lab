@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: comptool-mcp-lab
+    runtime: node
+    rootDir: .
+    buildFilter:
+      paths:
+        - src/**
+        - data/comp-corpus/**
+        - docs/**
+        - package.json
+        - package-lock.json
+        - next.config.ts
+        - tsconfig.json
+        - tsconfig.typecheck.json
+        - middleware.ts
+        - render.yaml
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    healthCheckPath: /login
+    autoDeployTrigger: commit
+    # For durable live-testing artifacts, move this service to a paid plan and
+    # attach a persistent disk mounted at /opt/render/project/src/data.
+    # disk:
+    #   name: comp-data
+    #   mountPath: /opt/render/project/src/data
+    #   sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: APP_PASSWORD
+        sync: false
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: COMP_CORPUS_DIR
+        value: data/comp-corpus
+      - key: LLM_PROVIDER
+        value: anthropic
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-sonnet-4-6
+      - key: MODEL_REQUEST_TIMEOUT_MS
+        value: "120000"
+      - key: EXTENSION_INTAKE_TOKEN
+        sync: false
+      - key: LAND_INSIGHTS_COOKIE
+        sync: false
+      - key: LAND_INSIGHTS_REFERER
+        value: https://app.landinsights.com/
+      - key: LAND_INSIGHTS_TIMEOUT_MS
+        value: 12000

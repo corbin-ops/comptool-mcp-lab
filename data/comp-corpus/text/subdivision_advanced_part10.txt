@@ -1,0 +1,207 @@
+[PAGE 1]
+DewClaw — Part 10: Advanced Subdivision & Hidden
+ Value
+ FULLY EXPANDED — Identifying Hidden Subdivision Plays, Road-Building Math,
+ Flagpole Lot Opportunities, and Questions for Future Screenshot Training
+HIDDEN VALUE IN SUBDIVISION — THE CORE CONCEPT
+The most profitable subdivision deals are the ones that other people MISS. Most investors look at a property and see one thing — a
+single parcel to flip. They calculate the as-is value, make an offer at 50%, and move on. They completely miss the fact that the
+property could be subdivided into 5, 8, or even 10+ lots that are each worth significantly more per acre than the whole parcel. That
+oversight is where DewClaw makes the real money.
+The user specifically emphasized that these opportunities 'hide in plain sight.' A property with three narrow access points from a road
+looks unremarkable to most people — they see weird entry points and don't think anything of it. The user sees three flagpole lot
+opportunities that could triple the property's total value. A large property with enough road frontage looks like a normal big lot to most
+people. The user sees 8 individual lots that each sell at a higher PPA than the whole parcel. This advanced subdivision thinking is
+what separates the DewClaw approach from 99% of other land flippers who only do simple flips.
+FLAGPOLE LOTS FROM HISTORICAL LOT SPLITS — HIDDEN IN PLAIN SIGHT
+One of the most important hidden value plays the user taught is recognizing flagpole lot opportunities that were CREATED by
+previous owners without anyone realizing it. Here is how this happens:
+A property owner once had a large parcel — say 60 acres. Over the years, they sold off smaller lots from the edges of their property.
+Maybe they sold a 5-acre lot on the left side to a neighbor. Then a 3-acre lot on the right side to another buyer. Then a 7-acre lot off
+the back. Each time they sold a piece, the remaining property's shape changed. What was once a clean rectangle became an
+irregular shape with narrow access strips where the sold lots used to connect to the road.
+Now the remaining 45 acres has three narrow entry points — maybe 50-60 feet wide each — where the sold-off lots created gaps
+along the road frontage. To most people looking at this property on a map, these narrow strips look like odd remnants of the original
+parcel. Nobody thinks twice about them. They are just weird shape features.
+But the user sees SUBDIVISION OPPORTUNITIES. Each of those narrow access strips IS a potential flagpole lot access point.
+Three 50-foot-wide access strips = three flagpole lots, each extending from the road back into the larger buildable area of the
+property. Instead of selling one 45-acre parcel at the large-lot PPA, you sell three ~15-acre lots at a significantly higher per-acre
+price. The total revenue could be 50-100%+ more than selling the whole parcel.
+The user was very clear: 'These are the things that are hidden in plain sight, but people don't even see that, just like you don't see it.
+So now you're starting to connect the dots — oh wow, if I can identify it, then imagine how many people don't, and how much money
+we could capitalize on.' This is the competitive advantage. Identifying these plays is how DewClaw finds deals that nobody else sees.
+How to Spot Historical Lot Splits on the Map
+When looking at a property on Land Insights, look for these visual clues that suggest previous lot splits created flagpole opportunities:
+Narrow strips of the parent parcel touching the road: If the property has one or more thin extensions reaching out to the road,
+separated by other parcels on either side, those thin extensions are likely remnants from when the owner sold off the lots on either
+side. Each thin extension is a potential flagpole access strip.
+Multiple small access points instead of one wide frontage: If the property touches the road in multiple places with gaps in
+between (where other people's parcels front the road), each of those access points is a flagpole entry. Count them — each one could
+be a separate lot.
+Neighboring parcels that were clearly carved out of a larger parent: Look at the surrounding parcels. If they look like they were
+pieces of a once-larger property (similar orientations, irregular shapes that fit together like puzzle pieces), the remaining property
+likely has flagpole access strips from the carve-outs.
+
+[PAGE 2]
+The user wants to see real screenshot examples: The user specifically requested a future training session with real Land Insights
+screenshots showing these situations. This visual training will be done in a NEW CHAT because the current chat cannot handle more
+image uploads. During that session, the user will show actual properties with historical lot splits and walk through how to identify the
+flagpole opportunities.
+
+[PAGE 3]
+ROAD-BUILDING MATH — THE COST-TO-REVENUE FORMULA
+The Correct Formula
+When evaluating whether a road-building subdivision play makes financial sense, the formula is:
+TOTAL INVESTMENT COST = Acquisition price + Road construction + Utilities (water, sewer, electricity if needed) + Any
+other development costs
+TOTAL REVENUE = Sum of all individual lot sale prices after subdivision
+The total investment cost should be approximately 50-60% of the total revenue. This means for every dollar you spend on
+acquisition and development, you should get approximately $1.67-$2.00 back in lot sales. That is a healthy spread that makes the
+deal worth the time, effort, complexity, and risk of doing a subdivision with road construction.
+On BIGGER properties where the absolute dollar amounts are larger, the acceptable ratio can stretch to 65-70%. The reason: even
+at 65-70% cost-to-revenue, the DOLLAR SPREAD on a large deal can be very significant. If total investment is $350,000 and total
+revenue is $500,000 at 70% ratio, the profit is $150,000. That is worth doing even though the percentage margin is thinner than the
+ideal 50-60% range. It is all about how much spread (profit in dollars) actually exists.
+How to Calculate and Present This
+When you identify a subdivision play that involves road construction or utility installation, calculate and present the math explicitly in
+the deliverable:
+Step 1: Determine the as-is value of the whole property and calculate your offer price (50% of as-is). This is the ACQUISITION
+COST.
+Step 2: Estimate the road construction cost. Look up gravel road cost per linear foot in the county/state. Measure the road distance
+using the Land Insights ruler tool. Multiply linear feet × cost per foot = estimated road cost.
+Step 3: Note any utility costs if applicable (water, sewer, electric hookups). These vary significantly by location — note them as items
+to investigate rather than precise estimates unless you can find local cost data.
+Step 4: Pull comps at EACH specific lot size you are proposing. If the subdivision creates four 10-acre lots and two 7-acre lots, pull
+comps for both 10ac and 7ac sizes separately because each size has its own PPA.
+Step 5: Calculate TOTAL REVENUE by multiplying each lot's estimated PPA by its acreage, then summing all lots.
+Step 6: Calculate the cost-to-revenue ratio: (Acquisition + Road + Utilities) ÷ Total Revenue × 100 = X%. Present this percentage.
+Step 7: Present it clearly: 'Acquisition at 50%: $150K + Road: $20K + Utilities: $5K = $175K total investment. Total revenue from 6
+lots: $340K. Cost-to-revenue ratio: 51%. Spread: $165K.'
+If the ratio is 50-60% = strong deal, recommend it. If 60-70% = workable on bigger properties, present it with a note about the thinner
+margin. If above 70% = the spread probably isn't worth the complexity, but still present the numbers and let the user decide.
+Roads Can Curve Around Features
+A subdivision road does NOT have to be a straight line from one end of the property to the other. Roads can CURVE around features
+that would be expensive or impractical to cross: wetlands (building a road through wetlands requires expensive fill and permitting),
+steep slopes (road grade has limits — too steep and vehicles can't safely use it), timber stands (might be cheaper to go around
+mature timber than to clear a path through it), creeks and streams (crossing requires a bridge or culvert).
+When a road needs to cross a wet area or small stream, a CULVERT can be installed. A culvert is a pipe or tunnel under the road
+that allows water to flow through while the road passes over it. Culverts are a standard construction element for rural roads — they
+cost more than just grading a dirt road on dry ground, but they are a proven, routine solution. The cost of culverts should be factored
+into your road cost estimate.
+When estimating road cost for a curved road: measure the ACTUAL path the road would take (including curves) using the Land
+Insights ruler tool, not just the straight-line distance. A road that curves around a wetland area might be 30-50% longer than a straight
+shot through it, but the additional road cost is likely much less than the cost of filling wetlands and getting environmental permits.
+
+[PAGE 4]
+LOT VALUE DIFFERENTIATION WITHIN A SUBDIVISION
+Not every lot in a subdivision is worth the same amount. When you create multiple lots from a parent parcel, each lot should be
+valued based on its SPECIFIC traits — just like comping any individual property. The key factors that create value differences
+between lots in the same subdivision:
+Road Type Matters Per Lot
+If the parent property has one side on a PAVED road and another side bordering a DIRT road, the lots fronting the paved road are
+worth MORE than the lots fronting the dirt road. This is exactly the same as comping any normal property — road type affects value.
+When designing the lot configuration, put the PREMIUM lots on the paved road side (these will sell faster and at higher PPA) and the
+DISCOUNTED lots on the dirt road side (these will take slightly longer and sell at lower PPA).
+Interior lots fronting a NEW private road (the road you built through the property) typically sell for 5-10% LESS than lots fronting the
+existing public road. This mirrors the general road hierarchy — a new gravel private road is not as desirable as an established public
+road.
+Flagpole Lots vs Standard Lots
+Flagpole lots — lots with a narrow access strip leading to a wider buildable area in the back — are worth LESS than standard lots
+with full road frontage. How much less depends on the DEPTH of the flagpole:
+Shallow flagpole (short access strip, buildable area is close to the road): SLIGHTLY less than a standard lot — maybe 5-10%
+discount. The access strip is short, so getting to the buildable area is quick and convenient. The inconvenience is minimal.
+Deep flagpole (long access strip, buildable area is far from the road): Essentially the same value as a lot on a dirt road because
+the buyer needs a LONG driveway through the access strip to reach their building site. It is functionally the same experience as
+driving down a long dirt road to reach a property. The user specifically said: 'Normally, when a flagpole lot is super deep, you actually
+need a road going back into it. And normally, if it's not developed and it's just vacant land, it's normally just a dirt road to go into there,
+so that's essentially the exact same thing as a normal lot on a dirt road.'
+This means: when designing a subdivision with flagpole lots, the shallower the flagpole, the more value it retains. If you can create
+flagpole lots where the access strip is short and the buildable area is relatively close to the road, the value penalty is small. If the
+flagpole forces a very long access road, the lot drops to dirt-road-lot pricing.
+Land Type Differences Per Lot
+If the parent property has different land types in different areas — cleared farmland on one side and timber on the other, pasture at
+the front and wetlands in the back — split along those natural boundaries to create lots with DISTINCT land types that appeal to
+DIFFERENT buyer pools. A cleared farmland lot appeals to agricultural buyers and homebuilders. A timbered lot appeals to
+recreational/hunting buyers. A wetlands lot appeals to duck hunters (if 20+ acres). Each lot type has its own PPA and its own buyer
+pool.
+Pull comps at each lot size AND for each land type. The cleared 10ac lot on the paved road might be worth $8,000/ac while the
+timbered 10ac lot on the dirt road side might be worth $4,000/ac. These differences should be reflected in your per-lot valuations.
+Wetlands Per Lot After Splitting
+As covered extensively in Part 2 (Wetlands), lot-splitting a wetlands property creates cleaner-looking individual lots even though the
+total wetlands haven't changed. A lot with 10% wetlands in the back looks much better than a whole parcel with 50% wetlands
+throughout. When calculating per-lot values, assess the wetlands impact on EACH lot individually: the clean lot gets near-full value
+with minor discount, the wetlands lot gets priced as hunting/recreational land.
+
+[PAGE 5]
+PULLING COMPS AT EACH TARGET LOT SIZE — PRECISION MATTERS
+When presenting a subdivision value-add scenario, you need comps at EACH SPECIFIC LOT SIZE you are proposing. This is critical
+because the PPA curve is exponential — every acreage point on the curve has a different PPA. You cannot use a 20-acre comp's
+PPA to estimate the value of an 8-acre lot. The 8-acre lot has a significantly higher PPA because it is on a different point on the
+curve.
+If your subdivision creates lots of different sizes — for example, four 10-acre lots along the road and two 7-acre flagpole lots — you
+need TWO sets of comps: one set showing what 10-acre lots trade at in this market, and another set showing what 7-acre lots trade
+at. Each lot size might have a different PPA, and your total revenue calculation needs to reflect those differences.
+How to do this simultaneously with the as-is comp process: when you zoom out on Land Insights and see the comp dots, you are
+already seeing a range of acreages. Note the PPAs at your target lot sizes as you scan. If the MLS comp filter allows acreage range
+adjustment, change the range to focus on your target lot size. Alternatively, use the comp data you already see on the map to
+interpolate — if 5ac comps trade at $10K/ac and 15ac comps trade at $6K/ac, your 8ac lots should be around $8K/ac on the curve.
+WHEN ROAD-BUILDING MAKES SENSE VS WHEN IT DOESN'T
+Road-building makes sense when the SPREAD between total investment and total revenue is significant enough to justify the
+additional cost, time, and complexity. The user's threshold: total investment (acquisition + road + utilities) should be approximately
+50-60% of total revenue from lot sales. On bigger properties, up to 65-70% because the dollar profit is still large.
+When Road-Building MAKES Sense
+Large acreage with strong demand for smaller lots in the area AND road frontage alone can't support enough lots. If you have 80
+acres with 500ft of road frontage, you might get 5 lots from the frontage alone. But building a 1,200ft gravel road through the middle
+could give you 12+ lots (5 from the road frontage plus 7 interior lots). If the road costs $30K but the additional 7 lots generate $350K
+in revenue, the math overwhelmingly works.
+The key indicators: property has significantly more acreage than the road frontage can serve. Surrounding lot sizes are relatively
+small (5-10ac) indicating strong subdivision demand. The PPA curve is steep (big difference between large-lot PPA and small-lot
+PPA). County ordinances allow the number of lots you are proposing.
+When Road-Building DOESN'T Make Sense
+Small properties where the road cost eats too much of the margin. If you have 20 acres and a road costs $25K but only creates 2
+additional lots worth $30K total, the math doesn't work — $25K cost for $30K additional revenue is razor-thin.
+Areas where there is no demand for smaller lots. If surrounding properties are all 40+ acres and nobody is buying small lots, building
+a road to create small lots is building a product nobody wants.
+Properties with terrain that makes road construction prohibitively expensive — steep slopes, deep wetlands that need extensive fill,
+rocky terrain that needs blasting. The road cost can balloon beyond what the lot revenue supports.
+When the cost-to-revenue ratio exceeds 70% even on a big property. At that point, the spread is too thin to justify the complexity,
+time, and risk of road construction. A simple flip is safer and faster.
+
+[PAGE 6]
+QUESTIONS FOR FUTURE SCREENSHOT TRAINING SESSION
+The user specifically requested a future training session in a NEW CHAT where real Land Insights screenshots will be used to teach
+advanced subdivision identification. The following questions should be addressed in that session with visual examples:
+Identifying Access Points and Flagpole Opportunities
+Q: When I see a property with narrow strips touching the road, how do I know if those are actual LEGAL access points vs just visual
+artifacts on the map? Do I assume they are legal access and flag it for the user to verify?
+Q: What do historical lot splits actually LOOK LIKE on Land Insights? Can you show me 2-3 real properties where previous lot sales
+created flagpole access strips?
+Q: How do I distinguish between a property that has multiple access points (subdivision opportunity) vs a property that has a single
+access point with an irregular boundary (not a subdivision opportunity)?
+Drawing Lot Lines Mentally
+Q: When looking at an irregular-shaped property on satellite, how do you mentally sketch where the lot lines should go? Do you start
+from the road and work backward? Do you start with the natural features (wetlands, timber line, creek) and work around them?
+Q: Can you show me on a real property how you would draw 6-8 lots? Where do the lines go? How do you maximize lot count while
+keeping each lot in a reasonable shape?
+Q: When the property has features that create natural lot boundaries (a creek down the middle, a timber line on one side, a wetland
+area in one corner), how do you incorporate those features into the lot design?
+Estimating Lot Count Quickly
+Q: When you first look at a property and instantly think 'this could be 8 lots,' what calculation are you running in your head? Is it
+purely road frontage ÷ minimum per lot, or are you also factoring in the property depth, the terrain, the demand?
+Q: For irregular shapes, how do you estimate lot count without drawing actual lines? Is there a quick mental formula or do you just
+eyeball it based on the total acreage and the surrounding lot sizes?
+Road Routing Through Properties
+Q: When you look at a large property and think 'I need a road through the middle,' how do you decide the road path? Straight down
+the middle? Follow the contour of dry land? Along one side?
+Q: Can you show me an example of a property where a road through the middle unlocks 5+ additional lots? What does that look like
+on the map?
+The PPA Trendline for Subdivision
+Q: When you are simultaneously pulling comps for the as-is value AND comps at the target subdivision lot size, how do you quickly
+see the PPA difference? Do you change the acreage filter on the fly, or do you look at the existing comp dots and mentally categorize
+by acreage?
+Q: If the PPA trendline shows a STEEP curve (big difference between large and small lot PPA), how do you quickly recognize that as
+a strong subdivision market vs a flat curve (weak subdivision market)?
+--- END OF PART 10 ---
+Part 10 covers: Hidden subdivision value (flagpole lots from historical splits), road-building math (cost-to-revenue formula corrected
+and expanded), lot value differentiation within subdivisions, pulling comps at each target lot size, when road-building makes sense vs
+doesn't, and aggregated questions for future screenshot training session

@@ -1,0 +1,22 @@
+{
+  "name": "comptool-mcp-lab",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3003",
+    "build": "next build --webpack",
+    "start": "next start -p ${PORT:-3003}",
+    "build:extension": "bash scripts/package-extension.sh",
+    "build:comp-corpus": "python scripts/build-comp-corpus.py",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"
+  },
+  "dependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "next": "^16.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "typescript": "^6.0.2"
+  }
+}

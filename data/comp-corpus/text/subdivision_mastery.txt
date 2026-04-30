@@ -1,0 +1,664 @@
+[PAGE 1]
+DewClaw Land Holdings
+ Subdivision Analysis & PPA Trendline
+ Mastery Guide
+ Comprehensive Training Document — Subdivision Decision-Making,
+ Lot Design, PPA Trendline Construction, Demand Reading,
+ & Real-World Property Examples
+ Internal Reference — April 2026
+
+[PAGE 2]
+Table of Contents
+1. The Subdivision Decision Framework — The complete 6-step decision tree
+2. The PPA Trendline Framework — How to build, read, and apply the mental trendline
+3. Reading Area Demand — Zooming out county-wide to determine if subdivision is viable
+4. Lot Line Design Principles — How to draw subdivision lines and prioritize lot layout
+5. Road Access & Classification — Road color codes, restrictions, and access strategies
+6. Building a Road Through the Middle — When to build, cost estimation, and the math
+7. Flagpole Lots — What they are, when they work, and when they kill a deal
+8. When NOT to Subdivide — The walk-away signals and common traps
+9. Comping the Subdivision — How to price subdivided lots vs. parent parcels
+10. Pricing Output: Market Value & List Price — The two-number deliverable
+11. Real-World Property Examples — 7 detailed examples with visual descriptions
+12. Quick Reference Decision Checklists — At-a-glance frameworks for field use
+
+[PAGE 3]
+1. The Subdivision Decision Framework
+Every property that crosses the desk gets evaluated through this 6-step decision tree before subdivision is
+recommended. The steps must be followed in order — each one is a gate. If a property fails at any step, it
+either becomes a simple flip or gets passed on entirely. Do not skip steps. Do not jump to lot design before
+confirming demand. The framework exists to prevent costly mistakes.
+Step 1 — Shape Check
+Before anything else, look at the parcel shape on Land Insights. Is the property wide enough relative to its
+depth to support splitting without creating bowling alley lots? The golden width-to-length ratio is 1:2 to 1:4.
+Maximum acceptable is 1:5 or 1:6. Anything skinnier than that means splitting will only make the lots less
+desirable, not more.
+If the property is narrow all the way through — like a long rectangle where the short side is on the road —
+stop here. Any split just creates skinnier bowling alleys. This is a flip, not a subdivision. Move on.
+Key principle: You cannot fix a bad width-to-length ratio by subdividing. You only make it worse.
+Flagpole lots work because the body of the lot is fat and usable — the narrow strip is just access.
+A lot that is skinny all the way through has no fix.
+Step 2 — Road Access Check
+What roads touch the property? What type are they? Check the road color coding on Land Insights: green
+= private/service road, yellow = residential/unclassified, orange = city/county road, red =
+highways/interstates. The road type matters because county regulations may restrict which road classes
+you can subdivide off of.
+Check whether the county allows new subdivided lots to front onto the available road types. If the only
+road is a county road and the county does not allow new subdivisions off county roads, you either need an
+internal road or cannot subdivide. This single restriction can reduce the value of a subdivision plan by
+20-50% or more.
+If the only access is a single narrow flagpole strip — one access point = one lot, period. All the acreage
+and cleared land in the world does not matter if the road access cannot support multiple lots.
+Also check: If a property has 3 narrow access strips at 50 feet each but the county requires 60-foot
+minimum for flagpole lots, that is a dead end. Flag it with the warning emoji so the owner knows the
+subdivision play is blocked by county requirements.
+Step 3 — Area Demand Check
+Zoom out county-wide on Land Insights. This is not a tight radius around the subject property — it is the
+entire county. Build a mental map of the county's personality: where are the towns? Where does density
+cluster? Where does it thin out? Where does the subject property fall on that spectrum?
+Look for these positive demand signals: lots of smaller parcels (2-5 acres) nearby with structures on them,
+proximity to a town, a lake nearby attracting buyers, visible new construction, general population density.
+
+[PAGE 4]
+These tell you people are actively choosing to buy small lots here, so if you create more small lots, they
+will sell.
+Watch for these caution signals: way out in the sticks, very few houses around, only big parcels with
+sparse development, no town or attraction nearby. This is rural recreational territory. It may be fine for a
+buy-and-flip, but subdivision into small lots is risky because there may not be enough demand to absorb
+them quickly. In these areas, big lots might be the only thing that moves because anyone who wanted a
+small lot would just live closer to town.
+Build rings outward from the subject property: what is happening immediately around it? One mile out?
+Five miles out? County-wide? This should take 10-20 seconds to scan and understand. The goal is to
+determine whether the market will absorb smaller lots in the timeframe we need (30-90 days).
+Additional demand signals to look for: Is it near a lake (attracts buyers)? Is there a town or city nearby?
+Are there houses and structures around, or is it desolate? Is it a nice area or a trashy area? Check Street
+View and Google Maps — are the houses maintained? Is there a community feel? Even if the numbers
+say subdivision works, if the area looks rough, buyers will not come.
+Step 4 — PPA Trendline Check
+Pull comps across the full acreage spectrum in the county. You want to know what 2-acre lots sell for,
+what 5-acre lots sell for, what 10 sells for, what 20 sells for, what 50 sells for. Each of those is a data point
+on the PPA curve. (Full details on the PPA Trendline Framework are in Section 2.)
+A steep curve means subdivision is lucrative — there is a big spread between large-parcel PPA and
+small-lot PPA. A flat or linear curve means there is no real subdivision premium. You are just creating
+more work for no payoff. If the curve is flat, this is a flip, not a subdivision.
+Step 5 — Design the Split
+Now — and only now — do you start thinking about how to draw the lot lines. The priority order is:
+1. Easy road frontage lots first — cookie-cutter lots along the road with the most frontage.
+2. Maximize waterfront touches — wrap as many lots as possible around any pond, lake, or significant
+water feature.
+3. Prioritize cleared land — buyers want to see where they can build. Cleared lots sell faster and at a
+premium.
+4. Flagpole cleanup lots last — use irregular/flagpole lots to capture remaining acreage that does not
+fit neatly into the primary layout.
+Match the target lot size to what the surrounding development pattern shows. If the area has mostly 2-4
+acre lots with houses, target 2-4 acres. If the area is more rural with 8-12 acre parcels, do a conservative
+2-3 way split. Do not force a lot size the area does not support.
+Different lot sizes within the same subdivision are completely normal and expected. Some lots will be
+waterfront, some cleared, some wooded, some flagpole. They do not need to be the same size. Price
+them accordingly when comping.
+
+[PAGE 5]
+Step 6 — Final Gut Check: Sell Timeline
+We want to sell within 30 days ideally, 90 days maximum. Subdivision only makes sense if the lots will
+actually move in that timeframe. Creating 12 small lots in an area with no demand means sitting on
+inventory, which kills the business model. That is why the area demand check (Step 3) comes before the
+subdivision design (Step 5) — no point calculating lot yield if the market cannot absorb it.
+The sell timeline is the governor. Do not maximize lot count — maximize lot count WITHIN what
+the market will absorb quickly. Over-subdividing in a low-demand area is worse than a
+conservative split because you are stuck holding inventory.
+
+[PAGE 6]
+2. The PPA Trendline Framework
+The PPA (Price Per Acre) Trendline is the single most important analytical tool for property valuation and
+subdivision analysis. It is not optional — it must be built mentally on every property evaluation. The
+trendline tells the story of the market and where the subject property fits within it.
+2.1 — How the Curve Works
+The PPA trendline is NOT linear — it is exponential on the low end and flattens to roughly linear on the
+high end. This is the fundamental shape of all rural land markets:
+Small lots (1-5 acres): PPA is HIGH and rises STEEPLY as acreage decreases. A 2-acre lot might sell at
+$15,000/ac while a 5-acre lot might sell at $8,000/ac. That drop is fast and dramatic. Small changes in
+acreage cause huge swings in PPA. This is the volatile, exponential part of the curve.
+Medium lots (5-20 acres): PPA is moderate and declining more gradually. The curve is still falling but not
+as steeply. This is the transition zone.
+Large parcels (20+ acres): PPA is LOW and relatively STABLE. A 20-acre parcel might be $3,500/ac and
+a 40-acre might be $2,800/ac. The curve has flattened out — PPA is not jumping wildly anymore, it is
+stabilizing. This is the linear, predictable part of the curve.
+2.2 — Why 50% Below / 100% Above
+The comp range is set at 50% below the subject acreage and 100% above (expanding to 50%/200% or
+even 100%/300% if needed). This asymmetry exists precisely because of the curve shape:
+On the low end (smaller acreage comps): PPA rises exponentially. Small acreage differences cause huge
+PPA swings. These comps are harder to trust and riskier to lean on. That is why we only go 50% below —
+we are being conservative on the steep, volatile part of the curve.
+On the high end (larger acreage comps): PPA flattens out and becomes more linear. The numbers are
+stable and predictable. A 30-acre comp and a 50-acre comp might have very similar PPAs. That is why we
+go 100% above (or more) — the flat part of the curve is trustworthy, and weighting toward higher-acreage
+comps gives a conservative valuation.
+Always weight toward the higher-acreage comps (lower PPA) for a conservative valuation. The
+flat part of the trendline is where the data is reliable. The steep part is where mistakes get made.
+2.3 — Building the Trendline on Every Eval
+On every property evaluation — whether subdivision is the play or not — build the mental trendline. Pull
+comps at multiple acreage points: 2 acres, 5 acres, 10 acres, 20 acres, and beyond. Each comp is a data
+point. Connect them mentally to see the curve shape.
+Even when the comps do not perfectly fill every acreage point, use whatever exists in between to establish
+ceilings and floors. If you have a 2-acre comp at $15,000/ac and an 8-acre comp at $5,000/ac but nothing
+at 5 acres, you can still interpolate — but be cautious on the steep part of the curve because the
+
+[PAGE 7]
+exponential shape makes the interpolation less reliable. Any comp in between, even if it is not a perfect
+match, gives you a ceiling or floor to narrow the range.
+Build SEPARATE curves per comp type when relevant: wooded vs. cleared, waterfront vs. non-waterfront.
+Each land type has its own PPA behavior. Do not mix a waterfront 5-acre comp with a landlocked wooded
+5-acre comp — they are on different curves.
+2.4 — What the Curve Shape Tells You
+Steep curve (big spread between large-parcel PPA and small-lot PPA): GOOD subdivision market. The
+value created by splitting a large parcel into small lots is significant. This is where the subdivision money is
+made — you are moving product from the flat part of the curve up to the steep part.
+Flat/linear curve (small-lot PPA and large-parcel PPA are similar): BAD subdivision market. There is no
+real premium for small lots. Focus on simple flips.
+Metro/lake counties tend to have steeper curves. Deep rural counties tend to have flatter curves. But this
+is a generalization — there are rural counties with steep curves. The comps themselves tell you the truth;
+let the data speak rather than assumptions.
+2.5 — Handling Outliers
+Outliers above the trendline are common. They are often off-market sales, bidding wars, or buyers who
+overpaid. When you see a comp that sold significantly above the trendline:
+Check the listing history — was there a bidding war? Did it go above asking price? That may signal
+strong demand, or just one motivated buyer.
+Check if it was off-market (Sold-Public Records). Off-market sales are unreliable and should not be
+used as comps per standing rules.
+Note it, but do not let it pull the valuation up. The trendline built from ceilings and floors across multiple
+comps is what matters — not one property that went crazy.
+The trendline should get progressively tighter as you identify close ceilings and floors near your subject's
+acreage. You are whittling the range down, not chasing outliers.
+2.6 — The Subdivision Math
+Once the trendline is built, the subdivision math becomes straightforward:
+1. The parent parcel sits at [X] PPA on the flat part of the curve (e.g., $3,000/ac for a 24-acre parcel).
+2. If split into [Y]-acre lots, the trendline says those sell at [Z] PPA (e.g., $8,000/ac for 5-acre lots).
+3. The spread between X and Z is the value created by subdivision.
+4. Reality-check: subtract road costs, survey costs, permitting, and the fact that not every lot will hit
+top-of-curve PPA.
+5. If the net yield still significantly exceeds the as-is value, subdivision is the play.
+
+[PAGE 8]
+3. Reading Area Demand
+Reading area demand is a zoom-out exercise that must happen before any subdivision design work. It
+determines whether subdivision is viable, what lot sizes the market will absorb, and how quickly the lots
+will sell. This is not optional — skipping this step has historically led to properties sitting on the market until
+they expire worthless.
+3.1 — The County-Wide Scan
+Zoom out to the county level on Land Insights. Build a mental map of the county's development pattern:
+Where are the towns and population centers?
+Where are the density clusters — areas with lots of small parcels and structures?
+Where does it transition to rural — larger parcels, fewer structures?
+Where is the deep rural edge — big tracts, sparse development, no towns nearby?
+The subject property falls somewhere on this spectrum. Its position tells you what lot sizes the market will
+absorb at that location. Near a town with small-lot clusters? Small lots will sell. In the rural transition zone?
+Conservative split. Deep rural? Big lots only — or just flip as-is.
+3.2 — Positive Demand Signals
+Lots of smaller parcels (2-5 acres) nearby with structures/houses on them
+Proximity to a town, city, or population center
+A lake or recreation area nearby attracting buyers
+Visible new construction activity in the area
+General population density — houses, roads, infrastructure
+A mix of lot sizes showing market activity across the spectrum
+When these signals are present, people are actively choosing to buy small lots here. Creating more small
+lots will meet existing demand.
+3.3 — Caution Signals
+Way out in the sticks — very few houses, mostly large tracts
+No town, lake, or attraction nearby
+Only big parcels with sparse development — the market favors large acreage
+The area looks rough or poorly maintained on Street View
+No recent small-lot sales activity in comps
+When these signals dominate, the market is telling you that buyers in this area want big tracts. Creating
+small lots creates LESS demand, not more. The farther out from civilization, the bigger the lots need to be.
+People who want small lots would just live closer to town.
+
+[PAGE 9]
+3.4 — Matching Lot Size to Market
+The target lot size comes from what is already selling around the subject property. Not what existed 20
+years ago, but what people are buying and building on now. If the surrounding development pattern is 2-4
+acre lots with houses, target 2-4 acres. If it is 8-12 acre parcels, do a conservative 2-3 way split. Match the
+market.
+Preferred minimum lot size for subdivision: 2 acres. Once you start selling smaller lots, it takes longer to
+sell all of them and the process gets complicated. For most rural subdivision plays, 2-5 acre target lots are
+the sweet spot when the market supports it.
+The demand check can tell you to walk away from the deal entirely — not just 'do not subdivide'
+but 'do not buy this at all' — because if the market does not support the size you are offering, the
+property is going to sit. Smaller parcels in areas dominated by big tracts are a risk not just for
+subdivision but for the flip itself.
+
+[PAGE 10]
+4. Lot Line Design Principles
+4.1 — Priority Order for Drawing Lines
+When designing a subdivision layout, always work in this order:
+Priority 1: Easy road frontage lots. Start with the road that gives the cleanest, most cookie-cutter lots. If
+there is a residential road running through or along the property, that is usually the best starting point.
+Divide the road frontage into lots of the target acreage.
+Priority 2: Maximize waterfront touches. If there is a pond, lake, or significant water feature, wrap as
+many lots as possible around it. Waterfront premium is significant — do not leave it on the table. For larger
+ponds, multiple waterfront lots work well and buyers can build docks. For very small ponds, one lot with
+the pond as its feature may be better than splitting it across multiple lots where nobody gets to enjoy it.
+Priority 3: Prioritize cleared land. Buyers want to see where they can build. Lots with cleared areas sell
+faster and command higher PPA. When drawing lines, try to include cleared ground in as many lots as
+possible. If a lot can have access through cleared land rather than only through timber, that is preferred.
+Priority 4: Flagpole cleanup lots. The remaining acreage that does not fit neatly into the primary layout
+gets captured with irregular or flagpole lots. These are the outliers, and having a few is normal in every
+subdivision. The flagpole strip is the sacrifice zone — the lot body should still be a usable, reasonably
+shaped parcel.
+4.2 — Lot Shape Rules
+Golden width-to-length ratio: 1:2 to 1:4. This gives lots that feel spacious and usable — you can have a
+house, yard, outbuildings, and driveway without everything being in a single line.
+Maximum acceptable ratio: 1:5 to 1:6. Beyond this, the lot starts feeling like a bowling alley.
+Anything skinnier: significant value loss. Before proposing a subdivision, always check if splitting creates
+bowling alley lots. If yes, do not subdivide — there is no value-add, only value destruction.
+The 'sideways flagpole' hack: When a flagpole lot would otherwise be too deep, run the flagpole strip
+horizontally instead of vertically. This keeps the buildable lot body at a usable width-to-length ratio while
+still providing road access through the horizontal strip.
+4.3 — Different Lot Sizes Are Normal
+Lots within a single subdivision do not need to be the same size. Some will be waterfront, some cleared,
+some wooded, some flagpole. Different sizes are expected. When lots along a natural feature boundary
+(like farmland vs. timber), the lots on each side can absolutely be different sizes.
+When the lots are roughly similar in size, you can calculate the average lot size (parent acreage / lot
+count) and comp that average to estimate total subdivision yield. When there is a huge disparity in lot
+sizes — say 2-acre waterfront lots AND 15-acre timber lots — you must comp each group separately.
+Averaging them would badly skew the numbers because of the exponential PPA curve.
+
+[PAGE 11]
+4.4 — Estimating Lot Count Quickly
+The threshold for pulling subdivision comps is low: if you can see even 2-4 possible splits, that is enough
+to warrant checking. The more road frontage, the more obvious the opportunity.
+For a quick mental estimate: look at the road frontage and the total acreage. Road frontage tells you how
+many lots can touch the road. Total acreage tells you how deep you can go. Both together give you a
+rough lot count.
+If a property has frontage on two roads, count potential lots from EACH road separately and add them up.
+More road frontage = more lots = better.
+Try multiple layout variations mentally. You have the advantage of being able to draw visual lines in your
+head and test different configurations simultaneously. Use the measuring tool on Land Insights to
+sanity-check dimensions.
+Timing: aim for 2 minutes per evaluation. If subdivision comps genuinely need 3-4 minutes, take the time.
+Do not sacrifice accuracy for speed. But do not waste time either.
+
+[PAGE 12]
+5. Road Access & Classification
+5.1 — Road Color Codes on Land Insights
+Color
+Road Type
+Subdivision Implications
+Green
+Private / Service Road
+Limited — may not allow public subdivision access
+Yellow
+Residential / Unclassified
+Often the best subdivision spine — check county regs
+Orange
+City / County Road
+May restrict new lot creation — verify with county
+Red
+Highway / Interstate
+Generally not subdivision-friendly; noise, privacy, access issues
+5.2 — The Residential Road Access Hack
+When a county restricts new lot creation off certain road types, there is sometimes a workaround: a lot that
+technically fronts on an allowed road (like a county road) can still have its physical driveway access come
+off a different road (like a residential road). The legal frontage is on the county road, but the practical entry
+is through the residential road and the cleared area. This gives buyers the best of both worlds.
+This is not always possible and depends on county regulations, but it is worth exploring when the
+alternative is losing half the subdivision value.
+5.3 — Narrow Strips Touching the Road
+When you see a narrow strip running from a parcel body down to the road on Land Insights, it is almost
+certainly legal access — if it touches the road, it more than likely has legal access. Flag it and note it, but
+do not overthink it. The key check is whether the strip width meets the county's minimum frontage
+requirement for flagpole lots.
+
+[PAGE 13]
+6. Building a Road Through the Middle
+6.1 — When to Consider an Internal Road
+An internal road makes sense when all of the following are true:
+The county has a steep PPA trendline — big spread between large-parcel and small-lot PPA.
+There is demand for small lots — surrounding development shows people building on 2-5 acre
+parcels.
+The property is deep enough that road-frontage-only subdivision wastes significant interior acreage.
+The road cost pencils out against the additional lot yield — even at the high cost estimate, the extra
+lots generate more revenue than the road costs.
+The mental math: 'If a road costs $50,000-$100,000 but I get 5-8 additional lots at significantly higher
+PPA, the revenue from those additional lots far exceeds the road cost.'
+A square lot illustrates the concept simply: without a road through the middle, you might get 4 lots off the
+existing frontage. With a road down the center, you double the frontage and get 8 lots. Each lot is smaller,
+which means higher PPA. As long as the market supports the smaller lot size, this is a clear win.
+6.2 — Road Cost Estimation
+When evaluating whether an internal road is worth building, provide a cost range with three tiers:
+Low end: Flat, cleared terrain. Minimal grading. Short road length. Simple gravel construction.
+Middle (most likely): Some grading required, moderate length, basic gravel with drainage.
+High end: Steep terrain requiring significant grading, longer road, culverts for water crossings, possibly
+paving.
+If the topography is steep and grading gets expensive, it may make more sense to just subdivide off the
+existing road frontage rather than building an internal road. The road is only worth building when the
+additional lot yield clearly outweighs the construction cost at the mid-to-high estimate.
+6.3 — Wetlands, Creeks, and Rivers
+Wetlands: You can build a road through wetlands. Culverts are typically $5,000-$10,000 each, which is
+not a dealbreaker. The real question is not 'can I build through it' but 'does the road improve the lot layout
+enough to justify it?' If the lots on either side of the road are still mostly wetlands, it is probably not worth it.
+If the road unlocks clean buildable lots that just happen to have wetlands in between, go for it.
+True marsh: This is different from mapped wetlands. Actual marshy, boggy ground is not something you
+should be putting a road through or subdividing. Going around it would be too expensive and
+time-consuming.
+Small creeks: Culvert — no big deal. The water flows through the tube, you build over it. Just a line item
+cost.
+
+[PAGE 14]
+Rivers: Completely different conversation. Bridge territory, which is serious money and complexity. Flag it
+but do not assume it is part of a subdivision plan.
+
+[PAGE 15]
+7. Flagpole Lots
+7.1 — What They Are
+A flagpole lot has a narrow strip (the 'pole') connecting to the road for legal access, with the main body of
+the lot (the 'flag') set back from the road. The narrow strip is just for access — the buildable area is in the
+body of the lot.
+Flagpole lots are normal and expected in any subdivision. They are how you capture acreage that does
+not have direct road frontage. The key is that the body of the lot must be usable — wide enough, flat
+enough, and accessible enough to build on.
+7.2 — County Frontage Minimums
+Counties have minimum frontage requirements for flagpole lots — typically 30-60+ feet. If the flagpole strip
+is narrower than the county minimum, the lot cannot be created. This is a hard stop.
+If a property has multiple narrow access strips that are each below the county minimum, this is a
+dead end for subdivision. Flag with the warning emoji so the owner knows immediately.
+7.3 — When Flagpole Access Kills Subdivision
+If the entire property is accessed through a single narrow flagpole strip — one access point — then the
+property functions as one lot regardless of how much acreage is in the back. You cannot create multiple
+subdivided lots when there is only one way in. All the cleared land, the great shape in the back, the
+beautiful views — none of it matters if you cannot give each new lot its own legal access.
+
+[PAGE 16]
+8. When NOT to Subdivide
+Approximately 85-90% of properties that come across the desk will NOT be subdividable. The default
+assumption should always be 'this is a flip' — subdivision potential is the exception, not the rule. Only
+upgrade to 'subdivision opportunity' when shape, road frontage, acreage, and area demand all line up
+together.
+8.1 — Walk-Away Signal: Narrow Shape
+If the property is narrow all the way through — long rectangle with the short side on the road — any split
+just creates skinnier bowling alleys. Nobody wants a lot where they can only access the property in a
+single line. Everything — house, shed, garden — would have to be arranged single-file. This is
+undesirable regardless of acreage.
+There is a reason flagpole lots are flagpole lots: the body is thick and usable, only the access strip is
+narrow. If the ENTIRE lot is narrow, there is no fix. Do not subdivide.
+8.2 — Walk-Away Signal: No Market Demand (The Dangerous Trap)
+This is the most dangerous scenario because it looks like a good deal on paper. The property
+has a decent shape. It has road frontage. You COULD physically split it. But the area is telling
+you nobody is buying small lots here.
+This is where real money gets lost. If the surrounding area only has big tracts, no small-lot construction, no
+town nearby, and only large-acreage sales in the comps — then creating small lots creates LESS
+demand, not more. The property may already be a harder sell at its current size because it is small for the
+market.
+Even the parent parcel at its current acreage might barely have demand in these deep rural markets.
+Splitting it just makes things worse. This is how properties sit on the market until they expire worthless.
+The test: If the market does not support the size you are offering, and splitting would create even
+less demand, then either flip as-is or pass on the deal entirely. Do not force subdivision where
+the market is saying no.
+8.3 — Walk-Away Signal: Single Access Point
+If the property is accessed through one narrow flagpole strip with a large buildable area in the back, it
+functions as one lot. You cannot run multiple flagpole strips through a single narrow neck — they would
+either be too skinny to meet county minimums or eat up all the usable frontage on the strip. One access
+point = one lot.
+
+[PAGE 17]
+9. Comping the Subdivision
+9.1 — The Dual-Comp Approach
+When subdivision is the play, always pull comps at TWO acreage levels:
+As-is comps: What is the parent parcel worth at its current acreage? This is the baseline — the value if
+subdivision does not happen.
+Subdivision comps: What do the target lot sizes sell for? This is the ceiling — the value if subdivision is
+executed successfully.
+The spread between these two numbers is the value created by subdivision. Present both to the owner so
+they can see the opportunity.
+9.2 — Average Lot Size Method
+When the subdivided lots are roughly similar in size:
+Parent acreage / lot count = average lot size. Comp that average lot size to get the PPA. Multiply PPA by
+parent acreage to get total subdivision yield.
+This works when the lots cluster in a similar range — say all between 4-7 acres. The exponential curve
+does not vary dramatically across this small range, so averaging is acceptable.
+9.3 — Group Comping Method
+When the lots have a huge size disparity — say 2-acre waterfront lots AND 15-acre timber lots — you
+must comp each group separately. The PPA curve is exponential. A 2-acre lot might be $15,000/ac while
+a 15-acre lot is $3,000/ac. Averaging $9,000/ac across all lots would be drastically inaccurate — it would
+overvalue the big lots and undervalue the small ones. Comp each group at its own acreage point on the
+trendline, then sum the groups for total yield.
+
+[PAGE 18]
+10. Pricing Output: Market Value & List Price
+Every valuation delivers TWO numbers:
+1. Actual Market Value: The best estimate of what the property is truly worth based on comps, trendline
+position, and property characteristics. This is the clean number based on the data.
+2. List Price (5% Discount): Market value discounted by approximately 5% to provide a margin of error
+and ensure the property is priced to move. This is the price the property would be listed at for sale.
+The acquisition target is approximately 50% of the list price. The owner uses the market value to avoid
+missing deals by a few thousand dollars, and the list price to set the acquisition target.
+Always give SPECIFIC prices, not just ranges. A range is acceptable when uncertain, but always
+include a specific recommended value. The owner needs concrete numbers to make offers.
+
+[PAGE 19]
+11. Real-World Property Examples
+The following examples were walked through visually on Land Insights during training. Each example
+includes the property details, what the land looked like, the decision made, and the reasoning behind it.
+These are the reference cases for pattern recognition going forward.
+Example 1: Pamela Adams — Full Subdivision (With Residential Road)
+Location: Near Eddins Rd / Zoar Rd area | Acreage: Large parcel (150+ acres) | County: SC
+What the land looked like: A massive parcel with Eddins Road (yellow/residential) running through the
+middle, Zoar Road (orange/county) along the eastern boundary, and Abrams Creek along the western
+edge. The property had a mix of cleared fields and timber. A significant pond/lake sat in the interior of the
+property. Multiple existing parcels (James E McLain, Michael E Valdaliso) were carved out within the
+property boundaries.
+The subdivision plan (Version 1 — with residential road access): Red lot lines were drawn creating
+approximately 15-20 lots. The residential road (Eddins Rd) served as the primary subdivision spine. Lots
+along this road were clean, cookie-cutter, roughly equal sizes. Multiple lots were wrapped around the pond
+to capture waterfront premium. Cleared areas were prioritized. Lots along Zoar Rd were slightly more
+irregular, with flagpole lots in the upper right to capture remaining acreage. Different sized lots throughout
+— completely normal.
+Key design decisions: Started with the residential road because it was easier and more cookie-cutter.
+Maximized waterfront touches on the pond. Prioritized cleared land. Flagpole lots used as cleanup. The
+residential road did the heavy lifting for access and created the most lots.
+Example 2: Pamela Adams — Constrained Subdivision (No Residential
+Road Access)
+Same property, different scenario: county does not allow subdivision off the residential road.
+The subdivision plan (Version 2 — Zoar Rd only): Dramatically fewer lots. A large dead zone in the
+northwest corner of the property could not be reached from Zoar Rd, creating a single large remainder
+parcel. Lots were larger and more irregular. The residential road was used as a physical access hack —
+lots fronted on Zoar Rd for legal purposes but driveways could access through the cleared area near the
+residential road.
+The sideways flagpole hack was used on the upper right — the flagpole strip ran horizontally instead of
+vertically to prevent the lot body from becoming too deep. Waterfront priority was maintained even with the
+constraint.
+Value impact: Estimated 20-50% loss in total subdivision value compared to Version 1. Fewer lots, bigger
+lots (lower PPA), dead zone acreage sold at the lower large-parcel PPA. This demonstrates why
+identifying road type restrictions is critical — it can be the difference between a home run and a mediocre
+deal.
+
+[PAGE 20]
+Lesson: The road type restriction reduced the deal value by 20-50%. When flagging subdivision
+potential, always identify the road types and note any potential restrictions. This is not a
+footnote — it is a deal-defining factor.
+Example 3: Louis Gauthier — Conservative Split (3 Lots)
+Location: 844 Chase Rd, Meshoppen, PA | Acreage: 24.05 | County: Susquehanna County, PA
+Link: app.landinsights.co/data?parcel=164399721
+What the land looked like: A 24-acre parcel with road frontage on Chase Rd (yellow/residential) on the
+north side and State Route 3004 (orange/county) on the south side. The property had a mix of cleared
+areas and heavy timber. A creek/river ran along the eastern edge near Elk Lake Rd. The surrounding area
+was very rural — large tracts everywhere, Commonwealth of Pennsylvania state land nearby, sparse
+development. No cluster of small-lot activity.
+The subdivision plan: Three lots, roughly 8 acres each average. The top lot used Chase Rd frontage. The
+bottom lot used State Route 3004 frontage and picked up the creek/river frontage for a waterfront
+premium. The middle lot accessed via Chase Rd. The lots were not equal sizes — the layout worked with
+the natural features.
+Why only 3 lots: The area demanded it. Zooming out to the county level showed big rural tracts
+dominating. No small-lot development clusters. No town or lake nearby. The market supports bigger lots.
+A conservative 2-3 way split still moves up the PPA curve (three 8-acre lots at higher PPA than one
+24-acre parcel) but does not overshoot the demand.
+Lesson: Match the split to the market. Do not maximize lot count in an area that cannot absorb
+small lots. Conservative splits still make money without the risk of sitting on unsold inventory.
+Example 4: Timothy R Marbaker — No Subdivide (Narrow Shape)
+Location: 5583 State Route 3004, Meshoppen, PA | Acreage: 11.45 | County: Susquehanna County,
+PA
+Link: app.landinsights.co/data?parcel=117213776
+What the land looked like: An 11.45-acre parcel that was clearly long and narrow, running roughly
+north-south. The cyan boundary on Land Insights showed a stretched-out, elongated shape. The property
+had a structure on it. The surrounding area was the same rural Susquehanna County pattern — large
+tracts, heavy timber, sparse development.
+Why no subdivision: The shape kills it. The parcel is already narrow relative to its depth. Any split would
+create even skinnier bowling alley lots that nobody would want to build on. Combined with the rural area
+showing no demand for small lots, this is clearly a flip-only property.
+Example 5: Terry M Ridall — No Subdivide (Narrow Shape, Larger
+Acreage)
+Location: 4849 State Route 3004, Meshoppen, PA | Acreage: 20 | County: Susquehanna County, PA
+
+[PAGE 21]
+Link: app.landinsights.co/data?parcel=117213659
+What the land looked like: A 20-acre parcel, also in Susquehanna County near the Marbaker property.
+Similar elongated, narrow shape running north-south. Despite being 20 acres (larger than Marbaker), the
+width-to-length ratio was still poor. Same rural surroundings — large tracts, Commonwealth of PA state
+land, no small-lot clusters.
+Why no subdivision: Same shape problem as Marbaker, just bigger. Even at 20 acres, the narrow shape
+means splitting creates undesirable lots. Size alone does not make a property subdividable — shape
+matters just as much.
+Lesson: Acreage does not override shape. A 20-acre narrow property is just as un-subdividable
+as an 11-acre narrow property. The shape check (Step 1) must pass before anything else
+matters.
+Example 6: John E Karabin — Could Split But SHOULD NOT (The
+Dangerous Trap)
+Location: 1084 McGavin Rd, Meshoppen, PA | Acreage: 4.61 | County: Susquehanna County, PA
+Link: app.landinsights.co/data?parcel=117216538
+What the land looked like: A 4.61-acre parcel on McGavin Rd with an irregular but workable shape — not
+a bowling alley. The property had road frontage on McGavin Rd (yellow/residential). It was surrounded by
+open fields and large tracts. A creek/river ran along the north side. Very few structures in the immediate
+area. Last purchased for $20,000 thirteen years ago.
+Why this is the most dangerous example: The shape works. The road frontage is there. You COULD
+physically split this into two roughly 2-acre lots. Everything about the property says 'yes, subdivide.' But
+the AREA says no. Zooming out to the county level shows massive open fields, huge parcels, barely any
+structures, deep rural. Nobody is buying 2-acre lots out here.
+The critical insight: Even the 4.61-acre parcel itself barely has demand in this market because it is small
+for the area. The surrounding parcels are all much bigger. Splitting it into two 2-acre lots would create
+parcels that are even MORE out of step with what buyers want. You would be creating less demand, not
+more. The property would sit on the market until it expires worthless.
+Real-world consequence: Properties like this have been purchased in the past and they sat on
+the market until they expired worthless. This is not theoretical. This is money lost. When the
+market does not support the size you are offering, and splitting makes it worse, walk away
+from the subdivision play — and potentially the deal itself.
+Lesson: 'Can I subdivide?' and 'Should I subdivide?' are completely different questions.
+Physical ability means nothing without market demand. The area demand check can tell you to
+walk away from the deal entirely.
+Example 7: Kenneth M Hyatt — Flagpole Lot, No Subdivide (Single Access
+Point)
+
+[PAGE 22]
+Location: Dillon County, SC | Acreage: 13.1 | APN: 119-00-00-079
+Link: app.landinsights.co/data?parcel=119242350
+What the land looked like: A 13.1-acre property with a classic flagpole shape. A narrow wooded strip
+connected to S Old Magnolia Rd at the top, running through heavy timber. The back of the property
+opened up into a large, beautiful cleared area — plenty of space to build. A subdivision (Southpark Ct,
+McCutcheon Pl) was visible nearby. The owner (Kenneth M Hyatt) had 57 properties.
+Why no subdivision: The front access is a single narrow strip through wooded area. You cannot build at
+the front. The back has all the space in the world — but it is all accessed through that one narrow neck. If
+you tried to split the back into two lots, you would need to run two flagpole strips through the narrow neck,
+and they would either be too skinny to meet county minimums or eat up all the usable frontage.
+Lesson: A big cleared area in the back does not mean subdivision potential if there is no way to
+give each new lot its own legal access. One narrow access strip = one lot, period. Always check
+access capacity before flagging subdivision potential.
+Example 8: Mapledale LLC — Road Through the Middle (Two Adjacent
+Parcels)
+Location: King William County, VA | Acreage: 358.51 + 353.75 (712+ total) | Owner: Mapledale LLC
+Links: app.landinsights.co/data?parcel=140889297 and app.landinsights.co/data?parcel=140898050
+What the land looked like: Two massive adjacent parcels owned by the same LLC totaling 712+ acres in
+King William County, VA. The Jacks Creek Rd property (353.75 acres, address: 1626 Jacks Creek Rd)
+already had a road running through it, slightly to the right, which could be centered for better lot
+distribution. The other parcel (358.51 acres) was along Route 621 with some steep topography in the
+lower portion. Multiple roads surrounded the properties: Routes 621, 629, 632, 678, and Green Level Rd.
+The area context: King William County showed a mix of development. Comp data visible on the map
+showed an extremely steep PPA trendline: 2.23 acres selling at $132,290/ac PPA while 6 acres was at
+$14,170/ac PPA and 4 acres at $12,500/ac PPA. This is a massive spread indicating a very strong
+subdivision market.
+Why build a road through the middle: At 350+ acres each, these properties are far too large to sell at a
+reasonable PPA as-is. The trendline is extremely steep, meaning small lots command enormously higher
+PPAs. A road through the middle of the 621 parcel would double the effective frontage and allow
+subdivision into smaller lots (2-5 acres) that match the area demand. Even with road construction costs
+($50k-$100k+), the lot yield from smaller parcels at that PPA curve would far exceed the road investment.
+The topography factor: Steep terrain on the lower portion of the 621 parcel adds grading cost. If the
+grading gets too expensive, the fallback is to just subdivide off existing road frontage — which still works
+because there is significant frontage available. The road through the middle is the maximum-yield play;
+subdividing off existing frontage is the conservative fallback.
+Lesson: When you have massive acreage, an extremely steep PPA trendline, and surrounding
+demand for small lots, building an internal road is a clear value-add play. Always evaluate road
+
+[PAGE 23]
+cost against lot yield. If topography makes the road too expensive, fall back to existing-frontage
+subdivision.
+
+[PAGE 24]
+12. Quick Reference Decision Checklists
+12.1 — Subdivision Go / No-Go Checklist
+Check
+Pass
+Fail
+Shape: Width-to-length ratio 1:2 to 1:4?
+Proceed to next check
+STOP — flip only
+Road access: Can subdivide off available roads?
+Proceed to next check
+Internal road needed or STOP
+Area demand: Small lots selling nearby?
+Proceed to next check
+Conservative split or STOP
+PPA trendline: Steep curve?
+Proceed — subdivision is lucrative
+Flat curve — flip only
+Lot design: Avoid bowling alleys?
+Draw lines and comp
+Reduce lot count or STOP
+Sell timeline: Lots sell in 30-90 days?
+GREEN LIGHT — recommend subdivision
+Scale back split
+12.2 — PPA Trendline Quick Reference
+Curve Shape
+What It Means
+Action
+Very steep (10x+ spread)
+Extremely strong subdivision market
+Full subdivision, consider internal road
+Steep (5-10x spread)
+Good subdivision market
+Subdivision if demand + shape support it
+Moderate (2-5x spread)
+Marginal subdivision market
+Conservative 2-3 way split at most
+Flat/linear (<2x spread)
+No subdivision premium
+Flip as-is, do not subdivide
+12.3 — Demand Signal Quick Reference
+Signal
+Interpretation
+Subdivision Approach
+Small lots (2-5ac) with houses nearby
+Strong demand for small lots
+Target 2-5ac lots
+Town/city within 5-10 miles
+Population supports lot sales
+Match lot size to town periphery
+Lake/recreation area nearby
+Attraction-driven demand
+Maximize waterfront, smaller lots OK
+New construction visible
+Active building market
+Aggressive subdivision may work
+Only big tracts (20+ ac) around
+Market favors large parcels
+Conservative 2-3 way split max
+Deep rural, sparse development
+Low demand for any size
+Flip as-is or pass
+Area looks rough on Street View
+Quality concerns
+Caution — buyers may not come
+12.4 — The 85-90% Rule
+Approximately 85-90% of properties will NOT be subdividable. The default assumption is always
+'this is a flip.' Subdivision potential is the exception. Only upgrade when ALL conditions align:
+
+[PAGE 25]
+good shape, adequate road access, area demand for smaller lots, steep PPA trendline, and
+confidence in 30-90 day sell timeline.
+ — End of Document —

@@ -1,0 +1,146 @@
+[
+  {
+    "doc_id": "complete_handbook_merged",
+    "filename": "DewClaw_Complete_Handbook_Merged.pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Complete_Handbook_Merged.pdf",
+    "category": "core_methodology",
+    "priority_rank": 1,
+    "status": "active",
+    "use_for": "Primary comping methodology and decision framework.",
+    "notes": "Treat as the canonical handbook for general valuation rules.",
+    "page_count": 98,
+    "word_count": 36685,
+    "title_lines": [
+      "DEWCLAW LAND HOLDINGS",
+      "LAND VALUATION",
+      "COMPLETE METHODOLOGY HANDBOOK",
+      "Deep Understanding Guide for Land Investment Comping"
+    ]
+  },
+  {
+    "doc_id": "pricing_trendline_mastery",
+    "filename": "DewClaw_Pricing_Trendline_Mastery_Guide.pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Pricing_Trendline_Mastery_Guide.pdf",
+    "category": "pricing",
+    "priority_rank": 2,
+    "status": "active",
+    "use_for": "Normal flip pricing, trendline construction, and weighting logic.",
+    "notes": "",
+    "page_count": 23,
+    "word_count": 6130,
+    "title_lines": [
+      "DewClaw Land Holdings",
+      "Pricing & PPA Trendline",
+      "Mastery Guide for Normal Flips",
+      "Comprehensive Training Document \u2014 PPA Trendline Construction,"
+    ]
+  },
+  {
+    "doc_id": "subdivision_mastery",
+    "filename": "DewClaw_Subdivision_Mastery_Guide.pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Subdivision_Mastery_Guide.pdf",
+    "category": "subdivision",
+    "priority_rank": 3,
+    "status": "active",
+    "use_for": "Subdivision decisions, lot design, and hidden-value analysis.",
+    "notes": "",
+    "page_count": 25,
+    "word_count": 7446,
+    "title_lines": [
+      "DewClaw Land Holdings",
+      "Subdivision Analysis & PPA Trendline",
+      "Mastery Guide",
+      "Comprehensive Training Document \u2014 Subdivision Decision-Making,"
+    ]
+  },
+  {
+    "doc_id": "deliverable_format_v3_final",
+    "filename": "DewClaw_Deliverable_Format_v3_FINAL.pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Deliverable_Format_v3_FINAL.pdf",
+    "category": "output_format",
+    "priority_rank": 4,
+    "status": "active",
+    "use_for": "Final evaluation output schema and section ordering.",
+    "notes": "This explicitly supersedes earlier deliverable formats.",
+    "page_count": 10,
+    "word_count": 1837,
+    "title_lines": [
+      "DewClaw Land Holdings",
+      "Property Evaluation Deliverable",
+      "Format \u2014 Version 3 (FINAL)",
+      "10-Section Deliverable Format with Lead Stage Classification"
+    ]
+  },
+  {
+    "doc_id": "complete_supplemental_reference",
+    "filename": "DewClaw_Complete_Supplemental_Reference.pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Complete_Supplemental_Reference.pdf",
+    "category": "visual_reference",
+    "priority_rank": 5,
+    "status": "active",
+    "use_for": "Visual land-type identification and supporting field heuristics.",
+    "notes": "",
+    "page_count": 51,
+    "word_count": 12600,
+    "title_lines": [
+      "DEWCLAW LAND HOLDINGS",
+      "LAND TYPE VISUAL IDENTIFICATION REFERENCE",
+      "Detailed Visual Descriptions for Satellite & Ground-Level Land Type Assessment",
+      "Version 1.0 \u2014 April 2026"
+    ]
+  },
+  {
+    "doc_id": "rural_properties",
+    "filename": "DewClaw_RURAL_PROPERTIES.pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_RURAL_PROPERTIES.pdf",
+    "category": "special_case",
+    "priority_rank": 6,
+    "status": "active",
+    "use_for": "Rural discount rules and extreme-access adjustments.",
+    "notes": "",
+    "page_count": 7,
+    "word_count": 3653,
+    "title_lines": [
+      "DewClaw \u2014 Part 9: Rural Property Evaluation",
+      "FULLY EXPANDED \u2014 How Extreme Rural Location Affects Value",
+      "Identifying, Flagging, and Pricing Properties in the Middle of Nowhere",
+      "WHY RURAL EVALUATION MATTERS"
+    ]
+  },
+  {
+    "doc_id": "subdivision_advanced_part10",
+    "filename": "PART10_SUBDIVISION_ADVANCED (1).pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\PART10_SUBDIVISION_ADVANCED (1).pdf",
+    "category": "special_case",
+    "priority_rank": 7,
+    "status": "active",
+    "use_for": "Advanced subdivision edge cases and hidden value scenarios.",
+    "notes": "",
+    "page_count": 6,
+    "word_count": 3345,
+    "title_lines": [
+      "DewClaw \u2014 Part 10: Advanced Subdivision & Hidden",
+      "Value",
+      "FULLY EXPANDED \u2014 Identifying Hidden Subdivision Plays, Road-Building Math,",
+      "Flagpole Lot Opportunities, and Questions for Future Screenshot Training"
+    ]
+  },
+  {
+    "doc_id": "complete_handbook_v3_duplicate",
+    "filename": "DewClaw_Complete_Handbook_V3 (1).pdf",
+    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Complete_Handbook_V3 (1).pdf",
+    "category": "duplicate_reference",
+    "priority_rank": 99,
+    "status": "exclude",
+    "use_for": "Legacy duplicate copy of the handbook.",
+    "notes": "Very likely redundant with the merged handbook. Keep for audit, not retrieval.",
+    "page_count": 37,
+    "word_count": 6288,
+    "title_lines": [
+      "DEWCLAW LAND HOLDINGS",
+      "LAND VALUATION",
+      "COMPLETE METHODOLOGY HANDBOOK",
+      "Deep Understanding Guide for Land Investment Comping"
+    ]
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Dew Claw CompTool Capture",
+  "version": "0.1.11",
+  "description": "Capture Land Insights parcel data and send it to CompTool V2 for internal comp review.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": ["activeTab", "tabs", "scripting", "downloads"],
+  "host_permissions": [
+    "https://app.landinsights.com/*",
+    "https://app.landinsights.co/*",
+    "https://comptoolv2.onrender.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["page-kml-bridge.js"],
+      "matches": [
+        "https://app.landinsights.com/*",
+        "https://app.landinsights.co/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "Send parcel to CompTool V2",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.landinsights.com/*",
+        "https://app.landinsights.co/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,587 @@
+[PAGE 1]
+DewClaw Land Holdings
+ Pricing & PPA Trendline
+ Mastery Guide for Normal Flips
+ Comprehensive Training Document — PPA Trendline Construction,
+ Comp Investigation Process, Pricing Philosophy,
+ Red Flag Identification, & Valuation Delivery
+ Internal Reference — April 2026
+
+[PAGE 2]
+Table of Contents
+1. The PPA Trendline: Core Framework — How the curve works, why it matters, how to build it on every
+eval
+2. Building the Trendline in Practice — Data points, interpolation, gap-filling, and curve shape reading
+3. The Comp Investigation Process — Exact order of operations for evaluating every comp
+4. The Comp vs. Subject Comparison Checklist — Feature-by-feature evaluation for weighting comps
+5. Red Flags in Listings — What to watch for in photos, descriptions, and listing history
+6. Handling Conflicting Comps — When two solid comps disagree and how to resolve it
+7. Making Your Own Market — Pricing when the subject is the best or worst in the area
+8. Special Comp Scenarios — Active listings, pending sales, non-disclosure states, old comps, farmland
+9. The Pricing Philosophy — Don't overthink it, think in total dollars, the gut check framework
+10. The Two-Number Deliverable — Market value and list price — what to deliver and why
+11. The Final Sanity Check — The mental frame before every valuation goes out the door
+12. Emoji Flag System — Standard emoji codes for flagging issues in deliverables
+13. Common Mistakes & How to Avoid Them — The most frequent pricing errors and their fixes
+14. Quick Reference Tables — At-a-glance frameworks for field use
+
+[PAGE 3]
+1. The PPA Trendline: Core Framework
+The PPA (Price Per Acre) Trendline is the foundational analytical tool for every property valuation at
+DewClaw. It is not optional. It is not something that gets built only on complex deals. It is built mentally on
+EVERY property evaluation, every time, without exception. The trendline is what transforms comping from
+guesswork into a defensible, math-backed process.
+1.1 — The Shape of the Curve
+The PPA trendline is NOT linear. It follows an exponential curve on the low-acreage end that gradually
+flattens into a roughly linear shape on the high-acreage end. This is the universal shape of rural land
+markets:
+Small lots (1-5 acres): PPA is HIGH and rises STEEPLY as acreage decreases. A 2-acre lot might sell at
+$15,000/ac while a 5-acre lot sells at $8,000/ac. The change is dramatic — small acreage differences
+cause huge PPA swings. This is the volatile, exponential, hard-to-predict part of the curve.
+Medium lots (5-20 acres): PPA is moderate and declining more gradually. The curve is still falling but the
+rate of descent is slowing. This is the transition zone where the exponential shape bends toward linear.
+Large parcels (20+ acres): PPA is LOW and relatively STABLE. A 20-acre parcel might be $3,500/ac
+and a 40-acre might be $2,800/ac. The curve has flattened out. PPA is not jumping wildly anymore. This is
+the predictable, trustworthy part of the curve.
+1.2 — Why This Shape Matters for Pricing
+Understanding the curve shape is not academic — it directly controls how you weight comps and where
+you place confidence in your valuation:
+The LOW END (small lots) is exponential and volatile. Small acreage differences cause huge PPA swings.
+Comps in this zone are harder to trust and riskier to lean on. That is why the comp range is set at only
+50% below the subject acreage — to limit exposure to the steep, unpredictable part of the curve.
+The HIGH END (large parcels) is flat and stable. PPA does not change dramatically between a 30-acre
+and a 50-acre parcel. Comps in this zone are trustworthy and predictable. That is why the comp range
+extends to 100% above the subject acreage (or even 200-300% if needed) — the flat part of the curve can
+be trusted at wider ranges.
+Always weight toward the higher-acreage comps (lower PPA) for a conservative valuation. The
+flat part of the trendline is where the data is reliable. The steep part is where mistakes get
+expensive.
+1.3 — The Trendline Is the Story
+At its core, the trendline is the market itself, visualized. When you pull comps at 2 acres, 5 acres, 10 acres,
+20 acres, and 50 acres, you are mapping out how the market values land across the acreage spectrum.
+Each comp is a data point. Connected together, they tell a story about what buyers in this county are
+willing to pay for different sized parcels.
+
+[PAGE 4]
+The subject property lives somewhere on this curve. The trendline tells you where. If the subject is at 10
+acres and the curve shows $6,000/ac at 5 acres and $3,500/ac at 15 acres, the 10-acre point is
+somewhere in between — shaped by whether the curve is steep or flat in that range.
+You are not guessing. You are constructing a market. If the data says 5 acres goes for X and 15 acres
+goes for Y, then 10 acres lives between those two points. A realtor or seller looking at the same comps
+would reach a similar conclusion. The trendline makes the valuation defensible.
+Pricing is always an estimate — it is never going to be exactly right. But if the math is sound and
+the odds are stacked, the number will be fair and defensible. Then discount for the list price and
+move on.
+1.4 — Curve Shape Varies by Market
+Not all counties have the same curve shape. The steepness and spread vary based on the market:
+Metro-adjacent counties / lake counties: Tend to have STEEPER curves. Big spread between small-lot
+PPA and large-parcel PPA. Strong demand for small lots drives up the low-acreage PPA.
+Deep rural counties: Tend to have FLATTER curves. Less spread between small and large lot PPA.
+Less demand for small lots means the curve does not spike as dramatically on the low end.
+But these are generalizations. Some rural counties have steep curves. The comps themselves tell the
+truth — let the data speak rather than assuming. The first time in any county, pull the widest possible
+comp range to see the curve shape. That tells you what kind of market you are in.
+
+[PAGE 5]
+2. Building the Trendline in Practice
+2.1 — Pull Data Points Across the Spectrum
+On every evaluation, pull comps at multiple acreage points to see the full curve. You want to know what
+2-acre lots sell for, what 5-acre lots sell for, what 10 sells for, what 20 sells for. Each is a data point. The
+more data points, the clearer the curve, the more trustworthy the valuation.
+Start with AUTO range on Land Insights, then expand: 50% below / 100% above. If needed, go to
+50%/200% or 100%/300%. More comps is always better. Evaluate ALL comps and build the full PPA
+trendline across the acreage spectrum, then slot the subject into the curve.
+2.2 — Filling Gaps in the Trendline
+You will not always get clean comps at every acreage point. There will be gaps. When there is a gap —
+say you have solid comps at 5 acres and 15 acres but nothing at 10 — use the curve shape itself to guide
+where the subject falls:
+If the curve between those two points looks LINEAR in this market, interpolation is straightforward. A
+10-acre property falls proportionally between the 5-acre and 15-acre PPAs.
+If the curve is STEEP between those two points (exponential zone), the 10-acre PPA will be closer to the
+15-acre PPA than the 5-acre PPA — because the exponential curve drops fast on the small-lot side.
+Weight toward the higher-acreage comp (15 acres) since that is the conservative, more stable end.
+Even imperfect comps between the gap points help. A 7-acre comp that is not a great match for your
+10-acre subject still gives you a ceiling or floor to narrow the range. Any data point between two anchor
+points tightens the estimate.
+Build SEPARATE mental curves per comp type when relevant: wooded vs. cleared, waterfront vs.
+non-waterfront. Each land type has its own PPA behavior. Do not mix a waterfront 5-acre comp with a
+landlocked wooded 5-acre comp.
+2.3 — Handling Outliers
+Outliers above and below the trendline are common. They are often off-market sales, friend deals, bidding
+wars, or distressed sales. When you see a comp that does not fit the trendline:
+Note it, but do not let it pull the valuation.
+Check listing history — was there a bidding war? Price drops? Sold same day?
+Check if it was off-market (Sold-Public Records) — if so, reject it per standing rules.
+The trendline built from multiple comps is the truth. One outlier is an anecdote. Statistics are proven
+over larger sample sizes — the more data points, the better the average, the more trustworthy the
+number.
+The trendline gets progressively tighter as you identify close ceilings and floors near the subject acreage.
+You are whittling the range down from broad to narrow, not chasing individual outlier sales.
+
+[PAGE 6]
+2.4 — The Perspective Check: Think in Total Dollars
+When working on the steep part of the curve (small lots), the PPA numbers look intimidating. A 2-acre lot
+might show $12,000/ac versus $14,000/ac, which seems like a big range. But in total dollars, that is only
+$24,000 vs $28,000 — a $4,000 difference. Not catastrophic.
+Meanwhile, on the flat part of the curve (large parcels), the PPA looks calm. A 100-acre property at
+$500/ac versus $750/ac seems like a small PPA difference. But in total dollars, that is $50,000 vs $75,000
+— a $25,000 swing. Much more impactful.
+Do not freak out about high PPA numbers on small lots. Do not get complacent about low PPA
+numbers on large parcels. Always convert to total dollars to calibrate the actual financial impact
+of your pricing decisions. Keep your head on straight.
+
+[PAGE 7]
+3. The Comp Investigation Process
+This is the exact order of operations for evaluating every single comp. This process is what makes the
+difference between a 200% accurate valuation and a 500% accurate one. Do not skip steps. Do not get
+lazy. Every step adds a piece of the puzzle that makes the final picture clearer.
+Step 1 — Legitimacy Check
+Is this a real, usable comp? Check immediately:
+Closed (MLS) = gold standard. Use it.
+Pending = usable but discount 5-10% from list price (hot market = 5%, slow = 10%). Always flag
+which comps are pending and that you applied the discount.
+Off-market / Sold-Public Records = REJECT. Do not use. Move on immediately.
+Never use AI Comp, Zestimate, or any platform estimate.
+Never cross county lines for comps.
+If the comp fails this check, do not spend another second on it. Move to the next one.
+Step 2 — Listing Photos (ALWAYS First)
+Go through EVERY listing photo. Even when there are 20 photos of trees. Even when they all look the
+same. Here is what you are looking for:
+Cleared areas / building sites — where could someone build? How cleared is it? Maintained or
+overgrown?
+Road access — is there a visible driveway, entryway, or road? Paved, gravel, or dirt?
+Culverts — are there culvert crossings visible? This indicates creek crossings and infrastructure.
+Fencing — is the property fenced? What kind? This adds value.
+Structures — any buildings, sheds, mobile homes? Metal or wood? Condition?
+Water features — pond, creek, lake frontage? Size and quality of shoreline?
+Wetland indicators — standing water, boggy areas, marsh grass?
+Slope — can you see steep terrain, hillsides, ravines?
+Timber — is the timber managed (uniform rows, plantation) or natural? Clear-cut stumps?
+Rocky soil — visible rock outcroppings that could affect perc tests and building?
+Aerial photos — these are gold. They show the parcel shape, surrounding area, how the property sits
+relative to neighbors and roads. Always look carefully at aerials.
+Community amenity photos — swimming pools, clubhouses, HOA amenities. These are NOT on the
+actual parcel. Do not assign extra value for them. They just indicate the area is probably nicer than
+average. It boils down to proximity, which you are already evaluating.
+Even trees can be useful — you can sometimes identify timber type, density, and whether the land has
+been managed or clear-cut. Every photo is a potential piece of the puzzle.
+
+[PAGE 8]
+Step 3 — Listing Description (Second)
+Read the full listing description AFTER you have already seen the photos. Now you can put two and two
+together — the description may mention something you did not catch visually, or confirm what you saw in
+the photos. Together they give a much more complete picture than either one alone.
+Look for specific details: acreage breakdown (wooded vs. cleared), road type, utilities available, perc test
+results, survey information, zoning, restrictions, HOA fees, easements, and any mention of slope,
+wetlands, or flood zones. Also look for red flags in the language (covered in detail in Section 5).
+Do NOT take positive marketing claims at face value. 'Great building site,' 'cleared homesite,'
+'perfect for your dream home' — all need verification through the photos, map view, or Land
+Insights APN. Marketing language is designed to sell. Data tells the truth.
+Step 4 — Map View on Redfin/Zillow (Third)
+Check the map view to see the parcel boundaries and surrounding area. This gives you proximity context,
+neighboring parcel sizes, road network, and distance to towns or features.
+CRITICAL WARNING: The parcel lines on Redfin and Zillow are WRONG approximately 40-50% of
+the time. Since you have already seen the listing photos, you can cross-reference and tell if the
+map boundaries make sense. If the photos showed a cleared field but the map shows the parcel
+sitting entirely in timber, something is off with the map. Do not trust the map blindly.
+Step 5 — Land Insights APN Check (When Needed)
+This is the bulletproof, foolproof verification step. Open a separate Land Insights tab and pull the comp's
+APN. This gives you 100% accurate parcel boundaries, soil data, wetland/flood zone overlays, slope
+contours, road classification, and proximity to the subject — all on the most reliable data source available.
+When to use Step 5: When something does not add up between the photos, description, and map. When
+the comp is a critical anchor for the valuation. When you see an outlier (high or low) and need to
+understand why. When you want to verify road access, slope, or wetland status.
+On Land Insights, you can also access the aerial view and sometimes Street View, which gives a much
+better representation of the property than Redfin/Zillow maps. If the APN does not aggregate in Land
+Insights, move on — it happens, and you cannot force it.
+Combined with the listing data (photos + description + sale price), the Land Insights APN check
+gives you the most complete, most accurate comp evaluation possible. This is what makes
+comps 200-500% more accurate.
+Timing Target
+For a standard comp where photos and description align: Steps 1-3 take 30-45 seconds. Step 4 adds
+15-20 seconds. Total: under 1 minute per comp for the standard process. Step 5 (Land Insights APN)
+adds 30-60 seconds but is only used on critical comps or when something does not add up. For 5-8
+comps with APN checks on the 2-3 most important ones, the full process fits within 3-4 minutes.
+
+[PAGE 9]
+4. The Comp vs. Subject Comparison Checklist
+For every comp, run through this checklist to determine whether the comp is better, worse, or equivalent to
+the subject property. This determines how you weight the comp in your valuation. The checklist is ordered
+by typical impact on value:
+Feature
+What to Compare
+Impact on Value
+Road Quality
+Paved vs. gravel vs. maintained dirt vs. bad dirt vs. highway frontage. What does the comp have vs. subject?
+HIGH — paved adds significant premium, bad dirt discounts 20-30%
+Land Type
+Cleared & maintained vs. pasture (tall, unkempt) vs. farmland (crop rows, yielding asset) vs. wooded vs. clear-cut (stumps)
+HIGH — farmland > cleared > pasture > wooded > clear-cut
+Access Features
+Driveway present? Gravel or paved? Culverts in? Visible entry on Street View?
+MODERATE — existing infrastructure adds value
+Water Features
+Pond ON property vs. bordering lake vs. seasonal creek vs. nothing. Shore quality matters.
+HIGH — true waterfront can be 2-3x premium
+Slope
+Flat vs. sloped in back vs. sloped in front vs. steep throughout. WHERE the slope sits matters.
+MODERATE to HIGH — steep front kills value, back slope is less impactful
+Shape
+Clean rectangle/square vs. flagpole vs. irregular vs. bowling alley. Is it developable?
+MODERATE — flagpole = 2-5% discount, bowling alley = major loss
+Proximity
+Close to town/city/lake/nice area? Or deep rural? Are similar-sized lots trading nearby?
+VARIABLE — proximity to city is exponential, small town is modest
+Wetlands/Flood
+What percentage? Where on the lot? Buildable ground available?
+VARIABLE — 20% back wetlands = ~5% discount, 100% = 30-40%
+Timber Quality
+Managed plantation (uniform rows) vs. natural timber vs. clear-cut stumps
+LOW to MODERATE — managed timber adds $200-500/ac
+Views/Elevation
+Does property sit high? Potential views? Panoramic?
+LOW to MODERATE — mediocre ~5%, good 10-15%, panoramic 20-30%
+Demand Signals
+If selling this comp size here, would there be demand? Similar lots trading?
+CONTEXT — affects confidence in pricing, not the price itself
+Never try to split the evaluation (e.g., valuing half at cleared PPA and half at wooded PPA and
+blending). This creates drastically different numbers that do not make sense together. Instead,
+find comps that are generally similar overall, build a ceiling and floor, and price from there.
+
+[PAGE 10]
+5. Red Flags in Listings
+5.1 — Perc Test Language (Critical)
+Perc test language in listings is one of the most important red flag indicators. A seller with a passing perc
+test would ALWAYS include it because it removes uncertainty and adds value. When the perc results are
+hidden or vague, assume the worst.
+Language in Listing
+What It Means
+Action
+"Perc test passed" or results included
+POSITIVE — seller is marketing it because it adds value. No mystery.
+Trust it. Factor as a positive for the comp.
+"Talk to agent for perc results" or "See details for perc/soil test"
+RED FLAG — if it passed, they would just say so. They want to get you on the phone to convert you into a lead.
+Assume perc failed. Discount comp or note the risk.
+"Perc test expired"
+ACTUALLY POSITIVE — it means the test DID pass at some point, just needs renewal.
+Leave hope on this one. Mild positive signal.
+"Soil test failed" or negative soil language
+RED FLAG — affects building, foundations, septic. Dealbreaker for residential buyers.
+Significant discount. Note as inferior comp.
+No mention of perc at all
+MYSTERY — and mystery is bad. Good sellers showcase everything positive. Conspicuous absence = assume the worst.
+Be cautious. Do not assume perc will pass.
+5.2 — Listed / Delisted / Relisted Pattern
+When a property has been listed, delisted, and relisted, the pattern usually means:
+The seller was priced too high initially and got frustrated with low offers.
+The seller may have had a disagreement with the realtor and temporarily pulled the listing.
+The seller may have realized they were overpriced and relisted lower, OR they relisted at the same
+unrealistic price.
+The seller may be desperate and trying again.
+Action: Check the price history. Did they relist lower? (Confirms overpricing.) Same price? (Still
+unrealistic.) Note the pattern and factor it into how you weight this comp — it tells you something about the
+market's willingness to pay at that price level.
+5.3 — The Mystery Principle
+Mystery is BAD for sellers. Good sellers showcase everything positive about their property — perc test
+results, survey, utilities, road access, cleared building sites. When something is conspicuously absent
+from a listing, there is usually a reason. The seller is hiding a negative.
+If a listing is vague about road access — the road is probably bad. If it does not mention perc —
+it probably failed. If there are no aerial photos — the shape or surroundings are probably
+unflattering. Assume the worst until proven otherwise.
+
+[PAGE 11]
+6. Handling Conflicting Comps
+When two solid, legitimate comps — similar acreage, similar features, same county — show significantly
+different PPAs, do not just pick one. Investigate both using the full comp investigation process (Section 3).
+Usually, comps that appear identical on the surface are NOT truly identical. Something explains the gap —
+better road access, a cleared building site, waterfront, slope, a feature visible in photo 14 of 20 that you
+missed. The investigation almost always reveals the difference.
+If after thorough investigation the comps really do appear identical and the gap is still significant:
+Check listing history on both. Which one dropped price? (Desperate seller.) Which one went above
+asking? (Motivated buyer.) Which one sold same day? (Someone really wanted it.)
+Weight toward whichever comp looks like the most ORGANIC, NORMAL sale — a standard market
+transaction where a normal buyer and seller agreed on a fair price without unusual pressure on either
+side.
+For larger acreage comps (10+ acres), a significant dollar gap (like $30k) between two supposedly
+identical comps means something is definitely different. Keep digging.
+The tiebreaker is always: which sale looks the most organic? Not recency, not proximity — but
+which transaction looks like the most normal, arms-length market sale.
+Non-Disclosure States
+Some states do not disclose how much properties actually sold for — including parts of Texas, Mississippi,
+and Oklahoma. In these states, comping is harder because you cannot see sold prices. Active and
+pending listings become more important data points out of necessity. Be aware of which states are
+non-disclosure when comping and adjust expectations for data availability.
+
+[PAGE 12]
+7. Making Your Own Market
+When the subject property is the best or worst thing in the area with nothing directly comparable, you are
+not stuck. You work with what you have in the same market and build comparison layers.
+7.1 — Subject Is the WORST Property in the Area
+Find the bottom-grade comps in the area — the ones with slope, bad road access, issues. Build a mini
+trendline from those. Then compare: is the subject worse than those comps, the same, or slightly better? If
+the subject is still the worst, you have close comps to anchor from and you discount down from there. You
+are not guessing blind — you are saying 'the worst comps sold at X, mine is a bit worse, so I price below
+X.'
+7.2 — Subject Is the BEST Property in the Area
+Same process in reverse. Find the highest-quality comps — waterfront, cleared, great access. Build the
+ceiling from those. Then ask: is the subject better? By how much? Apply a reasonable increase above the
+best comps. Be conservative — do not go crazy. The premium should be defensible.
+Waterfront properties are a common example of this. Waterfront parcels often set their own market
+because they are rare. Price fairly and they sell quickly.
+7.3 — The Middle Ground Always Helps
+Even when pricing the best or worst property, still pull the mediocre/normal comps to establish the
+baseline. This gives the full spectrum: bottom-grade comps set the floor, normal comps set the middle,
+top-grade comps set the ceiling. The subject falls somewhere on this spectrum. The trendline, even an
+imperfect one, is always better than blind guessing.
+You are never truly without comps. Even when there is nothing identical, there are always
+properties that are somewhat better and somewhat worse. Those create the range. Then whittle
+it down based on how the subject compares feature by feature.
+
+[PAGE 13]
+8. Special Comp Scenarios
+8.1 — Active Listings
+Active listings get weight in two specific scenarios:
+Setting list price: Active listings are a ceiling for the list price. You do not want to compete with active
+listings — you want to look priced well below them so buyers come to you first. If there are active listings
+at $X/ac, your list price should be clearly below that.
+Non-disclosure states: When sold prices are not publicly available, active and pending listings may be
+all you have. In these states, they become more important data points by necessity.
+In normal markets with plenty of closed comps, active listings are reference points, not primary comps.
+The market has not validated their price yet.
+8.2 — Pending Sales
+Always discount pending sales by 5% from the listed price to be conservative. This is the standard — hot
+market or slow market, always apply 5% for safety.
+Multiple pending sales clustered at a similar price point carry real weight — they indicate the market is
+accepting that price range. Three pendings at $6,000/ac is a stronger signal than one closed at $5,500/ac.
+But still discount each by 5%.
+Always flag which comps are pending and that the 5% discount was applied, so the owner knows exactly
+what adjustments were made.
+8.3 — Old Comps (1-2+ Years)
+Rural land markets do not shift dramatically year to year. Comps from a couple years ago are still usable.
+If adjusting for time, add approximately 2-5% annual appreciation — but this is not a precise science. Mix
+older comps in with modern ones and see how much the market actually changed.
+If you notice a meaningful shift between old and new comps, note it in extra notes for the owner. But do
+not overthink the time adjustment — it is not a major factor in rural land.
+8.4 — Farmland Comps
+Farmland (crop rows, irrigation, tilled soil) is a yielding asset and is worth MORE than standard residential
+rural land. It occupies a different tier from pasture, cleared, and wooded land.
+If the subject is farmland in an area with both farmland and residential, comp it against other farmland first.
+If no farmland comps exist, use residential as the trendline baseline and understand the subject is worth a
+good amount more. Use gut feeling on the premium.
+Since DewClaw sells as residential (not farmland), the pricing still needs to make sense for the buyer —
+but do not undervalue farmland by only using residential comps.
+
+[PAGE 14]
+If genuinely unsure about farmland valuation, flag with the red stop sign emoji and recommend getting a
+realtor opinion. Still provide your best estimate alongside the flag.
+
+[PAGE 15]
+9. The Pricing Philosophy
+9.1 — Don't Overthink It
+Pricing is all an estimate. It is never going to be exactly right. But if the math is sound, the comps are
+investigated, and the trendline is built from stacked odds (multiple data points, multiple verification steps,
+feature-by-feature comparison), the number will be fair and defensible.
+At the end of the day, it really is just math. If you are comping the exact same type of property, using the
+same data sources, building the same trendline — a realtor or appraiser looking at the same comps would
+reach a similar conclusion. You are not doing rocket science. You are constructing a market from data and
+placing your subject within it.
+9.2 — Stack All the Odds
+No single tool gives the answer alone. The trendline is one odd. The comp investigation is another. The
+feature comparison is another. The area demand check is another. Each one narrows the range and
+increases confidence. Together, they get close enough to make money.
+The more comps you have, the better the average, the more trustworthy the number. One comp is an
+anecdote. Ten comps is a trend. Statistics are proven over larger sample sizes — that is exactly what the
+trendline represents. Every additional data point makes the story clearer.
+9.3 — DOM Shaving: Keep It Simple
+Days on market is a signal, not a formula. The overall approach is already conservative, and there is a
+discount applied at the end. DOM is used as a directional lean:
+If comps sold fast (under 30 days): feel confident pricing closer to market. Strong demand at fair price.
+If something sat for a while (150+ days): weight toward the lower end to be conservative. The market was
+not fully accepting that price.
+Do not apply precise mathematical discounts per DOM bucket in practice. The final 5% (approximate)
+discount on top of market value is the real safety net. DOM informs which direction you lean — it does not
+dictate a specific percentage adjustment.
+9.4 — The Gut Check Layer
+After the math, after the trendline, after the comp investigation — there is a gut check. Based on the
+market, what do you think people would actually pay for this property, knowing you want to sell quickly? Is
+there a feature that makes this property stand out? Is there an active listing with similar features sitting on
+the market at a certain price?
+Active listings with nice features and okay sales ratios become ceilings. Your list price needs to be below
+them to actually move. If their listing is struggling, you need to be WELL below.
+
+[PAGE 16]
+The 5% discount is not the holy grail. On average, that is the standard. But depending on how nice the
+property is, how strong the demand is, and what the competitive landscape looks like, it could be slightly
+more or less. The goal is: price it to create urgency without being desperate.
+
+[PAGE 17]
+10. The Two-Number Deliverable
+Every valuation delivers TWO specific numbers:
+1. Actual Market Value: The best estimate of true market value based on comps, trendline position, and
+property characteristics. This is the clean number — what the data says the property is worth.
+2. List Price (~5% Discount): Market value discounted by approximately 5% to provide a margin of error
+and ensure the property is priced to move. This is the price the property would be listed at for sale.
+The owner uses market value to avoid missing deals by a few thousand dollars (sometimes you negotiate
+close to market value). The list price sets the acquisition target at approximately 50% of list. Both numbers
+are needed for every deal.
+Always give SPECIFIC prices, not just ranges. A range is acceptable when uncertain, but always
+include a specific recommended value. The owner needs concrete numbers to make offers.
+
+[PAGE 18]
+11. The Final Sanity Check
+Before every valuation goes out the door, run this mental frame:
+Put yourself in the shoes of a knowledgeable realtor who has buyers actively looking for land. Would this
+property, at this price, make that realtor pick up the phone and call their buyer saying: 'You need to grab
+this before someone else does'?
+That is the sweet spot. The price should create urgency without being desperate. A realtor should look at
+the listing and think: 'This is priced right. My buyer would jump on this.' If the price would not generate that
+reaction, it is either too high (will not sell fast enough) or could go a bit higher (leaving money on the table).
+The balance: do not discount too much, do not discount too little. Just right. The 5% discount
+from market value is the starting framework, but the gut check is always: 'Does this price make a
+realtor excited to call their buyer?'
+If the answer is yes — submit the valuation with confidence.
+
+[PAGE 19]
+12. Emoji Flag System
+Standard emoji codes used in deliverables to flag specific conditions. Each emoji has a specific meaning
+— use them consistently:
+Emoji
+Meaning
+When to Use
+Warning (yellow triangle)
+Hazard / Warning Flag
+County restrictions blocking subdivision, potential issues with road access, slope over 20%, structures on property, clear-cut suspected, managed timberland, any condition requiring owner awareness
+Stop Sign (red)
+Get a Realtor Opinion
+Genuinely unsure about valuation, mixed land types with no clear comps, unusual property characteristics, market you cannot read. STILL give your best estimate alongside the flag.
+Flag (red)
+Owner Has Multiple Properties
+Owner has 2+ properties. Note how many. Do not comp the other properties — that is on the owner. Does NOT affect pricing. Just a deal-flow signal.
+
+[PAGE 20]
+13. Common Mistakes & How to Avoid Them
+Mistake 1: Lazy Comp Investigation
+The Problem: Seeing a comp that looks similar on paper — similar acreage, same county — and
+weighting it heavily without actually investigating what the property looks like. Skipping listing photos,
+skipping map view, not checking Land Insights APN.
+The Consequence: Mispricing. Treating a nicer comp as equivalent to the subject (overpricing), or missing
+a feature that makes the subject better (underpricing). A comp might have a cleared building site
+accessible by a dirt road visible in photo 14 of 20 that changes the entire valuation — but you skipped the
+photos.
+The Fix: Follow the full 5-step comp investigation process on every comp. No shortcuts. Photos
+first, description second, map third, Land Insights APN on critical comps.
+Mistake 2: Not Building the Trendline
+The Problem: Comping only at the subject's acreage without pulling wider data points. This gives you a
+cluster of comps but no context for where they sit on the market curve.
+The Consequence: You cannot tell if the subject is priced above or below the trendline. You cannot
+identify outliers. You cannot see the curve shape (steep vs. flat). You are flying blind.
+The Fix: Pull comps at multiple acreage points on every eval: 2ac, 5ac, 10ac, 20ac+. Build the
+mental trendline. See where the subject slots in. This takes 30 extra seconds and transforms the
+valuation.
+Mistake 3: Weighting Comps Too Heavily on One Side
+The Problem: Finding one or two comps that seem like great matches and anchoring the entire valuation
+to them without considering the broader trendline or investigating whether those comps are truly
+comparable.
+The Consequence: If the anchor comp was an outlier — overpay, friend deal, distressed sale — the entire
+valuation is skewed.
+The Fix: Never treat one comp as the Holy Grail. Use it as an anchor to build the story around,
+but validate it against the broader trendline. More data points = more trustworthy average.
+Mistake 4: Freaking Out About High PPA on Small Lots
+The Problem: Seeing $12,000/ac versus $14,000/ac on a 2-acre lot and treating it as a crisis.
+The Reality: That is only a $4,000 total price difference ($24k vs $28k). Meanwhile, being off by $250/ac
+on a 100-acre parcel is a $25,000 swing. Think in total dollars, not PPA.
+
+[PAGE 21]
+The Fix: Always convert PPA to total dollars to calibrate the actual impact. Keep your head on
+straight. The steep part of the curve looks scary but the dollar impact is smaller than the flat
+part.
+Mistake 5: Not Checking What the Subject Actually Looks Like
+The Problem: Comping the subject based on acreage and location without verifying its actual features —
+missing a dirt road that leads to a cleared spot, not realizing there are two access points, overlooking a
+water feature visible on satellite.
+The Fix: Street View is MANDATORY on every subject property. Check satellite imagery. Toggle
+Land Insights layers. Look for entryways, driveways, cleared spots, mobile homes, sheds,
+structures, wet areas, power lines, fencing. Note everything in Extra Notes.
+
+[PAGE 22]
+14. Quick Reference Tables
+14.1 — Comp Source Hierarchy
+Source
+Reliability
+Action
+Closed (MLS)
+Gold Standard
+USE — primary comp source
+Pending
+Good with discount
+USE — discount 5% from list price, always flag
+Active Listing
+Reference only
+USE for list price ceiling and non-disclosure states only
+Off-Market / Sold-Public Records
+Unreliable
+REJECT — never use
+AI Comp / Zestimate / Platform Estimate
+Unreliable
+REJECT — never use
+14.2 — Comp Investigation Speed Guide
+Step
+Time
+When to Do It
+1. Legitimacy check
+5 seconds
+EVERY comp — no exceptions
+2. Listing photos (all of them)
+15-30 seconds
+EVERY comp — no exceptions
+3. Listing description
+10-15 seconds
+EVERY comp — no exceptions
+4. Map view (Redfin/Zillow)
+10-15 seconds
+EVERY comp — watch for 40-50% map inaccuracy
+5. Land Insights APN
+30-60 seconds
+Critical comps, outliers, or when something does not add up
+14.3 — Land Type Value Hierarchy
+Land Type
+How to Identify
+Relative Value
+Farmland
+Crop rows, irrigation, tilled soil
+HIGHEST — yielding asset
+Cleared & Maintained
+Grass cut short, no random trees, presentable
+HIGH — ready to build
+Pasture
+Open, tall grasses 2ft+, weeds, scattered trees, unkempt
+MODERATE — needs work
+Wooded (natural timber)
+Natural forest, mixed species, varied spacing
+MODERATE — has timber value
+Managed Timberland
+Plantation rows, uniform spacing
+MODERATE + $200-500/ac premium
+Clear-Cut
+Stumps, bare ground, no canopy
+LOW — stumps costly, cannot build easily
+14.4 — The Pricing Delivery Checklist
+Before submitting any valuation, confirm:
+Check
+Confirmed?
+
+[PAGE 23]
+Trendline built across full acreage spectrum?
+All comps investigated (photos, description, map)?
+Each comp compared feature-by-feature to subject?
+Subject property Street View checked?
+Subject property satellite imagery verified?
+Ceiling and floor established from comps?
+Market value = specific number (not just a range)?
+List price = market value discounted ~5%?
+Active listings checked as ceiling reference?
+Sanity check: Would a realtor call their buyer about this?
+All flags applied (warning, stop sign, flag emojis)?
+Extra notes include any uncertainties or observations?
+ — End of Document —

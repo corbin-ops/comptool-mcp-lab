@@ -1,0 +1,280 @@
+[PAGE 1]
+DewClaw Land Holdings
+ Property Evaluation Deliverable
+ Format — Version 3 (FINAL)
+ 10-Section Deliverable Format with Lead Stage Classification
+THIS DOCUMENT SUPERSEDES ALL PREVIOUS DELIVERABLE FORMAT INSTRUCTIONS.
+This is the definitive, final format for all property evaluations going forward.
+All 10 sections must be included in every deliverable.
+ Internal Reference — April 2026
+
+[PAGE 2]
+IMPORTANT: This Document Supersedes All Previous
+Formats
+This Version 3 (FINAL) deliverable format replaces any and all previous deliverable format instructions,
+including the original 6-section format and the earlier 9-section format. The key update is the addition of
+Section 10: Lead Stage Classification, which categorizes every evaluated property into the correct smart
+list stage based on how the seller's asking price compares to market value.
+Every property evaluation from this point forward must include all 10 sections. No exceptions.
+This is the holy grail — the final, definitive format.
+
+[PAGE 3]
+The 10-Section Deliverable Format
+Section 1: Market Value
+The best estimate of true market value based on comps, PPA trendline position, and property
+characteristics. Always provide a SPECIFIC number and the price per acre. This is the clean number —
+what the data says the property is worth.
+Format: $XX,XXX (~$X,XXX/ac)
+This number drives everything else in the deliverable. The offer price, list price, value-add calculations,
+and lead stage classification all flow from this number. It must be accurate.
+Section 2: Offer Price
+Three offer tiers based on market value. Always provide all three so the owner can choose the approach
+based on seller motivation and deal dynamics.
+50%: $XX,XXX
+60%: $XX,XXX
+70%: $XX,XXX
+If the property is potentially landlocked, also include: Landlocked price (10% of MV): $X,XXX
+Section 3: Value-Add Market Value (Optional)
+Only include if subdivision or other value-add exists. This is what the property would be worth AFTER the
+value-add is executed. Include subdivision scenarios with lot count, target lot sizes, and estimated costs
+separated out. If no value-add exists, mark as N/A.
+Format: $XX,XXX (subdivision into X lots at ~X acres each)
+Section 4: Value-Add Offer Price (Optional)
+50%, 60%, 70% of the value-add market value. This is the backup pitch — if the seller rejects the initial
+offer, pitch the value-add at 50% of improved value. If no value-add exists, mark as N/A.
+50%: $XX,XXX
+60%: $XX,XXX
+70%: $XX,XXX
+Section 5: Negotiation Strategies / Leverage
+All seller motivation signals and property issues that can be used as negotiation leverage:
+Ownership length (5+ years = motivated signal)
+Owner location (out of state/county = absentee owner signal)
+
+[PAGE 4]
+Transfer type (family transfer = inherited, low cost basis, any offer is profit)
+Tax status (delinquent = MAJOR leverage, always note amount owed)
+Property issues to leverage (wetlands, slope, bad road, flagpole, landlocked)
+Seller timeline or urgency if known
+Cash/quick close pitch angle if applicable
+Section 6: Extra Notes
+Everything else the owner needs to know. Use emoji flags as appropriate:
+Warning flag = hazard, county restrictions, slope 20%+, structures, clear-cut, anything requiring
+awareness
+Stop sign = get a realtor opinion (genuinely unsure, still provide best estimate)
+Red flag = owner has multiple properties (note count, deal-flow opportunity)
+Area quality observations (nice/average/poor)
+Water features noted or verified
+Zoning code if available
+Structures visible — type, condition, needs verification
+Any reasoning notes if comps were scattered or unusual
+Land ID link pasted here
+Section 7: Recommended List Price
+Market value discounted approximately 5% for fast sale combined with elite drone marketing. This is the
+price the property would be listed at for sale. The 5% is a guideline — adjust slightly based on market
+conditions, active listing competition, and property quality.
+Format: $XX,XXX (~5% discount from MV)
+Section 8: Key Comps Used
+3 to 5 comps with full detail. No fewer than 3, no more than 5. Include acreage, sale price, PPA,
+sold/pending status, and notes on why each comp was used (ceiling, floor, primary anchor, etc.). Brief
+explanation of weighting if needed.
+Format per comp: X.XX ac | $XX,XXX | $X,XXX/ac | Sold/Pending | Notes
+Section 9: Questions to Ask Seller
+Anything that needs ground verification or seller confirmation. Common questions include:
+Survey on file?
+Perc test done? Results?
+Easements or access agreements?
+
+[PAGE 5]
+Mobile home or structure specs (year, sqft, bed/bath)?
+Timber type or harvest history?
+Other properties for sale?
+Seller's timeline or motivation?
+Anything visible in photos/satellite that needs clarification?
+
+[PAGE 6]
+Section 10: Lead Stage Classification (NEW)
+This is the new critical section added in Version 3. Every property evaluation must classify the lead into
+the correct smart list stage based on how the seller's asking price compares to the calculated market
+value. This tells the owner exactly where to file the lead and what to expect.
+10.1 — The Stage Classification Table
+Stage
+Seller Asking Range
+What It Means
+Price Rejected - Close
+65% to 75% of MV
+Seller is asking significantly below market but still above our target buy price. Close to a potential deal — worth pursuing with negotiation.
+Price Rejected - Far
+75.5% to 95% of MV
+Seller is closer to market value. Further from our buy target. Harder deal but not impossible — needs strong negotiation or seller motivation.
+Archive - At Market
+95.5% to 105% of MV
+Seller is asking right around market value (within 5% above or below). No margin for our model. Archive unless seller becomes motivated.
+Archive - Over Market
+105.5% to 130% of MV
+Seller is asking above market value, up to 30% over. Overpriced. Archive and revisit only if seller drops price significantly.
+Archive Dead Lead
+130.5%+ of MV
+Seller is asking more than 30% above market value. Unrealistic expectations. Dead lead — do not pursue.
+10.2 — What to Include in Section 10
+Every Section 10 must include these four elements:
+Seller Asking Price: What the seller is asking (or what price is on the lead).
+Market Value: The calculated MV from Section 1.
+Difference: Dollar amount AND percentage over or under market value. Always show both so the owner
+can see exactly how far off the seller is.
+Stage: The correct smart list stage based on the classification table above.
+10.3 — Calculating the Percentage
+The percentage is calculated as: (Seller Asking Price / Market Value) x 100 = percentage of MV.
+Example: Seller asking $130,000 on a property with $100,000 MV. $130,000 / $100,000 = 130% of MV.
+That is 30% over market value. Stage = Archive - Over Market.
+Example: Seller asking $70,000 on a property with $100,000 MV. $70,000 / $100,000 = 70% of MV. That
+is 30% under market value. Stage = Price Rejected - Close.
+Example: Seller asking $150,000 on a property with $100,000 MV. $150,000 / $100,000 = 150% of MV.
+That is 50% over market value. Stage = Archive Dead Lead.
+
+[PAGE 7]
+Full Worked Example
+The following is a complete example of the 10-section deliverable for a property with $100,000 market
+value where the seller is asking $130,000. The property is a 20-acre wooded lot, family transfer, seller is
+motivated and wants to sell within 30 days to fund a new house purchase.
+PROPERTY: 1234 Example Rd, Example County, SC
+COUNTY: Example County, SC | ACREAGE: 20 acres
+1. MARKET VALUE:
+$100,000 (~$5,000/ac)
+2. OFFER PRICE:
+50%: $50,000
+60%: $60,000
+70%: $70,000
+3. VALUE-ADD MARKET VALUE:
+N/A - Wooded lot, no subdivision potential
+(shape/area demand do not support splitting)
+4. VALUE-ADD OFFER PRICE:
+N/A
+5. NEGOTIATION STRATEGIES / LEVERAGE:
+- Family transfer = inherited, low cost basis,
+any offer is profit for seller
+- Motivated seller: wants to sell within 30 days
+- Needs cash for new house purchase = real urgency
+- Time pressure works in our favor
+- Pitch: cash, quick close, no hassle, no
+inspections, no contingencies
+6. EXTRA NOTES:
+- Wooded lot, no cleared building site visible
+- Family transfer = low cost basis
+- Seller urgency is real: new house purchase
+depends on this sale
+- Gravel road access, no paved frontage
+7. RECOMMENDED LIST PRICE:
+
+[PAGE 8]
+$95,000 (~5% discount from MV)
+8. KEY COMPS USED:
+- 18.5ac | $95,000 | $5,135/ac | Sold |
+Similar wooded, gravel road - weighted heavily
+- 22ac | $98,000 | $4,455/ac | Sold |
+Slightly larger, used as floor
+- 15ac | $82,500 | $5,500/ac | Sold |
+Smaller, used as ceiling reference
+9. QUESTIONS TO ASK SELLER:
+- Any survey on file?
+- Has perc test been done?
+- Any easements or access agreements?
+- Timeline for new house purchase: can we close
+in 2 weeks?
+10. LEAD STAGE CLASSIFICATION:
+- Seller Asking: $130,000
+- Market Value: $100,000
+- Difference: +$30,000 (30% over MV)
+- Stage: ARCHIVE - OVER MARKET
+
+[PAGE 9]
+Lead Stage Quick Reference (Dollar Examples)
+For quick reference, here is what each stage looks like at various market values:
+If Market Value = $100,000
+Stage
+Seller Asking Range
+Dollar Range
+Price Rejected - Close
+65% - 75%
+$65,000 - $75,000
+Price Rejected - Far
+75.5% - 95%
+$75,500 - $95,000
+Archive - At Market
+95.5% - 105%
+$95,500 - $105,000
+Archive - Over Market
+105.5% - 130%
+$105,500 - $130,000
+Archive Dead Lead
+130.5%+
+$130,500+
+If Market Value = $50,000
+Stage
+Seller Asking Range
+Dollar Range
+Price Rejected - Close
+65% - 75%
+$32,500 - $37,500
+Price Rejected - Far
+75.5% - 95%
+$37,750 - $47,500
+Archive - At Market
+95.5% - 105%
+$47,750 - $52,500
+Archive - Over Market
+105.5% - 130%
+$52,750 - $65,000
+Archive Dead Lead
+130.5%+
+$65,250+
+If Market Value = $200,000
+Stage
+Seller Asking Range
+Dollar Range
+Price Rejected - Close
+65% - 75%
+$130,000 - $150,000
+Price Rejected - Far
+75.5% - 95%
+$151,000 - $190,000
+Archive - At Market
+95.5% - 105%
+$191,000 - $210,000
+Archive - Over Market
+105.5% - 130%
+$211,000 - $260,000
+Archive Dead Lead
+130.5%+
+$261,000+
+
+[PAGE 10]
+Edge Cases & Important Notes
+When Seller Asking Price Is Unknown
+If the seller has not provided an asking price yet, still complete Sections 1-9 as normal. For Section 10,
+note 'Seller asking price not yet provided — stage to be classified once asking price is known.' The owner
+will update the stage after the first conversation with the seller.
+When Seller Asking Price Is Below 65% of MV
+If the seller is asking less than 65% of market value, this is an exceptional deal — well within the
+buy target of ~50% of list price. Note the stage as 'STRONG BUY — seller asking XX% of MV' and
+flag it with urgency so the owner knows to move fast.
+Section 10 Format — Always Include These 4 Lines
+Line 1: Seller Asking: $XXX,XXX
+Line 2: Market Value: $XXX,XXX
+Line 3: Difference: +/-$XX,XXX (XX% over/under MV)
+Line 4: Stage: [STAGE NAME]
+Emoji Flag System (Unchanged)
+Emoji
+Meaning
+When to Use
+Warning (yellow triangle)
+Hazard / Warning Flag
+County restrictions, slope 20%+, structures, clear-cut, access issues
+Stop Sign (red)
+Get Realtor Opinion
+Genuinely unsure about valuation — still provide best estimate
+Flag (red)
+Multiple Properties
+Owner has 2+ properties — note count, deal-flow signal
+THIS IS THE FINAL, DEFINITIVE DELIVERABLE FORMAT. ALL 10 SECTIONS REQUIRED ON
+EVERY EVALUATION. THIS SUPERSEDES ALL PREVIOUS FORMATS.
+ — End of Document —
