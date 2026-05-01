@@ -1,15 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { buildCompEvaluationResponse } from "@/comp-tool/evaluate";
-import {
-  buildCompRequestFromPhase2Capture,
-  buildPhase2ParcelEnrichment,
-} from "@/phase2/comp-bridge";
-import { runVisualParcelInspector } from "@/phase2/inspector";
-import {
-  saveVisualBrowserIntakeArtifact,
-  updateVisualBrowserIntakeArtifact,
-} from "@/phase2/storage";
+import { createPendingPhase2Artifact } from "@/phase2/artifact-runner";
 import type {
   VisualBrowserPageSnapshot,
   VisualComparableRow,
@@ -180,43 +171,6 @@ function parseBrowserIntakeRequest(payload: unknown): VisualParcelInspectorReque
   };
 }
 
-async function runCompEvaluationForArtifact(
-  artifactId: string,
-  parsed: VisualParcelInspectorRequest,
-  result: Awaited<ReturnType<typeof runVisualParcelInspector>>,
-) {
-  const startedAt = new Date().toISOString();
-  await updateVisualBrowserIntakeArtifact(artifactId, {
-    compEvaluationStartedAt: startedAt,
-    compEvaluationCompletedAt: null,
-  });
-
-  try {
-    const compRequest = buildCompRequestFromPhase2Capture(parsed, result);
-    const compEvaluation = await buildCompEvaluationResponse(compRequest, {
-      skipParcelEnrichment: true,
-      parcelEnrichment: buildPhase2ParcelEnrichment(parsed, result),
-    });
-
-    await updateVisualBrowserIntakeArtifact(artifactId, {
-      compEvaluation,
-      compEvaluationStatus:
-        compEvaluation.generation.status === "completed" ? "completed" : "failed",
-      compEvaluationStartedAt: startedAt,
-      compEvaluationCompletedAt: new Date().toISOString(),
-      compEvaluationError: compEvaluation.generation.error,
-    });
-  } catch (error) {
-    await updateVisualBrowserIntakeArtifact(artifactId, {
-      compEvaluationStatus: "failed",
-      compEvaluationStartedAt: startedAt,
-      compEvaluationCompletedAt: new Date().toISOString(),
-      compEvaluationError:
-        error instanceof Error ? error.message : "The comp evaluation failed.",
-    });
-  }
-}
-
 export async function POST(request: Request) {
   if (!canUseBrowserIntake(request)) {
     return jsonResponse({ error: "Missing or invalid extension intake token." }, { status: 401 });
@@ -240,17 +194,7 @@ export async function POST(request: Request) {
     return jsonResponse({ error: "browserPage is required for browser intake." }, { status: 400 });
   }
 
-  const result = await runVisualParcelInspector(parsed);
-  const artifact = await saveVisualBrowserIntakeArtifact({
-    request: parsed,
-    result,
-    compEvaluationStatus: "pending",
-    compEvaluationStartedAt: null,
-    compEvaluationCompletedAt: null,
-    compEvaluation: null,
-  });
-
-  void runCompEvaluationForArtifact(artifact.id, parsed, result);
+  const artifact = await createPendingPhase2Artifact(parsed);
 
   return jsonResponse({
     ok: true,
