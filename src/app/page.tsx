@@ -1,7 +1,7 @@
-import { CompToolPageShell } from "@/comp-tool/page-shell";
+import { redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
 export default function HomePage() {
-  return <CompToolPageShell />;
+  redirect("/phase2");
 }

@@ -17,17 +17,17 @@ export default async function Phase2Page({ searchParams }: Phase2PageProps) {
     <main className="page-shell">
       <section className={`hero-panel${hasArtifact ? " compact-hero-panel" : ""}`}>
         <div>
-          <p className="eyebrow">Phase 2 Lab</p>
-          <h1>Visual Parcel Inspector</h1>
+          <p className="eyebrow">Claude MCP Lab</p>
+          <h1>Visual comp dashboard</h1>
           <p>
-            Staging workflow for browser-assisted comping. Open the Land Insights comp report,
-            click the extension, send the parcel into V2, then review the DewClaw + AI result.
+            Experimental dashboard for Land Insights visual review, MCP-style source capture,
+            and DewClaw comp reasoning without touching the active V2 testing app.
           </p>
         </div>
 
         <div className="hero-actions">
-          <Link className="secondary-button" href="/">
-            Back to comp tool
+          <Link className="secondary-button" href="/sop" target="_blank" rel="noreferrer">
+            SOP
           </Link>
         </div>
       </section>
