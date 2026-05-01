@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3003",
+    "dev": "next dev --webpack -p 3003",
     "build": "next build --webpack",
     "start": "next start -p ${PORT:-3003}",
     "build:extension": "bash scripts/package-extension.sh",
