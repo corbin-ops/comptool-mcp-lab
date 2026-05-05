@@ -2,12 +2,12 @@
   {
     "doc_id": "complete_handbook_merged",
     "filename": "DewClaw_Complete_Handbook_Merged.pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Complete_Handbook_Merged.pdf",
+    "source_path": "data\\source-pdfs\\DewClaw_Complete_Handbook_Merged.pdf",
     "category": "core_methodology",
-    "priority_rank": 1,
+    "priority_rank": 5,
     "status": "active",
-    "use_for": "Primary comping methodology and decision framework.",
-    "notes": "Treat as the canonical handbook for general valuation rules.",
+    "use_for": "Supporting comping methodology and decision framework.",
+    "notes": "Use as the legacy fallback behind the MCP comping and investigation guides.",
     "page_count": 98,
     "word_count": 36685,
     "title_lines": [
@@ -20,9 +20,9 @@
   {
     "doc_id": "pricing_trendline_mastery",
     "filename": "DewClaw_Pricing_Trendline_Mastery_Guide.pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Pricing_Trendline_Mastery_Guide.pdf",
+    "source_path": "data\\source-pdfs\\DewClaw_Pricing_Trendline_Mastery_Guide.pdf",
     "category": "pricing",
-    "priority_rank": 2,
+    "priority_rank": 6,
     "status": "active",
     "use_for": "Normal flip pricing, trendline construction, and weighting logic.",
     "notes": "",
@@ -38,9 +38,9 @@
   {
     "doc_id": "subdivision_mastery",
     "filename": "DewClaw_Subdivision_Mastery_Guide.pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Subdivision_Mastery_Guide.pdf",
+    "source_path": "data\\source-pdfs\\DewClaw_Subdivision_Mastery_Guide.pdf",
     "category": "subdivision",
-    "priority_rank": 3,
+    "priority_rank": 7,
     "status": "active",
     "use_for": "Subdivision decisions, lot design, and hidden-value analysis.",
     "notes": "",
@@ -56,9 +56,9 @@
   {
     "doc_id": "deliverable_format_v3_final",
     "filename": "DewClaw_Deliverable_Format_v3_FINAL.pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Deliverable_Format_v3_FINAL.pdf",
+    "source_path": "data\\source-pdfs\\DewClaw_Deliverable_Format_v3_FINAL.pdf",
     "category": "output_format",
-    "priority_rank": 4,
+    "priority_rank": 11,
     "status": "active",
     "use_for": "Final evaluation output schema and section ordering.",
     "notes": "This explicitly supersedes earlier deliverable formats.",
@@ -74,9 +74,9 @@
   {
     "doc_id": "complete_supplemental_reference",
     "filename": "DewClaw_Complete_Supplemental_Reference.pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Complete_Supplemental_Reference.pdf",
+    "source_path": "data\\source-pdfs\\DewClaw_Complete_Supplemental_Reference.pdf",
     "category": "visual_reference",
-    "priority_rank": 5,
+    "priority_rank": 8,
     "status": "active",
     "use_for": "Visual land-type identification and supporting field heuristics.",
     "notes": "",
@@ -92,9 +92,9 @@
   {
     "doc_id": "rural_properties",
     "filename": "DewClaw_RURAL_PROPERTIES.pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_RURAL_PROPERTIES.pdf",
+    "source_path": "data\\source-pdfs\\DewClaw_RURAL_PROPERTIES.pdf",
     "category": "special_case",
-    "priority_rank": 6,
+    "priority_rank": 9,
     "status": "active",
     "use_for": "Rural discount rules and extreme-access adjustments.",
     "notes": "",
@@ -110,9 +110,9 @@
   {
     "doc_id": "subdivision_advanced_part10",
     "filename": "PART10_SUBDIVISION_ADVANCED (1).pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\PART10_SUBDIVISION_ADVANCED (1).pdf",
+    "source_path": "data\\source-pdfs\\PART10_SUBDIVISION_ADVANCED (1).pdf",
     "category": "special_case",
-    "priority_rank": 7,
+    "priority_rank": 10,
     "status": "active",
     "use_for": "Advanced subdivision edge cases and hidden value scenarios.",
     "notes": "",
@@ -126,9 +126,99 @@
     ]
   },
   {
+    "doc_id": "dcl_mcp_comping_guide",
+    "filename": "dcl-mcp-comping-guide/DewClaw_Comping_MCP_Guide.pdf",
+    "source_path": "data\\source-pdfs\\dcl-mcp-comping-guide\\DewClaw_Comping_MCP_Guide.pdf",
+    "category": "core_methodology",
+    "priority_rank": 1,
+    "status": "active",
+    "use_for": "Primary MCP comping workflow, source capture, and visual evidence handling.",
+    "notes": "Treat as the top comping authority for Phase 2 MCP behavior.",
+    "page_count": 30,
+    "word_count": 6203,
+    "title_lines": [
+      "DewClaw Land Investment",
+      "MCP Comping Master Guide",
+      "The complete visual, operational, and analytical playbook for comping vacant",
+      "land using the MCP browser, Land Insights, Zillow, and Redfin."
+    ]
+  },
+  {
+    "doc_id": "dcl_comp_investigation_guide",
+    "filename": "dcl-mcp-comping-guide/DewClaw_Comp_Investigation_Guide.pdf",
+    "source_path": "data\\source-pdfs\\dcl-mcp-comping-guide\\DewClaw_Comp_Investigation_Guide.pdf",
+    "category": "pricing",
+    "priority_rank": 2,
+    "status": "active",
+    "use_for": "Primary comp investigation workflow, APN/listing verification, and market evidence quality.",
+    "notes": "",
+    "page_count": 31,
+    "word_count": 6248,
+    "title_lines": [
+      "DEWCLAW LAND",
+      "INVESTING",
+      "COMP INVESTIGATION MASTER GUIDE",
+      "How to Pull, Verify, Investigate, and Use Comps With Precision \u2014 Every Time"
+    ]
+  },
+  {
+    "doc_id": "dcl_visual_land_analysis_guide",
+    "filename": "dcl-mcp-comping-guide/DewClaw_Visual_Land_Analysis_Guide.pdf",
+    "source_path": "data\\source-pdfs\\dcl-mcp-comping-guide\\DewClaw_Visual_Land_Analysis_Guide.pdf",
+    "category": "visual_reference",
+    "priority_rank": 3,
+    "status": "active",
+    "use_for": "Primary visual land analysis from maps, terrain, access, improvements, and nearby context.",
+    "notes": "",
+    "page_count": 42,
+    "word_count": 8632,
+    "title_lines": [
+      "DEWCLAW LAND",
+      "INVESTING",
+      "VISUAL AERIAL ANALYSIS MASTER GUIDE",
+      "How to Read Any County From the Air and Know Exactly What You're Dealing With"
+    ]
+  },
+  {
+    "doc_id": "dcl_visual_field_guide_v3",
+    "filename": "dcl-mcp-comping-guide/DewClaw_Visual_Field_Guide_V3.pdf",
+    "source_path": "data\\source-pdfs\\dcl-mcp-comping-guide\\DewClaw_Visual_Field_Guide_V3.pdf",
+    "category": "visual_reference",
+    "priority_rank": 4,
+    "status": "active",
+    "use_for": "Primary visual field guide for wooded/cleared land, structures, access, and photo cues.",
+    "notes": "Treat as the active version of the visual field guide.",
+    "page_count": 43,
+    "word_count": 5519,
+    "title_lines": [
+      "DewClaw Land Investment",
+      "Visual Field Guide \u2014 Volume 3",
+      "Parcel shapes \u00b7 Water quality \u00b7 Road grades \u00b7 Landlocked access \u00b7 Farmland vs.",
+      "pasture \u00b7 Trailway vs. railroad \u00b7 County rivers \u00b7 Developer subdivisions \u00b7 The Street"
+    ]
+  },
+  {
+    "doc_id": "dcl_visual_field_guide_v2",
+    "filename": "dcl-mcp-comping-guide/DewClaw_Visual_Field_Guide_V2.pdf",
+    "source_path": "data\\source-pdfs\\dcl-mcp-comping-guide\\DewClaw_Visual_Field_Guide_V2.pdf",
+    "category": "duplicate_reference",
+    "priority_rank": 98,
+    "status": "exclude",
+    "use_for": "Legacy visual field guide.",
+    "notes": "Superseded by DewClaw_Visual_Field_Guide_V3.pdf. Keep for audit, not retrieval.",
+    "page_count": 44,
+    "word_count": 5484,
+    "title_lines": [
+      "DewClaw Land Investment",
+      "Visual Field Guide \u2014 Volume 2",
+      "Complete visual reference for power lines, easements, timber quality, water",
+      "features, Land Insights interface, comp colors, parcel verification, and satellite"
+    ]
+  },
+  {
     "doc_id": "complete_handbook_v3_duplicate",
     "filename": "DewClaw_Complete_Handbook_V3 (1).pdf",
-    "source_path": "C:\\Users\\JOW\\Downloads\\DewClaw_Complete_Handbook_V3 (1).pdf",
+    "source_path": "data\\source-pdfs\\DewClaw_Complete_Handbook_V3 (1).pdf",
     "category": "duplicate_reference",
     "priority_rank": 99,
     "status": "exclude",

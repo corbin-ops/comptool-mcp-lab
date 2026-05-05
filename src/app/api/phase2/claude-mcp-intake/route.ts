@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { createPendingPhase2Artifact } from "@/phase2/artifact-runner";
 import { CLAUDE_MCP_LI_FIELD_ORDER } from "@/phase2/claude-mcp-return";
 import type {
+  ClaudeMcpExternalListingEvidence,
   ClaudeMcpFieldCapture,
   ClaudeMcpLiTableReturn,
   ClaudeMcpVisualClassification,
@@ -86,6 +87,44 @@ function readComparableRows(value: unknown): VisualComparableRow[] {
     });
 
     return rows;
+  }, []);
+}
+
+function readExternalListingEvidence(value: unknown): ClaudeMcpExternalListingEvidence[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value.reduce<ClaudeMcpExternalListingEvidence[]>((items, item) => {
+    const record = item && typeof item === "object" ? (item as Record<string, unknown>) : null;
+
+    if (!record) {
+      return items;
+    }
+
+    const source = readString(record.source);
+    const matchQuality = readString(record.matchQuality);
+
+    items.push({
+      source:
+        source === "redfin" || source === "zillow" || source === "realtor"
+          ? source
+          : "unknown",
+      url: readString(record.url),
+      searchQuery: readString(record.searchQuery),
+      matchQuality:
+        matchQuality === "confirmed_match" ||
+        matchQuality === "possible_match" ||
+        matchQuality === "rejected_match"
+          ? matchQuality
+          : "possible_match",
+      matchedSignals: readStringArray(record.matchedSignals),
+      photoObservations: readStringArray(record.photoObservations),
+      listingFacts: readStringArray(record.listingFacts),
+      risks: readStringArray(record.risks),
+    });
+
+    return items;
   }, []);
 }
 
@@ -183,6 +222,7 @@ function parseClaudeMcpPayload(payload: unknown): ClaudeMcpLiTableReturn {
     fieldCaptures: readFieldCaptures(record.fieldCaptures),
     comparableRows: readComparableRows(record.comparableRows),
     listingLinks: readStringArray(record.listingLinks),
+    externalListingEvidence: readExternalListingEvidence(record.externalListingEvidence),
     visualClassification: readVisualClassification(record.visualClassification),
     navigationLog: readStringArray(record.navigationLog),
     diagnostics: readStringArray(record.diagnostics),
@@ -197,15 +237,58 @@ function buildPageText(capture: ClaudeMcpLiTableReturn) {
   const captureLines = capture.fieldCaptures
     .filter((item) => item.value)
     .map((item) => `${item.label}: ${item.value}`);
+  const listingEvidenceLines = capture.externalListingEvidence.flatMap((item, index) => [
+    `External listing evidence ${index + 1}: ${item.source} ${item.matchQuality}`,
+    item.url ? `URL: ${item.url}` : "",
+    item.searchQuery ? `Search query: ${item.searchQuery}` : "",
+    item.matchedSignals.length ? `Matched signals: ${item.matchedSignals.join("; ")}` : "",
+    item.photoObservations.length
+      ? `Photo observations: ${item.photoObservations.join("; ")}`
+      : "",
+    item.listingFacts.length ? `Listing facts: ${item.listingFacts.join("; ")}` : "",
+    item.risks.length ? `Listing risks: ${item.risks.join("; ")}` : "",
+  ]);
 
   return [
     "Claude MCP Land Insights source capture.",
     ...fieldLines,
     ...captureLines,
+    ...listingEvidenceLines,
     capture.rawObservationNotes ? `Raw observation notes: ${capture.rawObservationNotes}` : "",
   ]
     .filter(Boolean)
     .join("\n");
+}
+
+function buildExternalListingSnapshots(
+  capture: ClaudeMcpLiTableReturn,
+): VisualBrowserPageSnapshot[] {
+  return capture.externalListingEvidence.map((item, index) => {
+    const pageText = [
+      `External listing evidence ${index + 1}.`,
+      `Source: ${item.source}`,
+      `Match quality: ${item.matchQuality}`,
+      item.searchQuery ? `Search query: ${item.searchQuery}` : "",
+      item.matchedSignals.length ? `Matched signals: ${item.matchedSignals.join("; ")}` : "",
+      item.photoObservations.length
+        ? `Photo observations: ${item.photoObservations.join("; ")}`
+        : "",
+      item.listingFacts.length ? `Listing facts: ${item.listingFacts.join("; ")}` : "",
+      item.risks.length ? `Risks: ${item.risks.join("; ")}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    return {
+      sourceUrl: item.url || capture.parcelLink,
+      finalUrl: item.url,
+      pageTitle: `${item.source} ${item.matchQuality}`,
+      pageText,
+      extractedAt: capture.capturedAt,
+      sourceApp: "claude-mcp-external-listing",
+      extractionError: item.url ? "" : "Claude MCP did not provide an external listing URL.",
+    };
+  });
 }
 
 function buildRequestFromClaudeMcp(capture: ClaudeMcpLiTableReturn): VisualParcelInspectorRequest {
@@ -229,13 +312,19 @@ function buildRequestFromClaudeMcp(capture: ClaudeMcpLiTableReturn): VisualParce
     notes: [
       "Source: Claude MCP LI-table return.",
       capture.rawObservationNotes,
+      ...capture.externalListingEvidence.flatMap((item) => [
+        `External listing ${item.source}: ${item.matchQuality}`,
+        ...item.matchedSignals.map((signal) => `External matched signal: ${signal}`),
+        ...item.photoObservations.map((observation) => `External photo observation: ${observation}`),
+        ...item.risks.map((risk) => `External listing risk: ${risk}`),
+      ]),
       ...capture.visualClassification.visualRisks.map((risk) => `MCP visual risk: ${risk}`),
       ...capture.visualClassification.verifyNext.map((item) => `MCP verify next: ${item}`),
     ]
       .filter(Boolean)
       .join("\n"),
     browserPage,
-    browserListings: [],
+    browserListings: buildExternalListingSnapshots(capture),
     kmlText: "",
     kmlFileName: "",
   };

@@ -32,6 +32,22 @@ Open:
 http://localhost:3003
 ```
 
+## One-Click Compile
+
+Double-click this file from the project folder:
+
+```text
+Compile Everything.cmd
+```
+
+Or run the same flow from PowerShell:
+
+```powershell
+npm run compile:all
+```
+
+This rebuilds the DewClaw corpus, runs TypeScript checks, builds the web app, and packages the Chrome extension into `dist`.
+
 ## Render
 
 Suggested Render service name:

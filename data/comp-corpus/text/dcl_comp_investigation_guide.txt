@@ -1,0 +1,809 @@
+[PAGE 1]
+DEWCLAW LAND
+ INVESTING
+ COMP INVESTIGATION MASTER GUIDE
+ How to Pull, Verify, Investigate, and Use Comps With Precision — Every Time
+ Built From Real Comp Sessions — Manistee County, MI
+ Internal Reference — May 2026
+
+[PAGE 2]
+DewClaw Comp Investigation Guide | Page 2
+HOW TO USE THIS GUIDE
+Everything you need to comp with precision
+This guide documents the complete comp investigation system — not just what buttons to click, but the full
+detective process: how to read a comp, when to discard it, how to verify it across multiple platforms, how to
+investigate water features, landlocked parcels, acreage discrepancies, APN mismatches, development context,
+and photo discrepancies between platforms. Every principle comes from live comp sessions on real Manistee
+County, Michigan parcels.
+● Part 1 — Comp Validity Rules: What makes a comp usable vs. disqualified before you spend any time
+on it.
+● Part 2 — Photo Analysis Protocol: Reading photos for what descriptions hide — utility poles, access,
+water quality, infrastructure.
+● Part 3 — Acreage Verification: The Healy Lake Rd case study — 13.19 vs 9.82 acres and how to
+resolve discrepancies.
+● Part 4 — APN Lookup Workflow: Step-by-step with screenshots — the exact process, format issues,
+and what to do when it fails.
+● Part 5 — Waterfront & Landlocked Investigation: The Big Four Rd Bear Creek case study — full
+detective sequence.
+● Part 6 — Development Comp Context: The Chief Rd 289-acre subdivision case — reading plot maps,
+developer pricing, related party flags.
+● Part 7 — Cross-Platform Verification: Land Insights vs Redfin vs Zillow vs OnX — when they disagree
+and how to triangulate.
+● Part 8 — The Complete Comp Workflow: Every step in sequence from first click to final PPA decision.
+
+[PAGE 3]
+DewClaw Comp Investigation Guide | Page 3
+PART 1 — COMP VALIDITY RULES
+Kill the bad comp fast — spend time only on the good ones
+The fastest skill you can develop in comping is instant recognition of disqualifying factors. Every minute you
+spend analyzing an invalid comp is wasted. The rules below are your first filter — run them in under 30 seconds
+before you look at anything else.
+THE COMP STATUS HIERARCHY
+ STATUS
+ WHAT IT MEANS
+ USE AS COMP?
+ WEIGHT
+SOLD (MLS)
+Closed arms-length transaction on the
+open market
+ YES — gold standard
+ Full weight
+PENDING
+Under contract, not yet closed — price
+may change
+ YES with caution
+ Discount 5-10% from list
+ACTIVE
+Currently listed, not yet sold — asking
+price only
+ YES with caution
+Discount 10-15% — ceiling
+ only
+OFF MARKET
+— SOLD
+Sold without MLS exposure — private
+transaction
+ NO — disqualify
+ immediately
+ N/A — invalid
+SOLD —
+Public
+Records
+County record only, no MLS — may be
+family/foreclosure
+ AVOID — verify first
+ Very low — likely
+ distressed
+Quit Claim
+Deed
+Non-arms length transfer — family,
+trust, estate
+ NO — disqualify
+ N/A — invalid
+INSTANT DISQUALIFIER #1 — OFF MARKET
+■ OFF MARKET = INSTANT DISQUALIFY — DO NOT ANALYZE FURTHER
+OFF MARKET means the property sold WITHOUT MLS exposure — no public listing, no competing buyer
+pool, no open market price discovery. The price means nothing for comp purposes. It could be $1k/acre in a
+$6k/acre market or $20k/acre in a $5k/acre market — neither tells you what a real buyer in the open market
+would pay. STOP the moment you see it.
+Two places where Off Market appears — know both:
+
+[PAGE 4]
+DewClaw Comp Investigation Guide | Page 4
+ Redfin listing: "OFF MARKET — SOLD SEP 2025 FOR $62,000"
+ appears in the status line directly below the photos. This is
+ Location #1 — the status text block.
+ Land Insights comp report showing PENDING status (291 days).
+ Always verify status in Land Insights AND click through to
+ Redfin/Zillow — they may show different statuses.
+● Location 1: Badge/banner in the TOP LEFT corner of the main listing photo
+● Location 2: Status text line BELOW the photos — 'OFF MARKET — SOLD [date] FOR $[price]'
+● Either location = same rule: stop immediately, close the tab, move to the next comp
+● Do not read the description. Do not check acreage. Do not pull APN. Zero additional time.
+INSTANT DISQUALIFIER #2 — RELATED PARTY TRANSACTIONS
+■ SAME AGENT/BROKERAGE ON BOTH SIDES = RELATED PARTY FLAG
+When the listing agent and buying agent share the same last name or same brokerage — especially on a
+parcel within a development the agent is actively selling — treat the sale price as potentially soft. The agent
+may have sold to a family member at a preferred price, or bought it themselves to control inventory. Flag it
+and weight it lower.
+How to spot it: In the Zillow or Redfin listing details, scroll to the bottom of the description section. Look for
+'Listed by: [Agent Name]' and 'Bought with: [Agent Name]'. If those two names share a last name or brokerage
+name, flag it immediately.
+Real example — Chief Rd, Bear Lake MI:
+
+[PAGE 5]
+DewClaw Comp Investigation Guide | Page 5
+ Zillow listing details: "Listed by: Bill Ringel, Ringel Real Estate" and "Bought with: Alexander William Ringel, Ringel Real Estate."
+ Same last name, same brokerage. This comp is flagged as a potential related-party transaction.
+
+[PAGE 6]
+DewClaw Comp Investigation Guide | Page 6
+INSTANT DISQUALIFIER #3 — QUIT CLAIM DEED
+■ QUIT CLAIM DEED = NOT A MARKET TRANSACTION
+A Quit Claim Deed is a legal instrument used for non-arms-length transfers: family transfers, estate
+settlements, divorce proceedings, trust changes. The price recorded (often $0 or a nominal amount) has no
+relationship to market value. When Land Insights shows 'Quit Claim Deed' as the deed type on a parcel's last
+purchase, ignore that price completely.
+● Quit Claim Deeds frequently show $0 sale price — this is a family/trust transfer, not a sale
+● Even if a dollar amount is listed, it's often a nominal figure, not market value
+● You'll see this in Land Insights under 'Last Purchase Type' and 'Deed Type' in the Summary panel
+● Do not use any Quit Claim price as a comp — it contaminates your analysis
+
+[PAGE 7]
+DewClaw Comp Investigation Guide | Page 7
+PART 2 — PHOTO ANALYSIS PROTOCOL
+Photos tell you what descriptions are designed to hide
+Listing descriptions are marketing documents. They are written to present the property in the most favorable
+light. Every negative feature gets either omitted entirely or reframed as a positive. Photos are neutral — they
+show exactly what is there without editorial spin. Always look at photos before trusting descriptions.
+UTILITY POLES & POWER LINES IN PHOTOS
+ 14124 Healy Lake Rd, Bear Lake MI — street-level photo of the property. The utility pole is clearly visible in the middle distance
+ running through the pine tree access path. This was NOT mentioned in the listing description.
+The listing description for this property said: "Partially wooded 9.82 acre building site with electric already in."
+Notice how the utility pole is reframed as 'electric already in' — a positive. The description is technically
+accurate but completely changes how you read it. The photo tells the unvarnished truth.
+✓ ALWAYS LOOK AT PHOTOS BEFORE READING THE DESCRIPTION
+PHOTO FIRST RULE: Before reading a single word of the description, scroll through every available photo
+looking specifically for: utility poles, overhead wires, cleared easement corridors, gates or fences indicating
+access restrictions, nearby structures on adjacent parcels, and water features.
+WHAT PHOTOS REVEAL — MASTER CHECKLIST
+ WHAT TO LOOK FOR
+ WHY IT MATTERS
+ DESCRIPTION WILL SAY
+Utility poles in access path
+Easement restriction, visual impact
+"Electric already in" or nothing at all
+
+[PAGE 8]
+DewClaw Comp Investigation Guide | Page 8
+Red/farm gate at entrance
+Access restriction, seasonal access
+only
+"Private, gated access"
+Gravel vs paved road access
+Year-round access reliability
+Usually omitted
+Water quality (creek/pond)
+Determines premium value and
+year-round flow
+"Beautiful water feature"
+Adjacent structures visible
+Neighbor proximity, not truly private
+Usually omitted
+Logged or disturbed areas
+5-30% value discount
+"Timber-managed property"
+Campsite, shed, platform
+Confirms access and active use
+"Campsite in place"
+Trail cam photos of wildlife
+Hunting use = specific buyer type
+"Excellent hunting opportunity"
+Drone vs ground photos
+Drone hides slope; ground reveals
+terrain
+"Rolling terrain with views"
+LAND INSIGHTS vs REDFIN PHOTO COMPARISON
+This is one of the most important discoveries in the comping process. Redfin and Zillow sometimes remove,
+reduce, or never had the full MLS photo package for a sold listing. Land Insights aggregates directly from the
+MLS record and often retains photos that Redfin no longer shows. The difference between what each platform
+shows can completely change your understanding of a property.
+★ CHECK LAND INSIGHTS PHOTOS FIRST — IT HAS MORE THAN REDFIN
+ALWAYS open the Land Insights comp report and check for photos BEFORE concluding a comp is
+photo-poor. A comp that shows 1 photo on Redfin may show 9 photos on Land Insights — the difference
+between 'mystery landlocked parcel' and 'confirmed premium hunting property with built campsite
+infrastructure.'
+ Land Insights comp report for 20 AC Big Four Rd — 9 photos
+ visible including creek shots, trail cam buck, storage shed,
+ elevated deck platform. All from the MLS record.
+ Redfin listing for same property — only 4 photos visible. The
+infrastructure photos (shed, platform, trail cam) are gone. Without
+ Land Insights you would never see these.
+WHAT THE BEAR CREEK PROPERTY PHOTOS REVEALED:
+
+[PAGE 9]
+DewClaw Comp Investigation Guide | Page 9
+ Storage shed + elevated wooden
+deck/platform on bluff overlooking the
+creek. CONFIRMS physical access — you
+cannot build a shed on a landlocked parcel.
+ Fall photo: campsite table on bluff edge,
+creek visible below through foliage. Multiple
+ seasons of photos = property actively used
+ year-round.
+ Trail cam night photo: large-rack buck on
+property. Confirms active hunting use and
+explains the buyer's motivation at $10.57k
+ ppa.
+
+[PAGE 10]
+DewClaw Comp Investigation Guide | Page 10
+PART 3 — ACREAGE VERIFICATION &
+DISCREPANCY RESOLUTION
+When platforms disagree on acreage — the Healy Lake Rd case study
+Acreage discrepancies between platforms are more common than you might expect. Land Insights, Redfin,
+Zillow, and the actual county parcel record can all show different numbers for the same transaction. The Healy
+Lake Rd parcel is the definitive teaching case for how to handle this.
+ Land Insights comp details popup: 13.19 acres, $65,000,
+$4,927.46/acre, SOLD, 33+ days on market. This is what the
+ comp shows at first glance.
+ Redfin listing page for same property: sold Jan 20, 2026 for
+$65,000. Header says 13.19 acres. But the description says
+ something completely different.
+The listing description: "Partially wooded 9.82 acre building site with electric already in." The description explicitly states 9.82 acres
+ — contradicting the 13.19 acre listing header.
+THE DETECTIVE SEQUENCE:
+STEP 1 — Land Insights shows 13.19 acres at $4,927/acre
+Initial read from the comp popup. Take the number but do not trust it yet.
+STEP 2 — Click through to Redfin — still shows 13.19 acres
+Both platforms agree on 13.19. Seems consistent. But then read the description.
+
+[PAGE 11]
+DewClaw Comp Investigation Guide | Page 11
+STEP 3 — Description says 9.82 acres — first conflict detected
+The description explicitly says 9.82-acre building site. This is a real contradiction. It means one of two things:
+(a) the MLS recorded the wrong acreage, or (b) multiple parcels were sold together but only one is being
+described.
+STEP 4 — Pull parcel in Land Insights — Richard Reineke = 9.82 acres confirmed
+ Land Insights parcel view: Richard Reineke, 9.82 acres, 14124 Healy Lake Rd, Bear Lake MI 49614. The actual parcel record
+confirms 9.82 acres. Also note: last sale was $0 (Quit Claim Deed, 17 years ago) — that is NOT the comp. The $65,000 sale is the
+ comp.
+STEP 5 — Look for adjacent parcels — found 4.08 acres next door
+9.82 + 4.08 = 13.90 acres. Close to 13.19 but not exact. The most likely explanation: two adjacent parcels were
+sold together in one transaction. The MLS recorded the combined acreage (approximately). The parcel data
+only shows the primary parcel (9.82 acres).
+
+[PAGE 12]
+DewClaw Comp Investigation Guide | Page 12
+ OnX Hunt app showing the Reineke Richard James parcel boundary (orange outline). Note the Traverse City Forest Management
+ Unit immediately to the right — permanent state forest buffer adjacent to the parcel.
+THE RESOLUTION — MIDPOINT WEIGHTING:
+★ UNRESOLVABLE ACREAGE = USE MIDPOINT PPA
+When acreage is genuinely unresolvable — two platforms disagree, the parcel record gives a third number,
+and the math on adjacent parcels doesn't perfectly reconcile — weight the PPA between both scenarios. Do
+not discard the comp entirely. Note the discrepancy, document both calculations, and use the midpoint as
+your working figure.
+ SCENARIO
+ ACREAGE
+ PRICE
+ PPA
+If it was 9.82 acres (parcel record)
+ 9.82 ac
+ $65,000
+ $6,619/ac
+If it was 13.19 acres (MLS listing)
+ 13.19 ac
+ $65,000
+ $4,927/ac
+MIDPOINT (working figure)
+ ~11.5 ac implied
+ $65,000
+ ~$5,700-5,800/ac
+
+[PAGE 13]
+DewClaw Comp Investigation Guide | Page 13
+PART 4 — APN LOOKUP WORKFLOW
+Step-by-step with screenshots — exact process, format issues, and failure protocol
+The APN (Assessor's Parcel Number) lookup in Land Insights is the most reliable way to confirm which parcel a
+comp represents. When you have an APN from Redfin or Zillow and need to verify it in Land Insights, follow this
+exact sequence.
+STEP 1 — Pull APN from listing details on Redfin or Zillow
+In Redfin: scroll to 'Property Details' → 'Public Facts' section → 'APN' field. In Zillow: scroll to 'Facts & Features'
+→ 'Details' section → 'Parcel number.' Copy the number exactly as shown — do not retype it.
+ Redfin property details showing APN: 1303142505 for the Bear Creek parcel. This is the number you copy to use in Land Insights.
+STEP 2 — Open a DUPLICATE Land Insights tab
+Right-click the Land Insights tab → Duplicate. The new tab will open with the same view as your current
+session. This preserves your working tab with the parcel panel open while you search in the new one.
+The duplicated Land Insights tab opens in a fresh state — showing whatever parcel you were last viewing. The left panel shows the
+ parcel data from the previous view. The search bar at top is where you will now work.
+
+[PAGE 14]
+DewClaw Comp Investigation Guide | Page 14
+STEP 3 — Click Location dropdown → Select Parcel #
+ Clicking the "Location" dropdown reveals three options: Location, Parcel #, Owner. Click "Parcel #" to switch into APN search
+ mode.
+STEP 4 — Type county name — select from autocomplete
+ After selecting Parcel #, the search bar splits into two fields:
+county name on the left, APN on the right. Type the county name
+ in the left field.
+ As you type "manis", Manistee County MI appears in the
+autocomplete dropdown. Click it to lock in the county scope. Now
+ enter the APN in the right field.
+STEP 5 — Enter APN — wait 3-5 seconds — read the result
+Type or paste the APN into the right field. Do not exit immediately. Land Insights sometimes takes 3-5
+seconds to query and return results. Wait for a definitive response before acting.
+
+[PAGE 15]
+DewClaw Comp Investigation Guide | Page 15
+"No results found" — the definitive failure message. Once you see
+ this clearly displayed, the APN did not match. Now try
+ reformatting before giving up.
+The dropdown shows a suggestion: "13-031-425-05" — this is the
+ Land Insights format for the APN that Redfin showed as
+ "1303142505" (no dashes). Format mismatch.
+THE FORMAT MISMATCH PROBLEM — MOST COMMON APN FAILURE
+CAUSE:
+■ FORMAT MISMATCH IS THE #1 CAUSE OF 'NO RESULTS FOUND'
+The same parcel number can be formatted completely differently across platforms. Redfin and Zillow often
+strip all dashes and display a continuous digit string. Land Insights uses the county recorder's format which
+includes dashes. Before giving up on an APN search, try reformatting the number.
+ PLATFORM
+ HOW APN IS DISPLAYED
+ EXAMPLE
+Redfin
+Continuous digit string — no dashes
+ 1303142505
+Zillow
+Continuous digit string — no dashes
+ 510200320005
+Land Insights
+County recorder format — with dashes
+ 13-031-425-05
+County records
+County recorder format — with dashes
+ 13-031-425-05
+The fix: look at any parcel you know in that county in Land Insights and read its APN from the Summary panel.
+That shows you the dash pattern Land Insights uses for that county. Then reformat your APN to match that
+pattern and try again.
+STEP 6 — If 'No Results Found' persists — document and move on
+If you've tried the original APN, tried reformatting with dashes in different positions, and still get nothing — the
+parcel simply isn't in Land Insights' database for that county, or the APN from the listing is wrong. Document:
+'APN unverified — parcel not found in Land Insights.' Use the Redfin/Zillow map to approximate location
+instead.
+
+[PAGE 16]
+DewClaw Comp Investigation Guide | Page 16
+PART 5 — WATERFRONT & LANDLOCKED
+INVESTIGATION
+The Bear Creek case study — 20 AC Big Four Rd, $215,000, $10.57k/acre
+This is the most complex investigation sequence in this guide. A single comp that initially appeared to be a
+landlocked parcel at a premium price — which triggered a full detective sequence that ultimately revealed a
+Blue Ribbon Trout Stream, 1,370 feet of dual-creek frontage, built campsite infrastructure, trail camera
+evidence of premium hunting, and adjacent State of Michigan land. Every step of this sequence teaches a
+repeatable skill.
+ Land Insights flood/wetland overlay for the Bear Creek area. The massive blue coverage confirms this is a wetland-heavy,
+creek-dominated landscape. The 20.35ac | 10.57k ppa comp (highlighted in blue outline) appears to sit entirely within the wetland
+ zone — triggering the landlocked investigation.
+INITIAL HYPOTHESIS FORMATION:
+● 20.35 acres at $10.57k ppa = $215,000 total — significantly above typical Manistee County rural baseline
+● Wetland overlay shows nearly the entire parcel in the flood/wetland zone
+● Appears to have no direct road frontage visible on the aerial
+● Hypothesis: there must be an easement PLUS a creek premium that justifies this price
+● Action: investigate the creek system before doing anything else
+STEP 1 — Follow the creek system to find the nearest road crossing
+
+[PAGE 17]
+DewClaw Comp Investigation Guide | Page 17
+ Zooming in to trace Bear Creek and Little Bear Creek toward the
+ nearest road. The target: where does the creek cross under a
+ road? That crossing is your ground-truth landmark.
+ Google Maps confirms the creek system: Little Bear Creek runs
+parallel and crosses Big 4 Rd. The pin location is at the Big 4 Rd /
+ 13 Mile Rd intersection.
+STEP 2 — Use Google Street View to assess actual creek quality
+ Street View from bridge on 13 Mile Rd — Bear Creek is a full,
+clear-flowing stream with healthy riparian vegetation. NOT marshy
+ or seasonal. Year-round flow confirmed.
+ Second Street View angle: deeper water, strong flow, lush
+vegetation. This is a Blue Ribbon Trout Stream — exactly what
+ anglers pay premium for. The $10.57k ppa suddenly makes
+ sense.
+✓ ALWAYS STREET VIEW THE NEAREST BRIDGE CROSSING
+CREEK QUALITY ASSESSMENT via Street View: Always find the nearest road bridge crossing the creek
+and use Street View to look at the water. A Blue Ribbon Trout Stream looks completely different from a
+muddy, slow, seasonal drainage ditch. Water quality is a massive price driver and you cannot assess it from
+the aerial alone.
+STEP 3 — Pull the Redfin listing and read the full description
+
+[PAGE 18]
+DewClaw Comp Investigation Guide | Page 18
+ The listing description: "Two rivers — Blue Ribbon Trout Stream Bear Creek and Little Bear Creek. Over 680 feet of frontage on
+Bear Creek plus frontage on both sides of Little Bear Creek. Campsite already in place, storage shed perched on a bluff, stunning
+river views. Snowmobile and ORV trails close by, thousands of acres of state land. Lake Michigan just 10 miles away." Six separate
+ demand drivers in one description.
+STEP 4 — Pull property details — extract APN and key data
+ Property details: On Waterfront, River Front. Frontage Type:
+Waterfront. Frontage Length: 1370 ft. Water Body: Bear Creek.
+ Lot Size: 1289 x 685. Zoning: Residential. Tax: $1,223/year.
+ APN: 1303142505 (Redfin format). Manistee County. Vacant
+ land. Updated by county records Sep 10, 2025.
+STEP 5 — Attempt APN lookup in Land Insights — discover adjacent State land
+
+[PAGE 19]
+DewClaw Comp Investigation Guide | Page 19
+Clicking an adjacent parcel during investigation reveals: STATE OF MICHIGAN, 165.23 acres, Corp Owned, APN 13-031-100-DR,
+mailing address PO Box 30735 Lansing MI 48909. This is the "thousands of acres of state land" the listing referenced — confirmed
+ as directly adjacent.
+STEP 6 — Look for physical easement access
+ Potential easement candidate #1: gravel driveway leading to
+outbuilding in the woods near Big Four Rd. Private property — not
+ a clear dedicated easement.
+ Potential easement candidate #2: residential driveway at 13785
+Big 4 Rd. Established home — not an easement corridor either.
+■ INFRASTRUCTURE = PROOF OF ACCESS
+No visible physical easement path was found during the investigation. However, the presence of built
+infrastructure ON the property (shed, deck, campsite) PROVES access exists. A landlocked property with no
+access cannot have structures built on it. The most likely explanation: a LEGAL DEEDED EASEMENT exists
+in the chain of title but has no visible physical path (access via creek or private agreement with neighbor).
+STEP 7 — Open Land Insights comp report — discover the full photo set
+
+[PAGE 20]
+DewClaw Comp Investigation Guide | Page 20
+Land Insights comp report: "20.35 acres - Springdale Township, MI." SOLD, $215,000 ($10,565.13/acre), 85 days on market. NINE
+ photos visible — far more than Redfin showed. Photos include: creek views, deer trail cam, storage shed, deck platform. APN:
+ 13-031-425-05 (Land Insights format).
+THE BEAR CREEK COMP — FINAL ANALYSIS:
+ FACTOR
+ FINDING
+ PRICE IMPACT
+Blue Ribbon Trout
+Stream
+Bear Creek — World-class trophy trout fishery
+Major premium — anglers pay for
+this specifically
+Dual creek frontage
+1,370 ft on Bear Creek + Little Bear Creek both
+sides
+Very significant — unusual to have
+two creeks
+State land adjacent
+165.23 acres State of Michigan directly
+adjacent
+Permanent rural buffer — adds
+seclusion value
+Built infrastructure
+Shed + elevated bluff deck + active campsite
+Ready to use immediately —
+turnkey hunting property
+ORV/snowmobile access
+Trails immediately accessible
+Extends recreational season to
+year-round
+Lake Michigan proximity
+10 miles — day trip to Great Lake
+Broadens buyer appeal beyond just
+hunters
+Access status
+Legal deeded easement — no physical path
+visible
+Risk factor — ask seller in call
+VERDICT
+$10.57k ppa fully justified by stacked premium
+features
+Use as ceiling comp for waterfront
+properties
+
+[PAGE 21]
+DewClaw Comp Investigation Guide | Page 21
+PART 6 — DEVELOPMENT COMP CONTEXT
+The Chief Rd 289-acre subdivision — reading plot maps, developer pricing, related party
+flags
+When multiple similarly-sized parcels cluster in the same area along the same road, you're almost always
+looking at a larger parent parcel being subdivided and sold off in lots. This completely changes how you use
+these comps — the prices are set by a developer, not discovered through open-market competition between
+multiple sellers.
+ Chief Rd, Bear Lake MI — six listings visible in tight cluster: 19.38ac | 5.06k, 10.02ac | 11.98k, 19.19ac | 5.58k, 10.02ac | 6.19k,
+ 10.02ac | 6.39k (pending/pink), 9.99ac | 7.11k, 9.98ac | 8.92k (cyan). The repeated ~10-acre sizes and same road location =
+ subdivision development.
+HOW TO READ A SUBDIVISION LISTING:
+STEP 1 — Open the comp report — look at ALL photos before reading anything
+
+[PAGE 22]
+DewClaw Comp Investigation Guide | Page 22
+Land Insights comp report for 9.99 acres Bear Lake MI: SOLD $71,000 ($7,107/acre), 56 days. Photos include: wooded winter shot
+ with gate, plot map (labeled A-M), drone aerials showing parent parcel with Bear Lake in background.
+STEP 2 — Two photos immediately signal this is a subdivision
+ The plot map (2013 ortho aerial with hand-drawn lot lines). Lots
+ labeled A through M carved out of the parent parcel. Acreages
+noted: 30.39, 17.38, 19.17, 78.65 acres. This is the developer's
+ internal survey — included in listing to show available lots.
+ Drone aerial photo showing the full 289-acre parent parcel from
+above. Bear Lake visible in the background. This shows the scale
+and selling pitch: wooded, rolling, lake proximity. The cleared field
+ area is the center of the development.
+STEP 3 — Read the description — confirm subdivision context
+ Description: "This development is part of a 289 acre parcel, additional parcels available. Only 1 1/2 miles to Bear Lake, 7 miles to
+ Lake Michigan, only about 20 minutes to Crystal Mountain Resort." The word "development" and "additional parcels available"
+ confirm this is a developer's subdivision.
+
+[PAGE 23]
+DewClaw Comp Investigation Guide | Page 23
+STEP 4 — Attempt APN lookup — 'No results' is expected for unrecorded subdivisions
+"No results found" when searching APN 510200320005 in Manistee County. This is expected when the subdivision plat has not yet
+ been recorded through the county recorder — Land Insights still shows the parent parcel.
+STEP 5 — Use Zillow map + Land Insights position to triangulate parcel location
+ Zillow satellite map in lot-lines mode: the $71K pin sits at the
+ BOTTOM of the cluster, left of Chief Rd. This is the Zillow
+system's best approximation of the parcel location within the
+ development.
+ Zoomed out: $557K pin at top, $285K on right, $71K at bottom.
+The three pins represent different lots from the same development
+ at different prices based on location. Both Land Insights and
+ Zillow independently place the $71K lot at bottom.
+★ DUAL PLATFORM CONFIRMATION = BEST AVAILABLE PARCEL IDENTIFICATION
+When two independent platforms (Land Insights and Zillow) both place a comp at the same location within a
+development, that is not coincidence. That's the best available identification of which specific lot the comp
+represents. Use it.
+DEVELOPMENT COMP PRICING DYNAMICS:
+When comping a development lot, understand that each lot's price is set by the developer based on its specific
+characteristics — not discovered through market competition. The same parent parcel can have lots at
+dramatically different PPAs:
+ LOT POSITION
+ PPA IN THIS
+DEVELOPMENT
+ LIKELY REASON
+
+[PAGE 24]
+DewClaw Comp Investigation Guide | Page 24
+Top of development
+(road-adjacent, views)
+ $11.98k ppa
+Maximum road frontage, first to be seen, premium
+position
+Mid-development interior
+ $8.92k ppa
+Good access, some privacy, no special feature
+Pending mid-lot
+ $6.39k ppa
+Pending — may reflect slight discount to close
+Bottom of development (M lot)
+ $7.11k ppa
+Last/southernmost lot — possible slight isolation
+Large parcel adjacent (19.38ac)
+ $5.06k ppa
+Larger acreage = lower PPA (acreage discount curve)
+■ DEVELOPMENT PRICING ≠ OPEN MARKET PRICING
+Development lots are NOT pure market comps. The developer controls pricing and inventory release
+strategy. A buyer has limited negotiating power when a developer is actively selling adjacent lots. Use
+development comps as reference points but weight them lower than standalone, arms-length sales of similar
+properties in the same area.
+
+[PAGE 25]
+DewClaw Comp Investigation Guide | Page 25
+PART 7 — CROSS-PLATFORM VERIFICATION
+Land Insights vs Redfin vs Zillow vs OnX — when they disagree
+No single platform has perfect data. Each pulls from different sources, updates on different schedules, and
+formats data differently. When platforms disagree, your job is to use their disagreement as a signal that
+something needs investigation — not to panic, but to triangulate toward the truth.
+ PLATFORM
+ BEST FOR
+ WEAKNESSES
+ TRUST FOR
+Land Insights
+Owner data, parcel boundaries,
+MLS comps, photo archives, APN
+lookup
+APN format mismatches,
+duplicate comp pins, stale
+imagery
+PRIMARY — your main
+tool
+Redfin
+Sale history, listing photos,
+property details, sale status
+Photos removed after sale,
+acreage sometimes wrong
+Status verification,
+description reading
+Zillow
+Facts & features, parcel number,
+map location for sold parcels
+Map pin not always precise,
+may show Zestimate not sale
+price
+APN extraction, lot line
+mode for location
+OnX Hunt
+Parcel boundaries, owner names,
+public/private land overlay
+Doesn't show sale prices or
+MLS data
+Parcel identity confirmation,
+adjacent land ownership
+Google Street
+View
+Water quality assessment, road
+access verification, neighbor
+structures
+Images may be 1-3 years old
+Ground-truth verification of
+features
+THE DOUBLE-LISTING PROBLEM IN LAND INSIGHTS:
+ Land Insights showing TWO identical labels for 20.35ac | 10.57k ppa at different locations. One is positioned correctly on the Paul
+ Maciag parcel. One appears near Donna M Nummerdor's parcel. Same comp, two map pins. This is a Land Insights data
+
+[PAGE 26]
+DewClaw Comp Investigation Guide | Page 26
+ duplication — the sale was mapped to two parcel centroids that were both close to the GPS coordinates in the MLS record.
+■ DUPLICATE PINS = DATA MAPPING ERROR — CLICK BOTH AND VERIFY
+When you see the same acreage and PPA label appearing twice on the Land Insights map at different
+locations — this is a data duplication issue, not two separate sales. Click both pins. One will show the correct
+parcel with matching owner, APN, and acreage. The other will show an adjacent parcel that happened to be
+close to the GPS coordinates in the MLS record. Use the one that matches the Redfin/Zillow data.
+THE WRONG PARCEL CLICK — HOW IT HAPPENS:
+ Clicking the duplicate pin landed on Donna M Nummerdor — 27 acres, APN 13-031-350-01, AI Comp $93,536. This is an
+ADJACENT parcel, not the sold parcel. The parcel shows Calculated Acres: 19.66 vs listed 27 — another acreage discrepancy in
+ the same area.
+Resolution: pull the APN from Redfin (1303142505), search it in Land Insights, get no result (format mismatch),
+reformat to 13-031-425-05, find the actual Paul Maciag parcel. The APN is the ultimate source of truth — owner
+name and visual parcel location are secondary identifiers.
+
+[PAGE 27]
+DewClaw Comp Investigation Guide | Page 27
+PART 8 — THE COMPLETE COMP WORKFLOW
+Every step in sequence from first click to final PPA decision
+This is the master workflow that combines every technique in this guide. Follow it in sequence for every comp
+you evaluate. Fast comps clear in 2 minutes. Complex comps like Bear Creek may take 15-20 minutes — but
+you'll know everything there is to know about them.
+STEP 1 — OPEN COMP IN LAND INSIGHTS — INSTANT STATUS CHECK
+Click the comp label on the map. The popup shows: acreage, price, PPA, status, days on market. Check status
+first. SOLD (MLS) = proceed. PENDING = proceed with discount note. OFF MARKET = close immediately.
+PUBLIC RECORDS only = approach with extreme caution.
+● Green label = sold MLS — proceed
+● Pink label = pending — proceed, note 5-10% discount
+● Cyan/blue label = active listing — proceed, note 10-15% ceiling discount
+● No status or 'off market' = disqualify and close
+STEP 2 — OPEN FULL COMP REPORT — PHOTO ANALYSIS FIRST
+Click 'Details' or the comp title to open the full Land Insights comp report. LOOK AT PHOTOS BEFORE
+READING ANYTHING ELSE. Count the photos. Note what you see.
+● Utility poles, power lines, overhead wires → flag, check description
+● Gate at entrance → access restriction, seasonal-only risk
+● Creek, pond, river → begin waterfront premium investigation
+● Shed, platform, campsite structures → confirms access, adds value
+● Trail cam wildlife photos → hunting property buyer type
+● Drone photos only → go find Street View for ground truth
+● 'No Photo Available' on most slots → check Redfin AND Zillow separately
+STEP 3 — READ THE DESCRIPTION — LOOK FOR WHAT'S MISSING
+Read the full description. Compare what you saw in photos to what the description says. Note every omission
+and every reframing.
+● 'Electric already in' but utility pole visible in photo → noted
+● 'Private setting' but neighbors visible in photo → noted
+● 'Part of a 289-acre development' → development comp context applies
+● 'Two rivers' → major waterfront premium, begin creek investigation
+● No mention of access → potential landlocked, investigate
+
+[PAGE 28]
+DewClaw Comp Investigation Guide | Page 28
+● Description very short or 'No description available' → rely on photos and parcel data
+STEP 4 — EXTRACT KEY DATA — ACREAGE, PRICE, APN, DOM
+Record: exact acreage from listing, total price, calculated PPA, days on market, APN from Facts & Features.
+Note any discrepancy between listing acreage and description acreage.
+● Listing acreage ≠ description acreage → begin acreage investigation
+● Very few days on market (under 30) → may have been underpriced
+● Very many days on market (over 180) → may have been overpriced or had issues
+● APN in standard county format → copy for Land Insights lookup
+● APN in continuous digit string → copy, will need reformatting
+STEP 5 — RUN APN LOOKUP IN LAND INSIGHTS
+Duplicate Land Insights tab → Parcel # → County → Enter APN → Wait 3-5 seconds.
+● Result found → confirm owner name, acreage, parcel matches
+● 'No results found' → try reformatting (add dashes per county format)
+● Still nothing → document as unverified, use Zillow lot-line map for location
+● Wrong parcel appears (different owner) → duplicate pin problem, click other pin
+● Correct parcel found → note adjacent owners, identify state/public land
+STEP 6 — WATERFRONT INVESTIGATION (if creek/water present)
+Any comp with water feature — creek, river, pond, lake frontage — requires this sub-sequence.
+● Find the creek on the aerial → trace to nearest road crossing
+● Open Google Maps → confirm creek name and road intersection
+● Open Google Street View at the bridge → assess water quality visually
+● Full flowing clear stream = year-round, premium → justify higher PPA
+● Muddy, slow, seasonal-looking = discount → question the water premium claim
+● Read property details for: frontage length, water body name, waterfront type
+● Check for Blue Ribbon designation in description or county fishing resources
+STEP 7 — LANDLOCKED INVESTIGATION (if no obvious road frontage)
+If a parcel sells at a significant premium but shows no clear road frontage, investigate access.
+● Check photos for shed, platform, campsite → built infrastructure = access exists
+● Check photos for trail cams, hunting stands → water/foot access common in hunting properties
+● Look for legal language in description: 'deeded easement', 'access via easement'
+● Try to trace a physical path from road to parcel on the aerial
+
+[PAGE 29]
+DewClaw Comp Investigation Guide | Page 29
+● If nothing found → note as seller question: 'How do you currently access this property?'
+● A $10k+ ppa landlocked parcel almost certainly has legal easement OR water access
+STEP 8 — DEVELOPMENT CONTEXT CHECK
+If multiple similarly-sized parcels cluster along same road within small area:
+● Check listing description for: 'part of a [X]-acre parcel', 'additional parcels available'
+● Look for plot maps in listing photos — lettered/numbered lots = formal subdivision
+● Note which lots sold vs pending vs active within development
+● Identify floor comp (lowest ppa in development) and ceiling comp (highest)
+● Flag related party buyers: same last name as listing agent = possible insider price
+● Weight development comps lower than standalone arm's-length sales
+● Use floor comp as your baseline; development ceiling may not reflect true open market
+STEP 9 — FINAL PPA DETERMINATION
+After running all applicable investigations, make your final comp call.
+● Straight sale, verified, no issues → use PPA as stated
+● Waterfront premium → note premium and isolate from non-waterfront comps
+● Acreage discrepancy → use midpoint PPA between both acreage scenarios
+● Development context → weight lower, use as reference not primary comp
+● Related party flag → weight lower, possible soft price
+● Long DOM (90+ days) → may have been overpriced, discount slightly
+● Short DOM (under 14 days) → may have been underpriced, note as floor
+● Document your reasoning → your comp notes must explain every weight adjustment
+
+[PAGE 30]
+DewClaw Comp Investigation Guide | Page 30
+QUICK REFERENCE — COMP RED FLAGS &
+SIGNALS
+One-page decision system
+ WHAT YOU SEE
+ SIGNAL
+ ACTION
+"OFF MARKET" anywhere on
+listing
+Invalid — not arms-length
+ CLOSE IMMEDIATELY
+Quit Claim Deed in parcel record
+Non-market family transfer
+ IGNORE that price
+Same agent/brokerage buys and
+lists
+Related party — soft price
+ FLAG — weight lower
+Utility pole visible in photo
+Not in description — always
+check
+ NOTE the infrastructure
+1 photo on Redfin
+More may exist on Land
+Insights
+ CHECK Land Insights comp report
+Listing acreage ≠ description
+acreage
+Multi-parcel sale or data error
+ INVESTIGATE — midpoint if unresolved
+"No results found" on APN
+search
+Format mismatch or
+unrecorded
+ REFORMAT with dashes — retry
+Two identical labels on map
+Data duplication in Land
+Insights
+ CLICK BOTH — verify correct one
+Creek/river feature
+Potential premium — verify
+quality
+ STREET VIEW the bridge crossing
+Premium price + no road
+frontage
+Legal easement or water
+access
+ INVESTIGATE infrastructure in photos
+Multiple ~10ac lots on same road
+Developer subdivision
+ READ description for parent parcel
+Plot map A-M in listing photos
+Formal subdivision underway
+ WEIGHT lower — developer pricing
+DOM over 180 days
+Possibly overpriced or had
+issues
+ NOTE — slight discount on weight
+DOM under 14 days
+Possibly underpriced — floor
+signal
+ NOTE — use as floor comp
+Shed/platform/campsite in
+photos
+Confirms access and active
+use
+ NOTE value-add; confirms easement
+Trail cam wildlife photos
+Hunting property — specific
+buyer
+ NOTE buyer type drives premium
+Blue Ribbon Trout designation
+Premium fishing asset
+ SIGNIFICANT premium — not avg creek
+
+[PAGE 31]
+DewClaw Comp Investigation Guide | Page 31
+State land adjacent
+Permanent rural buffer
+ NOTE — seclusion premium element
+✓ SPEED PRINCIPLE: KILL BAD COMPS FAST — INVESTIGATE GOOD ONES DEEPLY
+The fastest comp investigators are the ones who recognize disqualifiers instantly and don't waste time. Off
+market = close in 2 seconds. Quit claim = skip. Related party = flag and move on. The detective work is
+reserved for the valid comps that make it through the first filter — those are worth the time.
+ — END OF DOCUMENT —
+ DewClaw Land Investing — Comp Investigation Guide — May 2026

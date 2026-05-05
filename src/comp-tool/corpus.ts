@@ -137,15 +137,32 @@ const MODE_CATEGORY_WEIGHTS: Record<CompMode, Record<string, number>> = {
 };
 
 const MODE_DOC_BOOSTS: Partial<Record<CompMode, Partial<Record<string, number>>>> = {
+  general: {
+    dcl_mcp_comping_guide: 1.7,
+    dcl_comp_investigation_guide: 1.55,
+    dcl_visual_land_analysis_guide: 1.4,
+    dcl_visual_field_guide_v3: 1.35,
+    complete_handbook_merged: 1.05,
+  },
   pricing: {
-    pricing_trendline_mastery: 1.5,
-    complete_handbook_merged: 1.1,
+    dcl_comp_investigation_guide: 1.8,
+    dcl_mcp_comping_guide: 1.6,
+    dcl_visual_land_analysis_guide: 1.3,
+    dcl_visual_field_guide_v3: 1.25,
+    pricing_trendline_mastery: 1.35,
+    complete_handbook_merged: 1.0,
   },
   subdivision: {
+    dcl_mcp_comping_guide: 1.35,
+    dcl_visual_land_analysis_guide: 1.35,
+    dcl_visual_field_guide_v3: 1.25,
     subdivision_mastery: 1.65,
     subdivision_advanced_part10: 1.45,
   },
   rural: {
+    dcl_visual_land_analysis_guide: 1.45,
+    dcl_visual_field_guide_v3: 1.35,
+    dcl_mcp_comping_guide: 1.25,
     rural_properties: 1.75,
   },
   deliverable: {

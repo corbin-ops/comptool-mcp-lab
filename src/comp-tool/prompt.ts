@@ -63,8 +63,13 @@ function buildPropertyBrief(input: CompEvaluateRequest) {
 function formatChunks(chunks: RetrievedCompChunk[]) {
   return chunks
     .map(
-      (chunk, index) =>
-        `[Context ${index + 1}] ${chunk.docId} | page ${chunk.pageNumber} | score ${chunk.score}\n${chunk.text}`,
+      (chunk, index) => {
+        const matchedTerms = chunk.matchedTerms.length
+          ? ` | matched: ${chunk.matchedTerms.join(", ")}`
+          : "";
+
+        return `[Context ${index + 1}] ${chunk.docId} | category ${chunk.category} | page ${chunk.pageNumber} | score ${chunk.score}${matchedTerms}\n${chunk.text}`;
+      },
     )
     .join("\n\n---\n\n");
 }
@@ -109,7 +114,11 @@ export function buildCompPromptPackage(
 ): CompPromptPackage {
   const systemPrompt = [
     "You are DewClaw's internal land valuation analyst.",
-    "Use the provided DewClaw training context as the primary authority.",
+    "Use the retrieved DewClaw PDF training context as the primary valuation authority.",
+    "For comping workflow, APN/listing investigation, and visual map/photo interpretation, treat the newer MCP comping guides as higher authority than older handbook references.",
+    "The captured parcel facts, Land Insights fields, Redfin/Zillow evidence, photos, and map observations describe the property; the DewClaw PDF context tells you how to interpret and price those facts.",
+    "Do not make a pricing or lead-stage decision from general real estate knowledge when a relevant retrieved DewClaw context chunk exists.",
+    "When the retrieved context is weak, missing, or not on-point, say the decision is preliminary and list the exact missing reference or property fact.",
     "Do not invent property facts, comps, or legal conclusions that are not supported by the input or the retrieved context.",
     "If key data is missing, explicitly mark it as Needs verification.",
     "The output must help an acquisitions operator decide what to do next, not just summarize research.",
@@ -131,6 +140,34 @@ export function buildCompPromptPackage(
     "",
     "RETRIEVED DEWCLAW CONTEXT",
     formatChunks(chunks),
+    "",
+    "PDF GROUNDING RULES",
+    "- Treat the retrieved DewClaw context above as the rulebook for valuation logic, offer posture, discounts, lead stage, and output format.",
+    "- Use property facts from the PROPERTY BRIEF; use retrieved PDF context to decide what those facts mean.",
+    "- Do not cite or apply a DewClaw rule unless it appears in the retrieved context packet.",
+    "- If the retrieved context conflicts with a captured parcel fact, keep the parcel fact and use the PDF only as methodology.",
+    "- If multiple retrieved chunks apply, follow the highest-priority/source-specific chunk first, then use lower-priority chunks as support.",
+    "- marketValueReasoning must mention 1 to 3 source anchors from the retrieved context when they materially affect the decision, using the format docId p.pageNumber.",
+    "- offerStrategy.reasoning must explain how the retrieved DewClaw context supports the opening/target/max/walk-away posture.",
+    "- dataQuality.reasoning must say whether the retrieved context was strong enough for the current property type or if more source context is needed.",
+    "",
+    "DOCUMENT ROUTING RULES",
+    "- MCP/browser comping workflow, source capture, and visual evidence handling: prioritize dcl_mcp_comping_guide.",
+    "- APN checks, Redfin/Zillow investigation, listing-photo review, comp match quality, and evidence quality: prioritize dcl_comp_investigation_guide.",
+    "- Visual map/photo interpretation, wooded vs cleared/pasture, slope/access cues, structures, and nearby development context: prioritize dcl_visual_land_analysis_guide and dcl_visual_field_guide_v3.",
+    "- General land comping and legacy decision logic: use complete_handbook_merged only as supporting methodology behind the newer MCP guides.",
+    "- PPA, trendline, acreage-size adjustment, market value, and normal flip pricing: prioritize dcl_comp_investigation_guide plus pricing_trendline_mastery.",
+    "- Subdivision, road frontage, lot split, flagpole/road-building, and hidden value: prioritize subdivision_mastery and subdivision_advanced_part10.",
+    "- Rural/remoteness/access discount, middle-of-nowhere risk, poor roads, and extreme access friction: prioritize rural_properties.",
+    "- Supporting visual land classification: use complete_supplemental_reference only after the newer visual guides.",
+    "- Final section order, lead stage classification, and Follow-Up Boss note format: prioritize deliverable_format_v3_final.",
+    "- If a needed document category was not retrieved, do not pretend it was. Mark the related conclusion preliminary and add a verification/source gap.",
+    "",
+    "SOURCE VS FACT RULES",
+    "- Land Insights AI comp/pricing numbers are not allowed as market value anchors.",
+    "- Land Insights parcel fields may be used as property facts when captured.",
+    "- Redfin/Zillow/APN/photo observations may be used as visual/property evidence only when matchQuality is confirmed_match or clearly labeled possible_match.",
+    "- Off-market listings, mismatched APNs, or uncertain listing matches should not anchor market value; use them only as weak context or rejection evidence.",
     "",
     "SAVED REVIEWER FEEDBACK MEMORY",
     "Use these reviewer corrections as operating guidance when applicable. Do not treat them as parcel facts unless the current property input supports them.",

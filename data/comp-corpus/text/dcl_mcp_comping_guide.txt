@@ -1,0 +1,697 @@
+[PAGE 1]
+DewClaw Land Investment
+ MCP Comping Master Guide
+ The complete visual, operational, and analytical playbook for comping vacant
+ land using the MCP browser, Land Insights, Zillow, and Redfin.
+ Version 1.0 — May 2026
+ STRICTLY INTERNAL — DO NOT SHARE
+
+[PAGE 2]
+TABLE OF CONTENTS
+I. Core Philosophy & Business Model
+II. Absolute Rules — Never Violate
+III. URL & Navigation Fundamentals
+IV. Reading the Area — Bird's Eye to Ground Level
+V. The Full Step-by-Step Comping Workflow
+VI. Land Insights Visual Guide (with Screenshots)
+VII. Zillow Deep Dive (with Screenshots)
+VIII. Redfin Deep Dive (with Screenshots)
+IX. APN — The Most Powerful Tool in Comping
+X. Acreage Verification Protocol
+XI. Comp Confidence Tiers & Weighting
+XII. MLS Comps Toggle & Data Layers
+XIII. Reading Listing Photos & Descriptions
+XIV. Street View Protocol
+XV. Easements, Power Lines & Utility Corridors
+XVI. Structure Identification & Flagging
+XVII. DOM, Price History & Long-Sitting Comps
+XVIII. Land Type Identification
+XIX. Timing & Efficiency
+XX. Comp Note Delivery Format
+
+[PAGE 3]
+I. CORE PHILOSOPHY & BUSINESS MODEL
+DewClaw buys vacant rural land at approximately 50% of market value, then sells slightly below market using
+elite drone marketing. Target hold time: 7–90 days. The entire business model depends on one thing: knowing
+what a property is actually worth so we can offer 50 cents on the dollar with confidence.
+Why Comping Matters
+The comp process is not about finding a number to justify a predetermined offer. It's about understanding what
+the market has actually decided land in this county, of this type, of this acreage, is worth. Everything else — the
+offer, the negotiation, the value-add play — flows from that honest number.
+The Value-Add Backup Strategy
+If a seller rejects the 50% as-is offer, look for value-add potential (subdivision, rezoning, etc.). If the improved
+value is $160K and the seller wants $80K, that's still 50% of the improved value — and the seller doesn't know
+the upside exists. Always identify value-adds even when you don't need them for the primary offer. They are the
+backup plan.
+
+[PAGE 4]
+II. ABSOLUTE RULES — NEVER VIOLATE
+■ These rules are non-negotiable. Violating any one of them corrupts the entire comp.
+■ NEVER use the Comp Report page or URL — ever. Only use the data?parcel= URL.
+■ NEVER use the Land Insights AI Comp Value, Deep AI Analysis, or any platform estimate.
+■ NEVER cross county lines for comps. Each county is its own market.
+■ NEVER use off-market sales, family transfers, or Sold–Public Records comps.
+■ NEVER use Zestimate or any automated valuation model.
+■ NEVER go off numbers alone — always verify visually.
+■ NEVER rely on the comp bubble's map position without APN verification.
+■ NEVER skip Street View. It is mandatory for every subject property.
+■ NEVER deliver results in multiple responses with 'continue' breaks — one complete response only.
+■ NEVER ask for permission mid-process — work silently, deliver the final product.
+
+[PAGE 5]
+III. URL & NAVIGATION FUNDAMENTALS
+The Only URL Format We Use
+Every property will come in as a data?parcel= URL. This is the standard format:
+https://app.landinsights.co/data?parcel=[PARCEL_ID]#[ZOOM]/[LAT]/[LNG]
+If the MCP browser cannot load the parcel page, immediately tell the user to input the data parcel manually.
+Never try to force it or use the comp report URL as a fallback.
+Modals & Page Interruptions
+Land Insights occasionally displays update modals like 'We've made some improvements.' When this happens:
+click OK immediately and move on. The page will not lose its state. Even if it refreshes, all previously read data
+remains in working memory. Simply continue clicking the remaining tabs. You already know everything you
+collected before the refresh.
+County Boundary Lines
+Pink lines on the Land Insights map are county boundaries. They are your hard comp border. Never pull a
+comp from across a pink line, even if it's physically closer. Buyers search Zillow/Redfin by county — adjacent
+counties develop completely different pricing patterns over time.
+
+[PAGE 6]
+IV. READING THE AREA — BIRD'S EYE TO GROUND
+LEVEL
+Three Area Types from Satellite
+When you zoom out to county level, you're reading the character of the land. There is no 'good' or 'bad' URL —
+there are three rough area types that affect value:
+Area Type
+What It Looks Like
+Implication
+In or Near a City
+Dense road grid, subdivisions, commercial
+strips visible
+Higher demand, more comps, easier to
+price
+Semi-Rural
+Some towns nearby, scattered development,
+mix of cleared and wooded
+Moderate demand, typical rural land
+market
+Super Rural
+No development, extremely hilly terrain, no
+infrastructure being built nearby
+Low demand, thin comp pool, terrain
+may make land functionally unusable
+■ RED FLAG: If terrain is extremely hilly, heavily forested, no development visible anywhere nearby,
+and nobody is building — that terrain is the reason. Appalachian-type land (parts of PA, VA, TN, WV)
+that is steep, hilly, and inaccessible is functionally unusable. Flag it hard.
+Street View — The Ground Truth Check
+Satellite shows you the land. Street View shows you the world around it. This is where neighborhood quality
+actually gets deciphered. Drop the pegman and look around. Check house quality, condition, maintenance,
+signs of life or abandonment. A semi-rural area with well-kept homes on County Road 403 tells a completely
+different story than one with collapsing structures and overgrown driveways.
+
+[PAGE 7]
+V. THE FULL STEP-BY-STEP COMPING WORKFLOW
+★ TARGET: Complete every property evaluation in approximately 2.5 minutes.
+STEP 1 — Open the Land Insights Parcel Page
+Navigate the MCP browser to the data?parcel= URL. Confirm the page loads and the parcel data is visible. If a
+modal appears, click OK. If login is required, notify the user immediately.
+STEP 2 — Pull Summary Data from Land Insights
+In order: Summary tab (last purchase price, acreage, APN), Parcel tab (land use classification), Owner tab
+(out-of-state/county status, ownership length). Note Tax Delinquent status, Family Transfer flag, Mobile Home
+flag, Structure count. Do this fast — do not linger.
+STEP 3 — Open Land ID Simultaneously
+Open a new tab to Land ID. Click AI Smart Search (blue button) → Parcel → ID → enter State / County / APN.
+Copy the URL and paste it in Extra Notes as 'Land ID link.' If APN doesn't aggregate, try Owner Name. If Land
+ID is blocked entirely, note it and skip.
+STEP 4 — Street View (MANDATORY — No Exceptions)
+Drop the pegman onto Street View for every subject property. Look for: driveways/entryways, cleared building
+spots, mobile homes, sheds, any structures, wet areas/standing water, power lines, fencing, road condition.
+Note everything observed in Extra Notes.
+STEP 5 — Satellite Verification
+Check satellite imagery on both Google Maps AND Land Insights with ALL filters OFF. Toggle between old and
+new satellite imagery to catch recent timbering. Never trust filters alone — use your own eyes.
+STEP 6 — Check MLS Comps Toggle
+MLS Comps should always be ON. If zero comps are showing (no actives, no solds, no pendings): go to Data
+Layers (bottom right, next to Tools and Map Layers) → click MLS Data → toggle ON. Only do this if there are
+genuinely zero comps. If even a few are showing, it's already on.
+STEP 7 — Navigate to County View for Comps
+Navigate directly to zoom level 11-12 in the URL for county-wide comp view. Do NOT scroll-zoom 4-5 times —
+type the zoom level into the URL directly to save time. Acreage Range: always click AUTO. If not enough
+comps: set below=80%, above=150%.
+STEP 8 — Click Each Comp Bubble
+Click each comp bubble to open the popup (acreage, price, PPA, status, DOM, thumbnail). Click the green
+Details button. Review photos, MLS price, days on market. Then click 'View Original Listing' in the bottom right
+to open Zillow or Redfin.
+
+[PAGE 8]
+STEP 9 — Verify the Comp on Zillow and Redfin
+Always click both if both are available. Check: Is it MLS or off-market/public record? Read all photos. Read the
+description. Get the APN (may be under 'Show more' or 'Show all property details'). Check price history for
+drops or cycles. Check DOM and cumulative DOM.
+STEP 10 — Pull APN into Land Insights
+Duplicate the Land Insights tab. Input the comp's APN. Verify the parcel loads correctly. Compare its deeded
+vs. calculated acreage. Click 5-7 surrounding parcels if anything looks off. This turns a questionable comp into
+a fully verified one.
+STEP 11 — Visual Map Cross-Check
+On Zillow/Redfin, expand the neighborhood map. Toggle to Satellite + Lot Lines. Confirm the comp is in the
+right general vicinity. If parcel lines show, compare to listing photos. If APN didn't aggregate, try clicking
+surrounding parcels on Land Insights to find it visually.
+STEP 12 — Final Valuation & Deliverable
+Find your anchor comp, floor, and ceiling. Weight by: proximity to subject acreage, geographic closeness, land
+type similarity, recency of sale. Calculate market value. Generate offer range (target ~50% of MV). Deliver
+complete 8-section analysis in ONE response.
+STEP 13 — Clean Up
+CLOSE ALL MCP TABS after every comp. Delete the tab group completely. The browser will lag and crash if
+you leave them open. No exceptions.
+
+[PAGE 9]
+VI. LAND INSIGHTS VISUAL GUIDE
+Screenshot 1 — Comp Bubble Popup
+[SCREENSHOT 1] — Comp Bubble — What I See When I Click a Pin
+ Fig 1: Clicking a comp bubble on the Land Insights map opens this popup. It shows acreage, price, PPA, status
+(SOLD), subdivision (N/A), and days on market (3+). The thumbnail photo gives a first visual impression. Always
+ click the green Details button.
+Key data points visible in the bubble: Lot size (5.00 acres), Price ($65,000), PPA ($13,000.03), Status (SOLD),
+Subdivision (N/A), Days on Market (3+). The aerial thumbnail shows cleared/pasture land — green fields,
+treeline in background. 3 days on market means this sold almost instantly — strong market signal, very clean
+comp.
+Screenshot 2 — Land Insights data?parcel= Page
+[SCREENSHOT 2] — Land Insights data?parcel= Page — Full Layout
+
+[PAGE 10]
+Fig 2: The data?parcel= page. This is the ONLY Land Insights page we ever use. Left sidebar: tabs
+(Summary/Parcel/Owner), APN, GPS, Tax Delinquent, Family Transfer, Mobile Home, Structure count. Center:
+listing photos and property description. Bottom right: 'View Original Listing' button — gateway to Zillow/Redfin.
+CRITICAL ELEMENTS TO NOTE: Title bar shows '5 acres - Carthage, TX' — Panola County, TX. Left sidebar:
+APN = 5493, GPS coordinates visible, Tax Delinquent For 2020 (FLAG — note this), Family Transfer = No
+(good), Mobile Home = No (good), Structure count shows dashes (none). The 'Comp Report' button visible at
+top — NEVER click this. We do not use the Comp Report. The 'View Original Listing' button at bottom right is
+what we always click to get to Zillow/Redfin. Photos show open cleared/pasture land — matches the bubble
+thumbnail. Property description reads: prime area, available to build on, room for home/shop/pool. MLS Price:
+$65,000 ($13,000/acre), Status: SOLD, 3 Days on Market, Subdivision: N/A.
+
+[PAGE 11]
+VII. ZILLOW DEEP DIVE
+Screenshot 3 — Zillow Landing Page
+[SCREENSHOT 3] — Zillow Landing Page
+ Fig 3: Zillow listing for the same 5-acre Carthage, TX property. Address: 2541 County Road 403, Carthage, TX
+75633. Status: Sold. Photos match Land Insights — open pasture, cleared land. Price Unknown = already sold. 5
+ Acres Lot confirmed. Zestimate: Not Available (ignore — never use).
+What I'm doing on Zillow when I first land: (1) Confirm photos match what Land Insights showed me — they do.
+Same green pasture land. (2) Confirm acreage — 5 acres matches. (3) Note 'Price Unknown' — this is normal
+for sold land on Zillow, the MLS price is the source of truth from Land Insights ($65,000). (4) Scroll down for
+Facts & Features, parcel number, price history, and the neighborhood map.
+Screenshot 4 — Zillow Facts, Features & Price History
+[SCREENSHOT 4] — Zillow Facts, Features, MLS Confirmation
+
+[PAGE 12]
+Fig 4: Zillow Facts & Features and Price History section. Parcel Number: 1689. Zoning: residential. Fencing: None.
+ Utilities: Water Available, Electricity Available (positive signals). Lot Features: No Mobile Home, Building
+Restrictions, Deed Restrictions (note these). Source: LGVBOARD, MLS#: 20245342 — this confirms it IS an MLS
+ sale, not off-market.
+APN DISCREPANCY NOTE: Land Insights showed APN = 5493, but Zillow shows Parcel Number = 1689. This
+is the exact scenario where I need to investigate further. Take both numbers, try plugging each into Land
+Insights in a duplicated tab. Whichever one loads the correct parcel is the real APN. If neither works, fall back to
+visual map verification. CRITICAL: The source line shows 'LGVBOARD, MLS# 20245342' — this confirms it is a
+legitimate MLS transaction, not an off-market or public record sale. ALWAYS verify this.
+DEED RESTRICTIONS / BUILDING RESTRICTIONS: These are noted in the listing. They don't kill the comp,
+but they're important context — the buyer accepted these restrictions at $65,000. If our subject property has no
+such restrictions, it may be worth slightly more.
+Screenshot 5 — Zillow Tax History & Neighborhood Map
+[SCREENSHOT 5] — Tax History & Neighborhood Satellite Map
+
+[PAGE 13]
+Fig 5: Zillow public tax history (2022-2024) and neighborhood map. Tax assessments declining slightly: $32,720
+(2022) → $27,790 (2023/2024). Neighborhood map shows satellite view with lot lines. Surrounding values: $421K,
+$289K, $306K, $120K. These are HOUSE values (Zestimates) — not land comps. Do not factor into land valuation.
+The neighborhood map in Zillow is one of the most powerful visual tools available. Click the expand arrow (top
+right of the map widget) to get the full-size version. Toggle through: Lot Lines (shows parcel boundaries), Road
+(street names), Satellite (terrain). Always use Satellite + Lot Lines together. The surrounding home Zestimates
+($421K, $289K, etc.) tell me this is a developed area with actual homes being built and sold — good sign for
+land value. Street View is accessible from this map too — click the thumbnail in the corner.
+
+[PAGE 14]
+Screenshot 6 — Zillow Expanded Satellite + Lot Lines View
+[SCREENSHOT 6] — Expanded Zillow Satellite + Lot Lines — Parcel Location Confirmed
+ Fig 6: Zillow map expanded to full satellite view with Lot Lines enabled. The subject comp parcel (center, outlined
+ in white) sits along County Road 403. Surrounding parcels are clearly developed — homes with driveways,
+outbuildings, landscaping. A pond is visible top-right on an adjacent parcel. Open field/pasture land dominates. No
+ obvious flood or wetland indicators from this view.
+HOW I USE THIS VIEW: (1) Does the parcel outline match what the listing photos showed? Yes — open
+pasture, road frontage visible. (2) Are there any obvious issues? Pond on adjacent parcel (not subject). No
+visible wetlands on subject. (3) What's the neighborhood quality? Multiple well-developed homes nearby. Not a
+rural wasteland. (4) Is the road paved? County Road 403 is visible and appears paved (confirmed in Street
+View). (5) Does the lot size look proportionally correct? The parcel looks like 5 acres relative to neighbors —
+reasonable.
+Screenshot 7 — Street View: County Road 403
+[SCREENSHOT 7] — Street View: County Road 403 — Ground Truth Check
+
+[PAGE 15]
+Fig 7: Street View on County Road 403, Carthage TX. Road: older asphalt, cracked but paved — not dirt or gravel.
+ Right side: power/utility poles running alongside the road. Gravel driveway entrance visible. Open fields on both
+ sides. Scattered trees, a distant structure visible. Overall impression: semi-rural, decent area, not declining or
+ distressed.
+STREET VIEW ANALYSIS FOR THIS COMP: Road condition: Older paved asphalt (County Road). Not a dirt
+road — positive. Utility poles: Running alongside the road on the right side. This means electricity is accessible
+to the property — positive for buildability. The poles are standard utility/telecom — not high-voltage
+transmission lines with wide setbacks. Lower discount impact. Gravel driveway: Visible on the right — another
+property's access point. No visible distressed structures, no standing water, no signs of flooding. Area verdict:
+Semi-rural, modest but functional area. Not a concern.
+
+[PAGE 16]
+VIII. REDFIN DEEP DIVE
+Screenshot 8 — Redfin Listing Page (Pending Property)
+[SCREENSHOT 8] — Redfin Listing Page — Pending Pine Plantation Comp
+ Fig 8: Redfin listing for 6 County Road 3121, Long Branch, TX. Status: PENDING. Price: $53,625. 6.5 acres. PPA:
+$8,250/acre. 166 days on Redfin, 14 views. Source: NTREIS #21045970 (confirms MLS listing). Drone photo shows
+ pine plantation with a cleared strip running through it. Description: 'young pine plantation, gently rolling terrain,
+ multiple tracts available.'
+REDFIN PAGE LAYOUT: Unlike Zillow, Redfin shows the description and key stats right below the photos
+without much scrolling. The small map thumbnail appears between the price block and the Contact Listing
+Agent box — click it to expand to full satellite view. Always toggle the expanded map to Satellite mode (top right
+of map). Use Location layer for parcel lines. Street View available from the map too.
+RED FLAGS ON THIS COMP: (1) 166 days on Redfin + 612 cumulative DOM — been sitting almost 2 years
+total. Check price history for drops. (2) 'Multiple tracts available' — this is a subdivision-style sale. Seller is
+breaking up a larger parcel. Small tract sales from a subdivision often price differently than standalone parcels.
+(3) The cleared strip visible in the drone photo — could be a firebreak, logging road, or utility easement.
+Investigate via Street View. Follow it to where it meets a road if possible. (4) 14 views only after 166 days —
+very low engagement. Market may have already decided it's overpriced.
+Screenshot 9 — Redfin Property Details Section
+[SCREENSHOT 9] — Redfin Property Details — APN = NA Scenario
+
+[PAGE 17]
+Fig 9: Redfin 'Property Details' section after clicking 'Show all property details.' Farm Info: AG Exemption = No,
+Barns = 0. Land Info: Vegetation = Wooded. Lot Info: Easements = None, Lot Size 5-10 acres, 6.5 acres confirmed,
+Will Subdivide = No. Parcel Number: NA — APN not available for this comp. Sale and Tax History section visible at
+ bottom.
+APN = NA PROTOCOL: When Redfin shows 'Parcel Number: NA,' this means APN verification is not possible
+through this source. Next steps: (1) Check Zillow for the same listing — it may have the APN there. (2) If both
+show NA, work with what you have: use the map, photos, and description. (3) Try clicking surrounding parcels
+on Land Insights visually — if you can eyeball one that matches the acreage and shape from the listing photos,
+you've found it without needing the APN. (4) If all else fails, treat this comp as lower-confidence. Use it if it fits
+the trend line, but don't anchor your entire valuation on it.
+OTHER KEY DETAILS FROM THIS PAGE: Easements: None — clean. Vegetation: Wooded — pine plantation
+confirmed. Will Subdivide: No — noted but doesn't affect our use of this as a comp. AG Exemption: No — no
+agricultural tax benefit. Electricity Available — positive for buildability.
+
+[PAGE 18]
+Screenshot 10 — Redfin Full Listing Details (Bottom Section)
+[SCREENSHOT 10] — Redfin Full Details — County Discrepancy & Cumulative DOM
+ Fig 10: Redfin full details — Location (County: Panola vs Public Facts: Rusk County discrepancy). APN: NA
+confirmed. Cumulative DOM: 612. Purchase Contract: 2026-02-11. Off Market Date: 2026-02-11. Previous Status:
+ Active. MLS Status: Pending. Original List Price: $53,625. Source: Matrix (MLS confirmed — NOT off-market).
+COUNTY DISCREPANCY: Location section says 'Panola' but Public Facts says 'Rusk County.' Always trust the
+realtor's inputted public records data — that's what they filed with the MLS. The public records section (which
+shows Rusk County) is the authoritative source. If there is still doubt, the GPS coordinates (Latitude:
+32.06509000, Longitude: -94.60035500) can be dropped into Google Maps to confirm which county the parcel
+physically sits in.
+CUMULATIVE DOM = 612 ANALYSIS: This property has been trying to sell for nearly two years. The price
+history will tell the full story — did they drop the price significantly, or hold firm? Even with 612 cumulative DOM,
+if it's now pending at $53,625 ($8,250/acre), that IS what a buyer decided to pay. Use it as a comp. Flag the
+long sit time. Weight it slightly lower than a property that sold in 3-30 days, but do not exclude it.
+
+[PAGE 19]
+IX. APN — THE MOST POWERFUL TOOL IN COMPING
+★ The APN is not just a verification tool. It is a full comp on the comp itself. When you pull a comp's
+APN into Land Insights, you see everything about it — exactly as if you were comping it as a subject
+property.
+When you input a comp's APN into Land Insights, you gain access to: flood zones, wetlands, road access,
+parcel shape, calculated vs. deeded acreage, land use classification, area quality, surrounding parcels, and
+satellite/Street View. This transforms a questionable comp into a fully verified, deeply understood one.
+Where to Find the APN
+ Zillow: Scroll to Facts & Features → Property section → 'Parcel number' (may need 'Show more')
+ 
+ Redfin: Scroll to Property Details → click 'Show all property details' → Lot Information → 'Parcel Number'
+ 
+ Land Insights sidebar: APN field visible on the data?parcel= page left sidebar
+ 
+ Note: Zillow's 'Parcel number' and Land Insights' 'APN' may show different numbers — verify both
+ 
+How to Use the APN
+Duplicate the Land Insights browser tab. In the duplicated tab, navigate to the data?parcel= URL and input the
+comp's APN in the parcel search. If it loads — you now have a full Land Insights view of the comp property.
+Verify everything: acreage, flood zone, wetlands, access, parcel shape, land type. This is a comp on steroids.
+When APN Doesn't Aggregate
+Sometimes the APN simply doesn't work in Land Insights. This happens — don't panic. Close that tab and
+continue working the comp with available information. When running multiple comps simultaneously, if one tab's
+APN fails, close it and move to the next.
+The Visual Parcel Hunt (Advanced Technique)
+If APN fails but you know the approximate location from the Zillow/Redfin map, try clicking surrounding parcels
+on Land Insights to find it visually. If you find a neighboring parcel that matches the acreage and shape from the
+listing photos, click it — you've found the comp parcel without needing the APN at all. You already have it right
+there. Skip the tab duplication entirely.
+■ If the comp bubble's position on Land Insights looks far off from expected location BUT the APN
+confirms the correct location — ALWAYS go with the APN. The bubble can be wrong. The APN does not
+lie.
+
+[PAGE 20]
+X. ACREAGE VERIFICATION PROTOCOL
+Acreage discrepancies between deeded (reported) and calculated acres are common. Some difference is
+normal. A 3-4+ acre gap is a red flag that requires investigation.
+The Surrounding Parcel Method
+Click 5-7 neighboring parcels on Land Insights and compare their deeded AND calculated acreage. Build a
+mental picture of the size relationships. If your subject says 10 acres but neighbors are all 20-40 acres and the
+subject looks half their size, the deeded acreage is likely wrong. If calculated acreage aligns with the neighbors'
+scale, calculated is probably correct.
+The House Reference Trick
+A house typically sits on approximately 1 acre. If a property has a house on it and the deeded acreage says it's
+10 acres, but the whole parcel looks the same size as a house lot, something is off. Use visible structures as a
+proportional reference anchor.
+Scenario
+Action
+Deeded vs. Calculated within ~1-2 acres
+Normal. Note it, move on.
+Deeded vs. Calculated 3-4+ acres off
+Red flag. Click 5-7 surrounding parcels to calibrate.
+Calculated aligns with neighbors but deeded is off
+Calculated is likely correct. Note the discrepancy.
+Deeded aligns with neighbors but calculated is off
+Deeded is likely correct. Some counties calculate oddly.
+Both are wildly off from what satellite shows
+Investigate further. Flag for follow-up with seller.
+
+[PAGE 21]
+XI. COMP CONFIDENCE TIERS & WEIGHTING
+TIER 1 — FULL TRUST
+ APN confirmed and aggregated in Land Insights
+ 
+ Photos clearly show the property
+ 
+ Description matches photos and map
+ 
+ MLS source confirmed (not off-market)
+ 
+ Map location verified
+ 
+ Parcel shape and acreage make sense
+ 
+TIER 2 — PARTIAL TRUST
+ APN didn't aggregate but photos are decent
+ 
+ Map shows parcel in general vicinity
+ 
+ Description makes sense with the trend line
+ 
+ Source confirmed as MLS
+ 
+ Use it — note the uncertainty, don't anchor on it
+ 
+TIER 3 — OUTLIER / SHOT IN THE DARK
+ Vague description, terrible quality photos or no photos
+ 
+ No APN available on any source
+ 
+ Map location unclear
+ 
+ May add to the story but never anchor anything on it
+ 
+ Flag it explicitly in your notes
+ 
+REJECT — DO NOT USE
+ Off-market sale (not on MLS)
+ 
+ Sold–Public Records (family transfer, tax sale, partial interest)
+ 
+ Crosses county line
+ 
+ Cannot determine if arms-length transaction
+
+[PAGE 22]
+XII. MLS COMPS TOGGLE & DATA LAYERS
+✓ MLS Comps should ALWAYS be toggled ON. This is the default state.
+If comps are showing on the map — even just a few — the toggle is already ON. Leave it alone. Only take
+action if there are zero comps visible: no actives, no solds, no pendings.
+How to Turn On MLS Comps (Only If Zero Show)
+ Step 1: Look at the bottom right of the Land Insights map
+ 
+ Step 2: Find the button labeled 'Data Layers' (it sits next to 'Tools' and 'Map Layers')
+ 
+ Step 3: Click 'Data Layers'
+ 
+ Step 4: Inside that panel, find 'MLS Data'
+ 
+ Step 5: Toggle it ON
+ 
+ Step 6: Comps should now appear on the map
+ 
+■ Do NOT do this every single time. It is a waste of time if comps are already showing. Only use this
+when there are genuinely ZERO comps visible on the entire map.
+Acreage Range Filter
+Always click AUTO (not Manual). AUTO sets the acreage range automatically based on the subject. If you need
+more comps and AUTO isn't giving enough: set below = 80%, above = 150%. Always pull a wide acreage range
+to see the full PPA curve — understanding how price per acre changes across acreage sizes tells you where
+your subject fits in the market.
+
+[PAGE 23]
+XIII. READING LISTING PHOTOS & DESCRIPTIONS
+Listing photos and descriptions are used to cross-reference and verify what the map and satellite show. They
+are not taken at face value — they are one piece of the puzzle.
+Photo Reading Protocol
+ Go through ALL photos on Zillow and Redfin — don't just look at the first one
+ 
+ Note what land type the photos show: pasture, wooded, cleared, farmland, etc.
+ 
+ Look for any structures visible in photos — shed, trailer, barn, mobile home, anything
+ 
+ Look for water features — pond, creek, wetland markers
+ 
+ Look for road frontage shots — can you tell if it's paved or dirt?
+ 
+ Compare what the photos show to what the satellite/map shows — do they match?
+ 
+ If photos and satellite don't match, investigate why — wrong pin? Wrong listing photos?
+ 
+Description Reading Protocol
+ Read the full description — don't skim
+ 
+ Look for: road type mentioned, utility availability, building restrictions, deed restrictions
+ 
+ Flag any mention of easements, setbacks, HOA, or deed restrictions
+ 
+ Note phrases like 'multiple tracts available' — signals subdivision-style sale
+ 
+ Note phrases like 'gently rolling terrain' vs 'heavily wooded' vs 'flat and cleared'
+ 
+ Cross-reference description with photos — do they tell the same story?
+ 
+ If description mentions something specific (creek, pond, spring), find it on satellite
+ 
+When Photos Are Missing or Terrible Quality
+If photos are missing or extremely low quality, and the description is vague, and APN didn't aggregate — this
+comp drops to Tier 3 (outlier). You can still use it if it fits the trend line, but never anchor your valuation on it.
+Flag it explicitly. More information always means more confidence.
+
+[PAGE 24]
+XIV. STREET VIEW PROTOCOL
+■ Street View is MANDATORY for every subject property. No exceptions. Ever.
+Street View is the only way to see the world at ground level — the thing satellite cannot give you. It shows road
+quality, neighborhood condition, house quality, power line locations, driveway access, standing water, fencing,
+and general area feel.
+What to Look For in Street View
+ Road condition: Paved vs. dirt/gravel. Cracked old asphalt is still paved. Dirt roads reduce value and
+ accessibility.
+ Power/utility poles: Running alongside the road means electricity is accessible. Positive for buildability.
+ 
+ High-voltage transmission lines: Massive towers with thick cables — require wide setbacks, significantly
+ reduce value.
+ Driveway/entry access: Is there a clear driveway or access point to the property? Gravel, paved, or none?
+ 
+ Houses nearby: What condition are they in? Well-maintained vs. collapsing? This tells you neighborhood
+ quality.
+ Standing water or wet areas: Look in ditches, low spots, fields — indicates potential flooding or drainage
+ issues.
+ Fencing: Is the property fenced? What type? Barbed wire, wood, chain-link?
+ 
+ Structures: Any visible buildings, barns, sheds, mobile homes on or adjacent to subject parcel?
+ 
+ Overgrowth or abandonment: Heavily overgrown roadsides with collapsed structures = declining area.
+ 
+The Utility Easement Street View Hack
+If you see a cleared strip on satellite that might be a utility easement, and you can't drop your pegman directly
+on it (no road coverage there), follow that easement line on the map until it crosses a road — even if that's 2
+miles away. Drop your pegman there. The easement will look the same at that road crossing as it does at the
+subject property. This lets you identify: power lines vs. telecom poles vs. pipeline vs. other infrastructure.
+
+[PAGE 25]
+XV. EASEMENTS, POWER LINES & UTILITY CORRIDORS
+Type
+Visual ID
+Value Impact
+High-voltage
+transmission lines
+Massive steel towers, thick cables, very
+wide cleared corridor
+Significant discount — wide setbacks,
+cannot build near them, noise/aesthetics
+Standard utility /
+telecom poles
+Wooden poles, thinner wires, run
+alongside roadsides
+Minor impact — electricity accessible is
+actually positive for buildability
+Gas/oil pipeline
+easement
+Narrower cleared strip, often marked with
+signs, no poles
+Moderate — setbacks apply, no building
+over it, but less visual impact
+Logging road
+Wide dirt track, visible tire tracks from
+heavy equipment, may be rutted
+Usually not an easement — just access
+history. Minor or neutral impact
+Firebreak
+Narrow cleared strip through woods, very
+straight, no road surface
+Minimal impact — can actually be positive
+(fire protection, wildlife management)
+When uncertain about what a cleared strip is: follow it on the map to where it crosses a road, drop Street View
+there, and look. You will be able to identify it visually. Then pull the APN — if the property has a major
+easement crossing it, that significantly affects your ability to use it as a clean comp and affects your subject
+property's value.
+
+[PAGE 26]
+XVI. STRUCTURE IDENTIFICATION & FLAGGING
+✓ ANY structure on a property — shed, trailer, mobile home, barn, house — must be flagged. Even the
+smallest structure gets noted. The seller conversation handles condition assessment.
+I cannot assess condition or value with certainty from satellite and Street View alone. My job is to identify that
+something is there and describe what I can observe. The user then asks the seller directly about condition, age,
+and situation.
+Structure Flag Format
+When flagging a structure, provide: what it appears to be, where on the parcel it sits, what source revealed it
+(satellite, Street View, listing photos), and any observable condition notes. Example: 'Structure flagged:
+Appears to be a metal barn/outbuilding, visible in satellite view on the southeast corner of the parcel. Listing
+photos show interior — appears to be a working agricultural structure, no obvious collapse or severe damage
+visible.'
+How Structures Affect Comps
+A comp with a structure is still usable. Note the structure in your comp analysis. If your subject property is
+vacant land and the comp has a house on it, the comp's price likely reflects the structure's value — weight it
+accordingly. A comp with a small shed or outbuilding is generally still comparable to vacant land.
+
+[PAGE 27]
+XVII. DOM, PRICE HISTORY & LONG-SITTING COMPS
+Days on Market (DOM) and cumulative DOM tell you how quickly the market accepted a price. Long-sitting
+comps are not automatically excluded — they are analyzed and weighted carefully.
+DOM Range
+What It Signals
+How to Weight
+1–30 days
+Market accepted price immediately.
+Strong demand.
+Full weight — clean comp
+30–90 days
+Normal marketing period. Reasonable
+demand.
+Full weight — normal comp
+90–180 days
+Slower but still moved. May have been
+slightly overpriced initially.
+Moderate weight — check for price drops
+180–365 days
+Market pushed back significantly. Price
+was wrong or property has issues.
+Lower weight — always check full price history
+365+ days / 612+
+cumulative
+Extreme market rejection OR stubborn
+seller waiting for perfect buyer. Both
+happen.
+Flag it. Check every price change. Still use as
+comp — note it clearly.
+IMPORTANT: A property that sat for 612 days and finally went pending is STILL a valid comp. A buyer paid
+market value for it — that IS what the market decided. The long DOM simply means it took longer to find the
+right buyer. Flag it, note the history, weight it slightly lower than a fast sale, but never exclude it just because it
+sat.
+Reading Price History on Zillow & Redfin
+ Multiple price drops over time = seller originally overpriced it, market corrected it
+ 
+ Listed → Delisted → Relisted multiple times = high red flag, seller extremely reluctant
+ 
+ Price held steady throughout long DOM = stubborn seller, buyer finally met their number
+ 
+ Price raised at any point = unusual — flag and investigate
+ 
+ Original list price vs. final sale price gap tells you how much the market pushed back
+
+[PAGE 28]
+XVIII. LAND TYPE IDENTIFICATION
+Farmland
+Actively farmed — visible crop rows, irrigation patterns, tilled soil, distinct field boundaries. This is a YIELDING
+ASSET. It produces income. Worth significantly MORE than other land types. Always identify and call out
+farmland. If you see crop rows from satellite, that is farmland.
+Pasture / Cleared
+Open grass, possibly grazed. No crop rows. May have livestock visible. Clean, usable, buildable. Generally
+worth more than wooded because it requires less clearing work. Buyers can visualize building a home on it
+immediately.
+Wooded / Timber
+Tree canopy covering the parcel. Value depends on timber quality, species, age, and density. Pine plantation
+(uniform rows visible from satellite) has timber value. Mixed hardwood varies. Wooded land is generally worth
+less per acre than cleared because of clearing costs.
+Recently Timbered / Clear-Cut
+Stumps, debris, ugly brown/gray patches on satellite. Worst of both worlds — not wooded (no
+privacy/recreation), not cleared (stumps everywhere, can't build easily). Discount 5-30% depending on severity.
+Toggle old vs. new satellite to catch it.
+Wetlands / Flood Zone
+Blue overlays on Land Insights hazards layer, standing water visible on satellite, irregular dark patches
+indicating saturated soil. Significantly reduces buildable area. Never panic-discount without checking the actual
+percentage. 100% flood zone is very different from 10% flood zone on a corner.
+
+[PAGE 29]
+XIX. TIMING & EFFICIENCY
+★ TARGET: 2.5 minutes per property, start to finish.
+Phase
+Target Time
+Key Actions
+Initial Assessment
+~45 seconds
+Load parcel, check acreage/APN/owner/flags, satellite + Street
+View
+Comp Process
+~75 seconds
+Pull comps county-wide, click bubbles, verify on Zillow/Redfin,
+pull APNs
+Final Valuation &
+Deliverable
+~30 seconds
+Weight comps, calculate MV, generate offer range, write full
+analysis
+Speed Rules
+ Navigate directly to zoom 11-12 in the URL — never scroll-zoom 4-5 times
+ 
+ Minimize screenshots — one for property data, one at parcel zoom, one at county zoom for comps
+ 
+ CLOSE ALL MCP TABS after every comp. Delete the tab group. Browser will lag and crash otherwise.
+ 
+ Deliver full analysis in ONE response — no 'continue' breaks, no mid-process narration
+ 
+ Do not ask for permission mid-process — work silently, deliver the final product
+ 
+ If Land ID is blocked, note it and skip — do not waste time fighting it
+ 
+ If APN doesn't aggregate, close the tab and move on — do not retry repeatedly
+
+[PAGE 30]
+XX. COMP NOTE DELIVERY FORMAT
+Every comp analysis is delivered in one complete response with 8 sections. No breaks, no asking to continue,
+no mid-process updates. Work silently and deliver everything.
+Section 1 — Property Overview
+APN, owner, county, acreage (deeded vs calculated), GPS, land use, flags (tax delinquent, family transfer,
+structure count, mobile home)
+Section 2 — Land Type & Satellite Assessment
+Land type identification, wetlands %, flood zone %, hazards, what satellite shows with filters OFF
+Section 3 — Area Assessment
+Rural/semi-rural/suburban classification, development context, neighborhood quality from bird's-eye view
+Section 4 — Street View Findings
+Road type, utility/power lines, access/driveway, structures visible, standing water, area quality ground-level
+assessment
+Section 5 — Comp Analysis
+All comps used: acreage, price, PPA, status, DOM, source, confidence tier, APN verified Y/N, distance from
+subject, weighting rationale
+Section 6 — PPA Curve & Market Context
+Low/mid/high PPA range by acreage, what the market is saying about this county for this land type
+Section 7 — Market Value Conclusion
+Final market value, how it was calculated, which comps anchored it, what was weighted up or down and why
+Section 8 — Offer Range & Notes
+50% offer target, offer range, any flags that could affect offer (structures, easements, acreage discrepancy, long
+DOM comps, thin comp pool)
+ END OF DewClaw MCP Comping Master Guide — Version 1.0
+ If Claude ever seems off or forgets this workflow, paste this document back to restore full methodology.

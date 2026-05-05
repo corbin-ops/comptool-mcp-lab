@@ -1,0 +1,823 @@
+[PAGE 1]
+DewClaw Land Investment
+ Visual Field Guide — Volume 3
+ Parcel shapes · Water quality · Road grades · Landlocked access · Farmland vs.
+pasture · Trailway vs. railroad · County rivers · Developer subdivisions · The Street
+ View power lesson
+ Version 1.0 — May 2026
+ VOLUME 3 OF 3 — COMPANION TO VOLUMES 1 & 2 — STRICTLY INTERNAL
+
+[PAGE 2]
+TABLE OF CONTENTS
+I. Parcel Shape Identification — Bowling Alley, Flagpole, Normal
+II. Water Quality — Trash Lakes, Medium, Premium
+III. Water Quality Master Reference Table
+IV. Road Quality — Complete Visual Spectrum
+V. Road Quality Master Reference Table
+VI. Landlocked Parcels — Identification & Access Research
+VII. Same-Owner Adjacent Parcel Access Protocol
+VIII. The 'More Properties' Feature — Full Workflow
+IX. Farmland vs. Pasture vs. Specialty Agriculture — Satellite ID
+X. The Street View Power Lesson — Hay Operation
+XI. County-Owned River Corridors — Waterfront Still Applies
+XII. Developer Subdivision Lots — Pattern Recognition
+XIII. Marshland — All Colors & Shapes
+XIV. Trailway vs. Railroad — Critical Distinction
+XV. Waterfront vs. Near Water — The Exact Threshold
+XVI. Green Tree Dots on GIS Maps
+XVII. Yielding Assets — Hay, Orchards, Specialty Ag
+XVIII. Final Comping Mindset — Putting It All Together
+
+[PAGE 3]
+I. PARCEL SHAPE IDENTIFICATION
+★ Shape affects buildability and value. Always flag severely elongated parcels.
+Moderate Bowling Alley — North-South (Elijah Keller)
+[MODERATE BOWLING ALLEY] North-South Elongated — Creek on East Side
+ Fig 1A: Elijah Keller parcel (cyan outline) runs tall and narrow north-south. A creek/river borders the right side —
+ positive feature. The narrow width limits buildable area but the parcel is still functional. A magenta/pink county
+ boundary line is visible at the bottom. Flag the shape but note the water feature.
+Extreme Bowling Alley — East-West Ribbon (Joseph T Perrin)
+[EXTREME BOWLING ALLEY] East-West Ribbon — Minimal Depth, Maximum Discount
+
+[PAGE 4]
+Fig 1B: Joseph T Perrin parcel (cyan outline) — the most extreme bowling alley shape. Dramatically wider than it is
+ tall — almost no depth. Minimal setback room from road, minimal depth before hitting back boundary. Plantation
+ timber visible on left (Jeffrey Daniels, Ignacio Serna — very uniform rows). Randall Tulick below = recently
+ timbered (tan/brown pattern). Clean lake/pond visible at top. This shape tanks value significantly.
+Moderate Bowling Alley with Partial Clearing (Jonathan Hurst)
+[MODERATE BOWLING ALLEY] With Federal Land Adjacent & Plantation Timber Nearby
+
+[PAGE 5]
+Fig 1C: Jonathan Hurst parcel (cyan outline) — moderate bowling alley, north-south. USA federal land label inside
+ = adjacent federal land. Partially cleared/timbered interior. Darcey Trippett and Dennis Jerome right side =
+plantation timber (uniform rows visible). Northern Michigan Rentals LLC (green outline, left) = textbook plantation
+ rows. Lake visible bottom-left (Peggy Roe area) on a separate parcel.
+Bowling Alley Shape Discount Framework
+Shape Type
+Description
+Discount
+Flag Language
+Normal rectangular
+Width and depth roughly
+proportional
+None
+No shape flag needed
+Moderate bowling
+alley
+Clearly elongated, one
+dimension 3-4x the other
+10-20%
+'Elongated parcel shape limits
+buildable area and siting flexibility'
+Severe bowling
+alley
+Extreme ribbon, very little
+depth or width
+20-35%
+'Severe bowling alley shape —
+minimal buildable area, significant
+discount'
+Flagpole/easement
+lot
+Small access strip connecting
+to main parcel
+15-25%
+'Flagpole configuration — easement
+access, reduced frontage value'
+
+[PAGE 6]
+II. WATER QUALITY — TRASH LAKES, MEDIUM, PREMIUM
+■ NEVER price a water feature without looking at it. Satellite color alone is insufficient.
+Trash Lake Examples — No Value-Add
+[TRASH LAKE] Dark Ragged Edges, Vegetation Encroaching — No Premium
+ Fig 2A: Richard Berryhill parcel — trash lake example. Dark irregular blob, ragged edges, vegetation growing into
+ water from all sides. No recreational value. An uninviting, unattractive water body. Do not count as a value-add
+ feature.
+[TRASH LAKE] Cluttered, Messy, Uninviting — Neutral Impact
+
+[PAGE 7]
+Fig 2B: Packaging Corp of Amer — another trash lake. Dark water with cluttered, messy appearance. Vegetation
+from multiple sides. Surrounded by scrubby area. A buyer would not consider this a selling point. Note it exists, no
+ premium.
+Worst Case — Heavy Algae/Wetland Pond (Keith Teachout)
+[WORST CASE] Heavy Algae Blob — Actively Hurts Value, Near-Wetland Level
+ Fig 2C: Keith Teachout — the worst water quality example. Large brownish-green blob with floating
+vegetation/algae visible from space. Extremely ragged irregular edges. Snaking creek on the right with very chaotic
+ banks. Jeffrey Derstine's clean green field below shows the contrast — healthy land vs. this water disaster. This
+ actively hurts value — it dominates the parcel with something deeply unattractive.
+Split Personality — Good Lake + Bad Pond (Fink/McCurdy)
+
+[PAGE 8]
+[SPLIT PERSONALITY] Clean Lake South + Algae Pond North — Note Both Separately
+ Fig 2D: The most instructive water quality image. BOTTOM of parcel: dark, clean, well-defined lake — genuinely
+ premium. TOP of parcel: pale green/white mossy, algae-heavy shallow pond — clearly poor quality. SAME
+PARCEL, two completely different water situations. Call both: 'Property contains a clean lake on south end
+ (positive) and a heavily algae-covered shallow pond on north end (negative/neutral).'
+Premium Clean Lake — Chief Lake (Gold Standard)
+[PREMIUM LAKE] Chief Lake — Dark, Clean, Well-Defined, Gold Standard
+
+[PAGE 9]
+Fig 2E: Chief Lake — the benchmark for premium lake quality. Dark blue-black, clean edges, large oval shape,
+consistent depth appearance throughout. Multiple developed parcels surrounding it, LLC-owned cabin business,
+ homes on shoreline. Two green comp bubbles: 21.37ac | $5.62k ppa both near this premium lake. This is what a
+ genuine value-add water feature looks like from satellite.
+
+[PAGE 10]
+III. WATER QUALITY MASTER REFERENCE TABLE
+What I See from
+Satellite
+Water Type
+Street View Check
+Value Call
+Dark blue-black, clean
+round/oval edges,
+consistent
+Premium clean lake
+(Chief Lake, Healy
+Lake level)
+Deep, clear, good
+banks
+Strong positive — call it out
+prominently
+Dark water, slight pale
+patches on surface
+Medium quality —
+some algae (Lake
+Emma north)
+Some algae visible,
+still a real lake
+Moderate positive — note
+algae, still a lake
+Dark water, ragged
+edges, vegetation
+encroaching
+Trash lake —
+unattractive
+Uninviting, scrubby
+surroundings
+Neutral to slight negative — no
+premium
+Brownish-green blob,
+pale floating patches
+Heavy algae/weedy
+pond
+Algae mats,
+shallow, weedy
+Negative — actively hurts value
+Pale green/white
+irregular mass, no clear
+water
+Severe algae or
+shallow weedy pond
+Almost marsh-level
+conditions
+Significant negative — near
+wetland
+Pale yellowish-green
+wide corridor with
+snaking creek
+Marshland corridor
+Cattails, standing
+water, scrubby
+Major negative — likely
+unbuildable
+Orange-brown irregular
+blob, fuzzy edges
+Marshland (different
+season color)
+Same as above just
+different color
+Major negative — same as
+above
+Brownish-tan winding
+ribbon, sandy inside
+bends
+Premium river
+(Manistee-type)
+Wide, deep, glassy
+— ALWAYS verify
+Strong positive — verify with
+Street View
+■ NEVER judge a river from satellite alone. A brownish-tan ribbon that looks shallow from above can be
+a wide, deep, premium recreational river at ground level. Street View is the final word on water quality
+— every single time.
+
+[PAGE 11]
+IV. ROAD QUALITY — COMPLETE VISUAL SPECTRUM
+Satellite Context — What Access Looks Like from Above
+[SATELLITE] Green Trail Line = NEVER Assume Paved — Always Verify Street View
+ Fig 4A: Debbie Sue Forward parcel (cyan outline, center) near Hopkins Rd and 11 Mile Rd. The GREEN LINE on
+ Hopkins Rd = Land Insights trail marker. This almost NEVER means paved. Always verify in Street View. The
+orange 11 Mile Rd at bottom = good paved road but it's NOT the parcel's access — the parcel accesses via that
+ green dirt trail. Golf course visible top = decent neighborhood context. House on parcel.
+C-Grade: Unmaintained Dirt/Gravel — Hopkins Rd Access Trail
+[C-GRADE DIRT] Two-Track, Grass Center Strip, Overgrown — Note Street View Year
+
+[PAGE 12]
+Fig 4B: The actual Hopkins Rd dirt access trail from Street View. Two tire tracks visible with green grass growing
+ up the center strip — hasn't been re-graded in a long time. Overgrown vegetation encroaching from both sides.
+Sandy/dirt surface with some gravel. Passable but clearly neglected. ALWAYS note the Street View year. Ask: 'Has
+ road condition changed?' This is a significant discount situation.
+A+ Grade: Perfect Paved Road — 13 Mile Rd
+[A+ PAVED] 13 Mile Rd — Fresh Asphalt, Lane Markings, No Discount
+
+[PAGE 13]
+Fig 4C: 13 Mile Rd — the A+ benchmark. Fresh dark asphalt, crisp white edge lines, yellow center dashes,
+ maintained gravel shoulder, trees trimmed back, no cracking or patching visible. Two full lanes, smooth.
+ Everything gets compared to this. A road like this = no access discount whatsoever.
+F-Grade Paved Roads — Equivalent to Maintained Gravel
+[F-GRADE PAVED] Massive Potholes, Crumbling — Equivalent to Gravel
+ Fig 4D: Severely deteriorated paved road — massive water-filled potholes across both lanes, crumbling asphalt
+edges, truck swerving around them. Technically 'paved' but rides worse than a well-maintained gravel road. Rare in
+
+[PAGE 14]
+Street View but when you see it, flag it hard. Heavy discount.
+[F-GRADE PAVED] Alligator Cracking, Standing Water — Heavy Discount
+ Fig 4E: Another F-grade paved road — deep alligator cracking throughout, potholes filled with standing water,
+completely broken up surface. This is what pavement looks like when it hasn't been properly maintained for years.
+F-Grade Gravel with Potholes
+[F-GRADE GRAVEL] Large Muddy Potholes, Ruts — Significant Discount
+Fig 4F: Badly deteriorated gravel/dirt road with large muddy potholes and standing water. Deep tire track ruts. This
+ is what a poorly maintained gravel road becomes — genuinely problematic in wet conditions. Worse than the
+ Hopkins Rd example (4B). The potholes form from tire traffic and rain without regular grading.
+A-Tier Dirt Road — Chief Rd (Well-Maintained)
+[A-TIER DIRT] Chief Rd — Wide, Graded, No Potholes, Minor Discount Only
+
+[PAGE 15]
+Fig 4G: Chief Rd — an A-tier maintained dirt road. Wide, easily two vehicles can pass. Well-compacted surface,
+recently graded, no potholes. Clean defined ditches on both sides. Utility pole on left = electricity accessible. Tall
+ pine trees lining both sides. Note as: 'Chief Rd — maintained dirt road, A-tier, well-graded, wide, no visible
+ deterioration (Street View: [year]).' Minor reduction vs. paved but nothing dramatic.
+
+[PAGE 16]
+V. ROAD QUALITY MASTER REFERENCE TABLE
+Grade
+Visual Markers
+Discount
+Note Protocol
+A+ Paved
+Fresh dark asphalt, lane markings,
+gravel shoulder, no cracks (13 Mile Rd)
+None
+No road flag needed
+A Paved
+Clean asphalt, minor aging, markings
+clear, functional
+None–Mino
+r
+Note road type only
+A Dirt
+Wide, well-graded, compacted, no
+potholes, clean ditches (Chief Rd)
+Minor
+'Maintained dirt road, A-tier
+[year]'
+B Paved/Gravel
+Noticeable aging/roughness, still clearly
+drivable
+Minor–Mod
+erate
+Note condition briefly
+C Dirt/Gravel
+Grass center strip, overgrown sides,
+passable (Hopkins Rd)
+Significant
+'Unmaintained dirt/gravel
+[year] — verify condition'
+Two-Track
+Two tire ruts in grass, minimal
+clearance, not a real road
+Heavy
+'Two-track access only —
+heavy discount'
+F Paved
+Massive potholes, crumbling, standing
+water — technically paved
+Heavy
+'Severely deteriorated
+pavement — equivalent to
+gravel'
+F Gravel
+Deep muddy potholes, ruts, standing
+water (Image 4F)
+Heavy
+'Deteriorated gravel —
+significant access concern'
+Green Trail
+(Land Insights)
+Green line on map — ALWAYS verify in
+Street View. Almost never paved.
+Unknown
+'Trail/dirt access — Street
+View verification required'
+★ ALWAYS note the Street View year in road notes. Example: 'Hopkins Rd — C-grade dirt access,
+overgrown (Street View: 2023). Lead manager should verify current condition with seller.'
+
+[PAGE 17]
+VI. LANDLOCKED PARCELS — IDENTIFICATION & ACCESS
+RESEARCH
+■ Always price conservatively as landlocked, THEN also price 'what if it has an easement?' Present
+both scenarios. Never assume — verify.
+Example 1: Sandra Ware — Same Owner Adjacent (Short Easement)
+[SHORT EASEMENT] Same Owner Adjacent — Sandra Ware/Ware Sandra Trust
+ Fig 6A: Sandra Ware parcel (cyan outline) — landlocked at first glance. But 'Ware Sandra Trust' on adjacent right
+parcel with Golfview Dr frontage. Same person, two parcels. Roundabout on Golfview Dr visible. Golf course area
+ context. Discount like flagpole/easement — not full landlocked pricing. Short easement through the owner's own
+ adjacent parcel. Area is decent — near golf course.
+Example 2: Wade Milnickel — Small Corner Piece Gives Access
+[CORNER ACCESS] Small Corner Piece Touches Allen Rd — Same Owner
+
+[PAGE 18]
+Fig 6B: Wade Milnickel large parcel (cyan outline) appears landlocked. But small 'Wade Milnickel' corner piece
+top-left DOES touch Allen Rd. Same owner, small corner access parcel. Cleared area visible in upper portion of
+main parcel = likely the access corridor or building spot. Discount for easement/dirt access — not full landlocked.
+Example 3: John Gauthier — Deep Landlocked, Long Easement Chain
+[DEEP LANDLOCKED] Multi-Parcel Easement Chain — Significant Discount
+
+[PAGE 19]
+Fig 6C: John N Gauthier parcel (cyan outline) — deeply landlocked. Access would require easement through Myers
+ Family Trust → Michael Gushen → road. Multi-parcel easement chain = hundreds of feet of dirt access through
+others' land. Significant discount. WRQT-FM label adjacent = radio tower nearby, worth flagging. This is the most
+ landlocked scenario — still verify with seller.
+Example 4: Donavan Anderson — 'More Properties' Reveals Access
+[DETECTIVE WORK] Visible Track = Access Exists. Check 'More Properties'.
+ Fig 6D: Donavan E Anderson (cyan outline) looks landlocked at county zoom. But visible track/road running
+ through the property = people ARE accessing it = easement exists. Comp bubbles: 9.99ac | $8.91k ppa
+(blue/active), 9.99ac | $7.51k ppa (green/sold), 19.38ac | $5.06k ppa (green/sold), 19.19ac | $5.58k ppa (green/sold).
+ Carrington Mortgage Services LLC (green outline, top left) = corporate parcel nearby.
+Example 5: Anderson Living Trust — Potter Rd Access Revealed
+[ACCESS FOUND] Same Family Name + Potter Rd Frontage = Access for Whole Cluster
+
+[PAGE 20]
+Fig 6E: Zoomed to show Anderson Stephen H & Mary parcel connects to Potter Rd at the bottom. The same family
+ owns a smaller parcel off Potter Rd that gives the entire cluster road access. Even if the name is slightly different
+ — same last name Anderson ties them together. Potter Rd is a yellow maintained road. Plantation timber rows
+ visible below — uniform, organized planting pattern.
+Full County View with Comp Pool
+[COMP POOL] Landlocked Interior vs. Road Frontage — PPA Difference Visible
+
+[PAGE 21]
+Fig 6F: Wide county view showing subject parcel cluster (cyan outline) with full comp pool visible. Green = sold,
+ Blue = active, Pink = pending. Notable: 10.02ac | $11.98k ppa (green) on Chief Rd = frontage premium. 19.38ac |
+ $5.06k ppa and 19.19ac | $5.58k ppa = landlocked/interior parcels priced lower. 'American Tower' parcel = cell
+ tower, infrastructure context. This shows how landlocked status suppresses PPA vs. road frontage.
+
+[PAGE 22]
+VII. SAME-OWNER ADJACENT PARCEL ACCESS
+PROTOCOL
+When a parcel appears landlocked, always check adjacent parcels before concluding. Same-owner adjacency
+almost always means an easement exists — even if it's not labeled.
+How to Identify Same-Owner Access
+ Check adjacent parcels for identical owner name — exact match = almost certainly the same person
+ 
+ Check for same LAST NAME on adjacent parcels — family members commonly share easements
+ 
+ Look for a visible dirt track or clearing running toward a road — if people are getting in, an easement exists
+ 
+ Click the 'X properties' link in the sidebar → see all parcels this owner holds highlighted in blue
+ 
+ Zoom into each blue cluster to find which parcel connects to a road
+ 
+ Purple = parcel you previously clicked on in the same owner's portfolio
+ 
+ Even if the name is slightly different (trust vs. personal name), same last name = same person probable
+ 
+Pricing Framework for Landlocked/Easement Access
+Scenario
+Discount
+Notes
+Direct road frontage
+0%
+Full market value, no access concern
+Short easement through own
+adjacent parcel
+Similar to dirt road —
+15-25%
+Owner controls the easement — more stable
+than third-party
+Long easement through multiple
+third-party parcels
+25-40%
+Legal complexity, maintenance burden, access
+uncertainty
+Truly landlocked, no easement
+identified
+Maximum discount —
+40%+
+Flag hard. Verify with seller. Present both
+scenarios.
+■ ALWAYS present two valuations: (1) As landlocked, (2) Assuming easement exists. Let the seller
+conversation resolve the actual situation.
+
+[PAGE 23]
+VIII. THE 'MORE PROPERTIES' FEATURE — FULL
+WORKFLOW
+When you click a parcel in Land Insights, the sidebar shows 'X properties' next to the owner name. This links to
+ALL parcels this owner holds. Use it to find hidden road access, understand ownership context, and verify
+parcel relationships.
+Click 'X properties' link
+Opens a new map view showing all parcels this owner holds, highlighted in blue
+Zoom into each blue cluster
+Blue = all their parcels. Find which one touches a road.
+Click individual parcels
+Clicked parcels turn purple — helps you track what you've already reviewed
+Check the road connection
+Find the parcel that has paved/dirt frontage — that's the access point for the whole cluster
+Note the road quality
+The access road quality for the connecting parcel = the effective access quality for all linked parcels
+Cross-reference last names
+Even if parcel names differ slightly, same last name = same family = likely access
+✓ This feature turns a 15-second check into a complete access picture. Always use it when a parcel
+looks landlocked or when you see a cluster of same-name parcels.
+
+[PAGE 24]
+IX. FARMLAND vs. PASTURE vs. SPECIALTY AGRICULTURE
+— SATELLITE ID
+★ Farmland = yielding asset. Sellers of yielding assets almost always know their land's value. Price
+accordingly and never underestimate.
+100% Active Farmland — Jeffrey Harthun (Crop Rows)
+[ACTIVE FARMLAND] Tight Crop Rows, Equipment Visible — Yielding Asset Premium
+ Fig 9A: Jeffrey Harthun parcel — textbook active farmland. Tight, crisp, parallel crop rows across both sections.
+ Two distinct growing areas with different row spacing = different crops or planting stages. Farm equipment
+(tractor) visible as small dot mid-field. Dark water body at top edge. Potter Rd frontage. THIS IS A YIELDING
+ ASSET. Flag the farmland premium every time rows this defined are visible.
+Well-Maintained Pasture — Soft Mowing Patterns
+[WELL-MAINTAINED PASTURE] Soft Mowing Patterns, Not Crop Rows — Positive, No Premium
+
+[PAGE 25]
+Fig 9B: Well-maintained pasture/hay field. Some faint row patterns = mowing patterns, NOT crop rows. Much softer
+ and less defined than farmland. Uniform clean green grass. Small green structure at bottom (shed — flag as
+structure). Treeline on right. Clean usable pasture land — very buildable, presentable. Positive but not farmland
+ premium.
+Semi-Maintained Pasture — Average
+[SEMI-MAINTAINED PASTURE] Casual, Inconsistent — Average Cleared Land
+
+[PAGE 26]
+Fig 9C: Corp of Amer parcel — casual cleared/pasture area. Open center, dirt tracks visible running through.
+ Circular structure (water tank or propane — flag as structure). Dirt driveway from Potter Rd. Inconsistent
+ maintenance. Average cleared land, no premium.
+Specialty Agricultural — Fruit Haven Nursery Inc
+[SPECIALTY AG] Commercial Nursery — Business Name + Regular Planting Rows
+
+[PAGE 27]
+Fig 9D: Fruit Haven Nursery Inc — commercial nursery operation. Left side: dormant nursery stock rows
+(tan/brown, regular spacing — Christmas trees, fruit trees, or ornamentals). Right side: active green rows in more
+advanced growth stage. When corporate/business name + very regular commercial planting pattern = specialty ag.
+ Flag it and note the commercial use — price with ag premium.
+Active Cultivation — Reddish Tilled Soil (Steven R Myers)
+[ACTIVE TILLED FARMLAND] Reddish-Orange Soil with Cultivation Lines — Farm Premium
+ Fig 9E: Steven R Myers parcel on Chief Rd. Top-left: settled area with house, green outbuilding, cleared yard.
+ Center-right: reddish-orange soil with visible cultivation lines — freshly tilled or specific row crop (possibly
+strawberries, potatoes) exposing bare red soil. Active farming. Flag farmland premium. Charles Carver adjacent at
+ bottom left.
+Land Type Reference Table
+What I See
+Land Type
+Value Signal
+Tight crisp parallel rows,
+equipment visible
+Active farmland — yielding
+asset
+HIGHEST premium — always flag
+Reddish/orange tilled soil
+with cultivation lines
+Actively tilled/farmed
+Farmland premium
+Very regular commercial
+rows, business/LLC owner
+Specialty ag (nursery,
+Christmas trees)
+Commercial premium — flag
+Soft mowing patterns,
+uniform clean green
+Well-maintained pasture/hay
+Positive — no special premium
+
+[PAGE 28]
+Open cleared, some
+maintenance, no rows
+General cleared/pasture
+Average — positive
+Open cleared, scrubby near
+road, inconsistent
+Casual cleared
+Modest — neutral
+
+[PAGE 29]
+X. THE STREET VIEW POWER LESSON — HAY OPERATION
+■ This is the defining lesson: satellite gave a B-level read. Street View gave the A-level truth. 30
+seconds changed everything.
+Step 1 — Satellite View: 'Maintained Pasture'
+[SATELLITE] Maintained Pasture Land — Incomplete Read Without Street View
+ Fig 10A: Daniel M Daberkoe parcel (cyan outline) on Big Four Rd. From above: maintained cleared land. House
+visible right side, green outbuilding, small wet feature center, driveway visible. Road appears chip-seal/maintained
+ gravel. Satellite read: 'maintained pasture land — neutral to positive.' INCOMPLETE.
+Step 2 — Street View Pass 1: Hay Bales Spotted
+[STREET VIEW PASS 1] Hay Bales Visible — Flag as Possible Yielding Asset
+
+[PAGE 30]
+Fig 10B: Drop the pegman. Open grass field — but those small brown round shapes in the background are HAY
+BALES. White barn/outbuilding clearly visible right. Road: maintained chip-seal/gravel, 40 mph speed limit, utility
+ lines overhead. Flag immediately: possible hay operation, active agricultural use, yielding asset.
+Step 3 — Street View Pass 2: Full Confirmation
+[STREET VIEW PASS 2] Tractor + Hay Bales Confirmed — Yielding Asset, Sophisticated Seller
+ Fig 10C: Move further down Street View. Now undeniable: large round hay bales lined up along the tree row. Red
+tractor with baling attachment actively working mid-field. Well-maintained house behind. Mature shade trees along
+ fence line. CONFIRMED: functioning hay farming operation. Seller is producing a product, selling it, making
+ income. They KNOW what their land is worth.
+What This Means for Comping
+
+[PAGE 31]
+ Flag in notes: 'Active hay operation visible from Street View — round bales and tractor present. Land
+ appears to be a yielding asset. Seller likely aware of agricultural value.'
+ Compare only to other agricultural comps when possible — not generic cleared land
+ 
+ The ag premium applies — treat like farmland, not standard pasture
+ 
+ Seller sophistication level: HIGH. Don't expect an uninformed seller.
+ 
+ Street View took 30 seconds and changed the entire valuation context.
+
+[PAGE 32]
+XI. COUNTY-OWNED RIVER CORRIDORS — WATERFRONT
+STILL APPLIES
+Big Four Rd — County River Corridor (Hazards OFF)
+[COUNTY RIVER CORRIDOR] Green Line = County Owned Strip — Waterfront Premium Still Applies
+ Fig 11A: Big Four Rd area with hazards OFF. The green winding line following the river = county's river corridor
+ownership strip. Arcadia Country Club visible top right. Also note: bottom area near Glovers Lake Rd shows lighter
+ patchy area = timber regrowth visible even at this zoom level — early regrowth or recently timbered section.
+The County River Corridor Rule
+When a river corridor is owned by the county (green line on Land Insights), and a parcel borders that corridor —
+it IS still waterfront. The county owns the strip of land immediately along the river, not the adjacent landowner.
+But public access to the river exists, meaning the adjacent parcel owner can access and use the river. The
+restriction: cannot build over the river or install a dock without a county easement. This is still a waterfront
+premium situation — just note the county ownership distinction.
+ Parcel boundary touches county river corridor = waterfront premium applies
+ 
+ County owns the river strip = public access, but no permanent structures without easement
+ 
+ No dock, no bridge, no building over the corridor without county permission
+ 
+ Still call it waterfront in the comp analysis — just note the county ownership
+ 
+ If the subject parcel directly borders the river (no county strip) = full waterfront
+
+[PAGE 33]
+XII. DEVELOPER SUBDIVISION LOTS — PATTERN
+RECOGNITION
+Classic Developer Subdivision — Woods Trail Area
+[DEVELOPER SUBDIVISION] Identical Lots, Same Shape/Size — One Parent Parcel Divided
+ Fig 12A: County zoom showing developer subdivision between Woods Trail and Glovers Lake Rd. All parcels are
+ identical size, same shape, same orientation — bowling alley lots lined up in rows. This was ONE large parent
+parcel a developer bought, subdivided into individual lots, and sold off for profit. Comp bubbles: Matthew Swain
+19.10ac | $4.45k ppa and 20.00ac | $5.25k ppa visible for comparison. State of Michigan parcels adjacent. Bottom
+ shows timber regrowth near Glovers Lake Rd.
+How to Recognize Developer Subdivisions
+ All parcels same size, same shape, same orientation — mathematical uniformity
+ 
+ Multiple 'same-name' owners in the grid (the developer sold them off individually)
+ 
+ A main access road (Woods Trail in this case) running through or alongside
+ 
+ Comp bubbles clustered in this area = multiple similar listings = child lots from same parent
+ 
+ If comping one of these lots — use ONE comp from the cluster, not all of them
+ 
+ Using multiple child lot comps from the same parent skews the valuation artificially
+ 
+✓ Rule: When multiple comp bubbles are in the same tight area and they look like identical lots — they
+are almost certainly child lots from one parent parcel. Use only ONE as your comp representative.
+
+[PAGE 34]
+XIII. MARSHLAND — ALL COLORS & SHAPES
+■ Marshland color varies by season, vegetation type, and water content. The identifier is SHAPE and
+TEXTURE — not color.
+Orange-Brown Marshland (New Color Calibration)
+[ORANGE-BROWN MARSH] Different Color, Same Identifier — Irregular Shape + Fuzzy Texture
+Fig 13A: Orange-brown marshland — same irregular blob shape and fuzzy texture as yellow-green marsh, different
+ color. Large irregular mass center-left with characteristic snaking creek/stream cutting through. Completely
+different texture from surrounding healthy dark green timber. Two green comps visible: Matthew Swain 19.10ac |
+ $4.45k ppa and 20.00ac | $5.25k ppa. The marsh significantly affects buildability of nearby parcels.
+Marshland Color Spectrum
+The KEY identifiers for marsh are NEVER color — always shape and texture:
+ IRREGULAR BLOB SHAPE — not clean round or oval, ragged organic outline
+ 
+ FUZZY TEXTURE — not sharp clean canopy, blurry patchy appearance
+ 
+ SNAKING CREEK/STREAM LINE — dark thin winding line cutting through
+ 
+ DIFFERENT TEXTURE from surrounding healthy dark green timber
+ 
+ LIGHTER than surrounding healthy canopy in most cases
+ 
+Color
+Season/Condition
+Still Marsh?
+Pale yellowish-green
+Summer — active vegetation
+YES — Lemon Creek example
+
+[PAGE 35]
+Orange-brown
+Fall or dry season — dormant
+vegetation
+YES — Keith Teachout area example
+Tan/beige
+Late fall — dried out, low water
+YES — same pattern
+Dark brown
+Saturated, heavy water
+YES — most severe
+Pure dark blue
+Open standing water — actual pond
+Water body, not marsh
+
+[PAGE 36]
+XIV. TRAILWAY vs. RAILROAD — CRITICAL DISTINCTION
+★ ALWAYS zoom into any diagonal line/corridor on Land Insights to read the label before applying a
+discount. A trailway and a railroad look identical from distance.
+Google Maps: Betsie Valley Trailway Context
+[GOOGLE MAPS CONTEXT] Betsie Valley Trailway — Copemish, MI
+ Fig 14A: Copemish area on Google Maps. Cadillac Hwy (115) running diagonally. Betsie Valley Trailway running
+parallel to it — labeled clearly. Small town of Copemish: St Raphael Catholic Church, Dollar General, Copemish
+Kitchen and Coffee, Copemish Pro Hardware. Farmland visible northeast. The trailway is a converted rail corridor
+ now used for recreation — not an active railroad.
+Street View: What the Trailway Actually Looks Like
+[TRAILWAY STREET VIEW] Orange Trail Markers, Dirt Path — Recreational Use, Not Railroad
+
+[PAGE 37]
+Fig 14B: Betsie Valley Trailway Street View entrance. Two orange/red trail markers. Dirt/gravel two-track going into
+ the woods. No train infrastructure, no rails, no ballast, no steel. Just a peaceful recreational path. People walk,
+ bike, snowmobile here in winter. This is NEUTRAL to SLIGHTLY POSITIVE for adjacent land value.
+[TRAILWAY] Trail Peels Off from Hwy 115 — Quiet, No Noise Impact
+ Fig 14C: Betsie Valley Trailway from a different angle — two-track dirt trail peeling off from Highway 115. Orange
+trail markers. Highway 115 visible in background. This is what the corridor looks like from the road. Peaceful, quiet,
+
+[PAGE 38]
+no traffic noise.
+Trailway vs. Railroad Discount Framework
+Type
+Visual ID
+Noise
+Value Impact
+Recreational
+Trailway
+Dirt/gravel path, orange trail
+markers, no rails or ballast
+None — quiet
+Neutral to slight positive — hiking,
+biking, lifestyle amenity
+Abandoned Railroad
+Overgrown rail bed, may still
+have old ballast, no active
+trains
+None — quiet
+Minor discount — industrial
+character but no noise
+Low-Activity Railroad
+Active rails, ballast visible,
+occasional train
+Occasional —
+tolerable
+10-15% discount
+Active Freight
+Railroad
+Active rails, ballast, rail yard
+nearby, heavy train traffic
+Loud — every
+1-2 hours
+20-30% discount — nobody wants
+to hear trains all day
+■ RAILROAD RULE: Active freight railroad near a property signals lower-income area context, constant
+noise disruption, and industrial character. People with money choose NOT to live near active rail lines.
+10-30% discount depending on activity level.
+
+[PAGE 39]
+XV. WATERFRONT vs. NEAR WATER — THE EXACT
+THRESHOLD
+The distinction is simple and non-negotiable. There is no gray area here.
+Category
+Definition
+Value Treatment
+TRUE WATERFRONT
+Water (lake, river, pond, stream) literally
+touches the parcel boundary line. The
+water's edge IS the parcel edge.
+Full waterfront premium. Call it
+waterfront clearly in the analysis.
+COUNTY RIVER
+CORRIDOR
+WATERFRONT
+Parcel borders a county-owned river
+corridor strip. Parcel touches the corridor,
+which borders the river. Can access and
+use the river.
+Waterfront premium applies. Note
+county ownership — no
+dock/structure without easement.
+NEAR WATER
+Another parcel, road, or strip of land sits
+between the subject parcel and the water.
+The parcel does NOT touch the water.
+No waterfront premium unless
+exceptional proximity with easy
+access. Note it as 'near water'.
+WATER VISIBLE
+FROM PROPERTY
+Water visible from satellite near the
+property but no direct access or
+bordering.
+Minimal premium — note as 'water
+nearby, no frontage.' Don't
+over-value.
+
+[PAGE 40]
+XVI. GREEN TREE DOTS ON GIS MAPS
+When viewing listing photos on Zillow or Redfin that include GIS/parcel maps, you may see green tree dots
+overlaid on certain parcels. These most likely represent state land, national forest, or some form of
+public/reserve land designation. Not something you'll see constantly. When you do see them:
+ Note it as adjacent state/federal/public land if bordering the subject parcel
+ 
+ Adjacent public land is actually a POSITIVE for recreational/hunting value context
+ 
+ It means no future development will occur on that side — natural buffer preserved
+ 
+ It does NOT restrict the subject parcel's use (unless the parcel itself is designated)
+ 
+ Just note: 'Adjacent state/federal land designation visible on GIS map — positive for natural context'
+
+[PAGE 41]
+XVII. YIELDING ASSETS — HAY, ORCHARDS, SPECIALTY
+AG
+■ Sellers of yielding assets almost always understand their land's value. Never assume they're
+uninformed. Price accordingly and always flag.
+A yielding asset is any parcel that generates ongoing income from the land itself — hay production, active
+farming, orchards, timber harvest operations, hunting leases, etc. These are fundamentally different from
+vacant land. The seller has a business running on that property and prices it accordingly.
+Active Crop Farmland
+Tight crop rows visible, tractor equipment, distinct field sections. Highest premium. Sellers are sophisticated
+farmers or landowners who know every acre's value.
+Hay/Pasture Production
+Bales visible in Street View, tractor with baling equipment, well-maintained grass field. Flag as yielding — seller
+knows the land produces income.
+Commercial Nursery/Orchard
+Very regular commercial planting rows, business name on parcel, distinct product stages visible. Specialty
+premium. Corporate-level knowledge of land value.
+Managed Timber Plantation
+Uniform plantation rows from satellite, LLC/corporate ownership, systematic harvest cycles. These owners track
+timber value professionally.
+Active Tilled Cultivation
+Reddish/orange tilled soil with cultivation lines — freshly worked, active planting cycle. Treat as farmland.
+
+[PAGE 42]
+XVIII. FINAL COMPING MINDSET — PUTTING IT ALL
+TOGETHER
+★ Every piece of information you gather is one more pixel in the full picture. The more pixels you have,
+the clearer the image — and the more accurate the offer.
+The Information Hierarchy
+Tier: APN Verification
+The single most powerful tool. When you pull a comp's APN and load it in Land Insights, you run a full comp on
+the comp itself. Flood, wetlands, road, shape, acreage, area — everything. This is the ground truth.
+Tier: Street View
+The second most powerful tool. It reveals what satellite never can: hay bales, road condition, water quality,
+neighborhood character, structures hidden by trees. Always mandatory.
+Tier: Satellite + Map Layers
+Your broad-stroke read. Land type, water features, easements, terrain, timber quality. Toggle between multiple
+satellite dates. Toggle hazards on and off.
+Tier: Listing Photos + Description
+Cross-reference tool. Do they match satellite? Do they match the APN location? Do they tell a consistent story?
+Use them to confirm, not to lead.
+Tier: Zillow + Redfin
+Comp verification tools. MLS source confirmation, APN, price history, DOM, GIS parcel maps. Always check
+both — they often have different information.
+The Detective's Checklist — Before Every Comp Delivery
+ Did I toggle hazards OFF to assess real terrain, then back ON before finishing?
+ 
+ Did I check Street View for: road quality, structures, water quality, area character?
+ 
+ Did I pull the APN and verify the comp location + acreage + land type?
+ 
+ Did I check both Zillow AND Redfin for: MLS confirmation, APN, price history, GIS map?
+ 
+ Did I identify the land type correctly: farmland / pasture / timber / cleared / mixed?
+ 
+ Did I assess any water features via Street View — not just satellite color?
+ 
+ Did I check for easements, power lines, pipelines, trailways, or railroad corridors?
+ 
+ Did I check parcel shape for bowling alley / flagpole issues?
+ 
+ Did I assess road quality and note the Street View year?
+ 
+ Did I check for landlocked status and investigate same-owner access?
+ 
+ Does the market value make sense against the PPA curve I observed?
+ 
+ Is the offer range landing at approximately 50% of market value?
+ 
+ Did I close all MCP tabs after the comp?
+
+[PAGE 43]
+END OF DewClaw Visual Field Guide — Volume 3
+ Use Volumes 1, 2, and 3 together. Together they contain the complete comping methodology, visual
+ calibration, and operational playbook. No further explanation should ever be needed.

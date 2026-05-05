@@ -30,29 +30,29 @@ SOURCE_DOCUMENTS: tuple[SourceDocument, ...] = (
         doc_id="complete_handbook_merged",
         filename="DewClaw_Complete_Handbook_Merged.pdf",
         category="core_methodology",
-        priority_rank=1,
-        use_for="Primary comping methodology and decision framework.",
-        notes="Treat as the canonical handbook for general valuation rules.",
+        priority_rank=5,
+        use_for="Supporting comping methodology and decision framework.",
+        notes="Use as the legacy fallback behind the MCP comping and investigation guides.",
     ),
     SourceDocument(
         doc_id="pricing_trendline_mastery",
         filename="DewClaw_Pricing_Trendline_Mastery_Guide.pdf",
         category="pricing",
-        priority_rank=2,
+        priority_rank=6,
         use_for="Normal flip pricing, trendline construction, and weighting logic.",
     ),
     SourceDocument(
         doc_id="subdivision_mastery",
         filename="DewClaw_Subdivision_Mastery_Guide.pdf",
         category="subdivision",
-        priority_rank=3,
+        priority_rank=7,
         use_for="Subdivision decisions, lot design, and hidden-value analysis.",
     ),
     SourceDocument(
         doc_id="deliverable_format_v3_final",
         filename="DewClaw_Deliverable_Format_v3_FINAL.pdf",
         category="output_format",
-        priority_rank=4,
+        priority_rank=11,
         use_for="Final evaluation output schema and section ordering.",
         notes="This explicitly supersedes earlier deliverable formats.",
     ),
@@ -60,22 +60,61 @@ SOURCE_DOCUMENTS: tuple[SourceDocument, ...] = (
         doc_id="complete_supplemental_reference",
         filename="DewClaw_Complete_Supplemental_Reference.pdf",
         category="visual_reference",
-        priority_rank=5,
+        priority_rank=8,
         use_for="Visual land-type identification and supporting field heuristics.",
     ),
     SourceDocument(
         doc_id="rural_properties",
         filename="DewClaw_RURAL_PROPERTIES.pdf",
         category="special_case",
-        priority_rank=6,
+        priority_rank=9,
         use_for="Rural discount rules and extreme-access adjustments.",
     ),
     SourceDocument(
         doc_id="subdivision_advanced_part10",
         filename="PART10_SUBDIVISION_ADVANCED (1).pdf",
         category="special_case",
-        priority_rank=7,
+        priority_rank=10,
         use_for="Advanced subdivision edge cases and hidden value scenarios.",
+    ),
+    SourceDocument(
+        doc_id="dcl_mcp_comping_guide",
+        filename="dcl-mcp-comping-guide/DewClaw_Comping_MCP_Guide.pdf",
+        category="core_methodology",
+        priority_rank=1,
+        use_for="Primary MCP comping workflow, source capture, and visual evidence handling.",
+        notes="Treat as the top comping authority for Phase 2 MCP behavior.",
+    ),
+    SourceDocument(
+        doc_id="dcl_comp_investigation_guide",
+        filename="dcl-mcp-comping-guide/DewClaw_Comp_Investigation_Guide.pdf",
+        category="pricing",
+        priority_rank=2,
+        use_for="Primary comp investigation workflow, APN/listing verification, and market evidence quality.",
+    ),
+    SourceDocument(
+        doc_id="dcl_visual_land_analysis_guide",
+        filename="dcl-mcp-comping-guide/DewClaw_Visual_Land_Analysis_Guide.pdf",
+        category="visual_reference",
+        priority_rank=3,
+        use_for="Primary visual land analysis from maps, terrain, access, improvements, and nearby context.",
+    ),
+    SourceDocument(
+        doc_id="dcl_visual_field_guide_v3",
+        filename="dcl-mcp-comping-guide/DewClaw_Visual_Field_Guide_V3.pdf",
+        category="visual_reference",
+        priority_rank=4,
+        use_for="Primary visual field guide for wooded/cleared land, structures, access, and photo cues.",
+        notes="Treat as the active version of the visual field guide.",
+    ),
+    SourceDocument(
+        doc_id="dcl_visual_field_guide_v2",
+        filename="dcl-mcp-comping-guide/DewClaw_Visual_Field_Guide_V2.pdf",
+        category="duplicate_reference",
+        priority_rank=98,
+        use_for="Legacy visual field guide.",
+        status="exclude",
+        notes="Superseded by DewClaw_Visual_Field_Guide_V3.pdf. Keep for audit, not retrieval.",
     ),
     SourceDocument(
         doc_id="complete_handbook_v3_duplicate",
@@ -96,7 +135,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--downloads-dir",
         type=Path,
-        default=Path.home() / "Downloads",
+        default=Path("data") / "source-pdfs",
         help="Directory containing the source PDFs.",
     )
     parser.add_argument(
@@ -189,6 +228,34 @@ def extract_pages(pdf_path: Path) -> list[str]:
     return pages
 
 
+def extract_pages_from_existing_text(text_path: Path) -> list[str]:
+    text = text_path.read_text(encoding="utf-8")
+    matches = list(re.finditer(r"(?m)^\[PAGE (\d+)\]\s*$", text))
+
+    if not matches:
+        return [normalize_text(text)]
+
+    pages: list[str] = []
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+        pages.append(normalize_text(text[start:end]))
+
+    return pages
+
+
+def load_source_pages(source: SourceDocument, pdf_path: Path, fallback_text_path: Path) -> list[str]:
+    if pdf_path.exists():
+        return extract_pages(pdf_path)
+
+    if fallback_text_path.exists():
+        return extract_pages_from_existing_text(fallback_text_path)
+
+    raise FileNotFoundError(
+        f"Missing source PDF and fallback text for {source.doc_id}: {pdf_path}"
+    )
+
+
 def build_doc_manifest(
     source: SourceDocument,
     pdf_path: Path,
@@ -237,16 +304,19 @@ def iter_chunk_records(
 
 
 def build_source_priority(manifest: list[dict]) -> dict:
-    active_docs = [
-        {
-            "doc_id": doc["doc_id"],
-            "category": doc["category"],
-            "priority_rank": doc["priority_rank"],
-            "use_for": doc["use_for"],
-        }
-        for doc in manifest
-        if doc["status"] == "active"
-    ]
+    active_docs = sorted(
+        [
+            {
+                "doc_id": doc["doc_id"],
+                "category": doc["category"],
+                "priority_rank": doc["priority_rank"],
+                "use_for": doc["use_for"],
+            }
+            for doc in manifest
+            if doc["status"] == "active"
+        ],
+        key=lambda doc: doc["priority_rank"],
+    )
     excluded_docs = [
         {
             "doc_id": doc["doc_id"],
@@ -259,12 +329,15 @@ def build_source_priority(manifest: list[dict]) -> dict:
         "retrieval_order": active_docs,
         "excluded_from_retrieval": excluded_docs,
         "rules": [
-            "Use the merged handbook as the default authority for general comping logic.",
+            "Use the MCP comping guide as the default authority for Phase 2 browser/MCP source-capture and visual evidence workflow.",
+            "Use the comp investigation guide as the primary pricing investigation reference when APN, Redfin, Zillow, listing-photo, and comp-match verification matters.",
+            "Use the newest visual field and visual land analysis guides as primary references for map/photo interpretation, wooded-vs-cleared calls, structures, slope, and access cues.",
+            "Use the merged handbook as supporting legacy methodology when the newer MCP guides do not cover the issue.",
             "Use the pricing mastery guide to deepen normal flip pricing decisions.",
             "Use the subdivision mastery guide for split potential, lot layout, and road-access logic.",
             "Use the deliverable format document to shape the final output, not to make valuation decisions.",
             "Use rural and advanced subdivision documents as special-case overrides when the subject clearly fits those scenarios.",
-            "Do not retrieve the duplicate handbook copy unless you are auditing changes between versions.",
+            "Do not retrieve duplicate or superseded guide copies unless you are auditing changes between versions.",
         ],
     }
 
@@ -299,10 +372,9 @@ def main() -> None:
 
     for source in SOURCE_DOCUMENTS:
         pdf_path = args.downloads_dir / source.filename
-        if not pdf_path.exists():
-            raise FileNotFoundError(f"Missing source PDF: {pdf_path}")
+        fallback_text_path = args.output_dir / "text" / f"{source.doc_id}.txt"
 
-        pages = extract_pages(pdf_path)
+        pages = load_source_pages(source, pdf_path, fallback_text_path)
         manifest.append(build_doc_manifest(source, pdf_path, pages))
         chunk_records.extend(iter_chunk_records(source, pages))
         write_full_text(args.output_dir, source.doc_id, pages)

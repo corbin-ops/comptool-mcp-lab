@@ -1,60 +1,91 @@
 {
   "retrieval_order": [
     {
-      "doc_id": "complete_handbook_merged",
+      "doc_id": "dcl_mcp_comping_guide",
       "category": "core_methodology",
       "priority_rank": 1,
-      "use_for": "Primary comping methodology and decision framework."
+      "use_for": "Primary MCP comping workflow, source capture, and visual evidence handling."
+    },
+    {
+      "doc_id": "dcl_comp_investigation_guide",
+      "category": "pricing",
+      "priority_rank": 2,
+      "use_for": "Primary comp investigation workflow, APN/listing verification, and market evidence quality."
+    },
+    {
+      "doc_id": "dcl_visual_land_analysis_guide",
+      "category": "visual_reference",
+      "priority_rank": 3,
+      "use_for": "Primary visual land analysis from maps, terrain, access, improvements, and nearby context."
+    },
+    {
+      "doc_id": "dcl_visual_field_guide_v3",
+      "category": "visual_reference",
+      "priority_rank": 4,
+      "use_for": "Primary visual field guide for wooded/cleared land, structures, access, and photo cues."
+    },
+    {
+      "doc_id": "complete_handbook_merged",
+      "category": "core_methodology",
+      "priority_rank": 5,
+      "use_for": "Supporting comping methodology and decision framework."
     },
     {
       "doc_id": "pricing_trendline_mastery",
       "category": "pricing",
-      "priority_rank": 2,
+      "priority_rank": 6,
       "use_for": "Normal flip pricing, trendline construction, and weighting logic."
     },
     {
       "doc_id": "subdivision_mastery",
       "category": "subdivision",
-      "priority_rank": 3,
+      "priority_rank": 7,
       "use_for": "Subdivision decisions, lot design, and hidden-value analysis."
-    },
-    {
-      "doc_id": "deliverable_format_v3_final",
-      "category": "output_format",
-      "priority_rank": 4,
-      "use_for": "Final evaluation output schema and section ordering."
     },
     {
       "doc_id": "complete_supplemental_reference",
       "category": "visual_reference",
-      "priority_rank": 5,
+      "priority_rank": 8,
       "use_for": "Visual land-type identification and supporting field heuristics."
     },
     {
       "doc_id": "rural_properties",
       "category": "special_case",
-      "priority_rank": 6,
+      "priority_rank": 9,
       "use_for": "Rural discount rules and extreme-access adjustments."
     },
     {
       "doc_id": "subdivision_advanced_part10",
       "category": "special_case",
-      "priority_rank": 7,
+      "priority_rank": 10,
       "use_for": "Advanced subdivision edge cases and hidden value scenarios."
+    },
+    {
+      "doc_id": "deliverable_format_v3_final",
+      "category": "output_format",
+      "priority_rank": 11,
+      "use_for": "Final evaluation output schema and section ordering."
     }
   ],
   "excluded_from_retrieval": [
+    {
+      "doc_id": "dcl_visual_field_guide_v2",
+      "reason": "Superseded by DewClaw_Visual_Field_Guide_V3.pdf. Keep for audit, not retrieval."
+    },
     {
       "doc_id": "complete_handbook_v3_duplicate",
       "reason": "Very likely redundant with the merged handbook. Keep for audit, not retrieval."
     }
   ],
   "rules": [
-    "Use the merged handbook as the default authority for general comping logic.",
+    "Use the MCP comping guide as the default authority for Phase 2 browser/MCP source-capture and visual evidence workflow.",
+    "Use the comp investigation guide as the primary pricing investigation reference when APN, Redfin, Zillow, listing-photo, and comp-match verification matters.",
+    "Use the newest visual field and visual land analysis guides as primary references for map/photo interpretation, wooded-vs-cleared calls, structures, slope, and access cues.",
+    "Use the merged handbook as supporting legacy methodology when the newer MCP guides do not cover the issue.",
     "Use the pricing mastery guide to deepen normal flip pricing decisions.",
     "Use the subdivision mastery guide for split potential, lot layout, and road-access logic.",
     "Use the deliverable format document to shape the final output, not to make valuation decisions.",
     "Use rural and advanced subdivision documents as special-case overrides when the subject clearly fits those scenarios.",
-    "Do not retrieve the duplicate handbook copy unless you are auditing changes between versions."
+    "Do not retrieve duplicate or superseded guide copies unless you are auditing changes between versions."
   ]
 }

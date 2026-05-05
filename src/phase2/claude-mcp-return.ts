@@ -36,6 +36,23 @@ export interface ClaudeMcpVisualClassification {
   verifyNext: string[];
 }
 
+export type ClaudeMcpExternalListingSource = "redfin" | "zillow" | "realtor" | "unknown";
+export type ClaudeMcpExternalListingMatchQuality =
+  | "confirmed_match"
+  | "possible_match"
+  | "rejected_match";
+
+export interface ClaudeMcpExternalListingEvidence {
+  source: ClaudeMcpExternalListingSource;
+  url: string;
+  searchQuery: string;
+  matchQuality: ClaudeMcpExternalListingMatchQuality;
+  matchedSignals: string[];
+  photoObservations: string[];
+  listingFacts: string[];
+  risks: string[];
+}
+
 export interface ClaudeMcpLiTableReturn {
   schemaVersion: "claude-mcp-li-table-v1";
   source: "claude_mcp";
@@ -48,6 +65,7 @@ export interface ClaudeMcpLiTableReturn {
   fieldCaptures: ClaudeMcpFieldCapture[];
   comparableRows: VisualComparableRow[];
   listingLinks: string[];
+  externalListingEvidence: ClaudeMcpExternalListingEvidence[];
   visualClassification: ClaudeMcpVisualClassification;
   navigationLog: string[];
   diagnostics: string[];
@@ -109,6 +127,7 @@ export function createEmptyClaudeMcpLiReturn(parcelLink = ""): ClaudeMcpLiTableR
     })),
     comparableRows: [],
     listingLinks: [],
+    externalListingEvidence: [],
     visualClassification: {
       areaType: "unclear",
       terrainType: "unclear",

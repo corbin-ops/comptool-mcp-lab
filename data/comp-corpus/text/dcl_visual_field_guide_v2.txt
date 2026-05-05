@@ -1,0 +1,726 @@
+[PAGE 1]
+DewClaw Land Investment
+ Visual Field Guide — Volume 2
+ Complete visual reference for power lines, easements, timber quality, water
+features, Land Insights interface, comp colors, parcel verification, and satellite
+ reading.
+ Version 1.0 — May 2026
+ COMPANION TO VOLUME 1 — STRICTLY INTERNAL
+
+[PAGE 2]
+TABLE OF CONTENTS
+I. Power Line Visual Identification — Complete Guide
+II. Easement Types — Street View & Satellite ID
+III. Easement Discount Framework
+IV. Timber Quality — Satellite Visual ID
+V. Timber Quality — Ground Level & Listing Photos
+VI. Land Insights Interface — Full Layout
+VII. Land Insights — Summary Tab Deep Dive
+VIII. Hazards Layer — ON vs. OFF Protocol
+IX. Water Features — Complete Visual Guide
+X. Rivers — Never Judge from Satellite Alone
+XI. Data Layers Panel — Complete Navigation
+XII. Comp Pin Colors — Visual Reference
+XIII. Zero Comps vs. Thin Market
+XIV. Parcel Verification — Clicking Surrounding Parcels
+XV. Listing Photo Verification — GIS Maps & Parcel Confirmation
+XVI. Sidebar Tags — Structure, Corp Owned, Quick Reference
+XVII. Map Layer Toggling Protocol
+XVIII. Final Pre-Delivery Sanity Check
+
+[PAGE 3]
+I. POWER LINE VISUAL IDENTIFICATION — COMPLETE
+GUIDE
+★ The bigger the tower, the bigger the discount. Size is everything.
+High-Voltage Transmission Lines — Street View Examples
+[HIGH-VOLTAGE] Steel Lattice Transmission Tower — Street View
+ Fig 1A: High-voltage transmission line from Street View. Massive steel lattice X-frame tower — 100-120ft tall.
+Multiple thick bundled cables running in parallel. Enormous cleared corridor underneath — 295-400ft wide. Nothing
+ built anywhere near it. Standard wooden utility pole visible at far right for scale comparison — it looks tiny.
+[HIGH-VOLTAGE] Same Corridor — Different Angle
+
+[PAGE 4]
+Fig 1B: Same easement corridor from a different Street View angle. The wide cleared swath through the landscape
+is unmistakable. Wooded areas on both sides, nothing in the corridor. The tower in the background confirms this is
+ the same high-voltage line. Standard distribution poles visible on the right — note the dramatic size difference.
+High-Voltage Easement on Land Insights Map
+[LAND INSIGHTS MAP] High-Voltage Easement Corridor — Bird's Eye
+ Fig 1C: Land Insights satellite view showing a massive high-voltage transmission easement cutting diagonally
+ across the entire map as a wide pink/red corridor. Width labels visible: 295-ft, 328-ft, 361-ft. This cuts through
+numerous parcels — Luminant Mining Co LLC owns large portions. When you see a corridor this wide on Land
+ Insights, it is transmission-level. Always flag immediately.
+Reference: Power Line Scale Comparison
+[REFERENCE] Voltage vs. Tower Size Scale
+ Fig 1D: Voltage vs. tower size reference chart. Left to right: 44-69kV wooden H-frame (smallest, distribution level),
+ 44-161kV small steel lattice, 120-315kV medium lattice, 230-315kV monopole, 450-735kV massive X-frame lattice
+ (largest). Size directly correlates with voltage and discount severity.
+
+[PAGE 5]
+[REFERENCE] Transmission vs. Distribution — Size Comparison
+ Fig 1E: Transmission vs. Distribution comparison chart. LEFT side (Transmission): Steel lattice tower 120ft+.
+RIGHT side (Distribution): Wooden poles 37-85ft. The distribution poles on the right are what you see running
+ alongside roads — they are NOT transmission lines. Never confuse them.
+
+[PAGE 6]
+II. EASEMENT TYPES — STREET VIEW & SATELLITE ID
+Distribution / Telecom Lines — Street View (NOT High Voltage)
+[DISTRIBUTION LINE] Standard Wooden Utility Poles — Co Rd 222
+ Fig 2A: Distribution/telecom lines at Co Rd 222, Henderson TX. Standard wooden poles, single crossarm, thin
+wires. Trees growing immediately adjacent — no wide cleared corridor. Barbed wire fence at road. Speed limit 40
+sign. These are 37-40ft wooden distribution poles. This is NOT a threat. Minor setbacks only. Electricity accessible
+ = positive for buildability.
+[DISTRIBUTION LINE] Minimal Setback — Trees Right Up to the Pole
+
+[PAGE 7]
+Fig 2B: Same location, looking into the property from the road. Single wooden pole with utility equipment attached
+ (transformer/switch box). Narrow dirt track between trees. Tall healthy pine timber on both sides growing right up
+ to the line — confirms minimal setback. Gate across entry. This is what low-impact distribution looks like.
+Pipeline / Underground Easement — Street View Examples
+[PIPELINE/BURIED UTILITY] Cleared Grass Strip, Gate at Road, No Overhead Infrastructure
+
+[PAGE 8]
+Fig 2C: Underground pipeline/utility easement from Street View. Wide cleared grass corridor cutting through
+wooded land. White metal gate blocking access at road. Sandy/disturbed soil visible. No poles, no wires, no towers
+ — everything underground. This is the visual signature of a buried pipeline or utility easement. The gate is the
+ utility company's maintenance access.
+[PIPELINE/BURIED UTILITY] Maintained Green Corridor — Confirmed Underground
+ Fig 2D: Same easement type from further back. Lush green grass maintained strip cutting straight through pine
+ forest. Wooden gate at road entry. Trees on both sides but nothing in the corridor. No poles visible at all. This
+ maintained green strip with a gate = underground gas/pipeline easement maintained by utility company for
+ inspection access.
+Pipeline Easement — Map & Reference Views
+[LAND INSIGHTS] Easement Corridor Visible from Satellite
+
+[PAGE 9]
+Fig 2E: Land Insights map showing an easement corridor with blue/cyan parcel outlines. The cleared corridor
+visible on satellite cuts through the wooded parcels. This is the bird's-eye view of what the Street View pipeline
+ easements look like from above — a cleared strip that stands out against the surrounding canopy.
+[REFERENCE] Pipeline Right-of-Way — Concept Diagram
+ Fig 2F: Pipeline right-of-way reference diagram. Shows the cleared strip above the buried pipeline with trees on
+either side. 'The depth of cover and right-of-way width may vary.' No building permitted directly over the pipeline.
+ Setbacks narrower than transmission lines.
+
+[PAGE 10]
+[REFERENCE] Pipeline Under Construction — Pre-Grass Stage
+ Fig 2G: Pipeline under construction — what it looks like being installed. Exposed black pipe on bare earth, steep
+cleared hillside cut through forest. After completion this gets grassed over and looks exactly like Figs 2C and 2D.
+ The cleared straight line through wooded terrain is the permanent visual signature regardless of construction
+ stage.
+
+[PAGE 11]
+III. EASEMENT DISCOUNT FRAMEWORK — COMPLETE
+■ NEVER use any estimate or platform valuation. Apply this framework manually always.
+Infrastructure Type
+Visual ID
+Discount
+Range
+Key Notes
+345–735 kV Steel
+Lattice Tower
+100-120ft+ X-frame steel
+structure. Thick bundled
+cables. 295-400ft cleared
+corridor. Loud buzz.
+25–40%+
+Worst case. Wide setbacks, air
+space restrictions, noise. Major
+value killer.
+138–230 kV Medium
+Lattice / Monopole
+65-85ft steel structure.
+Multiple cable sets. Wide
+cleared corridor.
+15–30%
+Still significant. Check how much
+of parcel it consumes.
+69 kV Wood Pole
+Sub-Transmission
+58ft wooden pole. Crossarms.
+Clearly taller than standard
+distribution.
+10–20%
+Moderate impact. Less airspace
+restriction than steel lattice.
+12–34.5 kV
+Distribution /
+Telecom
+37-40ft wooden pole. Single
+crossarm. Thin wires. Trees
+grow right up to it. No buzz.
+5–20%
+Location-dependent. Edge of
+parcel = 5%. Cuts through
+buildable center = up to 20%.
+Gas / Oil Pipeline or
+Buried Utility
+No poles, no wires. Cleared
+grass strip. Gate at road.
+Underground. No visual
+ugliness.
+5–20%
+Same tier as distribution. Pure
+setback issue. Location on parcel
+determines discount.
+★ KEY RULE: For distribution lines and buried utilities — location on the parcel determines the
+discount MORE than the infrastructure itself. Edge of parcel with no impact on buildable area = 5%.
+Cuts through the only buildable spot = up to 20%.
+The Street View Easement Detective Technique
+When you see a cleared strip on satellite but can't drop Street View directly on it (no road coverage), follow that
+easement line on the map until it crosses a road — even 2 miles away. Drop your pegman there. The easement
+will look exactly the same at that road crossing. You'll be able to visually identify what it is immediately. Once
+identified, pull the APN to confirm the full impact on the subject parcel.
+
+[PAGE 12]
+IV. TIMBER QUALITY — SATELLITE VISUAL
+IDENTIFICATION
+★ ALWAYS toggle between map layers to catch timbering, new structures, or anything one satellite
+date shows that another doesn't. Flag every discrepancy for the lead manager.
+Recently Timbered — Bare/Dirt Stage (Worst)
+[RECENTLY TIMBERED] Bare Earth Stage — Pink/Sandy Exposed Soil Visible
+ Fig 4A: Zoomed Land Insights view showing a recently timbered parcel. The pink/sandy exposed soil color
+center-left is bare earth after timber harvest. This is the most obvious sign — completely different color from
+surrounding canopy. Colonial Pipeline Co labeled at bottom — note the pipeline easement running through this
+area too. Toggle map layers here is critical because one layer may show bare earth and another may still show old
+ tree canopy imagery.
+Early Regrowth Stage — 6 to 18 Months After Harvest
+[REGROWTH STAGE] ~1 Year Post-Harvest — Yellowish-Green Patchy Regrowth
+
+[PAGE 13]
+Fig 4B: Same parcel as 4A on a different map layer (newer satellite date). The previously bare soil now shows light
+ yellowish-green regrowth — timber growing back approximately 1 year after harvest. Not bare dirt anymore but
+ clearly not mature canopy either. This is the 'worst of both worlds' stage — not wooded, not cleared. Discount
+ 5-30%.
+[REGROWTH] Zoomed In — Lighter Interior vs. Dark Mature Surrounding Canopy
+ Fig 4C: Zoomed-in view of the same regrowth parcel with cyan parcel outline. The lighter interior compared to
+surrounding dark mature canopy is clearly visible. This is what you're looking for — a parcel that looks lighter,
+
+[PAGE 14]
+more yellowish, less dense than everything around it. The 20.00ac | 5k ppa and 10.67ac | 2.81k ppa comp bubbles
+ visible on the right.
+Map Layer Toggle — Different Dates Show Different Stages
+[MAP LAYER TOGGLE] Same Parcel — Different Date Shows Different Stage
+ Fig 4D: A different map layer of the same area showing the parcel at an earlier satellite date — appearing more
+brownish-tan, closer to the bare earth stage. Compare this to Fig 4B which shows the same parcel greener on a
+newer date. TWO DIFFERENT MAP LAYERS, TWO DIFFERENT SNAPSHOTS. This is exactly why you always toggle
+ between layers — one may show recent timbering while the other still shows old pre-harvest canopy.
+Managed Plantation Timber — High Value
+[MANAGED PLANTATION TIMBER] Uniform Dense Canopy — Row Pattern Visible from Above
+
+[PAGE 15]
+Fig 4E: Managed timber plantation satellite view (Flagg Family I & R LLC). Dense, uniform, consistent dark green
+canopy across the entire parcel. You can almost trace the planting rows from this altitude. Mathematical evenness
+— not natural, not random. These people know exactly what their timber is worth. LLC ownership + uniform canopy
+ = assume sophisticated timber operators.
+County-Level Timber View — Semi-Rural Context
+[COUNTY VIEW] Plantation Timber vs. Normal Mixed Woods — Side by Side
+
+[PAGE 16]
+Fig 4F: County-level satellite view (Allen Rd area). The parcels south of Allen Rd with uniform, tightly packed,
+consistent canopy texture are plantation timber (SRF-Franklin LLC Badgett LLC area). Compare to the irregular,
+varied canopy of normal mixed woods elsewhere on the same map. David Fladung's tan/brown patch = farmland.
+ The plantation parcels have a gridded, mathematical evenness identifiable even at this zoom.
+Normal/Natural Timber — Irregular But Valuable
+[NATURAL TIMBER] Full Healthy Canopy — Irregular Pattern, NOT Plantation Rows
+Fig 4G: Normal timber (George M Rapp parcel, Wilkinson Rd). Full healthy canopy, good density, but NOT uniform.
+ Irregular, natural, varied — different tree heights, different species, natural clumping patterns. Cleared areas in
+ front with structures visible. Large bright blue pond/lake on right. This has solid timber value but is NOT a
+ managed plantation. Owner isn't running rows for harvest — mature natural woods.
+
+[PAGE 17]
+V. TIMBER QUALITY — GROUND LEVEL & LISTING
+PHOTOS
+The Coleman's Lake Road Side-by-Side Comparison
+[SIDE BY SIDE] Plantation Timber (Left) vs. Low-Quality Timber (Right)
+ Fig 5A: Coleman's Lake Road satellite — the definitive side-by-side comparison. LEFT side of Coleman's Lake Rd
+ (Anza Lane area): Large parcel with uniform, dense, clearly planted rows visible — this is managed plantation
+timber. The canopy is fluffy, full, and mathematically even. RIGHT side of Coleman's Lake Rd: Smaller parcels with
+ thinner, less dense, more patchy canopy — lower quality timber, smaller trees, less value.
+Listing Photos — Mature Hardwood Timber at Ground Level
+[LISTING PHOTO VERIFICATION] Mature Timber Interior + GIS Parcel Map Confirmation
+
+[PAGE 18]
+Fig 5B: This is the complete listing photo verification workflow for the 20ac | $5k ppa comp. TOP: Interior of mature
+ hardwood stand — tall straight dark trunks, high canopy, clean forest floor, good sight lines. This is premium
+timber. MIDDLE: GIS parcel maps from the listing showing four identical rectangular parcels lined up — same
+width, same shape, same parent parcel divided into strips. Blue X pin marks the subject. BOTTOM: County-level
+ map showing two different possible pin locations being evaluated.
+What Mature Timber Looks Like at Ground Level
+The top photo in Fig 5B is what you're looking for in listing photos to confirm high timber value. Key visual
+markers:
+ Tall straight trunks — 60-80ft+ with clean lower trunks (no low branches)
+ 
+ High canopy — the green is way above your head, not scrubby and low
+ 
+ Clean forest floor — mature trees shade out undergrowth, floor is relatively clear
+ 
+ Good sight lines through the forest — you can see a long distance between trunks
+ 
+ Dark bark — mature hardwoods (oak, maple, hickory) have dark, furrowed bark
+ 
+ Uniform height — all trees roughly same age/height indicates managed or old-growth stand
+ 
+Timber Identification Cheat Sheet
+What I See
+What It Is
+Value Signal
+Pink/sandy bare soil, no
+canopy
+Recently timbered — bare
+stage
+DISCOUNT 5-30%. Worst of both
+worlds.
+Yellowish-green patchy
+regrowth
+Timbered 6-18 months ago,
+growing back
+DISCOUNT. Not wooded, not
+cleared.
+
+[PAGE 19]
+Dense uniform dark green,
+row pattern, LLC-owned
+Managed timber plantation
+PREMIUM. These owners know
+the value.
+Full canopy,
+irregular/natural pattern
+Mature natural timber
+Solid value. Not plantation
+premium but still good.
+Thin, sparse, patchy, not
+fluffy
+Low-quality scrubby woods
+Below average. Less timber
+value, harder to clear.
+■ LLC ownership + uniform canopy = assume they know their timber value. Price accordingly and
+never underestimate it. Toggle map layers to catch recent timbering — flag every discrepancy for the
+lead manager.
+
+[PAGE 20]
+VI. LAND INSIGHTS INTERFACE — FULL LAYOUT
+The Complete data?parcel= Page — Zoomed In
+[LAND INSIGHTS] Full Page — Zoomed In View with All Key Elements Labeled
+ Fig 6A: Land Insights data?parcel= page fully loaded — David Ray Hamilton, 11.99 acres, Wexford County MI, APN
+08-004-200-25. CRITICAL: Orange 'Structure' tag visible just below the owner name — catch this immediately every
+ time. Bottom right buttons: Jump to Parcel | Tools | Data Layers | Map Layers. Tabs: Summary / Parcel / Owner /
+ Insights / Metrics.
+The Complete data?parcel= Page — Zoomed Out with Context
+[LAND INSIGHTS] County Context View — Healy Lake Visible, Hazards ON
+
+[PAGE 21]
+Fig 6B: Same parcel zoomed out to show county context. Healy Lake visible to the right — large blue body of water.
+ The subject parcel (cyan outline, center-bottom) sits near the lake but is NOT waterfront. Important distinction —
+ near water vs. waterfront. The hazards layer is ON here — blue overlays dominate the landscape showing
+ significant water and wetlands throughout this area of Michigan.
+
+[PAGE 22]
+VII. LAND INSIGHTS — SUMMARY TAB DEEP DIVE
+The Summary tab is the first tab and the one that loads by default. Every field lives in a specific location. Here is
+exactly what to read and in what order.
+Owner Name + Acreage + APN
+Top of sidebar. Owner name bold. Acreage and APN on same line. '11 properties' link shows how many
+properties this owner holds — useful context.
+Orange Tags (Structure / Corp Owned)
+Appear directly below the owner name line. CATCH THESE FIRST. Structure = something exists on the parcel.
+Corp Owned = LLC or corporate ownership (sophisticated seller, knows value).
+Comp Report + KML buttons
+Ignore Comp Report — never use it. KML is for downloading parcel data.
+AI Comp value
+NEVER use this. It appears next to KML. Always ignore it completely.
+Summary / Parcel / Owner / Insights / Metrics tabs
+Click through all three main tabs: Summary, Parcel, Owner.
+APN field
+Critical — this is what you duplicate tab and use to pull comp into Land Insights.
+GPS Coordinates
+Use if APN fails — can drop into Google Maps to confirm physical location.
+Tax Delinquent For
+Flag if populated. Indicates financial distress — motivated seller signal.
+In HOA
+Note if Yes — affects land use and restrictions.
+Family Transfer
+If Yes = reject as comp. Not an arms-length transaction.
+Structures / Structure count / Structure year built
+0 sqft with Structure count = 1 means something exists but size not recorded. Still flag it.
+Mobile Home
+Yes = flag. Affects value and comp comparability.
+
+[PAGE 23]
+Assessed Value / Market Total Value
+Note for context only. Never use as market value.
+Calculated Acres vs. Deeded Acres
+Compare these. 3-4+ acre gap = investigate. Click 5-7 surrounding parcels to calibrate.
+
+[PAGE 24]
+VIII. HAZARDS LAYER — ON vs. OFF PROTOCOL
+■ ALWAYS toggle hazards back ON after turning them off to assess terrain. Never leave the property
+assessment with hazards toggled off.
+Hazards ON — What the Map Looks Like
+[HAZARDS ON] Blue Overlays Active — Wetlands, Surface Water, Flood Zones Highlighted
+ Fig 8A: Hazards layer ON — the same Wexford County area. Massive blue overlays dominate the landscape. Healy
+ Lake is obvious. Wetlands and surface water highlighted throughout. The subject parcel (cyan outline) sits near
+significant blue coverage. This tells me: water is a major feature of this landscape and I need to assess carefully.
+Hazards OFF — Real Satellite Visible
+[HAZARDS OFF] Real Satellite Visible — Timber Organization Readable, True Terrain Visible
+
+[PAGE 25]
+Fig 8B: Hazards layer OFF — same area. Now I can see real satellite imagery. Healy Lake still visible as dark water
+ body but overlays gone. The wooded parcels are clearly readable — and notably this area shows organized
+plantation timber canopy. The small utility easement line visible running above Highway 115 across the river. This
+ is where actual terrain assessment happens.
+The Exact Toggle Protocol
+ Step 1: Open Data Layers panel (bottom right button)
+ 
+ Step 2: Find 'All Hazards' at the top of the panel
+ 
+ Step 3: Toggle OFF to assess real terrain — blue overlays disappear
+ 
+ Step 4: Do full visual assessment: timber, structures, easements, road access
+ 
+ Step 5: Toggle ALL HAZARDS back ON when done
+ 
+ Step 6: Confirm hazards are back on before moving to comps
+
+[PAGE 26]
+IX. WATER FEATURES — COMPLETE VISUAL GUIDE
+Marsh / Wetland — Satellite and Street View
+[WETLAND/MARSH] Satellite View — Pale Grayish-Green Irregular Patches
+ Fig 9A: Genuine marsh/wetland from satellite (Lemon Creek area, Thirteen Mile Rd). Pale grayish-green irregular
+patches with a snaking dark creek cutting through — that's saturated marshy ground. The texture is completely
+ different from normal land: irregular, patchy, fuzzy-looking. Lemon Creek label confirms water feature. Zero
+ buildability here. Identifiable even without hazards layer.
+[WETLAND/MARSH] Street View — Cattails, Dark Standing Water, Scrubby Vegetation
+
+[PAGE 27]
+Fig 9B: Street View of same Lemon Creek wetland. Dark standing water right at roadside. Dense cattails in
+foreground — the dark red/brown spike-topped plants are unmistakable wetland vegetation. Scrubby low bushy
+trees, not tall healthy timber. This is classic Michigan wetland. If Street View shows this vegetation profile: marsh,
+ standing water, unbuildable. Period.
+River Assessment — Always Verify with Street View
+[DATA LAYERS PANEL] Hazards OFF State — Standard Due Diligence ON
+
+[PAGE 28]
+Fig 9C: Data Layers panel showing 'All Hazards' toggle and 'Standard Due Diligence' ON. This is the exact panel
+state after opening Data Layers. All Hazards circle = currently OFF. Standard Due Diligence green toggle = ON. MLS
+ Comps green toggle = ON. Acreage Range Mode shows Manual selected — change to Auto.
+
+[PAGE 29]
+X. RIVERS — NEVER JUDGE FROM SATELLITE ALONE
+■ THE MOST IMPORTANT LESSON: A river that looks thin and tan on satellite can be a gorgeous wide
+recreational river at ground level. Always go to Street View.
+The Manistee River — Street View from Both Directions
+[MANISTEE RIVER] Street View Upstream — Wide, Deep, Premium Recreational River
+ Fig 10A: Manistee River from bridge — upstream view. Wide, deep, slow-moving. Brownish-tan water color =
+normal tannin-rich Michigan river, NOT a negative. Wooded island mid-river. Both banks lush green. Utility lines
+crossing overhead — thin wires, low-voltage distribution, not a significant threat to river value. This is a PREMIUM
+ water feature. Recreational value: fishing, kayaking, canoeing.
+[MANISTEE RIVER] Street View Downstream — Glassy, Wide, Premium Quality Confirmed
+
+[PAGE 30]
+Fig 10B: Same river, downstream view. Wide open water, gentle bend, glassy reflection. Rolling forested hills in
+ background. Both banks heavily vegetated. This appeared 'shallow' on satellite — Street View corrected that
+ assumption completely. The lesson: satellite color (brownish-tan) ≠ shallow. Always verify.
+Water Feature Assessment Framework
+What I See
+Hazards Layer
+Street View
+Value Call
+Large irregular blue
+patches
+Flags
+wetlands/marsh
+Cattails, dark standing
+water, scrubby bushes
+NEGATIVE — likely
+unbuildable
+Snaking thin dark line
+May flag flood zone
+Could be clean creek or
+boggy — verify
+Toggle OFF, check Street
+View
+Clean round/oval blue
+shape
+May or may not flag
+Clean pond vs. boggy
+marsh — must check
+Verify with Street View
+always
+Large solid blue body
+Flags as surface
+water
+Lake — size and depth
+vary
+Usually positive if clean
+access
+Brownish/tan ribbon on
+satellite
+May flag flood zone
+Could be deep/beautiful
+river — ALWAYS check
+NEVER price without Street
+View
+
+[PAGE 31]
+XI. DATA LAYERS PANEL — COMPLETE NAVIGATION
+The Full Data Layers Panel
+[DATA LAYERS PANEL] Complete View — All Toggles and Their States
+ Fig 11A: Complete Data Layers panel — two sections visible. QUICK GROUPS: 'All Hazards' (circle = OFF
+currently), 'Standard Due Diligence' (green toggle = ON). ALL OVERLAYS: Parcels (green dot = ON), Area (green
+ dot = ON), Water (no dot = OFF), Slope (no dot = OFF), MLS Data (green dot = ON) → MLS Comps (toggle ON,
+ green). Bottom right buttons visible: Jump to Parcel | Tools | Data Layers | Map Layers.
+Acreage Range Mode — AUTO vs. Manual
+[ACREAGE RANGE] Manual vs. Auto — Always Start with Auto, 3 Years Back, All Comps
+
+[PAGE 32]
+Fig 11B: Data Layers panel scrolled down showing Acreage Range Mode. Two buttons: 'Manual' (currently
+selected, green outline) and 'Auto' (grayed right). ALWAYS click Auto first. Manual shown here with range 8 to 22
+acres. Time window: '3 years back' (left dropdown). Status: 'All comps' (right dropdown). Marketing and Recently
+ Used sections below — ignore these.
+Complete Data Layers Workflow
+Open Data Layers
+Click 'Data Layers' button — bottom right of map, next to Tools and Map Layers
+Check All Hazards
+Top of panel — toggle ON to see all hazards, OFF to see real satellite
+Check MLS Data
+Scroll down — confirm MLS Data green dot is ON and MLS Comps toggle is ON
+Set Acreage Range
+Click Auto. Time window: 3 years back. Status: All comps
+If zero comps showing
+MLS Data section → MLS Comps toggle → flip ON
+Toggle hazards back ON
+After terrain assessment — ALWAYS restore before finishing
+
+[PAGE 33]
+XII. COMP PIN COLORS — VISUAL REFERENCE
+County View with All Three Comp Types
+[COMP COLORS] Green=Sold / Blue=Active / Pink=Pending — County Zoom View
+ Fig 12A: County-level comp view — Wexford County MI. All three comp types visible. GREEN bubbles = SOLD
+(primary anchor comps). BLUE bubbles = ACTIVE (currently listed). PINK bubbles = PENDING (under contract,
+discount 5-10%). At this zoom many appear as dots only — zoom in to read individual labels. PPA ranges visible:
+$2.81k to $12.5k+ across the county. Purple/pink vertical line = county boundary — NEVER cross it. One outlier at
+ $45k ppa near Haring = waterfront premium.
+Color
+Status
+How to Use
+Weight
+■
+GREEN
+SOLD — Closed MLS
+transaction
+Primary anchor comps. These are what the
+market actually paid.
+Full weight
+■ BLUE
+ACTIVE — Currently
+listed
+Shows what sellers are asking. Not what
+buyers paid. Supporting context only.
+Supporting context
+■ PINK
+PENDING — Under
+contract
+Discount 5-10% from list price. Hot market =
+5%, slow market = 10%.
+Moderate —
+discount applied
+Small
+dot (any
+color)
+Any of the above —
+too zoomed out
+Zoom in more to read the color and label
+clearly.
+Zoom in first
+
+[PAGE 34]
+XIII. ZERO COMPS vs. THIN MARKET — KNOW THE
+DIFFERENCE
+What Zero Comps Actually Looks Like
+[ZERO COMPS] Maximum Zoom-Out — No Bubbles, No Dots, No Pins Anywhere
+ Fig 13A: Maximum zoom-out with ZERO comps — MLS Data toggled completely OFF. Clean map with county
+boundary lines (pink) and some parcel lines visible. NO bubbles, NO dots, NO pins anywhere. Grand Traverse,
+Wexford, Kalkaska, Missaukee Counties all visible. This is unambiguous — zero means zero. When I see this: go to
+ Data Layers → MLS Data → MLS Comps → toggle ON immediately.
+[ZERO COMPS] County Zoom — Still Nothing. Toggle MLS Comps ON.
+
+[PAGE 35]
+Fig 13B: County-level zoom with ZERO comps over Wexford County. Mesick, Harrietta, Boon, Cadillac, Haring all
+ visible. White parcel lines and township boundaries visible. Still zero comp pins anywhere. This confirms: MLS
+comps are toggled OFF. Toggle them ON via Data Layers panel. Once ON, if still only 2-3 comps — that's a thin
+ market (comps are on, just not much data).
+Zero Comps vs. Thin Market — The Distinction
+Situation
+What I See
+Action
+MLS Comps toggled
+OFF
+Literally zero dots or bubbles anywhere
+on the entire county map
+Data Layers → MLS Data → MLS
+Comps → toggle ON
+Thin market
+A few comps visible (2-5), just not many.
+Comps ARE showing.
+Comps are already ON. Widen
+acreage range. Go back further in
+time.
+Good comp pool
+Multiple green/blue/pink bubbles spread
+across the county map
+Work with what's there. Filter by
+acreage range and proximity.
+
+[PAGE 36]
+XIV. PARCEL VERIFICATION — CLICKING
+SURROUNDING PARCELS
+The 10-Parcel Click Detective Process
+[PARCEL CLICKING] 10.67ac Comp — Surrounding Parcels Being Eliminated One by One
+Fig 14A: Clicking surrounding parcels to find the 10.67ac | $2.81k ppa comp (Nelson Stearns sidebar visible — 2.67
+ acres, not a match). The cyan highlights show which parcels were already clicked and eliminated. Two comp
+bubbles visible on E 26 Rd: 20.00ac | 5k ppa (green = sold) and 10.67ac | 2.81k ppa (green = sold). The surrounding
+ parcels clicked don't match 10.67 acres.
+[CORP OWNED TAG] Orange Tag — LLC/Corporate Ownership Identified
+
+[PAGE 37]
+Fig 14B: Cardinal Barbara sidebar — 20 acres, Corp Owned tag visible (orange). This is the 'Corp Owned' tag that
+appears when a corporation or LLC holds the parcel. APN 2310-35-4401. Also not a match for 10.67 acres. The cyan
+ outline on the right shows exactly which parcel is selected — the rectangular parcel just right of center.
+[PARCEL CLICKING] After ~10 Clicks, No Match Found — Close Tab and Move On
+ Fig 14C: Larson Robert M & Catherine A — 20.96 acres, also Corp Owned. Still not 10.67 acres. At this point after
+ clicking ~10 surrounding parcels with no match, confirmed on Redfin that this comp was actually off-market
+anyway. Close the tab, move on. Also note: plantation timber rows clearly visible on parcels below E 26 Rd —
+ Roger Shields, Mark Mellema, Arnold Burr parcels showing uniform canopy.
+
+[PAGE 38]
+The 10-Parcel Click Rule
+ Click up to 10 surrounding parcels maximum — should take 15-20 seconds total
+ 
+ Check acreage in sidebar against comp bubble acreage for each click
+ 
+ If none match after 10 clicks — close it out and move on, don't waste time
+ 
+ Cross-check Redfin/Zillow listing simultaneously while clicking
+ 
+ If listing shows GIS parcel map — use that to confirm location directly
+ 
+ Four identical rectangular parcels side by side = process of elimination
+ 
+ Use listing photos to confirm which specific one is correct
+
+[PAGE 39]
+XV. LISTING PHOTO VERIFICATION — GIS MAPS &
+PARCEL CONFIRMATION
+The Complete 20ac Comp Verification Workflow
+[LISTING PHOTO VERIFICATION] Mature Timber + GIS Maps + Two Possible Pin Locations
+ Fig 15A: The 20ac | $5k ppa comp verification. TOP: Mature hardwood stand interior — tall straight trunks, high
+ canopy, clean forest floor. This is premium timber quality. MIDDLE LEFT: GIS map from listing showing four
+identical rectangular parcels (bowling alley shape) side by side — blue X pin on the subject. MIDDLE RIGHT: Same
+ area different zoom showing second possible location. BOTTOM: County zoom with two blue X pins being
+ evaluated.
+[GIS MAP] Four Identical Rectangular Parcels — Process of Elimination + Pin Location Discrepancy
+
+[PAGE 40]
+Fig 15B: Close-up of the GIS map section from the listing. Top: Four rectangular bowling-alley parcels — blue X pin
+ marks the second from left. Green tree dots on adjacent parcel = plantation timber marker on the GIS. Bottom left:
+ County zoom with blue X pin in suburban/developed context. Bottom right: Blue X pin in more rural context. This
+shows the comp bubble was aggregating in the wrong location at county zoom — the parcel-level GIS confirmed
+ true location.
+The Confirmed Comp — Johnson Jamilah, 20.00ac | 5k ppa
+[CONFIRMED COMP] 20ac Johnson Jamilah — Bowling Alley Shape, E 26 Rd Frontage, Timber Confirmed
+
+[PAGE 41]
+Fig 15C: The confirmed comp parcel — Johnson Jamilah, cyan outline visible. Tall narrow strip (bowling alley
+shape) approximately 1,509 ft long. Road frontage on E 26 Rd at bottom. USA federal land above. Comp bubble sits
+ right at road frontage. Adjacent parcels: Balcom Barry & Margaret (cleared/timbered tan area to right), Cardinal
+Barbara (another cyan-outlined parcel already clicked and eliminated). Three-step confirmation: acreage matched,
+ bubble on parcel, listing photos confirmed timber.
+Three-Step Comp Confirmation Protocol
+Step 1 — Acreage Match
+Comp bubble shows 20.00ac. Click surrounding parcels until you find one that's 20 acres.
+Step 2 — Bubble Position
+The comp bubble sits directly on the parcel in Land Insights. Pin and parcel align.
+Step 3 — Listing Photo Match
+Redfin/Zillow listing photos show mature timber interior. GIS parcel map shows bowling alley shape matching
+what you see on Land Insights. All three confirm: this is the right parcel.
+
+[PAGE 42]
+XVI. SIDEBAR TAGS — QUICK REFERENCE
+Tag
+Color
+What It Means
+Action
+Structure
+Orange
+A structure exists on this parcel —
+shed, barn, mobile home, house,
+anything
+Flag immediately. Describe location,
+type, condition from photos/Street
+View.
+Corp
+Owned
+Orange
+Parcel held by a corporation or LLC.
+Sophisticated seller who likely knows
+their land's value.
+Price accordingly. Don't assume
+they're uninformed or motivated.
+No tag
+—
+Individual owner, no structure flagged
+by Land Insights
+Still check satellite and Street View
+— LI sometimes misses structures.
+■ Land Insights tags are helpful but NOT comprehensive. Always visually verify for structures on
+satellite even when no Structure tag appears. Small sheds and outbuildings are frequently missed by
+automated tagging.
+
+[PAGE 43]
+XVII. MAP LAYER TOGGLING PROTOCOL
+★ Always toggle through multiple map layers on every property. Different satellite dates reveal different
+information. One layer may show recent timbering, a new house, or a demolished structure that another
+layer doesn't show.
+Why Toggling Matters — Real Examples
+Recent Timbering Caught
+One layer shows mature canopy. New layer shows bare earth. Without toggling you'd think the timber is intact.
+House Found/Not Found
+One layer shows a structure. Older layer shows vacant land. Ask seller — 'Is there a house on the property?'
+confirms current state.
+House Demolished
+Older layer shows a house. New layer shows it's gone. Seller may mention: 'Yeah, we tore it down two years
+ago.'
+Pond/Water Feature Missed
+One satellite date captured dry season. Another captures wet season and reveals a pond or seasonal wetland.
+Cleared vs. Wooded Discrepancy
+Different dates show different clearing stages. Always compare old vs. new to understand trajectory.
+Map Layer Toggle Steps
+Click 'Map Layers' button (bottom right of screen, next to Data Layers). This gives access to different satellite
+imagery dates. Toggle through available layers. Note any discrepancies. Flag everything unusual for the lead
+manager. Old satellite may still show trees that have since been harvested. New satellite may show structures
+or clearings that didn't exist before.
+
+[PAGE 44]
+XVIII. FINAL PRE-DELIVERY SANITY CHECK
+★ Run this check on every property before delivering the final analysis.
+✓ Satellite vs. Analysis Match
+Does the market value make sense against what the satellite shows? If it's heavily wooded, deeply rural, and
+full of wetlands, a high MV doesn't make sense. If it's semi-rural cleared pasture near development, a low MV
+doesn't make sense.
+✓ PPA Curve Sanity
+Does the MV align with the PPA trend I observed? If all comps are $4-6k ppa and my MV implies $9k ppa,
+something is wrong. Recheck comp selection.
+✓ Offer Range at ~50%
+Is the offer range landing at approximately 50% of market value? That's the target. If not, recalculate.
+✓ Nothing Missed on Satellite
+Did I account for: easements, structures, wetlands, flood zone, recent timbering, water features, road access
+issues, shape problems? Scroll back through satellite one final time.
+✓ Hazards Layer Back ON
+Are all hazard layers restored to ON? Never deliver with hazards toggled off.
+✓ All MCP Tabs Closed
+Close every tab opened during this comp. Delete the entire tab group. Browser will lag and crash if tabs stay
+open.
+✓ Complete 8-Section Response
+Deliver everything in ONE response: Property Overview, Land Type, Area Assessment, Street View, Comp
+Analysis, PPA Curve, Market Value, Offer Range. No breaks, no 'continue' requests.
+ END OF DewClaw Visual Field Guide — Volume 2
+ Use alongside Volume 1. Together these two documents contain the complete comping methodology.

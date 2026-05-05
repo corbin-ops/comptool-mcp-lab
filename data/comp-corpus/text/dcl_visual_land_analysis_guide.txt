@@ -1,0 +1,1037 @@
+[PAGE 1]
+DEWCLAW LAND
+ INVESTING
+ VISUAL AERIAL ANALYSIS MASTER GUIDE
+ How to Read Any County From the Air and Know Exactly What You're Dealing With
+ Before You Ever Pull a Comp
+ INTERNAL REFERENCE DOCUMENT — CONFIDENTIAL
+ Compiled May 2026
+
+[PAGE 2]
+DewClaw Visual Land Analysis Guide | Page 2
+HOW TO USE THIS GUIDE
+Read this once. Reference forever.
+This document is a living reference for the DewClaw visual aerial analysis system — the process of reading a
+county from satellite view and knowing within minutes whether it belongs in our deal pipeline, what tier of
+rurality it sits at, what the terrain is going to do to access and buildability, and whether the market will support
+our product. Every principle in here was developed through live deal evaluation.
+The guide is organized into five major parts:
+● Part 1 — The Six Visual Signals: The raw inputs your eyes should be scanning for the moment you
+open a satellite view.
+● Part 2 — The Rurality Spectrum: The six-tier framework from Too Rural to Too Urban, with real county
+examples.
+● Part 3 — Terrain & Topography: Mountains, ridges, contour lines, power lines, and the mandatory 3D
+verification step.
+● Part 4 — County Case Studies: Michigan, Pennsylvania, and Ohio counties walked through in detail
+with actual screenshots.
+● Part 5 — The Evaluation Workflow: The step-by-step process to run on every county and every
+property before you pull a single comp.
+
+[PAGE 3]
+DewClaw Visual Land Analysis Guide | Page 3
+PART 1 — THE SIX VISUAL SIGNALS
+What your eyes should read the moment you open any aerial view
+Before you look at a single listing, a single price per acre, or a single data point, your eyes need to run a rapid
+six-signal scan. These signals are visible from 20,000 feet and they tell you almost everything you need to know
+about whether a county is worth deeper investigation.
+★ CORE PHILOSOPHY
+The aerial view never lies. The market is a reflection of who lives nearby, who drives out on weekends, and
+what they can do when they get there. The aerial shows you all three if you know what to look for.
+SIGNAL 1 — COLOR & TEXTURE: The First Cut
+The very first thing you're reading is the dominant color of the aerial. This single data point immediately places a
+county into one of three broad categories before you've done anything else.
+ COLOR SIGNATURE
+ WHAT IT MEANS
+ YOUR REACTION
+Deep, uniform dark green
+Dense forest canopy — mountainous or
+extremely remote
+Caution — check terrain
+immediately
+Mixed green — light &
+dark patches
+Varied land use — wooded parcels, some
+clearing, residential
+Promising — investigate further
+Tan/yellow/light beige
+fields
+Active farmland — agricultural use dominant
+Likely skip — wrong buyer pool
+Dense grey/beige with
+road grids
+Urban or suburban development
+Skip — too much city
+SIGNAL 2 — THE FIELD/GRID PATTERN: The Farmland Flag
+One of the most important things to identify instantly is the presence of agricultural grid patterns. These appear
+as large, squared-off sections of tan or light green, often arranged in perfectly regular rows and columns. This is
+actively farmed land — and it completely changes the market you're operating in.
+■ THE FARMLAND PROBLEM
+Farmland is a YIELDING ASSET. The people who own it know exactly what it's worth because they're
+profiting from it every season. Farmers are not distressed sellers. They understand land value better than
+almost anyone. Deep discount acquisition in pure farmland counties is extremely difficult — and even if you
+get in, your buyer pool is farmers, not recreational buyers.
+
+[PAGE 4]
+DewClaw Visual Land Analysis Guide | Page 4
+Additionally, in counties dominated by farmland, recreational land subdivisions don't work the way you need
+them to. Buyers who want to build a cabin or hunt a weekend property aren't shopping in the middle of
+cornfields. They want tree cover, privacy, and a sense of remoteness — none of which exists in agricultural
+flatland.
+Visual fingerprints of farmland counties:
+● Perfectly squared parcel shapes — identical sizes, regular grid
+● Tan, cream, light green, or off-white color in large contiguous blocks
+● Almost no tree canopy — very open, exposed land
+● Farm roads running at perfect 90-degree angles
+● Grain elevators, large barns, irrigation circles visible on zoom
+● ZIP code areas almost completely devoid of wooded sections
+
+[PAGE 5]
+DewClaw Visual Land Analysis Guide | Page 5
+SIGNAL 3 — RIDGE STREAKS: The Mountain
+Warning System
+From altitude, mountain ranges appear as parallel dark green streaks running in the same direction, like
+corduroy fabric stretched across the landscape. These are the Appalachian ridge-and-valley formations visible
+across Pennsylvania, West Virginia, and neighboring states. The moment you see this pattern, your brain
+needs to register: terrain alert — investigate slope and access before anything else.
+Why ridge streaks matter:
+● Each streak is a forested ridgeline — typically 30% to 70%+ slope
+● Steep slopes = no buildable envelope = property that nobody can develop
+● Access roads must wind up hollow approaches or switchback ridges — adds cost and limits buyers
+● The USABLE acreage of a ridge property may be a fraction of the paper acreage
+● Septic systems require perc tests that most steep-slope land will fail
+● Buyers researching remotely won't understand the slope until they visit — creates cancellations and
+refunds
+■ SLOPE DISTORTS ACREAGE VALUE
+Never look at a ridge property's acreage at face value. A 20-acre parcel on a mountain ridge may have 3
+usable acres. Always verify with the 3D tool and contour lines before pricing or marketing.
+SIGNAL 4 — CANOPY DENSITY & UNIFORMITY: Reading the Forest
+Not all dark green is equal. The texture and uniformity of tree canopy tells you whether you're looking at dense,
+unbroken wilderness or mixed-use wooded land where people are actually present.
+ CANOPY TYPE
+ VISUAL APPEARANCE
+ MEANING
+Uniform dense canopy
+Solid, unbroken dark green — no variation
+in texture
+Wilderness/state forest — very remote,
+thin buyer pool
+Mixed canopy with
+breaks
+Green patches with lighter gaps, small
+clearings, driveways visible
+Residential/recreational mix — people are
+here
+Canopy near water
+Dark tree ring surrounding a
+blue/reflective area
+Waterfront premium zone — high demand
+Recently logged
+Brown/grey scar areas, uneven patches,
+clear-cut visible
+Discount 5-30% — worst of both worlds
+
+[PAGE 6]
+DewClaw Visual Land Analysis Guide | Page 6
+SIGNAL 5 — ROAD NETWORK DENSITY: Infrastructure as a Demand
+Proxy
+Road networks are one of the clearest proxies for human presence and demand. The denser and more varied
+the road network, the more people have invested in accessing that land. Sparse, single-route access with long
+gaps between roads means isolation — which can be good for seclusion branding but bad for buyer
+accessibility and market liquidity.
+● Tight, varied road grid — many intersections, roads at multiple angles = suburb or rural-residential, high
+infrastructure
+● Moderate road grid — roads every mile or two, some variation = rural residential, ideal zone
+● Single corridor roads — one main road with long spurs = very remote, access is the product's limitation
+● No visible roads in large areas — state forest, wilderness, or extreme terrain = avoid
+SIGNAL 6 — POPULATION ANCHORS: The Buyer Pool Indicator
+Your recreational land buyer is almost never a local. They're someone driving 45 to 90 minutes from a
+population center — a city or large town — to reach their weekend escape. This means every county you
+evaluate needs a credible population anchor within a reasonable driving radius. If there's no anchor, there's no
+buyer pool.
+✓ THE POPULATION ANCHOR RULE
+The 60-90 minute rule: your property needs to sit within 60-90 minutes of a city or metro area large enough
+to generate recreational land buyers. Counties that are isolated from any real population center will have
+extreme sell times regardless of how pretty the land is.
+● Look for town names with visible road hubs and density
+● Interstate highway presence = connectivity to metro areas
+● Airport symbols, regional hospitals visible = real population
+● County seats with actual grids of streets = anchor towns
+● The further from any of these, the thinner your buyer pool
+
+[PAGE 7]
+DewClaw Visual Land Analysis Guide | Page 7
+PART 2 — THE RURALITY SPECTRUM
+Six tiers from Too Rural to Too Urban — with real examples
+This is the master classification system. Every county you evaluate slots into one of these six tiers. The goal is
+always Tier 3 or Tier 4 — rural enough for recreational buyers to feel they're genuinely escaping, but connected
+enough to a population center that those buyers actually exist and can reach the property.
+TIER
+ LABEL
+ DESCRIPTION
+ ACTION
+ 1
+ TOO RURAL
+Wilderness-level remote. State forest dominates. No buyer pool.
+ SKIP
+ 2
+ VERY RURAL
+Heavily forested, minimal infrastructure. Thin, slow market.
+ CAREFUL
+ 3
+ MODERATE
+ RURAL
+Wooded with some development. Real but selective market.
+ SELECTIVE
+ YES
+ 4
+ SWEET SPOT
+Rural feel + population pull nearby. Your target zone.
+ TARGET
+ 5
+ BORDERLINE
+ URBAN
+City-adjacent. Parts rural, parts suburban. Complex.
+ CAREFUL
+ 6
+ TOO URBAN
+All city. No recreational land. Wrong market entirely.
+ SKIP
+ TIER 1
+ TOO RURAL — SKIP
+This is the wilderness end of the spectrum. Counties at Tier 1 are dominated by state forests, national forests,
+or game lands. Tree canopy is unbroken from border to border. There are almost no listings because there's
+almost no private land being actively marketed. The few listings that exist show extreme price variance because
+comping is nearly impossible — every parcel is so unique that market value is essentially undefined.
+Aerial characteristics:
+● Solid, uniform dark green from edge to edge — no visible breaks in canopy
+● Ridge streak patterns if mountainous terrain
+● State/National Forest labels cover large portions of the county
+● Very few road corridors — mostly single-lane access roads into deep hollows
+● Almost zero listing density on the map — maybe 2-5 per county at most
+● The listings that exist have enormous price range ($1k-$30k ppa) with no clear pattern
+Pennsylvania Tier 1 examples: Cameron, Potter, Forest, deep Clinton County
+Cameron County is the extreme case — Emporium is the only real town and it barely registers. The entire
+county is essentially Sproul State Forest and Elk State Forest. There is no recreational buyer pool that can
+sustain a land business. Even hunters, who are often the last remaining buyer type in counties like this, can
+typically hunt for free on adjacent public land.
+
+[PAGE 8]
+DewClaw Visual Land Analysis Guide | Page 8
+ TIER 2
+ VERY RURAL — APPROACH WITH CAUTION
+Tier 2 counties have private land but it's deeply forested with minimal population. There are towns, but they're
+small — typically under 5,000 people — and isolated. The buyer pool exists but it's thin and seasonal.
+Properties move slowly. Comping is hard because comparable sales are infrequent. You can operate here but
+you need to be very precise about which specific parcels within the county you target.
+Pennsylvania Tier 2 examples: Venango, northern Clearfield, northern Jefferson, McKean
+Michigan Tier 2 equivalent: Au Sable State Forest units in Roscommon's NE corner
+Key test for Tier 2:
+● Is there a town of 5,000+ within 30 miles? If no, it's probably Tier 1
+● Are there at least 10-15 active listings visible in the county? If fewer, market is too thin
+● Is there any highway infrastructure connecting to a larger metro? If not, buyer pool is regional only
+● Are the listings priced consistently or randomly? Wild variance = bad comping environment
+ TIER 3
+ MODERATE RURAL — SELECTIVE YES
+Tier 3 is where you start making real money if you're selective. These counties are genuinely rural — real tree
+cover, real privacy feel, recreational activities available — but they have enough population and infrastructure
+that a functioning land market exists. You can find comps. Properties move within a reasonable timeframe. The
+buyer pool extends to people driving from regional cities.
+Pennsylvania Tier 3 examples: Southern Clearfield, southern Jefferson, Clarion, parts of Crawford
+The key distinction between Tier 2 and Tier 3 is whether you can find 5 defensible comps in a reasonable
+acreage range. If you can, you're in Tier 3 territory. If every comp you pull is 10+ miles away and 5 years old,
+you're in Tier 2.
+
+[PAGE 9]
+DewClaw Visual Land Analysis Guide | Page 9
+ TIER 4
+ THE SWEET SPOT — YOUR TARGET MARKET
+Tier 4 is the zone where your entire business model works optimally. These counties have the recreational feel
+buyers want — real woods, real privacy, accessible without being suburban — AND they sit within comfortable
+driving distance of a metro area large enough to generate consistent buyer demand. Properties move. Comps
+exist. Price discovery is real. You can buy at 50 cents on the dollar, subdivide or flip, and find buyers within your
+target timeline.
+✓ THE THREE-REQUIREMENT RULE
+Tier 4 is the intersection of three requirements: (1) rural enough to feel like an escape, (2) close enough to a
+population center that buyers exist, and (3) developed enough that a functioning real estate market with real
+comps exists. All three must be true simultaneously.
+Pennsylvania Tier 4 examples: Mercer, Butler, Armstrong, Indiana, Cambria, parts of Lawrence
+Ohio Tier 4 examples: Columbiana, Portage, parts of Trumbull
+Michigan Tier 4 examples: Areas near recreational lakes — Roscommon lake corridor
+Why these counties work:
+● Pittsburgh metro (2.3M+ population) creates enormous demand for weekend properties in PA and OH
+● Cleveland-Akron metro feeds Portage, Stark, Trumbull, Mahoning
+● Detroit and Flint metro feed Roscommon and surrounding MI counties
+● Properties can be listed and sold remotely — buyers research online and visit once
+● Recreational activities (hunting, ATV, camping, fishing) are all accessible
+● No-restriction parcels allow buyers to put what they want on the land
+ TIER 5
+ BORDERLINE URBAN — COMPLICATED
+Tier 5 counties have significant urban or suburban sections but also retain rural areas. The challenge is that
+you're operating in a mixed market — part of the county has land prices inflated by suburban demand, another
+part has recreational buyer potential, and a third part is just developed enough that 'rural land' listings look out
+of place. You need to be county-section specific rather than treating the whole county as a single market.
+Examples: Westmoreland PA, Washington PA, Trumbull OH, Stark OH
+The specific risk in Tier 5: you can easily mistake suburban sprawl for rural land potential from altitude.
+Washington County PA looks manageable from 30,000 feet but zoomed in it's riddled with small townships
+packed densely together — there's continuous low-density suburban development all the way down from
+Pittsburgh. The township-level zoning complexity in PA makes this even harder to navigate.
+ TIER 6
+ TOO URBAN — SKIP ENTIRELY
+Tier 6 counties are simply not a land investing market. Allegheny County PA (Pittsburgh) is the clearest
+example — it is continuous urban and suburban development from edge to edge. There is no recreational land
+to buy. Even if a vacant parcel exists, it's priced at development land values, not recreational values, and the
+
+[PAGE 10]
+DewClaw Visual Land Analysis Guide | Page 10
+buyer pool is developers, not recreational buyers. Do not waste time on Tier 6.
+Examples: Allegheny PA, dense suburban counties around Columbus, Cleveland core, Detroit metro
+
+[PAGE 11]
+DewClaw Visual Land Analysis Guide | Page 11
+PART 3 — TERRAIN & TOPOGRAPHY
+The 3D Verification System and Reading the Land's Physical Story
+Color and tier classification get you to the right county. Terrain analysis gets you to the right parcel. This section
+covers everything you need to know about reading physical landscape features that directly affect buildability,
+access, value, and marketability.
+THE MANDATORY 3D VERIFICATION STEP
+★ RULE: 3D ON EVERY SINGLE PROPERTY
+Run the 3D terrain view on EVERY property before you do anything else with it. No exceptions. It takes 30
+seconds. It has caught deal-killers that the flat aerial completely hid. If the terrain jumps off the screen
+dramatically in 3D, you have a slope problem. If it's flat or gently rolling, you're clear to proceed.
+The 3D tilt function in Land Insights (and in Google Maps/Earth) allows you to rotate the view to see elevation.
+By right-clicking and adjusting the perspective, you convert the flat satellite view into a rendered topographic
+display that makes ridges, valleys, and slope severity immediately obvious.
+What the 3D view reveals that flat aerial hides:
+● True ridge height and steepness — a 'green area' on flat aerial could be a 60-degree slope in 3D
+● Valley floor location — where the buildable, flat land actually sits
+● Hollow approach routes — how access roads must navigate around terrain
+● River and creek flood plain proximity — low areas that look flat but flood
+● Power line cuts across ridges — these appear as diagonal scars in 3D
+● State forest/game land adjacency — how much of the terrain is permanently public
+READING CONTOUR LINES
+When you enable the topographic layer on Land Insights or switch to terrain view, you'll see contour lines —
+curved lines that follow equal-elevation paths across the land. These lines are the single most important tool for
+assessing slope on a specific parcel.
+ CONTOUR LINE SPACING
+ SLOPE SEVERITY
+ PRACTICAL MEANING
+Far apart — widely spaced
+Very gentle — nearly flat
+Buildable, accessible, maximum usable acreage
+Moderate spacing
+Rolling terrain
+Generally buildable with site prep, driveway
+possible
+Close together
+Moderate slope — 15-25%
+Challenging but possible — costs up, some
+acreage lost
+
+[PAGE 12]
+DewClaw Visual Land Analysis Guide | Page 12
+Very tight — nearly touching
+Steep — 30%+ slope
+Mostly unbuildable — septic likely fails, access
+very hard
+Packed solid lines
+Cliff or near-vertical
+Zero buildable value — acreage number is
+meaningless
+POWER LINES & UTILITY EASEMENTS
+Power lines are one of the most damaging value factors you can encounter on a parcel. From the aerial or 3D
+view, they appear as a straight, cleared diagonal or straight cut running through the property — often orange or
+brown in color in 3D view, sometimes appearing as a bare slash through otherwise dense canopy from above.
+■ POWER LINE = SIGNIFICANT VALUE REDUCTION
+A power line easement through a parcel means: (1) you cannot build under or near it — setbacks are
+typically hundreds of feet from high-voltage lines, (2) the easement breaks up the usable area and kills
+privacy, (3) high-voltage lines produce audible buzzing that buyers hate, and (4) the cleared easement is
+permanently visible and disrupts the rural-privacy feel your buyers are paying for. Always flag it immediately.
+● High-voltage transmission lines (giant metal towers) = most damaging, avoid
+● Distribution lines on wooden poles = less severe, still note it
+● Gas pipeline easements = cleared strips, can't build, flag and discount
+● Look for: straight diagonal cuts through canopy from above, orange/brown scars in 3D
+● Verify easement width — some are 300+ feet wide, consuming massive usable area
+STATE & PUBLIC LAND ADJACENCY
+State forests, national forests, game lands, and wildlife areas adjacent to or near a property are a double-edged
+sword. Here's how to read them correctly.
+Positives of Public Land Adjacent
+● Property can never be surrounded by new
+development — guaranteed rural buffer
+● Built-in recreational access — hunters
+especially love forest-adjacent land
+● Views stay rural forever — no future subdivision
+adjacent
+● Can be marketed as 'surrounded by state
+forest' — premium pitch
+Risks of Public Land Adjacent
+● Very thin market — buyers for forest-adjacent
+land are a specific niche
+● Building on adjacent game lands is prohibited
+— if your parcel IS in game lands, it's not private
+● Emergency services access may be limited —
+long response times
+● In Tier 1 counties, even private parcels next to
+state forest sit for years
+
+[PAGE 13]
+DewClaw Visual Land Analysis Guide | Page 13
+PART 4 — COUNTY CASE STUDIES
+Real aerial screenshots analyzed in detail
+MICHIGAN: ROSCOMMON COUNTY
+Roscommon County is an excellent teaching example because it contains nearly every zone type within a
+single county boundary — lake-premium corridor, moderate rural residential areas, state forest buffer zones,
+and genuinely remote southern sections. Reading this county correctly requires understanding where within the
+county a property sits, not just what county it's in.
+Roscommon County, Michigan — Full county aerial with active listings. Note the heavy listing concentration around Houghton Lake
+ (west) and Roscommon town (north), thinning dramatically toward the south and Au Sable Forest (NE).
+Zone-by-Zone Breakdown:
+Zone 1 — Houghton Lake Area (West/Center)
+The hottest cluster in the county. Listings in the 7.35k to 8.14k ppa range right around the lake. This premium is
+entirely lake-proximity driven — buyers pay for recreational access to Michigan's largest inland lake. The
+20.00ac at 3.45k ppa just west of the lake tells you that once you step even a mile away from the lake pull,
+prices drop dramatically. The gradient is steep and fast.
+Zone 2 — Roscommon Town Area (North)
+
+[PAGE 14]
+DewClaw Visual Land Analysis Guide | Page 14
+Mid-tier market. Listings in the 3.99k to 6.9k ppa range. More listings, more activity, consistent demand from the
+county's population center. The 22.00ac at 2.73k is likely a shape or location issue pulling it below the zone
+average.
+Zone 3 — Saint Helen (East)
+The 12.24ac at 12.75k ppa is the highest on the full county map — nearly certainly waterfront or near-waterfront
+on Saint Helen Lake. Sparse listings mean thin market but the premium is real when it exists.
+Zone 4 — Au Sable State Forest (NE Corner)
+Almost no listings. State forest creates a permanent rural buffer — great for seclusion marketing but the market
+is very thin. Long sell times expected.
+Zone 5 — Southern Roscommon (Lowest Activity)
+The 18.28ac at 2.3k ppa is the lowest ppa on the entire county map. Very few listings, low prices, minimal
+demand. This is where properties that don't fit the lake narrative or the town narrative end up — they just sit.
+Proceed with caution on southern Roscommon parcels.
+★ ZONE DETERMINES MARKET
+Key Roscommon insight: You are not buying 'a Roscommon County property.' You are buying a
+lake-adjacent property, a town-adjacent property, or a remote property. Each has a completely different
+market, buyer pool, and hold time. Always identify the zone first.
+
+[PAGE 15]
+DewClaw Visual Land Analysis Guide | Page 15
+MICHIGAN: ISABELLA COUNTY — The Farmland Warning
+Isabella County is presented here as the definitive Michigan farmland example — exactly the type of county to
+recognize instantly and move past.
+ Isabella County with listings — Lake Isabella visible (west), Clare
+ at top. Note the 18.50ac at 43.24k ppa near Clare — an outlier,
+ likely special condition.
+ Isabella County zoomed in — Rosebush area. The agricultural
+ grid pattern is unmistakable: perfectly squared tan/light green
+ fields covering the entire frame.
+The zoomed view of the Rosebush/Beal City area (Image right) tells you everything before you've looked at a
+single listing. That perfect grid of squared-off agricultural parcels means this county operates as a farming
+economy. The buyer pool is agricultural, not recreational. Even the presence of Lake Isabella in the west
+provides limited mitigation — the rest of the county overwhelms any lake-adjacent recreational market.
+■ RECOGNIZE AND SKIP FARMLAND FAST
+When you see the grid pattern like Isabella County — squared parcels, tan/yellow color, minimal tree cover
+— stop your evaluation immediately. This is farmland territory. Move on to the next county.
+MICHIGAN: GRATIOT COUNTY — More Farmland
+
+[PAGE 16]
+DewClaw Visual Land Analysis Guide | Page 16
+ Gratiot County — Alma, Ithaca, Newark area. Same agricultural signature as Isabella: open fields, light green/tan color, minimal
+ tree cover. Listings at 5-13k ppa but buyer pool is agricultural, not recreational.
+Gratiot is Isabella's neighbor with the same problem. The imagery tells you this at a glance. Alma and Ithaca
+are small farm towns. The listing density exists but the market is serving a completely different buyer type than
+you need.
+
+[PAGE 17]
+DewClaw Visual Land Analysis Guide | Page 17
+PENNSYLVANIA: THE COMPLETE COUNTY
+SPECTRUM
+From wilderness to Pittsburgh metro — the full range in one state
+Pennsylvania is one of the richest teaching environments for this framework because the state contains every
+tier of the rurality spectrum within its borders — from Cameron County (Tier 1 wilderness) to Allegheny County
+(Tier 6 urban) with every tier represented in between. It also features the distinctive Appalachian
+ridge-and-valley topography that makes terrain reading a critical skill.
+ Pennsylvania overview — note the dramatic range from the super-dark counties in the north-center (Cameron, Potter, Clinton) to
+ the lighter developed counties in the south (Dauphin, Lancaster area) and southwest (Allegheny metro).
+PENNSYLVANIA: CLINTON COUNTY — Tier 1 Too Rural
+
+[PAGE 18]
+DewClaw Visual Land Analysis Guide | Page 18
+ Clinton County PA — Sproul State Forest dominates. Lock Haven is the only real anchor. Note the dramatic ridge-and-valley
+ terrain, sparse listings, and the extreme price variance (0.75k to 57.3k ppa in same county).
+Clinton County is a textbook Tier 1. Sproul State Forest covers massive portions of the county. Lock Haven is
+real but small and isolated. The listing spread from 0.75k to 57.3k ppa within the same county tells you that
+market discovery is essentially broken — every parcel is so unique that comping is a guessing game. The
+super-dark uniform canopy and heavy ridge signatures visible from altitude confirm: wilderness territory, do not
+operate here.
+PENNSYLVANIA: CLEARFIELD COUNTY — Tier 2-3 Transitional
+
+[PAGE 19]
+DewClaw Visual Land Analysis Guide | Page 19
+ Clearfield County PA — DuBois is the anchor. More listing activity than Clinton, mixed pink/cyan/green labels signal transaction
+ velocity. Still rural but functioning market.
+Clearfield reads differently than Clinton immediately. DuBois provides a real population anchor. You can see
+more listing density and a mix of label colors indicating active transactions. The terrain has character but isn't
+the extreme ridge pattern of the deep PA counties. South Clearfield approaching I-80 is more interesting than
+North Clearfield pushing toward the forest.
+
+[PAGE 20]
+DewClaw Visual Land Analysis Guide | Page 20
+PENNSYLVANIA: THE RIDGE-AND-VALLEY SYSTEM
+The Appalachian ridge-and-valley terrain is the defining geographic feature of central Pennsylvania and the
+single most important terrain pattern to recognize. Counties like Mifflin, Juniata, Perry, Huntingdon, and Centre
+all feature this formation. Understanding it is non-negotiable.
+Centre / Mifflin / Juniata / Perry / Snyder / Huntingdon counties PA. The ridge-and-valley Appalachian signature is crystal clear from
+altitude: parallel dark green ridges alternating with lighter valley floors. State College visible (top left) provides population anchor for
+ Centre County.
+From this altitude the ridges look like fabric — parallel dark stripes running diagonally across the frame. Each
+dark stripe is a forested ridge at significant elevation with steep slopes on both faces. The lighter areas between
+them are the valley floors where towns, farms, and development actually exist. Any parcel sitting ON the ridge
+(dark zone) is in the terrain-risk category. Parcels in the valley floors are a different conversation entirely.
+
+[PAGE 21]
+DewClaw Visual Land Analysis Guide | Page 21
+ 3D tilt view of the ridge-and-valley system — Mifflin/Juniata area.
+ The dramatic elevation becomes unmistakable in 3D. This is
+ exactly why the 3D verification step is mandatory.
+ Zoomed 3D topo with contour lines — Tuscarora State Forest
+area, Juniata River visible in valley. Note: flat farmland in valley
+ floor vs densely packed contour lines climbing the ridge face.
+The right image above shows the contour line density perfectly. In the valley bottom, lines are widely spaced —
+flat, buildable, farmland. The moment you hit the ridge base, lines pack together instantly. That packing = slope
+= unbuildable. The Tuscarora State Forest Campsites visible on the ridge confirm: this is recreational/public
+land, not private development territory.
+ Maximum zoom 3D view — Ickesburg area, Juniata River at bottom. Individual property owner names visible. The orange/brown
+diagonal slash across the mountain face is the power line easement — a clear value killer cutting through what would otherwise be
+ the most buildable area of these parcels.
+
+[PAGE 22]
+DewClaw Visual Land Analysis Guide | Page 22
+Reading this zoomed 3D view:
+● The Juniata River at the bottom is the valley floor — this is where the flat, buildable, farmland parcels are
+● The mountain face immediately above it has tight contour lines = significant slope
+● The power line scar running diagonally across = easement killing buildability in that strip
+● Individual owner names visible = these are small, fragmented private parcels between state forest above
+and river below
+● The orange patch mid-frame is logged or disturbed land — discount territory
+● Tuscarora State Forest covers the upper ridge = permanent wilderness buffer but also thin market
+
+[PAGE 23]
+DewClaw Visual Land Analysis Guide | Page 23
+PENNSYLVANIA: NORTHERN COUNTIES — Too Rural Zone
+ Northern PA / Southern NY border — Cattaraugus (NY), McKean, Potter, Cameron, Elk, Forest, Warren, Clinton counties. This is
+ the heart of Tier 1-2 territory. Uniform dark canopy, dramatic terrain, Allegheny National Forest anchor. Almost no listing activity.
+This image captures the full extent of Pennsylvania's rural wilderness zone. From Cattaraugus County in New
+York down through Cameron, Potter, and Forest counties in PA — the aerial tells you everything you need to
+know. Solid dark green, dramatically mountainous, Allegheny National Forest consuming an enormous
+footprint. Bradford PA is the largest anchor in the frame and even it is modest. This is not where you operate.
+PENNSYLVANIA: CENTRE/CLEARFIELD/BLAIR — Transitional Zone
+
+[PAGE 24]
+DewClaw Visual Land Analysis Guide | Page 24
+ Centre, Clearfield, Blair county area PA — State Game Lands 33, 60, and 108 visible. The patchwork of game lands, state forests,
+ and private land is visible from altitude. State College (top right) is the population anchor.
+This image shows the transitional zone perfectly. State Game Lands Number 33 sits in the center-right — that
+dark irregular blob with no development is permanently off-limits to private building. Game Lands 60 and 108
+further south, same story. The county isn't all state land, but those game land anchors break up the private land
+in ways that fragment markets. State College provides pull from the east but the terrain moving west into Centre
+County gets mountainous fast.
+
+[PAGE 25]
+DewClaw Visual Land Analysis Guide | Page 25
+WESTERN PA & EASTERN OHIO: THE SWEET
+SPOT
+Mercer, Butler, Armstrong, Indiana, Columbiana — your target territory
+ Western PA / Eastern OH sweet spot overview — Mercer, Butler, Armstrong, Indiana, Lawrence, Columbiana, Venango, Clarion,
+ Jefferson, Clearfield. This is the transitional zone from rural to metro-adjacent.
+This is the map you should have memorized. The counties in this frame represent your primary operating zone
+across western PA and eastern OH. Each one has different characteristics but they share the critical common
+thread: real rural feel with Pittsburgh and/or Cleveland metro driving distance providing the buyer pool.
+ COUNTY
+ TIER
+ STRENGTHS
+ WATCH FOR
+Mercer PA
+ 4
+I-79/I-80 corridors, real rural character, Sharon
+as anchor
+Northern parts thinner market
+Butler PA
+ 4
+Pittsburgh pull is strong, good rural/suburban
+mix
+Southern Butler gets suburban fast
+Armstrong PA
+ 4
+Very rural feel, Kittanning anchor, strong
+Pittsburgh pull
+Limited commercial infrastructure
+Indiana PA
+ 4
+IUP creates some population, very rural
+character
+Smaller buyer pool than Butler/Mercer
+Clarion PA
+ 3-4
+Southern Clarion good, Clarion University
+anchor
+North Clarion pushes toward Tier 2
+Lawrence PA
+ 4
+New Castle anchor, Pittsburgh-adjacent pull
+New Castle area more urban
+
+[PAGE 26]
+DewClaw Visual Land Analysis Guide | Page 26
+Columbiana
+OH
+ 4
+Great rural character, Pittsburgh/Cleveland in
+range
+Less well-known = slower market in
+spots
+Portage OH
+ 4
+Akron/Cleveland pull, Ravenna anchor
+Parts become suburban near Akron
+Jefferson PA
+ 2-3
+South Jefferson near DuBois usable
+North Jefferson too rural, DuBois still
+modest
+Venango PA
+ 2
+Oil City/Franklin anchors exist
+Most rural of this group — thin market
+
+[PAGE 27]
+DewClaw Visual Land Analysis Guide | Page 27
+THE URBAN CEILING: COUNTIES TO AVOID
+Allegheny, Washington, Stark — too much city
+The Pittsburgh metro area and surroundings. Allegheny County (center) is the definitive Tier 6. Washington, Westmoreland, Beaver
+are Tier 5 — significant urban/suburban mix. Lawrence and Mercer to the north start becoming interesting. Ohio counties visible on
+ the left.
+The critical skill this image teaches: learning to see where the urban field ends and where the rural opportunity
+begins. Allegheny County in the center is a hard wall — continuous development, no recreational land market.
+As you move outward from that center, each ring of counties has progressively more rural character until you
+reach your sweet spot.
+ALLEGHENY COUNTY PA — The Urban Benchmark
+
+[PAGE 28]
+DewClaw Visual Land Analysis Guide | Page 28
+ Allegheny County / Pittsburgh zoomed in — this is what pure Tier 6 looks like. Dense suburb-to-suburb development from edge to
+ edge. Every parcel boundary visible. No recreational land exists here.
+This image is important to memorize as your 'too urban' benchmark. Notice: tight parcel boundaries everywhere
+you look, continuous neighborhood development with zero green breaks, suburb names every mile or less
+(Allison Park, Glenshaw, Fox Chapel, Sharpsburg, Millvale...). This is what makes Tier 6 obvious from altitude.
+No aerial ambiguity — the development is wall-to-wall.
+STARK COUNTY OH — The Deceptive Borderline Case
+
+[PAGE 29]
+DewClaw Visual Land Analysis Guide | Page 29
+ Stark County OH — Canton metro area. Urban core clearly visible in center, but edges of county show field/open space. Tier 5:
+ surgical approach required. Akron to the north amplifies the buyer pool but also the suburban sprawl.
+Stark County is the Tier 5 teaching case. From altitude it might look manageable but zoom into the center and
+the Canton urban core is substantial. The key with Stark is parcel location — edge-of-county rural parcels are a
+different product than anything within 15 miles of Canton. You can operate here but only with very specific
+parcel selection and awareness that you're competing with suburban land prices in some areas.
+
+[PAGE 30]
+DewClaw Visual Land Analysis Guide | Page 30
+WASHINGTON COUNTY PA — The Deceptive Suburban County
+Washington County PA — Canonsburg, Washington, McMurray area. From the overview image this county looks manageable, but
+zoomed in the township-by-township development density is much higher than expected. Continuous low-density suburban sprawl
+ all the way from Pittsburgh.
+Washington County is the 'sneaky Tier 5' case. The full-county aerial view makes it look like a mixed
+rural/suburban county with potential. But zoomed in, you can see the truth: densely labeled township
+boundaries packed together, continuous residential development through every area, the I-70 and I-79 corridors
+creating suburban spines that development has crept along for decades.
+There is an additional complication specific to Pennsylvania: the state runs on a township-level governance
+system, which means zoning, regulations, and market character can change dramatically within just a few miles
+as you cross from one township into the next. This makes Washington County, and PA Tier 5 counties
+generally, significantly more complex to navigate than their aerial appearance suggests.
+■ PENNSYLVANIA TOWNSHIP COMPLEXITY
+Pennsylvania has hundreds of independent townships each with their own zoning. A parcel that looks
+promising on the aerial may be in a township with 1-acre minimum lots and strict septic setbacks while the
+adjacent township allows 10+ acre natural land. Always verify at the township level, not just the county level.
+
+[PAGE 31]
+DewClaw Visual Land Analysis Guide | Page 31
+NEW YORK / PENNSYLVANIA BORDER REGION
+Reading north vs south development gradient
+ NY/PA border region — Chautauqua, Cattaraugus, Allegany, Steuben (NY above border) vs McKean, Potter, Warren, Forest (PA
+ below border). Note the stark difference: lighter, more developed north vs dark forest south.
+This image is a perfect before/after of the development gradient. The Pennsylvania side of the border (bottom
+half) is dramatically more forested and remote than the New York side (top half). You can see this from the
+color alone — the PA counties drop to the deep dark forest green immediately south of the state line, while the
+NY counties maintain a lighter, more varied texture indicating development.
+Reading the NY side (Cattaraugus, Allegany, Steuben, Chautauqua):
+● Lighter green with visible field breaks and patchwork texture = people are here
+● Salamanca, Olean, Hornell, Corning, Jamestown as real population anchors
+● Rolling terrain rather than dramatic ridge-and-valley = more buildable land
+● Lake Erie influence in Chautauqua = some waterfront premium possibilities
+● More listing activity and real market liquidity compared to PA counties at same latitude
+Reading the PA side (McKean, Potter, Forest, Warren):
+● Solid dark green from border to south = Tier 1-2 territory immediately
+● Allegheny National Forest dominates Warren/McKean area = massive public land anchor
+● Bradford PA is the only real anchor in the region — modest size
+● Terrain immediately becomes mountainous crossing from NY into PA
+
+[PAGE 32]
+DewClaw Visual Land Analysis Guide | Page 32
+● Listing density drops dramatically — sparse, thin market
+★ CONTEXT FROM THIS VIEW
+The AI Comp displayed when this view was opened ($70,564.67 with 11 properties in filter) tells you there IS
+a property somewhere in this region being evaluated. The northern NY counties in this view would be far
+more interesting than the PA bottom half based purely on what the aerial reveals about demand density.
+
+[PAGE 33]
+DewClaw Visual Land Analysis Guide | Page 33
+PART 5 — THE COMPLETE EVALUATION
+WORKFLOW
+Step-by-step: from first aerial view to go/no-go decision
+Every county and every property evaluation should follow this sequence. Steps are ordered by speed — fastest
+eliminations come first so you don't waste time analyzing something you should have killed in 30 seconds.
+STEP 1 — OPEN AERIAL & RUN THE SIX-SIGNAL SCAN (60 seconds)
+Open the satellite view at full-county zoom. Read color, texture, field patterns, ridge streaks, road density, and
+population anchors simultaneously. This takes 60 seconds and eliminates 40% of counties before you do
+anything else.
+● Is the dominant color uniform dark green? → Check tier — possible Tier 1-2
+● Is there a clear agricultural grid pattern? → Flag farmland — likely skip
+● Are there ridge streaks (Appalachian corduroy pattern)? → Terrain flag
+● Is there visible road infrastructure and town presence? → Good sign
+● Can I identify at least one real population anchor? → Confirm buyer pool exists
+STEP 2 — TIER CLASSIFICATION (30 seconds)
+Based on the six-signal scan, assign a tier (1-6). If you're assigning Tier 1, 2, or 6, stop here. Document the
+reason and move on. Only continue for Tiers 3, 4, and 5.
+● Tier 1 or 2 → Stop. Document: 'Too rural — thin market, extreme comping difficulty'
+● Tier 6 → Stop. Document: 'Too urban — no recreational land market'
+● Tier 3 → Proceed with caution, expect selective parcel requirements
+● Tier 4 → Proceed — this is your zone
+● Tier 5 → Proceed with caution, expect township/location complexity
+STEP 3 — 3D TERRAIN VERIFICATION (30-60 seconds)
+Right-click and tilt the view to 3D for any Tier 3-5 county or any specific parcel you're evaluating. This is
+mandatory and non-negotiable. A Tier 4 county can still have Tier 1 parcels on steep ridges within its borders.
+● Does the terrain jump dramatically in 3D? → Slope flag — check contour lines
+● Is the parcel in a valley floor? → Good — likely buildable
+● Is the parcel on a ridge face? → Check contour line density immediately
+● Are contour lines packed tight? → Slope too steep — discount or eliminate
+● Any diagonal scars or straight-line cuts? → Power line easement — flag it
+
+[PAGE 34]
+DewClaw Visual Land Analysis Guide | Page 34
+STEP 4 — PUBLIC LAND AUDIT (30 seconds)
+Check for state forest, national forest, game lands, wildlife areas within or adjacent to the subject parcel. Use
+the land layer overlay.
+● Is the parcel itself within public land boundaries? → Not private — eliminate
+● Is parcel surrounded on multiple sides by public land? → Extreme isolation risk
+● Is public land adjacent on one side? → Seclusion premium possible — note it
+● Are there significant game lands fragmeting the local market? → Thin buyer pool warning
+STEP 5 — LISTING DENSITY & PRICE CHECK (2-3 minutes)
+Now look at the listings visible on the map. This is your first market data read.
+● Count visible listings — fewer than 5-6 in county = thin market warning
+● Read the price per acre range — is it consistent or wildly variable?
+● Wild PPA variance (e.g., 0.75k to 57k in same county) = bad comping environment
+● Consistent PPA range with normal acreage variation = functioning market
+● Identify any obvious premium zones (lake-adjacent, highway-adjacent) vs discount zones
+STEP 6 — LOCATION ZONE IDENTIFICATION
+Identify which zone within the county the subject parcel sits in. County tier classification is a starting point —
+zone within the county is the final answer.
+● Lake-adjacent zone → Premium pricing, fast market, higher entry cost
+● Town-adjacent zone → Mid-tier pricing, consistent demand
+● Highway corridor zone → Good access, commuter-adjacent premium possible
+● Interior rural zone → Recreational pricing, longer hold times
+● State forest buffer zone → Seclusion premium possible, thin market
+● Agricultural zone within otherwise rural county → Farmland dynamics apply
+
+[PAGE 35]
+DewClaw Visual Land Analysis Guide | Page 35
+PRICE PER ACRE PATTERNS BY MARKET TYPE
+What the numbers should look like in each zone
+Understanding typical PPA ranges by zone type helps you immediately flag anomalies — properties that are
+obviously underpriced (opportunity) or obviously overpriced (skip). These are not universal rules but directional
+guides based on observed patterns across operating counties.
+ ZONE TYPE
+ TYPICAL PPA
+ RANGE
+ DRIVER
+ NOTES
+Lake/waterfront
+adjacent
+ $8k - $30k+
+Water access premium
+Drops fast with distance from water
+Near-lake (1-3 miles)
+ $4k - $8k
+Lake proximity, not direct
+access
+Still benefits from lake buyer pool
+Tier 4 rural recreational
+ $3k - $6k
+Metro buyer demand,
+recreational use
+Your primary operating zone
+Moderate rural (Tier 3)
+ $2k - $4k
+Functional but thin market
+Selective deals only
+Very rural (Tier 2)
+ $1k - $3k
+Isolation discount + thin
+buyer pool
+Long hold times — be conservative
+Farmland
+ $3k - $10k+
+ (tillable)
+Soil quality and yield
+potential
+Not your market — farmer pricing
+Too urban (Tier 6)
+ $10k - $100k+
+(development)
+Development potential
+Not your market — developer pricing
+★ LOW PPA IN GOOD ZONE = INVESTIGATE IMMEDIATELY
+Price per acre anomalies are opportunities. When you see a parcel in a Tier 4 county priced at $1.5k ppa
+when the zone average is $4k-$5k, immediately ask why. Shape problem? Access issue? Wetlands? Slope?
+If none of those explain the discount, you may have found your deal.
+
+[PAGE 36]
+DewClaw Visual Land Analysis Guide | Page 36
+RED FLAGS MASTER LIST
+Everything that kills a deal — visible from the aerial
+This is your rapid reference for every red flag that appears in aerial/satellite analysis. Any one of these warrants
+investigation before proceeding. Multiple flags on the same parcel = serious problems, likely eliminate.
+TERRAIN FLAGS
+● Ridge streak pattern in aerial view → Slope issue — verify 3D immediately
+● Tight contour lines on parcel → Steep slope — check buildable envelope
+● Property sits on visible ridge face rather than valley → Access and septic risk
+● No flat area visible on parcel in 3D → May be completely unbuildable
+● Low-lying area adjacent to river/creek → Flood plain risk
+LAND USE FLAGS
+● Agricultural grid pattern → Farmland market, wrong buyer pool
+● Uniform canopy with no variation → Very remote, thin market
+● State/Game Land labels on or adjacent → Permanent public land buffer or parcel IS public
+● Clear-cut scar visible → Recently logged — discount 5-30%
+● Wetland signatures (dark patches, irregular shapes near water) → Septic and buildability issues
+INFRASTRUCTURE FLAGS
+● Straight diagonal scar through canopy → Power line easement
+● No visible road access to parcel → Landlocked or severely limited access
+● Single road only, very long spur → Isolation risk, emergency access concern
+● Parcel visible but no road frontage → Verify access easement exists
+MARKET FLAGS
+● Fewer than 5 listings visible in entire county → Thin market
+● Wild PPA variance (5x or more range in same county) → Bad comping environment
+● Property already listed → Seller anchored to list price — harder negotiation
+● No listings within 10 miles → Too remote — buyer pool does not exist here
+
+[PAGE 37]
+DewClaw Visual Land Analysis Guide | Page 37
+LOCATION FLAGS
+● No population anchor within 90 minutes → Buyer pool problem
+● Parcel in zone far from listing activity cluster → Wrong micro-zone
+● County is Tier 5 and parcel is in urban half → You're in the wrong part of the county
+● Lake-adjacent county but parcel is 10+ miles from water → You're NOT in the lake market
+
+[PAGE 38]
+DewClaw Visual Land Analysis Guide | Page 38
+QUICK REFERENCE: THE ONE-PAGE DECISION
+SYSTEM
+When you only have 3 minutes to evaluate a county
+ WHAT YOU SEE
+ WHAT IT MEANS
+ ACTION
+Solid uniform dark green
+Wilderness — Tier 1-2
+CHECK TIER → likely skip
+Ridge streak pattern (corduroy)
+Appalachian mountains — terrain issue
+3D VERIFY immediately
+Agricultural grid (tan/light squares)
+Farmland county — wrong market
+SKIP
+Mixed green, some clearings, road
+grid
+Rural residential — sweet spot
+candidate
+INVESTIGATE
+Dense gray/beige continuous
+Urban/suburban — Tier 6
+SKIP
+State/Game Land labels
+Public land — not private market
+CHECK if parcel is private
+Diagonal scar through canopy
+Power line easement
+FLAG — value reduction
+Tight contour lines on parcel
+Steep slope — slope problem
+ASSESS buildable envelope
+Fewer than 5-6 listings visible
+Thin market
+PROCEED carefully or skip
+Wild PPA variance in county
+Broken comping environment
+EXPECT hard pricing work
+Listing cluster near water
+Lake/waterfront premium zone
+CONFIRM parcel proximity
+No population anchor visible
+No buyer pool
+SKIP
+Metro within 90 min + rural feel
+Tier 4 sweet spot
+PROCEED — your market
+✓ THE SPEED PRINCIPLE
+The aerial view takes 60-90 seconds to read correctly when you know what you're looking for. Most of the
+time you should be able to make a Tier classification and a preliminary go/no-go within 3 minutes. Save your
+deeper work for Tier 3-4 counties that clear the initial scan. Never spend 20 minutes analyzing a Tier 1 or
+Tier 6 county — the aerial told you the answer in the first 30 seconds.
+
+[PAGE 39]
+DewClaw Visual Land Analysis Guide | Page 39
+LAKE PREMIUM MARKETS
+How waterfront proximity warps prices and buyer behavior
+Lakes are the single most powerful value driver in recreational land markets. Understanding how lake proximity
+affects price — and exactly how fast that premium evaporates with distance — is essential for correctly pricing
+any parcel within 10 miles of significant water.
+The Lake Premium Gradient:
+ DISTANCE TO
+ LAKE
+ PREMIUM
+MULTIPLIER
+ BUYER PROFILE
+ MARKET SPEED
+Direct waterfront
+ 3x-8x baseline
+Dock owners, boaters, serious lake
+buyers
+Very fast — multiple offers
+< 0.5 miles walk-to
+ 1.5x-2.5x
+Lake lifestyle buyers without
+waterfront budget
+Fast — strong demand
+0.5-2 miles
+ 1.2x-1.5x
+Recreational buyers who visit the lake
+Moderate — some lake pull
+2-5 miles
+ 1.0x-1.2x
+General recreational buyer, lake
+incidental
+Normal rural timeline
+5+ miles
+ Baseline 1.0x
+Pure recreational/hunting — lake
+irrelevant
+Normal rural timeline
+The critical mistake to avoid: buying a property 8 miles from a lake and trying to market it as near the lake.
+Buyers know the difference. A 30-minute drive to the lake from a rural parcel is not a lake property — it is a rural
+property that happens to be in a lake county. Price it as rural land accordingly.
+DISTANCE TO WATER = PRICE CLIFF
+Roscommon County teaches this perfectly: 20.00ac at 3.45k ppa sits just west of Houghton Lake while
+parcels directly adjacent to water hit 7k-8k+ ppa. A single mile of distance can mean a $3,000-$4,000 per
+acre difference. Zone identification within the county is everything.
+● Blue reflective area surrounded by darker canopy = lake confirmed from aerial
+● Dense listing cluster centered on the lake = active waterfront/near-water market
+● Multiple listing price tiers radiating outward from water = healthy price gradient
+● Developed shoreline visible (docks, boat ramps, clearings) = established lake market
+● Undeveloped shoreline with sparse listings = emerging or very thin lake market
+
+[PAGE 40]
+DewClaw Visual Land Analysis Guide | Page 40
+OHIO COUNTY DEEP DIVE
+Columbiana, Portage, Stark, Trumbull — your eastern Ohio corridor
+Eastern Ohio counties represent an underutilized opportunity corridor. The
+Cleveland-Akron-Youngstown-Pittsburgh axis creates a massive buyer population within 60-90 minutes of
+genuinely rural land across multiple counties. Knowing which part of each county is worth targeting is the critical
+skill.
+ COUNTY
+ TIER
+ BEST ZONE
+ AVOID
+Columbiana
+ 4
+Full county — especially central and
+south
+Far eastern WV border edge
+Portage
+ 4
+Central and south Portage —
+Ravenna anchor
+Northern edge near Summit County suburbs
+Trumbull
+ 4-5
+Eastern Trumbull near PA border
+Western near Warren/Youngstown urban
+Stark
+ 5
+South and east edges of county
+Everything within 10 miles of Canton
+Carroll
+ 3-4
+Full county — real rural character
+Watch listing density — can be thin
+Tuscarawas
+ 3-4
+Rural sections away from New
+Philadelphia
+New Philadelphia suburban zone
+Mahoning
+ 6
+N/A — Youngstown metro core
+Entire county
+Columbiana County is the standout. Salem and Lisbon provide county anchors. Pittsburgh is within 45-60
+minutes. Cleveland and Youngstown are within 60-90 minutes. This tri-metro buyer pull creates strong demand
+for recreational parcels with real market velocity and defensible comps.
+
+[PAGE 41]
+DewClaw Visual Land Analysis Guide | Page 41
+SEASONAL & IMAGERY TIMING
+When the aerial misleads you and what to do about it
+Satellite imagery is a snapshot, not a live feed. Images in Land Insights may be 1-5 years old. Always toggle
+between available map layers — different layers have different capture dates. Comparing summer (leaf-on) vs
+winter (leaf-off) reveals structures, roads, and drainage patterns that one layer alone would hide.
+ SEASON
+ AERIAL APPEARANCE
+ WHAT IT REVEALS
+Summer
+leaf-on
+Dense green — structures/roads hidden
+under canopy
+Best for: canopy density, timber type, lake visibility
+Winter leaf-off
+Gray/brown — structures visible, drainage
+clear
+Best for: spotting buildings, road networks, wet areas
+Spring
+Fresh green — wet areas dark
+Best for: identifying flood/wetland areas
+Fall
+Color variation — deciduous vs evergreen
+visible
+Best for: timber type, logged area identification
+MARKET VELOCITY IS SEASONAL — LAND VALUE IS NOT
+Land values are stable year-round — do not time purchases around season. What changes is market
+velocity: winter in northern states (MI, OH, PA) slows sell times 20-40% because buyers cannot see, access,
+or visualize the property. Buy in winter if you get the deal. Market in spring/summer with fresh drone content.
+
+[PAGE 42]
+DewClaw Visual Land Analysis Guide | Page 42
+CLOSING NOTES
+The philosophy behind all of this
+Every principle in this guide comes back to a single core insight: the aerial view is a reflection of human
+behavior. Where people live, how they use land, who drives out on weekends, and what they're willing to pay —
+all of it is encoded in what the satellite sees from above.
+Farmland looks the way it does because farmers are actively working it. Mountain ridges look uninhabited
+because they are — you can't build there and no one wants to try. Lake-adjacent land commands a premium
+because there's a massive line of people who want to be near water. Urban density looks congested because it
+is — every square foot has been claimed.
+Your job is to find the counties and parcels where a recreational buyer's desire to escape meets the real-world
+possibility of getting there and doing something meaningful with the land. The aerial tells you, in 90 seconds,
+whether that intersection exists.
+★ THE FINAL RULE
+Read the aerial. Trust what it's telling you. Verify with 3D. Check the listings for market confirmation. Then
+act decisively. The system works when you follow it without skipping steps — and skips almost nothing when
+you've trained your eye to read the signals correctly.
+ — END OF DOCUMENT —
+ DewClaw Land Investing — Internal Reference — May 2026

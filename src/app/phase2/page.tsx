@@ -26,6 +26,9 @@ export default async function Phase2Page({ searchParams }: Phase2PageProps) {
         </div>
 
         <div className="hero-actions">
+          <Link className="secondary-button" href="/mcp-test">
+            MCP tester
+          </Link>
           <Link className="secondary-button" href="/sop" target="_blank" rel="noreferrer">
             SOP
           </Link>
