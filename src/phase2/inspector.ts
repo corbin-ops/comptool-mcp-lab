@@ -6,6 +6,9 @@ import type {
   VisualBrowserPageSnapshot,
   VisualComparableRow,
   VisualConfidence,
+  VisualDewClawQa,
+  VisualDewClawQaCheck,
+  VisualDewClawQaStatus,
   VisualExtractedParcelFields,
   VisualKmlData,
   VisualParcelInspectorRequest,
@@ -84,6 +87,33 @@ function cleanFieldMap(fields: VisualExtractedParcelFields | undefined) {
 
 function countKnownFields(fields: VisualExtractedParcelFields | undefined) {
   return Object.values(fields ?? {}).filter(Boolean).length;
+}
+
+function normalizeIdentity(value: string | undefined) {
+  return (value || "").toUpperCase().replace(/[^A-Z0-9]/g, "");
+}
+
+function normalizeCounty(value: string | undefined) {
+  return (value || "")
+    .toUpperCase()
+    .replace(/\bCOUNTY\b/g, "")
+    .replace(/[^A-Z0-9]/g, "");
+}
+
+function parseKmlCountyStateFromFileName(fileName: string | undefined) {
+  const normalized = (fileName || "")
+    .replace(/\.[^.]+$/, "")
+    .replace(/\s+\(\d+\)$/, "");
+  const match = normalized.match(/-([A-Za-z_ ]+_County)-([A-Z]{2})$/);
+
+  if (!match) {
+    return null;
+  }
+
+  return {
+    county: normalizeWhitespace(match[1].replace(/_/g, " ")),
+    state: match[2],
+  };
 }
 
 function normalizeComparableRows(rows: VisualComparableRow[] | undefined) {
@@ -571,6 +601,239 @@ function buildSummary(args: {
   return parts.join(" ");
 }
 
+function buildQaCheck(
+  key: string,
+  label: string,
+  status: VisualDewClawQaStatus,
+  summary: string,
+  detail?: string,
+): VisualDewClawQaCheck {
+  return {
+    key,
+    label,
+    status,
+    summary,
+    detail,
+  };
+}
+
+function buildDewClawQa(args: {
+  parcelPageReached: boolean;
+  parcelQuality: PageQuality;
+  structuredFields: VisualExtractedParcelFields;
+  kmlData: VisualKmlData | null;
+  comparableRows: VisualComparableRow[];
+  listingPagesReached: number;
+  listingPagesAttempted: number;
+  browserPage?: VisualBrowserPageSnapshot | null;
+}): VisualDewClawQa {
+  const checks: VisualDewClawQaCheck[] = [];
+  const nextFixes: string[] = [];
+  const fieldCount = countKnownFields(args.structuredFields);
+
+  if (args.parcelPageReached && fieldCount >= 6 && !args.parcelQuality.isLoginWall) {
+    checks.push(
+      buildQaCheck(
+        "parcel_capture",
+        "Parcel captured",
+        "pass",
+        `${fieldCount} structured fields captured from Land Insights.`,
+        args.browserPage ? "Captured from the logged-in browser extension." : "Captured by server fetch.",
+      ),
+    );
+  } else {
+    checks.push(
+      buildQaCheck(
+        "parcel_capture",
+        "Parcel captured",
+        "fail",
+        "Parcel detail capture is not reliable enough yet.",
+        `Fields captured: ${fieldCount}.`,
+      ),
+    );
+    nextFixes.push("Open the actual Land Insights parcel detail/report page and run the extension again.");
+  }
+
+  if (!args.kmlData) {
+    checks.push(
+      buildQaCheck(
+        "kml_identity",
+        "KML match",
+        "warning",
+        "No KML attached, so parcel boundary was not verified.",
+      ),
+    );
+    nextFixes.push("Attach the KML export from the same Land Insights parcel before trusting boundary-sensitive analysis.");
+  } else {
+    const kmlFileCountyState = parseKmlCountyStateFromFileName(args.kmlData.fileName);
+    const parcelApn = normalizeIdentity(args.structuredFields.apn);
+    const kmlApn = normalizeIdentity(args.kmlData.apn || args.kmlData.placemarkName);
+    const parcelCounty = normalizeCounty(args.structuredFields.county);
+    const kmlCounty = normalizeCounty(kmlFileCountyState?.county);
+    const parcelState = normalizeIdentity(args.structuredFields.state);
+    const kmlState = normalizeIdentity(kmlFileCountyState?.state);
+    const mismatches: string[] = [];
+    const matches: string[] = [];
+
+    if (parcelApn && kmlApn) {
+      if (parcelApn === kmlApn) {
+        matches.push("APN");
+      } else {
+        mismatches.push(`APN ${args.structuredFields.apn} vs ${args.kmlData.apn || args.kmlData.placemarkName}`);
+      }
+    }
+
+    if (parcelCounty && kmlCounty) {
+      if (parcelCounty === kmlCounty) {
+        matches.push("county");
+      } else {
+        mismatches.push(`county ${args.structuredFields.county} vs ${kmlFileCountyState?.county}`);
+      }
+    }
+
+    if (parcelState && kmlState) {
+      if (parcelState === kmlState) {
+        matches.push("state");
+      } else {
+        mismatches.push(`state ${args.structuredFields.state} vs ${kmlFileCountyState?.state}`);
+      }
+    }
+
+    if (!args.kmlData.coordinateCount) {
+      mismatches.push("KML has no coordinates");
+    }
+
+    if (mismatches.length) {
+      checks.push(
+        buildQaCheck(
+          "kml_identity",
+          "KML match",
+          "fail",
+          "KML appears mismatched or incomplete.",
+          mismatches.join("; "),
+        ),
+      );
+      nextFixes.push("Re-upload the KML from the exact same Land Insights parcel before using the comp result.");
+    } else if (matches.length || args.kmlData.coordinateCount > 0) {
+      checks.push(
+        buildQaCheck(
+          "kml_identity",
+          "KML match",
+          "pass",
+          `KML attached with ${args.kmlData.coordinateCount} coordinates.`,
+          matches.length ? `Matched by ${matches.join(", ")}.` : "No identity mismatch detected.",
+        ),
+      );
+    } else {
+      checks.push(
+        buildQaCheck(
+          "kml_identity",
+          "KML match",
+          "warning",
+          "KML attached, but parcel identity could not be fully verified.",
+        ),
+      );
+      nextFixes.push("Confirm the uploaded KML belongs to the same APN/county/state as the parcel.");
+    }
+  }
+
+  if (args.listingPagesReached > 0) {
+    checks.push(
+      buildQaCheck(
+        "listing_verification",
+        "Redfin/Zillow inspected",
+        "pass",
+        `${args.listingPagesReached} external listing page(s) were captured.`,
+      ),
+    );
+  } else if (args.listingPagesAttempted > 0) {
+    checks.push(
+      buildQaCheck(
+        "listing_verification",
+        "Redfin/Zillow inspected",
+        "warning",
+        `${args.listingPagesAttempted} listing link(s) were detected, but none were inspected.`,
+        "This should remain preliminary until APN/photos/status/acreage are verified.",
+      ),
+    );
+    nextFixes.push("Use Claude MCP or browser listing snapshots to inspect Redfin/Zillow photos, APN, acreage, and sale status.");
+  } else {
+    checks.push(
+      buildQaCheck(
+        "listing_verification",
+        "Redfin/Zillow inspected",
+        "warning",
+        "No external listing links were captured.",
+      ),
+    );
+    nextFixes.push("Open/collect source listing links for the strongest comps when possible.");
+  }
+
+  if (args.comparableRows.length >= 3) {
+    checks.push(
+      buildQaCheck(
+        "comp_table_capture",
+        "Comp rows captured",
+        "pass",
+        `${args.comparableRows.length} Land Insights comparable row(s) captured.`,
+        "Rows still need quality classification before final valuation.",
+      ),
+    );
+  } else if (args.comparableRows.length > 0) {
+    checks.push(
+      buildQaCheck(
+        "comp_table_capture",
+        "Comp rows captured",
+        "warning",
+        `Only ${args.comparableRows.length} comparable row(s) captured.`,
+      ),
+    );
+    nextFixes.push("Capture more same-county comparable rows before finalizing value.");
+  } else {
+    checks.push(
+      buildQaCheck(
+        "comp_table_capture",
+        "Comp rows captured",
+        "fail",
+        "No comparable rows captured.",
+      ),
+    );
+    nextFixes.push("Turn on MLS comps / capture the comp table before running valuation.");
+  }
+
+  checks.push(
+    buildQaCheck(
+      "comp_quality_classification",
+      "Comp quality classified",
+      "warning",
+      "Comp rows are captured but not yet classified as anchor, floor, ceiling, weak context, or unrelated.",
+      "Family transfers, quit claims, landlocked cases, acreage issues, and major problems should be kept but weighted correctly.",
+    ),
+  );
+  nextFixes.push("Classify top comps as anchor, floor, ceiling, weak context, or unrelated before trusting the final value.");
+
+  const hasFail = checks.some((check) => check.status === "fail");
+  const hasWarning = checks.some((check) => check.status === "warning" || check.status === "unknown");
+  const overallStatus: VisualDewClawQa["overallStatus"] = hasFail
+    ? "contaminated"
+    : hasWarning
+      ? "preliminary"
+      : "strong";
+  const summary =
+    overallStatus === "strong"
+      ? "Strong capture. Evidence is ready for DewClaw valuation review."
+      : overallStatus === "contaminated"
+        ? "Do not trust final pricing yet. One or more source checks are mismatched or missing."
+        : "Preliminary comp. Intake worked, but source verification is incomplete.";
+
+  return {
+    overallStatus,
+    summary,
+    checks,
+    nextFixes: [...new Set(nextFixes)].slice(0, 6),
+  };
+}
+
 function normalizeListingLinks(...inputs: Array<string[] | undefined>) {
   return [...new Set(inputs.flatMap((links) => (links ?? []).map((link) => link.trim()).filter(Boolean)))].slice(
     0,
@@ -760,6 +1023,19 @@ export async function runVisualParcelInspector(
   }
 
   diagnostics.push(`parcel: comparableRows=${parcelPage?.comparableRows?.length ?? 0}`);
+  const comparableRows = parcelPage?.comparableRows ?? [];
+  const dewClawQa = buildDewClawQa({
+    parcelPageReached: Boolean(parcelPage?.ok),
+    parcelQuality,
+    structuredFields,
+    kmlData,
+    comparableRows,
+    listingPagesReached: listingPages.listingPagesReached,
+    listingPagesAttempted: normalizedListingLinks.length,
+    browserPage,
+  });
+
+  diagnostics.push(`qa: overallStatus=${dewClawQa.overallStatus}`);
 
   return {
     pageStatus: {
@@ -771,7 +1047,7 @@ export async function runVisualParcelInspector(
     parcelFinalUrl: parcelPage?.finalUrl ?? input.parcelLink,
     structuredFields,
     kmlData,
-    comparableRows: parcelPage?.comparableRows ?? [],
+    comparableRows,
     areaType,
     terrainType,
     structureSignal,
@@ -779,6 +1055,7 @@ export async function runVisualParcelInspector(
     visualRisks,
     verifyNext,
     confidence,
+    dewClawQa,
     summary: buildSummary({
       areaType,
       terrainType,

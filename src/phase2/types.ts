@@ -80,6 +80,24 @@ export interface VisualKmlData {
   coordinates: VisualKmlCoordinate[];
 }
 
+export type VisualDewClawQaStatus = "pass" | "warning" | "fail" | "unknown";
+export type VisualDewClawQaOverallStatus = "strong" | "preliminary" | "contaminated";
+
+export interface VisualDewClawQaCheck {
+  key: string;
+  label: string;
+  status: VisualDewClawQaStatus;
+  summary: string;
+  detail?: string;
+}
+
+export interface VisualDewClawQa {
+  overallStatus: VisualDewClawQaOverallStatus;
+  summary: string;
+  checks: VisualDewClawQaCheck[];
+  nextFixes: string[];
+}
+
 export interface VisualBrowserPageSnapshot {
   sourceUrl: string;
   finalUrl?: string;
@@ -129,6 +147,7 @@ export interface VisualParcelInspectorResult {
   visualRisks: string[];
   verifyNext: string[];
   confidence: VisualConfidence;
+  dewClawQa?: VisualDewClawQa;
   summary: string;
   diagnostics?: string[];
   screenshots?: string[];
@@ -165,6 +184,12 @@ export const EMPTY_VISUAL_PARCEL_INSPECTOR_RESULT: VisualParcelInspectorResult =
   visualRisks: [],
   verifyNext: [],
   confidence: "low",
+  dewClawQa: {
+    overallStatus: "preliminary",
+    summary: "No QA result has been generated yet.",
+    checks: [],
+    nextFixes: [],
+  },
   summary: "",
   diagnostics: [],
   screenshots: [],

@@ -295,6 +295,51 @@ function OutputList({ items }: { items: string[] }) {
   );
 }
 
+function DewClawQaPanel({ result }: { result: VisualParcelInspectorResult }) {
+  const qa =
+    result.dewClawQa ?? {
+      overallStatus: "preliminary" as const,
+      summary: "QA was not generated for this older capture.",
+      checks: [],
+      nextFixes: ["Run the extension again to generate the new DewClaw QA status."],
+    };
+  const statusLabel = {
+    strong: "Strong",
+    preliminary: "Preliminary",
+    contaminated: "Do not trust yet",
+  }[qa.overallStatus];
+
+  return (
+    <section className={`callout-card dewclaw-qa-card is-${qa.overallStatus}`}>
+      <div className="simple-section-head">
+        <strong>DewClaw QA status</strong>
+        <span className={`qa-status-pill is-${qa.overallStatus}`}>{statusLabel}</span>
+      </div>
+
+      <p className="qa-summary">{qa.summary}</p>
+
+      {qa.checks.length ? (
+        <div className="qa-check-grid">
+          {qa.checks.map((check) => (
+            <article className={`qa-check-card is-${check.status}`} key={check.key}>
+              <span>{check.label}</span>
+              <strong>{check.summary}</strong>
+              {check.detail ? <p>{check.detail}</p> : null}
+            </article>
+          ))}
+        </div>
+      ) : null}
+
+      {qa.nextFixes.length ? (
+        <div className="qa-next-fixes">
+          <strong>Next fixes</strong>
+          <OutputList items={qa.nextFixes} />
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 function CompBulletList({ items, empty = "N/A" }: { items: string[]; empty?: string }) {
   const filtered = items.filter(Boolean);
 
@@ -1810,6 +1855,8 @@ export function VisualParcelInspectorPlayground() {
             </section>
 
             <section className="phase2-full-width-stack" aria-label="Supporting comp details">
+              <DewClawQaPanel result={result} />
+
               <ArtifactKmlAttachPanel
                 artifactId={artifactId}
                 result={result}
