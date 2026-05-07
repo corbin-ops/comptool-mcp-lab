@@ -439,7 +439,7 @@ chrome.action.onClicked.addListener(async (tab) => {
 
     await navigateResultTab(
       progressTabId,
-      `${APP_BASE_URL}/phase2/loading?artifact=${encodeURIComponent(result.artifactId)}`,
+      `${APP_BASE_URL}/mcp-test?parcelLink=${encodeURIComponent(parcelLink)}&artifact=${encodeURIComponent(result.artifactId)}`,
     );
   } catch (error) {
     console.error("[Phase2 Extractor] Failed to send parcel to lab.", error);

@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
+import { useSearchParams } from "next/navigation";
 
-import { CLAUDE_MCP_CAPTURE_PROMPT } from "@/phase2/claude-mcp-prompt";
+import { buildClaudeMcpCapturePrompt } from "@/phase2/claude-mcp-prompt";
 
 type IntakeResult = {
   ok?: boolean;
@@ -119,6 +120,17 @@ function readErrorMessage(error: unknown) {
 }
 
 export function McpTestClient() {
+  const searchParams = useSearchParams();
+  const parcelLinkFromQuery =
+    searchParams.get("parcelLink") ||
+    searchParams.get("parcel") ||
+    searchParams.get("source") ||
+    "";
+  const sourceArtifactId = searchParams.get("artifact") || "";
+  const mcpPrompt = useMemo(
+    () => buildClaudeMcpCapturePrompt(parcelLinkFromQuery),
+    [parcelLinkFromQuery],
+  );
   const [jsonText, setJsonText] = useState(prettySamplePayload);
   const [result, setResult] = useState<IntakeResult | null>(null);
   const [status, setStatus] = useState<"idle" | "valid" | "error" | "success">("idle");
@@ -212,8 +224,9 @@ export function McpTestClient() {
             <p className="eyebrow">Step 1</p>
             <h2>Copy this prompt into Claude MCP</h2>
             <p className="muted-copy">
-              Replace the parcel-link placeholder inside Claude, let Claude inspect Land Insights,
-              then paste the returned raw JSON below.
+              {parcelLinkFromQuery
+                ? "The parcel link is already inserted. Paste this into Claude MCP, let Claude inspect Land Insights, then paste the returned raw JSON below."
+                : "Replace the parcel-link placeholder inside Claude, let Claude inspect Land Insights, then paste the returned raw JSON below."}
             </p>
           </div>
 
@@ -223,7 +236,7 @@ export function McpTestClient() {
               type="button"
               onClick={async () => {
                 try {
-                  await navigator.clipboard.writeText(CLAUDE_MCP_CAPTURE_PROMPT);
+                  await navigator.clipboard.writeText(mcpPrompt);
                   setCopyMessage("Prompt copied. Paste it into Claude MCP.");
                 } catch {
                   setCopyMessage("Copy blocked by browser. Select the prompt text manually.");
@@ -236,6 +249,26 @@ export function McpTestClient() {
           </div>
         </div>
 
+        {parcelLinkFromQuery || sourceArtifactId ? (
+          <div className="mcp-handoff-banner">
+            {parcelLinkFromQuery ? (
+              <p>
+                <strong>Parcel loaded from extension:</strong> {parcelLinkFromQuery}
+              </p>
+            ) : null}
+            {sourceArtifactId ? (
+              <a
+                className="light-button"
+                href={`/phase2?artifact=${encodeURIComponent(sourceArtifactId)}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open preliminary capture
+              </a>
+            ) : null}
+          </div>
+        ) : null}
+
         <div className="mcp-prompt-steps">
           <span>1. Copy prompt</span>
           <span>2. Paste into Claude MCP</span>
@@ -247,7 +280,7 @@ export function McpTestClient() {
           className="mcp-prompt-textarea"
           readOnly
           spellCheck={false}
-          value={CLAUDE_MCP_CAPTURE_PROMPT}
+          value={mcpPrompt}
           onFocus={(event) => event.currentTarget.select()}
         />
       </section>

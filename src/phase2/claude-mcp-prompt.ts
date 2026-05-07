@@ -1,9 +1,11 @@
+export const CLAUDE_MCP_PARCEL_LINK_PLACEHOLDER = "{{PASTE_LAND_INSIGHTS_PARCEL_LINK_HERE}}";
+
 export const CLAUDE_MCP_CAPTURE_PROMPT = `You are helping test the DewClaw CompTool MCP lab.
 
 Your job is to visually inspect a Land Insights parcel and return structured source data for our dashboard.
 
 Parcel link:
-{{PASTE_LAND_INSIGHTS_PARCEL_LINK_HERE}}
+${CLAUDE_MCP_PARCEL_LINK_PLACEHOLDER}
 
 Critical rules:
 - Return raw JSON only.
@@ -165,3 +167,13 @@ Important:
 - listingLinks can be empty if no listing URLs are visible.
 - externalListingEvidence should prioritize inspected Land Insights MLS comp photo/detail evidence. It can be empty only if no useful comp detail/photos are visible.
 - rawObservationNotes should be short, practical, and useful for land comping.`;
+
+export function buildClaudeMcpCapturePrompt(parcelLink?: string) {
+  const cleanParcelLink = parcelLink?.trim();
+
+  if (!cleanParcelLink) {
+    return CLAUDE_MCP_CAPTURE_PROMPT;
+  }
+
+  return CLAUDE_MCP_CAPTURE_PROMPT.replace(CLAUDE_MCP_PARCEL_LINK_PLACEHOLDER, cleanParcelLink);
+}

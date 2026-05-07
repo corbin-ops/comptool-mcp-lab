@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Dew Claw CompTool Capture",
-  "version": "0.1.11",
-  "description": "Capture Land Insights parcel data and send it to CompTool V2 for internal comp review.",
+  "version": "0.1.12",
+  "description": "Capture Land Insights parcel data and prepare a DewClaw MCP inspection handoff.",
   "icons": {
     "16": "icons/icon-16.png",
     "32": "icons/icon-32.png",
@@ -29,7 +29,7 @@
     }
   ],
   "action": {
-    "default_title": "Send parcel to CompTool V2",
+    "default_title": "Start DewClaw MCP inspection",
     "default_icon": {
       "16": "icons/icon-16.png",
       "32": "icons/icon-32.png",

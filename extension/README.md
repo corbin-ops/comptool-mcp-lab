@@ -10,10 +10,10 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 4. Detects the Land Insights **Comp Report** button/link when available
 5. Captures the Land Insights **KML** export when available
 6. Posts that payload to CompTool V2 at `https://comptoolv2.onrender.com/api/phase2/browser-intake`
-7. The local app converts the capture into a CompTool V1 evaluation request
-8. Shows a loading page while the comp runs
-9. The existing V1 DewClaw algorithm runs local retrieval plus the configured AI model
-10. Opens the saved result in `https://comptoolv2.onrender.com/phase2?artifact=...`
+7. The app saves a preliminary browser-capture artifact and queues the DewClaw evaluation
+8. Opens the MCP tester with the parcel link already inserted into the Claude MCP prompt
+9. User pastes that prompt into Claude MCP, lets Claude inspect Land Insights MLS comps/photos, then submits the returned JSON
+10. The final dashboard uses the MCP visual evidence plus the DewClaw corpus
 
 ## Current limitations
 
@@ -21,7 +21,7 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 - The extractor is now DOM-based, but it still depends on Land Insights page structure staying similar.
 - KML capture works best when Land Insights provides either a direct KML link or a browser-generated KML blob from the KML button.
 - If Land Insights changes the KML button implementation, the extension will still send parcel fields and diagnostics, but KML may require another capture fallback.
-- This MVP still does not inspect map pixels or listing photos directly.
+- The extension itself still does not inspect map pixels or listing photos directly; it prepares the Claude MCP handoff that performs the deeper visual inspection.
 - The app URL is hardcoded to `https://comptoolv2.onrender.com` in `background.js`.
 - The hosted intake token in `background.js` must match `EXTENSION_INTAKE_TOKEN` in Render.
 - The extension is intended for internal Dew Claw testing against hosted CompTool V2.
@@ -49,16 +49,16 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 3. Click the extension icon
 4. The extension should:
 
-   - open the hosted loading page
    - extract parcel fields
    - extract comparable rows
    - send them to hosted CompTool V2
+   - open the hosted MCP tester with the parcel link already inserted
 
 5. A new tab should open at:
 
-   `https://comptoolv2.onrender.com/phase2?artifact=<id>`
+   `https://comptoolv2.onrender.com/mcp-test?parcelLink=<url>&artifact=<id>`
 
-6. Review the V1 dashboard result and loaded browser capture in the Phase 2 lab
+6. Copy the prepared prompt into Claude MCP, paste the returned JSON into the MCP tester, then review the dashboard result
 
 ## How to package it for Chrome Web Store upload
 
@@ -77,5 +77,6 @@ public listing.
 1. Open the Land Insights parcel page or comp report
 2. Click the extension
 3. CompTool extracts the Comp Report link, KML, parcel fields, and comp rows
-4. The V2 bridge sends the captured payload through the CompTool V1 DewClaw + AI algorithm
-5. Review the dashboard result
+4. The MCP tester opens with a ready-to-copy Claude MCP prompt
+5. Claude MCP inspects Land Insights map layers, MLS comps, and photos, then returns JSON
+6. Paste JSON into the MCP tester and review the DewClaw dashboard result
