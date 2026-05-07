@@ -9,7 +9,7 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 3. Extracts comparable rows and visible Redfin/Zillow/Realtor links from the comp table
 4. Detects the Land Insights **Comp Report** button/link when available
 5. Captures the Land Insights **KML** export when available
-6. Posts that payload to CompTool V2 at `https://comptoolv2.onrender.com/api/phase2/browser-intake`
+6. Posts that payload to CompTool MCP Lab at `https://comptool-mcp-lab.onrender.com/api/phase2/browser-intake`
 7. The app saves a preliminary browser-capture artifact and queues the DewClaw evaluation
 8. Opens the MCP tester with the parcel link already inserted into the Claude MCP prompt
 9. User pastes that prompt into Claude MCP, lets Claude inspect Land Insights MLS comps/photos, then submits the returned JSON
@@ -22,10 +22,10 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 - KML capture works best when Land Insights provides either a direct KML link or a browser-generated KML blob from the KML button.
 - If Land Insights changes the KML button implementation, the extension will still send parcel fields and diagnostics, but KML may require another capture fallback.
 - The extension itself still does not inspect map pixels or listing photos directly; it prepares the Claude MCP handoff that performs the deeper visual inspection.
-- The app URL is hardcoded to `https://comptoolv2.onrender.com` in `background.js`.
+- The app URL is hardcoded to `https://comptool-mcp-lab.onrender.com` in `background.js`.
 - The hosted intake token in `background.js` must match `EXTENSION_INTAKE_TOKEN` in Render.
 - The extension is intended for internal Dew Claw testing against hosted CompTool V2.
-- The Chrome Web Store privacy policy URL is `https://comptoolv2.onrender.com/privacy`.
+- The Chrome Web Store privacy policy URL is `https://comptool-mcp-lab.onrender.com/privacy`.
 
 ## How to load it in Chrome for local testing
 
@@ -56,7 +56,7 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 
 5. A new tab should open at:
 
-   `https://comptoolv2.onrender.com/mcp-test?parcelLink=<url>&artifact=<id>`
+   `https://comptool-mcp-lab.onrender.com/mcp-test?parcelLink=<url>&artifact=<id>`
 
 6. Copy the prepared prompt into Claude MCP, paste the returned JSON into the MCP tester, then review the dashboard result
 

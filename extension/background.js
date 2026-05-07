@@ -1,4 +1,4 @@
-const APP_BASE_URL = "https://comptoolv2.onrender.com";
+const APP_BASE_URL = "https://comptool-mcp-lab.onrender.com";
 const EXTENSION_INTAKE_TOKEN = "ce8f050fdb583135eac2c16a889bd0146a09f783958f49cde341903706c5f79f";
 const LAND_INSIGHTS_HOST_PATTERN = /^https:\/\/app\.landinsights\.(com|co)\//i;
 
