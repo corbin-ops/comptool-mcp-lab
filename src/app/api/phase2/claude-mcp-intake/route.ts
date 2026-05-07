@@ -78,6 +78,7 @@ function readComparableRows(value: unknown): VisualComparableRow[] {
       status: readString(record.status),
       listingUrl: readString(record.listingUrl),
       source:
+        readString(record.source) === "landinsights_mls" ||
         readString(record.source) === "redfin" ||
         readString(record.source) === "zillow" ||
         readString(record.source) === "realtor"
@@ -104,10 +105,14 @@ function readExternalListingEvidence(value: unknown): ClaudeMcpExternalListingEv
 
     const source = readString(record.source);
     const matchQuality = readString(record.matchQuality);
+    const compRole = readString(record.compRole);
 
     items.push({
       source:
-        source === "redfin" || source === "zillow" || source === "realtor"
+        source === "landinsights_mls" ||
+        source === "redfin" ||
+        source === "zillow" ||
+        source === "realtor"
           ? source
           : "unknown",
       url: readString(record.url),
@@ -118,6 +123,14 @@ function readExternalListingEvidence(value: unknown): ClaudeMcpExternalListingEv
         matchQuality === "rejected_match"
           ? matchQuality
           : "possible_match",
+      compRole:
+        compRole === "anchor" ||
+        compRole === "price_floor" ||
+        compRole === "price_ceiling" ||
+        compRole === "weak_context" ||
+        compRole === "unrelated"
+          ? compRole
+          : undefined,
       matchedSignals: readStringArray(record.matchedSignals),
       photoObservations: readStringArray(record.photoObservations),
       listingFacts: readStringArray(record.listingFacts),
@@ -160,6 +173,7 @@ function readFieldCaptures(value: unknown): ClaudeMcpFieldCapture[] {
         sourceTab === "slope_insights" ||
         sourceTab === "deep_ai_analysis" ||
         sourceTab === "data_platform" ||
+        sourceTab === "landinsights_mls" ||
         sourceTab === "listing_page" ||
         sourceTab === "manual_note"
           ? sourceTab
@@ -239,6 +253,7 @@ function buildPageText(capture: ClaudeMcpLiTableReturn) {
     .map((item) => `${item.label}: ${item.value}`);
   const listingEvidenceLines = capture.externalListingEvidence.flatMap((item, index) => [
     `External listing evidence ${index + 1}: ${item.source} ${item.matchQuality}`,
+    item.compRole ? `Comp role: ${item.compRole}` : "",
     item.url ? `URL: ${item.url}` : "",
     item.searchQuery ? `Search query: ${item.searchQuery}` : "",
     item.matchedSignals.length ? `Matched signals: ${item.matchedSignals.join("; ")}` : "",
@@ -268,6 +283,7 @@ function buildExternalListingSnapshots(
       `External listing evidence ${index + 1}.`,
       `Source: ${item.source}`,
       `Match quality: ${item.matchQuality}`,
+      item.compRole ? `Comp role: ${item.compRole}` : "",
       item.searchQuery ? `Search query: ${item.searchQuery}` : "",
       item.matchedSignals.length ? `Matched signals: ${item.matchedSignals.join("; ")}` : "",
       item.photoObservations.length
@@ -314,6 +330,7 @@ function buildRequestFromClaudeMcp(capture: ClaudeMcpLiTableReturn): VisualParce
       capture.rawObservationNotes,
       ...capture.externalListingEvidence.flatMap((item) => [
         `External listing ${item.source}: ${item.matchQuality}`,
+        item.compRole ? `External comp role: ${item.compRole}` : "",
         ...item.matchedSignals.map((signal) => `External matched signal: ${signal}`),
         ...item.photoObservations.map((observation) => `External photo observation: ${observation}`),
         ...item.risks.map((risk) => `External listing risk: ${risk}`),

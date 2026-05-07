@@ -10,6 +10,7 @@ export type ClaudeMcpSourceTab =
   | "slope_insights"
   | "deep_ai_analysis"
   | "data_platform"
+  | "landinsights_mls"
   | "listing_page"
   | "manual_note"
   | "unknown";
@@ -36,17 +37,29 @@ export interface ClaudeMcpVisualClassification {
   verifyNext: string[];
 }
 
-export type ClaudeMcpExternalListingSource = "redfin" | "zillow" | "realtor" | "unknown";
+export type ClaudeMcpExternalListingSource =
+  | "landinsights_mls"
+  | "redfin"
+  | "zillow"
+  | "realtor"
+  | "unknown";
 export type ClaudeMcpExternalListingMatchQuality =
   | "confirmed_match"
   | "possible_match"
   | "rejected_match";
+export type ClaudeMcpCompRole =
+  | "anchor"
+  | "price_floor"
+  | "price_ceiling"
+  | "weak_context"
+  | "unrelated";
 
 export interface ClaudeMcpExternalListingEvidence {
   source: ClaudeMcpExternalListingSource;
   url: string;
   searchQuery: string;
   matchQuality: ClaudeMcpExternalListingMatchQuality;
+  compRole?: ClaudeMcpCompRole;
   matchedSignals: string[];
   photoObservations: string[];
   listingFacts: string[];

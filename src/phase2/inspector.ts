@@ -741,32 +741,32 @@ function buildDewClawQa(args: {
     checks.push(
       buildQaCheck(
         "listing_verification",
-        "Redfin/Zillow inspected",
+        "Comp photos/listings inspected",
         "pass",
-        `${args.listingPagesReached} external listing page(s) were captured.`,
+        `${args.listingPagesReached} comp photo/listing evidence item(s) were captured.`,
       ),
     );
   } else if (args.listingPagesAttempted > 0) {
     checks.push(
       buildQaCheck(
         "listing_verification",
-        "Redfin/Zillow inspected",
+        "Comp photos/listings inspected",
         "warning",
         `${args.listingPagesAttempted} listing link(s) were detected, but none were inspected.`,
-        "This should remain preliminary until APN/photos/status/acreage are verified.",
+        "This should remain preliminary until Land Insights MLS photos or Redfin/Zillow APN/photos/status/acreage are verified.",
       ),
     );
-    nextFixes.push("Use Claude MCP or browser listing snapshots to inspect Redfin/Zillow photos, APN, acreage, and sale status.");
+    nextFixes.push("Use Claude MCP to inspect Land Insights MLS photos first, then Redfin/Zillow only if needed.");
   } else {
     checks.push(
       buildQaCheck(
         "listing_verification",
-        "Redfin/Zillow inspected",
+        "Comp photos/listings inspected",
         "warning",
-        "No external listing links were captured.",
+        "No comp photo/listing evidence was captured.",
       ),
     );
-    nextFixes.push("Open/collect source listing links for the strongest comps when possible.");
+    nextFixes.push("Inspect Land Insights MLS comp photos/details for the strongest nearby comps.");
   }
 
   if (args.comparableRows.length >= 3) {

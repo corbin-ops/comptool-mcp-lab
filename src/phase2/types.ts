@@ -15,7 +15,7 @@ export interface VisualComparableRow {
   extraMetric?: string;
   status?: string;
   listingUrl?: string;
-  source?: "redfin" | "zillow" | "realtor" | "unknown";
+  source?: "landinsights_mls" | "redfin" | "zillow" | "realtor" | "unknown";
   rawCells: string[];
 }
 
