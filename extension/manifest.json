@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Dew Claw CompTool Capture",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Capture Land Insights parcel data and prepare a DewClaw MCP inspection handoff.",
   "icons": {
     "16": "icons/icon-16.png",
@@ -13,7 +13,9 @@
   "host_permissions": [
     "https://app.landinsights.com/*",
     "https://app.landinsights.co/*",
-    "https://comptool-mcp-lab.onrender.com/*"
+    "https://comptool-mcp-lab.onrender.com/*",
+    "http://127.0.0.1:4777/*",
+    "http://localhost:4777/*"
   ],
   "background": {
     "service_worker": "background.js",

@@ -22,7 +22,11 @@ dashboard, and the Claude MCP visual-inspection workflow into one codebase.
 - **Chrome extension:** `extension/`
   - Captures visible Land Insights parcel/report data.
   - Opens the dashboard result first for non-technical users.
-  - Keeps Claude MCP enrichment available as an analyst/admin follow-up.
+- **CompTool Local Worker:** `local-worker/`
+  - Small internal companion app that runs on the user's computer.
+  - Receives jobs from the Chrome extension on `http://127.0.0.1:4777`.
+  - Reopens the parcel with the user's logged-in Land Insights session and attaches MCP-style visual evidence to the same dashboard artifact.
+  - Keeps Claude MCP enrichment available as an analyst/admin fallback.
 
 ## Current Source Of Truth
 
@@ -69,6 +73,19 @@ http://localhost:3003/mcp-test
 http://localhost:3003/sop
 http://localhost:3003/references
 ```
+
+## Internal User Software Flow
+
+For non-technical users, the intended flow is:
+
+1. Start `Start CompTool Local Worker.cmd` once at the beginning of the day.
+2. Stay logged into Land Insights in the worker/browser session.
+3. Open a Land Insights parcel or comp report in Chrome.
+4. Click the DewClaw CompTool extension.
+5. The hosted dashboard opens immediately.
+6. If the local worker is running, the same dashboard result enriches itself in the background.
+
+If the worker is not running, the extension still opens the dashboard with the normal browser capture.
 
 ## One-Click Compile
 

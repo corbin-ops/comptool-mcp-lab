@@ -1,4 +1,5 @@
 const APP_BASE_URL = "https://comptool-mcp-lab.onrender.com";
+const LOCAL_WORKER_URL = "http://127.0.0.1:4777";
 const EXTENSION_INTAKE_TOKEN = "ce8f050fdb583135eac2c16a889bd0146a09f783958f49cde341903706c5f79f";
 const LAND_INSIGHTS_HOST_PATTERN = /^https:\/\/app\.landinsights\.(com|co)\//i;
 
@@ -40,6 +41,38 @@ async function postBrowserCapture(payload) {
   }
 
   return response.json();
+}
+
+async function queueLocalWorker(payload) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => {
+    controller.abort();
+  }, 2000);
+
+  try {
+    const response = await fetch(`${LOCAL_WORKER_URL}/jobs`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Local worker returned HTTP ${response.status}.`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.info(
+      "[Phase2 Extractor] Local worker not queued. Dashboard still opened with browser capture.",
+      error,
+    );
+    return null;
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 function getDownloadDisplayName(downloadItem) {
@@ -436,6 +469,14 @@ chrome.action.onClicked.addListener(async (tab) => {
     if (!result?.artifactId) {
       throw new Error("The Phase 2 lab did not return an artifact ID.");
     }
+
+    void queueLocalWorker({
+      artifactId: result.artifactId,
+      parcelLink,
+      baseUrl: APP_BASE_URL,
+      extensionToken: EXTENSION_INTAKE_TOKEN,
+      browserPage,
+    });
 
     await navigateResultTab(
       progressTabId,

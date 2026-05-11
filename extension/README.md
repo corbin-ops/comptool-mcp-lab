@@ -12,8 +12,10 @@ This Chrome extension is the current MVP for the browser-assisted CompTool workf
 6. Posts that payload to CompTool MCP Lab at `https://comptool-mcp-lab.onrender.com/api/phase2/browser-intake`
 7. The app saves a preliminary browser-capture artifact and queues the DewClaw evaluation
 8. Opens the dashboard result for the sales user
-9. If deeper visual review is needed, an analyst can use the dashboard's MCP enrichment button
-10. The final dashboard uses the browser capture, optional MCP visual evidence, and the DewClaw corpus
+9. If the CompTool Local Worker is running, the extension queues a deeper MCP-style enrichment job on `http://127.0.0.1:4777`
+10. The same dashboard result updates when the local worker attaches visual evidence
+11. If deeper manual review is still needed, an analyst can use the dashboard's MCP enrichment button
+12. The final dashboard uses the browser capture, optional MCP visual evidence, and the DewClaw corpus
 
 ## Current limitations
 
@@ -21,7 +23,8 @@ This Chrome extension is the current MVP for the browser-assisted CompTool workf
 - The extractor is now DOM-based, but it still depends on Land Insights page structure staying similar.
 - KML capture works best when Land Insights provides either a direct KML link or a browser-generated KML blob from the KML button.
 - If Land Insights changes the KML button implementation, the extension will still send parcel fields and diagnostics, but KML may require another capture fallback.
-- The extension itself still does not inspect map pixels or listing photos directly; it opens the dashboard first, and MCP enrichment remains an analyst/admin step when deeper visual inspection is needed.
+- The extension itself still does not inspect map pixels or listing photos directly; it opens the dashboard first, then optionally asks the local worker to perform deeper visual enrichment.
+- The local worker must be running on the user's computer for automatic MCP-style enrichment. If it is closed, the dashboard still opens with the browser capture.
 - The app URL is hardcoded to `https://comptool-mcp-lab.onrender.com` in `background.js`.
 - The hosted intake token in `background.js` must match `EXTENSION_INTAKE_TOKEN` in Render.
 - The extension is intended for internal Dew Claw testing against the unified CompTool MCP app.
@@ -58,7 +61,8 @@ This Chrome extension is the current MVP for the browser-assisted CompTool workf
 
    `https://comptool-mcp-lab.onrender.com/phase2/loading?artifact=<id>&source=<url>`
 
-6. Review the dashboard result. Use **Improve with Claude MCP** only when deeper visual inspection is needed.
+6. If the local worker is running, it will enrich the same dashboard artifact automatically.
+7. Review the dashboard result. Use **Improve with Claude MCP** only when deeper manual inspection is needed.
 
 ## How to package it for Chrome Web Store upload
 
@@ -78,5 +82,6 @@ public listing.
 2. Click the extension
 3. CompTool extracts the Comp Report link, KML, parcel fields, and comp rows
 4. The dashboard opens with the preliminary DewClaw result
-5. If needed, an analyst clicks **Improve with Claude MCP**
-6. Claude MCP inspects Land Insights map layers, MLS comps, and photos, then the analyst submits the JSON back into the dashboard workflow
+5. If the local worker is running, it processes the parcel in the background and updates the same result
+6. If needed, an analyst clicks **Improve with Claude MCP**
+7. Claude MCP inspects Land Insights map layers, MLS comps, and photos, then the analyst submits the JSON back into the dashboard workflow

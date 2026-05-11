@@ -1622,6 +1622,79 @@ export function VisualParcelInspectorPlayground() {
     };
   }, [artifactId, artifactIdFromQuery, compEvaluationStatus]);
 
+  useEffect(() => {
+    const currentArtifactId = artifactId || artifactIdFromQuery;
+    const currentSourceApp = artifactMeta?.request.browserPage?.sourceApp || "";
+
+    if (!currentArtifactId || !artifactMeta?.request.browserPage || currentSourceApp === "claude-mcp") {
+      return;
+    }
+
+    let isActive = true;
+    const startedAt = Date.now();
+
+    async function refreshForMcpEnrichment() {
+      try {
+        const response = await fetch(`/api/phase2/browser-intake/${currentArtifactId}`, {
+          method: "GET",
+          cache: "no-store",
+        });
+
+        if (!response.ok) {
+          return;
+        }
+
+        const artifact = (await response.json()) as VisualBrowserIntakeArtifact;
+
+        if (!isActive) {
+          return;
+        }
+
+        const nextSourceApp = artifact.request.browserPage?.sourceApp || "";
+        const sourceChanged = nextSourceApp !== currentSourceApp;
+        const statusChanged =
+          artifact.compEvaluationStatus !== compEvaluationStatus ||
+          artifact.compEvaluationCompletedAt !== artifactMeta?.compEvaluationCompletedAt;
+
+        if (!sourceChanged && !statusChanged) {
+          return;
+        }
+
+        setArtifactMeta(artifact);
+        setArtifactId(artifact.id);
+        setForm(formFromArtifact(artifact));
+        setResult(artifact.result);
+        setCompEvaluation(artifact.compEvaluation ?? null);
+        setCompEvaluationStatus(
+          artifact.compEvaluationStatus ?? (artifact.compEvaluation ? "completed" : null),
+        );
+        setCompEvaluationError(artifact.compEvaluationError ?? null);
+      } catch {
+        // Local worker enrichment is optional; keep the current result visible.
+      }
+    }
+
+    const interval = window.setInterval(() => {
+      if (Date.now() - startedAt > 5 * 60 * 1000) {
+        window.clearInterval(interval);
+        return;
+      }
+
+      void refreshForMcpEnrichment();
+    }, 10000);
+
+    return () => {
+      isActive = false;
+      window.clearInterval(interval);
+    };
+  }, [
+    artifactId,
+    artifactIdFromQuery,
+    artifactMeta?.compEvaluationCompletedAt,
+    artifactMeta?.request.browserPage,
+    compEvaluationStatus,
+  ]);
+
   const browserCaptureSummary = useMemo(() => {
     if (!artifactMeta?.request.browserPage) {
       return null;
