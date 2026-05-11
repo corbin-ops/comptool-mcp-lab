@@ -30,6 +30,7 @@ Required `.env` values:
 - `COMPTOOL_BASE_URL`: hosted CompTool URL.
 - `EXTENSION_INTAKE_TOKEN`: must match Render's extension token.
 - `ANTHROPIC_API_KEY`: optional but recommended for vision-based JSON generation.
+- `WORKER_LOGIN_WAIT_MS`: how long the worker waits on a Land Insights login screen. Default is 5 minutes.
 
 ## Internal User Flow
 
@@ -43,7 +44,10 @@ Required `.env` values:
 ## First Login
 
 The worker uses its own Playwright browser profile. On the first run it may open a
-Land Insights login page. Log in there once, then run the test again.
+Land Insights login page. Log in there once. The worker will wait up to 5 minutes,
+then reload the parcel and continue automatically.
+
+If login takes longer than 5 minutes, run the same parcel again after logging in.
 
 ## Health Check
 

@@ -26,6 +26,18 @@ Start DewClaw CompTool Worker
 6. The dashboard opens immediately.
 7. If the local worker is running, the same dashboard result updates in the background with deeper evidence.
 
+## First Land Insights Login
+
+The worker uses a separate browser profile from normal Chrome. On the first run,
+it may open Land Insights and ask for login.
+
+If that happens:
+
+1. Log into Land Insights in the worker browser window.
+2. Do not close the worker terminal.
+3. The worker will wait up to 5 minutes, reload the parcel, and continue.
+4. If it times out, click the CompTool extension on the parcel again after login.
+
 ## Confirm It Is Running
 
 Open this URL:

@@ -15,6 +15,7 @@ const EXTENSION_INTAKE_TOKEN = process.env.EXTENSION_INTAKE_TOKEN || "";
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
 const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-6";
 const WORKER_HEADLESS = /^true$/i.test(process.env.WORKER_HEADLESS || "");
+const WORKER_LOGIN_WAIT_MS = Number(process.env.WORKER_LOGIN_WAIT_MS || 5 * 60 * 1000);
 const WORKER_BROWSER_PROFILE =
   process.env.WORKER_BROWSER_PROFILE ||
   path.join(os.homedir(), "AppData", "Local", "DewClawCompTool", "browser-profile");
@@ -93,16 +94,19 @@ function createJob(payload) {
 async function processJob(job) {
   job.status = "running";
   job.startedAt = new Date().toISOString();
+  console.log(`Worker job ${job.id} started for ${job.payload?.parcelLink || "unknown parcel"}`);
 
   try {
     const result = await runVisualEnrichment(job.payload);
     job.status = "completed";
     job.completedAt = new Date().toISOString();
     job.result = result;
+    console.log(`Worker job ${job.id} completed.`);
   } catch (error) {
     job.status = "failed";
     job.completedAt = new Date().toISOString();
     job.error = error instanceof Error ? error.message : String(error || "Unknown worker error.");
+    console.error(`Worker job ${job.id} failed: ${job.error}`);
   }
 }
 
@@ -199,9 +203,26 @@ async function inspectParcelInBrowser(parcelLink) {
     await page.goto(parcelLink, { waitUntil: "domcontentloaded", timeout: 60000 });
     await page.waitForTimeout(3000);
 
+    const diagnostics = [];
+    let finalUrl = page.url();
+    let pageText = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
+    let loginRequired = isLoginRequired(finalUrl, pageText);
+
+    if (loginRequired && !WORKER_HEADLESS && WORKER_LOGIN_WAIT_MS > 0) {
+      console.log("Worker reached Land Insights login. Waiting for user login...");
+      diagnostics.push(
+        `Worker detected a login screen and waited up to ${Math.round(WORKER_LOGIN_WAIT_MS / 1000)} seconds for manual login.`,
+      );
+
+      const loginResult = await waitForManualLogin(page, parcelLink);
+      diagnostics.push(...loginResult.diagnostics);
+
+      finalUrl = page.url();
+      pageText = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
+      loginRequired = isLoginRequired(finalUrl, pageText);
+    }
+
     const title = await page.title().catch(() => "Land Insights");
-    const finalUrl = page.url();
-    const pageText = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
     const screenshotBase64 = await page.screenshot({ type: "png", fullPage: false }).then((buffer) =>
       buffer.toString("base64"),
     );
@@ -211,8 +232,9 @@ async function inspectParcelInBrowser(parcelLink) {
       finalUrl,
       pageText,
       screenshotBase64,
-      loginRequired: /\/login/i.test(finalUrl) || /sign in|log in/i.test(pageText),
+      loginRequired,
       diagnostics: [
+        ...diagnostics,
         `Worker opened parcel: ${finalUrl}`,
         `Worker captured visible text length: ${pageText.length}`,
         `Worker screenshot captured: ${screenshotBase64 ? "yes" : "no"}`,
@@ -221,6 +243,37 @@ async function inspectParcelInBrowser(parcelLink) {
   } finally {
     await context.close();
   }
+}
+
+function isLoginRequired(finalUrl, pageText) {
+  return /\/login/i.test(finalUrl || "") || /\b(sign in|log in|login)\b/i.test(pageText || "");
+}
+
+async function waitForManualLogin(page, parcelLink) {
+  const diagnostics = [];
+  const deadline = Date.now() + WORKER_LOGIN_WAIT_MS;
+
+  while (Date.now() < deadline) {
+    await page.waitForTimeout(3000);
+
+    const currentUrl = page.url();
+    const currentText = await page.locator("body").innerText({ timeout: 5000 }).catch(() => "");
+
+    if (!isLoginRequired(currentUrl, currentText)) {
+      diagnostics.push("Worker login resolved; reloading the parcel link.");
+
+      if (currentUrl !== parcelLink) {
+        await page.goto(parcelLink, { waitUntil: "domcontentloaded", timeout: 60000 });
+        await page.waitForTimeout(3000);
+      }
+
+      return { loggedIn: true, diagnostics };
+    }
+  }
+
+  diagnostics.push("Worker login wait timed out. Log into the worker browser, then rerun the comp.");
+
+  return { loggedIn: false, diagnostics };
 }
 
 function buildFallbackCapture({ artifact, parcelLink, inspection }) {
