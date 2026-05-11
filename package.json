@@ -7,6 +7,7 @@
     "build": "next build --webpack",
     "start": "next start -p ${PORT:-3003}",
     "compile:all": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/compile-all.ps1",
+    "package:internal-installer": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-internal-installer.ps1",
     "build:extension": "bash scripts/package-extension.sh",
     "build:comp-corpus": "python scripts/build-comp-corpus.py",
     "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"

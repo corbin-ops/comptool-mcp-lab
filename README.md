@@ -78,14 +78,27 @@ http://localhost:3003/references
 
 For non-technical users, the intended flow is:
 
-1. Start `Start CompTool Local Worker.cmd` once at the beginning of the day.
-2. Stay logged into Land Insights in the worker/browser session.
-3. Open a Land Insights parcel or comp report in Chrome.
-4. Click the DewClaw CompTool extension.
-5. The hosted dashboard opens immediately.
-6. If the local worker is running, the same dashboard result enriches itself in the background.
+1. Run `Install CompTool Local Worker.cmd` once on the user's machine.
+2. Start `Start CompTool Local Worker.cmd` once at the beginning of the day.
+3. Stay logged into Land Insights in the worker/browser session.
+4. Open a Land Insights parcel or comp report in Chrome.
+5. Click the DewClaw CompTool extension.
+6. The hosted dashboard opens immediately.
+7. If the local worker is running, the same dashboard result enriches itself in the background.
 
 If the worker is not running, the extension still opens the dashboard with the normal browser capture.
+
+To create a clean zip for another internal user:
+
+```powershell
+npm run package:internal-installer
+```
+
+The zip is written to:
+
+```text
+dist\DewClaw-CompTool-Internal-Installer.zip
+```
 
 ## One-Click Compile
 
