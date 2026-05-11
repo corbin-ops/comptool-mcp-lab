@@ -340,6 +340,44 @@ function DewClawQaPanel({ result }: { result: VisualParcelInspectorResult }) {
   );
 }
 
+function McpEnrichmentPanel({
+  artifactId,
+  parcelLink,
+  artifactMeta,
+}: {
+  artifactId: string;
+  parcelLink: string;
+  artifactMeta: VisualBrowserIntakeArtifact | null;
+}) {
+  if (!artifactId || !parcelLink) {
+    return null;
+  }
+
+  const isMcpCapture = artifactMeta?.request.browserPage?.sourceApp === "claude-mcp";
+  const mcpHref = `/mcp-test?parcelLink=${encodeURIComponent(parcelLink)}&artifact=${encodeURIComponent(artifactId)}`;
+
+  return (
+    <section className="callout-card simple-output-section phase2-result-card">
+      <div className="simple-section-head">
+        <strong>{isMcpCapture ? "Claude MCP evidence attached" : "Optional MCP enrichment"}</strong>
+        <span className="muted-chip">{isMcpCapture ? "Enhanced" : "Analyst only"}</span>
+      </div>
+      <p className="muted-copy">
+        {isMcpCapture
+          ? "This result already includes a Claude MCP visual source capture."
+          : "Sales users can stop here. Use this only when Corbin/Jow wants Claude to visually inspect map layers, MLS photos, and comp context before final calibration."}
+      </p>
+      {!isMcpCapture ? (
+        <div className="hero-actions">
+          <a className="secondary-button" href={mcpHref} target="_blank" rel="noreferrer">
+            Improve with Claude MCP
+          </a>
+        </div>
+      ) : null}
+    </section>
+  );
+}
+
 function CompBulletList({ items, empty = "N/A" }: { items: string[]; empty?: string }) {
   const filtered = items.filter(Boolean);
 
@@ -1856,6 +1894,12 @@ export function VisualParcelInspectorPlayground() {
 
             <section className="phase2-full-width-stack" aria-label="Supporting comp details">
               <DewClawQaPanel result={result} />
+
+              <McpEnrichmentPanel
+                artifactId={artifactId}
+                parcelLink={form.parcelLink}
+                artifactMeta={artifactMeta}
+              />
 
               <ArtifactKmlAttachPanel
                 artifactId={artifactId}

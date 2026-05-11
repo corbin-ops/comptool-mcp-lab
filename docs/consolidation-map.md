@@ -39,6 +39,7 @@ Use `comptool-mcp-lab` as the consolidated CompTool codebase.
 | --- | --- |
 | Web app | Render service `comptool-mcp-lab` |
 | Extension intake | `https://comptool-mcp-lab.onrender.com/api/phase2/browser-intake` |
+| Extension default result | `https://comptool-mcp-lab.onrender.com/phase2/loading?artifact=<id>` |
 | MCP tester | `https://comptool-mcp-lab.onrender.com/mcp-test` |
 | Extension package | `dist/comptoolv2-extension-*.zip` |
 

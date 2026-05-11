@@ -21,7 +21,8 @@ dashboard, and the Claude MCP visual-inspection workflow into one codebase.
   - Testing procedure and DewClaw reference context for users.
 - **Chrome extension:** `extension/`
   - Captures visible Land Insights parcel/report data.
-  - Opens the MCP tester with the parcel link prefilled.
+  - Opens the dashboard result first for non-technical users.
+  - Keeps Claude MCP enrichment available as an analyst/admin follow-up.
 
 ## Current Source Of Truth
 

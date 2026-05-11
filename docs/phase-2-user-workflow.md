@@ -22,18 +22,27 @@ Legacy folders remain useful as backups, but should not receive new feature work
 - `/sop`: user testing SOP
 - `/references`: DewClaw reference view
 
-## Recommended User Flow
+## Recommended Sales User Flow
 
 1. Open the Land Insights parcel page or comp report.
 2. Click the Chrome extension.
 3. The extension extracts visible parcel fields, comparable rows, links, and diagnostics.
 4. The extension sends the capture into `/api/phase2/browser-intake`.
-5. The extension opens `/mcp-test` with the parcel link and artifact prefilled.
-6. The user copies the prepared prompt into Claude MCP.
-7. Claude MCP visually inspects Land Insights map layers, MLS comps, and photos.
-8. The user pastes Claude's raw JSON return into `/mcp-test`.
-9. CompTool saves the MCP evidence and opens `/phase2?artifact=<id>`.
-10. The dashboard evaluates through DewClaw corpus retrieval and the configured AI model.
+5. The extension opens `/phase2/loading?artifact=<id>`.
+6. The dashboard opens `/phase2?artifact=<id>` with the preliminary DewClaw result.
+7. The user reviews the decision, market value, offer range, risks, and next action.
+8. The user saves feedback if Corbin wants to calibrate the result.
+
+## Analyst MCP Enrichment Flow
+
+Use this only when the result needs deeper visual inspection.
+
+1. Open the dashboard result.
+2. Click **Improve with Claude MCP**.
+3. Copy the prepared prompt into Claude MCP.
+4. Claude MCP visually inspects Land Insights map layers, MLS comps, and photos.
+5. Paste Claude's raw JSON return into `/mcp-test`.
+6. CompTool saves the MCP evidence and opens the enriched `/phase2?artifact=<id>` result.
 
 ## Manual Fallback Flow
 
