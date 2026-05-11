@@ -1,125 +1,71 @@
-# Phase 2 User Workflow
+# Unified CompTool User Workflow
 
 ## Purpose
 
-This document defines the current intended user workflow for the Phase 2 browser-assisted comp flow in `comp-tool-v2`.
+This document defines the consolidated CompTool workflow after merging the V1 manual
+tool, V2 browser-assisted dashboard, and Claude MCP lab into one repo.
 
-`comp-tool` remains the live production app.
+## Repo Roles
 
-`comp-tool-v2` remains the local staging and development workspace until this Phase 2 flow is stable enough to merge or promote.
+`comptool-mcp-lab` is now the active source of truth.
 
-## Current workflow
+Legacy folders remain useful as backups, but should not receive new feature work:
 
-1. The user opens the Land Insights comp report for a parcel.
-2. The user clicks the Chrome extension.
-3. The extension extracts parcel fields and comp-table rows from the active Land Insights page.
-4. The extension sends that payload into the local Phase 2 dashboard.
-5. Comp Tool V2 converts the captured payload into a CompTool V1 evaluation request.
-6. The existing CompTool V1 DewClaw algorithm retrieves the local corpus context and runs the configured AI model.
-7. The dashboard returns the V1-style comp result plus the captured parcel support details.
+- `comp-tool`: original V1 manual app
+- `comp-tool-v2`: Phase 2 staging app before MCP consolidation
 
-## Meeting update: 2026-04-27
+## Main Routes
 
-The current direction from Corbin and Jow is to keep V2 extension-first:
+- `/phase2`: primary visual comp dashboard
+- `/manual`: classic manual comp dashboard
+- `/mcp-test`: Claude MCP prompt + JSON intake tester
+- `/sop`: user testing SOP
+- `/references`: DewClaw reference view
 
-- do not wait for formal Land Insights API access
-- scrape/capture what the salesperson already sees in the browser
-- keep the salesperson workflow simple: open parcel, click extension, review result
-- keep the free OpenLayers + USGS map as the MVP map layer
-- treat Mapbox as a later upgrade if account setup and usage billing are approved
-- start preparing for Corbin-provided annotated comp examples
-- start preparing for a state/county/township regulation corpus for subdivision rules
+## Recommended User Flow
 
-The detailed roadmap note lives in [Corbin CompBot roadmap notes](./corbin-compbot-roadmap-2026-04-27.md).
+1. Open the Land Insights parcel page or comp report.
+2. Click the Chrome extension.
+3. The extension extracts visible parcel fields, comparable rows, links, and diagnostics.
+4. The extension sends the capture into `/api/phase2/browser-intake`.
+5. The extension opens `/mcp-test` with the parcel link and artifact prefilled.
+6. The user copies the prepared prompt into Claude MCP.
+7. Claude MCP visually inspects Land Insights map layers, MLS comps, and photos.
+8. The user pastes Claude's raw JSON return into `/mcp-test`.
+9. CompTool saves the MCP evidence and opens `/phase2?artifact=<id>`.
+10. The dashboard evaluates through DewClaw corpus retrieval and the configured AI model.
 
-## Practical user flow
+## Manual Fallback Flow
 
-### Step 1: Open Land Insights
+Use `/manual` when:
 
-The user must already be logged into Land Insights and must already be on the parcel comp report page.
+- there is no Land Insights page available
+- the extension fails
+- Corbin wants to correct or calibrate a previous comp
+- a sales user only has basic parcel facts and notes
 
-### Step 2: Click the extension
+Manual mode still uses the same DewClaw corpus and comp engine, but it depends more
+heavily on user-provided facts.
 
-The extension should:
+## Current Practical Limitations
 
-- detect the active Land Insights tab
-- extract structured parcel fields
-- extract comparable rows and listing links
-- send the payload to `http://localhost:3003/api/phase2/browser-intake`
+- Land Insights does not provide API access.
+- The Chrome extension can capture visible DOM/table data, but does not visually reason by itself.
+- Claude MCP is the current visual reasoning layer for terrain, MLS photos, and map context.
+- KML auto-attach can be blocked by Chrome blob/download behavior, so manual KML upload may still be needed.
+- Render local JSON storage is not durable unless a persistent disk is attached.
 
-### Step 3: Open the Phase 2 dashboard result
+## Quality Rules
 
-After successful intake, the extension opens:
+- Do not use Land Insights AI comp numbers as market value.
+- Preserve weird comps as evidence when useful: family transfers, quit claim deeds, landlocked cases, wrong acreage, and major issues may become price floors, price ceilings, or weak context.
+- Separate vacant land logic from structure/vacant-land logic.
+- Flag missing or unclear visual evidence instead of hiding uncertainty.
 
-`http://localhost:3003/phase2?artifact=<id>`
+## Immediate Consolidation Status
 
-This loads the captured parcel snapshot and the V1 comp evaluation into the V2 dashboard.
-
-### Step 4: Compute the result
-
-The V2 dashboard should evaluate through the existing CompTool V1 engine using:
-
-- extracted Land Insights parcel fields
-- extracted comp-table rows
-- optional KML export
-- optional listing links
-- DewClaw V1 retrieval and prompt logic
-- configured AI model reasoning
-
-### Step 5: Show the result
-
-The dashboard should show:
-
-- CompTool V1 dashboard result
-- decision, market value, offer range, next action, and data-quality summary
-- USGS map panel with subject marker, optional KML boundary, and approximate comp radius
-- structured parcel fields
-- comparable rows
-- risks
-- verify-next items
-- diagnostics
-
-## Environment separation
-
-### Production
-
-- Folder: `/Users/jj/Documents/New project/comp-tool`
-- Role: live production tool
-
-### Staging / development
-
-- Folder: `/Users/jj/Documents/New project/comp-tool-v2`
-- Role: Phase 2 browser-assisted workflow development
-
-## What is established now
-
-The agreed workflow is no longer:
-
-- user copies parcel details manually into the dashboard first
-
-The agreed workflow is now:
-
-- Land Insights page first
-- extension click second
-- V2 dashboard intake third
-- CompTool V1 DewClaw + AI result fourth
-
-## What is not final yet
-
-- exact AI scoring logic
-- final result wording
-- final promotion path from V2 into production
-- long-term hosted deployment path for the extension workflow
-- final Mapbox versus OpenLayers decision
-- final regulation-corpus storage and retrieval strategy
-- final annotated-comp training format
-
-## Immediate checkpoint before GitHub
-
-Before uploading V2 to GitHub, confirm:
-
-1. the extension consistently opens the correct artifact page
-2. parcel fields are extracted correctly
-3. comparable rows are extracted correctly
-4. the V2 result flow is acceptable for internal testing
-5. V1 remains untouched and usable in production
+- V1 manual dashboard is available at `/manual`.
+- V2 visual dashboard is available at `/phase2`.
+- MCP prompt/JSON intake is available at `/mcp-test`.
+- Extension is pointed to the MCP lab Render service.
+- New development should happen only in this repo.

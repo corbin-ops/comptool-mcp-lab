@@ -1,6 +1,6 @@
 # Dew Claw Phase 2 Extractor
 
-This Chrome extension is the current MVP for the Phase 2 browser-assisted comp workflow.
+This Chrome extension is the current MVP for the browser-assisted CompTool workflow.
 
 ## What it does
 
@@ -24,7 +24,7 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 - The extension itself still does not inspect map pixels or listing photos directly; it prepares the Claude MCP handoff that performs the deeper visual inspection.
 - The app URL is hardcoded to `https://comptool-mcp-lab.onrender.com` in `background.js`.
 - The hosted intake token in `background.js` must match `EXTENSION_INTAKE_TOKEN` in Render.
-- The extension is intended for internal Dew Claw testing against hosted CompTool V2.
+- The extension is intended for internal Dew Claw testing against the unified CompTool MCP app.
 - The Chrome Web Store privacy policy URL is `https://comptool-mcp-lab.onrender.com/privacy`.
 
 ## How to load it in Chrome for local testing
@@ -34,15 +34,15 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 3. Click **Load unpacked**
 4. Select this folder:
 
-   `/Users/jj/Documents/New project/comp-tool-v2/extension`
+   `D:\Users\JOW\Documents\New project\comptool-mcp-lab\extension`
 
 ## How to test it
 
 1. Start the local app:
 
    ```bash
-   cd "/Users/jj/Documents/New project/comp-tool-v2"
-   ./scripts/dev-local.sh
+   cd "D:\Users\JOW\Documents\New project\comptool-mcp-lab"
+   npm run dev
    ```
 
 2. Open a logged-in Land Insights parcel comp report in Chrome
@@ -51,7 +51,7 @@ This Chrome extension is the current MVP for the Phase 2 browser-assisted comp w
 
    - extract parcel fields
    - extract comparable rows
-   - send them to hosted CompTool V2
+   - send them to the hosted CompTool MCP app
    - open the hosted MCP tester with the parcel link already inserted
 
 5. A new tab should open at:

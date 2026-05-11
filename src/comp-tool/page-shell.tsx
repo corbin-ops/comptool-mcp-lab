@@ -15,7 +15,10 @@ export function CompToolPageShell() {
 
         <div className="hero-actions">
           <Link className="secondary-button" href="/phase2">
-            Phase 2 Lab
+            Visual MCP dashboard
+          </Link>
+          <Link className="secondary-button" href="/mcp-test">
+            MCP tester
           </Link>
           <Link className="secondary-button" href="/sop" target="_blank" rel="noreferrer">
             SOP

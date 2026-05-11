@@ -18,6 +18,9 @@ export default function McpTestPage() {
         </div>
 
         <div className="hero-actions">
+          <Link className="secondary-button" href="/manual">
+            Manual comp
+          </Link>
           <Link className="secondary-button" href="/phase2">
             Dashboard
           </Link>
