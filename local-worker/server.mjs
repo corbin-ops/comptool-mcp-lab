@@ -163,7 +163,9 @@ async function runVisualEnrichment(payload) {
   const artifactId = String(payload.artifactId || "").trim();
   const parcelLink = String(payload.parcelLink || "").trim();
   const baseUrl = trimTrailingSlash(payload.baseUrl || COMPTOOL_BASE_URL);
-  const intakeToken = String(payload.extensionToken || EXTENSION_INTAKE_TOKEN || "").trim();
+  const intakeToken = String(
+    payload.workerAttachToken || payload.extensionToken || EXTENSION_INTAKE_TOKEN || "",
+  ).trim();
 
   if (!artifactId) {
     throw new Error("artifactId is required.");

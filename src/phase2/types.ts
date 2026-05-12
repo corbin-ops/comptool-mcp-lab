@@ -157,6 +157,7 @@ export interface VisualParcelInspectorResult {
 export interface VisualBrowserIntakeArtifact {
   id: string;
   createdAt: string;
+  mcpAttachToken?: string;
   request: VisualParcelInspectorRequest;
   result: VisualParcelInspectorResult;
   compEvaluationStatus?: "pending" | "completed" | "failed";

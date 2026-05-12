@@ -474,6 +474,7 @@ chrome.action.onClicked.addListener(async (tab) => {
       artifactId: result.artifactId,
       parcelLink,
       baseUrl: APP_BASE_URL,
+      workerAttachToken: result.workerAttachToken || "",
       extensionToken: EXTENSION_INTAKE_TOKEN,
       browserPage,
     });

@@ -33,29 +33,34 @@ function getRequestExtensionToken(request: Request) {
   return bearerMatch?.[1]?.trim() ?? "";
 }
 
-function canAttachMcpCapture(request: Request) {
+function canAttachMcpCapture(request: Request, artifactAttachToken = "") {
   const expectedToken = getConfiguredExtensionToken();
+  const actualToken = getRequestExtensionToken(request);
+
+  if (artifactAttachToken && actualToken === artifactAttachToken) {
+    return true;
+  }
 
   if (!expectedToken) {
     return true;
   }
 
-  return getRequestExtensionToken(request) === expectedToken;
+  return actualToken === expectedToken;
 }
 
 export async function POST(
   request: Request,
   context: { params: Promise<{ id: string }> },
 ) {
-  if (!canAttachMcpCapture(request)) {
-    return NextResponse.json({ error: "Missing or invalid worker token." }, { status: 401 });
-  }
-
   const { id } = await context.params;
   const artifact = await readVisualBrowserIntakeArtifact(id);
 
   if (!artifact) {
     return NextResponse.json({ error: "Artifact not found." }, { status: 404 });
+  }
+
+  if (!canAttachMcpCapture(request, artifact.mcpAttachToken)) {
+    return NextResponse.json({ error: "Missing or invalid worker token." }, { status: 401 });
   }
 
   let payload: unknown;

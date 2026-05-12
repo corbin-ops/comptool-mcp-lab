@@ -29,6 +29,7 @@ export async function saveVisualBrowserIntakeArtifact(args: {
   const artifact: VisualBrowserIntakeArtifact = {
     id: randomUUID(),
     createdAt: new Date().toISOString(),
+    mcpAttachToken: randomUUID(),
     request: args.request,
     result: args.result,
     compEvaluationStatus: args.compEvaluationStatus ?? (args.compEvaluation ? "completed" : "pending"),

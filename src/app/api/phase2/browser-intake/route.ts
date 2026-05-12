@@ -199,6 +199,7 @@ export async function POST(request: Request) {
   return jsonResponse({
     ok: true,
     artifactId: artifact.id,
+    workerAttachToken: artifact.mcpAttachToken,
     createdAt: artifact.createdAt,
     result: artifact.result,
     compEvaluationStatus: artifact.compEvaluationStatus,
