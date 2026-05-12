@@ -26,6 +26,14 @@ Start DewClaw CompTool Worker
 6. The dashboard opens immediately.
 7. If the local worker is running, the same dashboard result updates in the background with deeper evidence.
 
+The worker now attempts to prepare the Land Insights MLS comp view automatically:
+
+- Open Data Platform when available
+- Click Data Layers
+- Turn on All Hazards, Standard Due Diligence, MLS Data, and MLS Comps
+- Capture screenshots/text after MLS setup
+- Classify visible comp evidence as anchor, floor, ceiling, weak context, or unrelated
+
 ## First Land Insights Login
 
 The worker uses a separate browser profile from normal Chrome. On the first run,

@@ -16,6 +16,8 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
 const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-6";
 const WORKER_HEADLESS = /^true$/i.test(process.env.WORKER_HEADLESS || "");
 const WORKER_LOGIN_WAIT_MS = Number(process.env.WORKER_LOGIN_WAIT_MS || 5 * 60 * 1000);
+const WORKER_MLS_AUTOMATION_ENABLED = !/^false$/i.test(process.env.WORKER_MLS_AUTOMATION_ENABLED || "true");
+const WORKER_MLS_MAX_COMP_CLICKS = Number(process.env.WORKER_MLS_MAX_COMP_CLICKS || 3);
 const WORKER_BROWSER_PROFILE =
   process.env.WORKER_BROWSER_PROFILE ||
   path.join(os.homedir(), "AppData", "Local", "DewClawCompTool", "browser-profile");
@@ -209,6 +211,13 @@ async function inspectParcelInBrowser(parcelLink) {
     let finalUrl = page.url();
     let pageText = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
     let loginRequired = isLoginRequired(finalUrl, pageText);
+    let mlsWorkflow = {
+      diagnostics: [],
+      navigationLog: [],
+      pageText: "",
+      screenshots: [],
+      compEvidence: [],
+    };
 
     if (loginRequired && !WORKER_HEADLESS && WORKER_LOGIN_WAIT_MS > 0) {
       console.log("Worker reached Land Insights login. Waiting for user login...");
@@ -224,6 +233,17 @@ async function inspectParcelInBrowser(parcelLink) {
       loginRequired = isLoginRequired(finalUrl, pageText);
     }
 
+    if (!loginRequired && WORKER_MLS_AUTOMATION_ENABLED) {
+      mlsWorkflow = await runLandInsightsMlsWorkflow(page);
+      finalUrl = page.url();
+      pageText = [
+        pageText,
+        mlsWorkflow.pageText ? `MLS workflow visible text:\n${mlsWorkflow.pageText}` : "",
+      ]
+        .filter(Boolean)
+        .join("\n\n");
+    }
+
     const title = await page.title().catch(() => "Land Insights");
     const screenshotBase64 = await page.screenshot({ type: "png", fullPage: false }).then((buffer) =>
       buffer.toString("base64"),
@@ -234,13 +254,20 @@ async function inspectParcelInBrowser(parcelLink) {
       finalUrl,
       pageText,
       screenshotBase64,
+      screenshots: [
+        { label: "final_worker_view", data: screenshotBase64 },
+        ...mlsWorkflow.screenshots,
+      ].filter((item) => item.data),
+      mlsCompEvidence: mlsWorkflow.compEvidence,
       loginRequired,
       diagnostics: [
         ...diagnostics,
+        ...mlsWorkflow.diagnostics,
         `Worker opened parcel: ${finalUrl}`,
         `Worker captured visible text length: ${pageText.length}`,
         `Worker screenshot captured: ${screenshotBase64 ? "yes" : "no"}`,
       ],
+      navigationLog: mlsWorkflow.navigationLog,
     };
   } finally {
     await context.close();
@@ -278,12 +305,237 @@ async function waitForManualLogin(page, parcelLink) {
   return { loggedIn: false, diagnostics };
 }
 
+async function runLandInsightsMlsWorkflow(page) {
+  const diagnostics = [];
+  const navigationLog = [];
+  const screenshots = [];
+  const compEvidence = [];
+
+  async function capture(label) {
+    const data = await page.screenshot({ type: "png", fullPage: false }).then((buffer) =>
+      buffer.toString("base64"),
+    ).catch(() => "");
+
+    if (data) {
+      screenshots.push({ label, data });
+      diagnostics.push(`MLS workflow screenshot captured: ${label}`);
+    }
+  }
+
+  try {
+    navigationLog.push("MLS workflow: start Land Insights visual comp setup.");
+    await openDataPlatformIfAvailable(page, diagnostics, navigationLog);
+    await capture("before_mls_layer_setup");
+
+    const dataLayersOpened = await clickFirstVisibleText(page, [
+      "Data Layers",
+      "Layers",
+      "Map Layers",
+    ]);
+
+    diagnostics.push(
+      dataLayersOpened
+        ? "MLS workflow: Data Layers panel opened or clicked."
+        : "MLS workflow: Data Layers control was not found.",
+    );
+    navigationLog.push(
+      dataLayersOpened
+        ? "Click Data Layers."
+        : "Data Layers click skipped because no matching control was visible.",
+    );
+
+    await page.waitForTimeout(1200);
+
+    for (const layer of [
+      "All Hazards",
+      "Standard Due Diligence",
+      "MLS Data",
+      "MLS Comps",
+    ]) {
+      const clicked = await clickFirstVisibleText(page, [layer]);
+      diagnostics.push(
+        clicked
+          ? `MLS workflow: layer/control clicked: ${layer}`
+          : `MLS workflow: layer/control not found: ${layer}`,
+      );
+      navigationLog.push(
+        clicked
+          ? `Click layer/control: ${layer}.`
+          : `Could not find layer/control: ${layer}.`,
+      );
+      await page.waitForTimeout(700);
+    }
+
+    const acreageClicked = await clickFirstVisibleText(page, [
+      "Acreage Range Mode",
+      "Auto",
+      "Acreage Range",
+    ]);
+    diagnostics.push(
+      acreageClicked
+        ? "MLS workflow: acreage range control clicked."
+        : "MLS workflow: acreage range control not found; kept current setting.",
+    );
+    navigationLog.push(
+      acreageClicked
+        ? "Click acreage range control / Auto if visible."
+        : "Acreage range control unavailable.",
+    );
+
+    await page.keyboard.press("Escape").catch(() => {});
+    await page.waitForTimeout(1500);
+    await capture("after_mls_layer_setup");
+
+    const mlsText = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
+    compEvidence.push(...buildHeuristicCompEvidenceFromText(mlsText));
+    diagnostics.push(`MLS workflow: heuristic comp evidence count=${compEvidence.length}`);
+    navigationLog.push("Capture visible map/MLS text after layer setup.");
+
+    return {
+      diagnostics,
+      navigationLog,
+      pageText: mlsText,
+      screenshots,
+      compEvidence,
+    };
+  } catch (error) {
+    diagnostics.push(
+      `MLS workflow failed safely: ${error instanceof Error ? error.message : "unknown error"}`,
+    );
+
+    return {
+      diagnostics,
+      navigationLog,
+      pageText: await page.locator("body").innerText({ timeout: 5000 }).catch(() => ""),
+      screenshots,
+      compEvidence,
+    };
+  }
+}
+
+async function openDataPlatformIfAvailable(page, diagnostics, navigationLog) {
+  const currentUrl = page.url();
+
+  if (/\/data(?:\?|#|$)/i.test(currentUrl)) {
+    diagnostics.push("MLS workflow: already on Data Platform page.");
+    navigationLog.push("Already on Data Platform map page.");
+    return;
+  }
+
+  const clicked = await clickFirstVisibleText(page, [
+    "View on Data Platform",
+    "Data Platform",
+    "View Data Platform",
+  ]);
+
+  if (!clicked) {
+    diagnostics.push("MLS workflow: no Data Platform button found; staying on current page.");
+    navigationLog.push("Data Platform button not found.");
+    return;
+  }
+
+  diagnostics.push("MLS workflow: clicked Data Platform button.");
+  navigationLog.push("Click View on Data Platform.");
+  await page.waitForLoadState("domcontentloaded", { timeout: 15000 }).catch(() => {});
+  await page.waitForTimeout(3000);
+}
+
+async function clickFirstVisibleText(page, labels) {
+  for (const label of labels) {
+    const locators = [
+      page.getByRole("button", { name: new RegExp(escapeRegExp(label), "i") }).first(),
+      page.getByText(new RegExp(escapeRegExp(label), "i")).first(),
+      page.locator(`[aria-label*="${cssAttributeEscape(label)}" i]`).first(),
+      page.locator(`[title*="${cssAttributeEscape(label)}" i]`).first(),
+    ];
+
+    for (const locator of locators) {
+      try {
+        if (await locator.isVisible({ timeout: 700 })) {
+          await locator.click({ timeout: 2500 });
+          return true;
+        }
+      } catch {
+        // Try the next locator. Land Insights controls can be canvas-heavy.
+      }
+    }
+  }
+
+  return false;
+}
+
+function buildHeuristicCompEvidenceFromText(text) {
+  const value = String(text || "");
+  const lines = value
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const evidence = [];
+  const seen = new Set();
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    const context = lines.slice(Math.max(0, index - 2), index + 4).join(" | ");
+    const hasPrice = /\$[\d,]+/.test(context);
+    const hasAcreage = /\b\d+(?:\.\d+)?\s*ac(?:res?)?\b/i.test(context);
+    const hasMlsSignal = /\b(mls|sold|active|pending|acre|ppa|dom|comp)\b/i.test(context);
+
+    if (!hasPrice || !hasAcreage || !hasMlsSignal) {
+      continue;
+    }
+
+    const key = normalizeSpace(context).slice(0, 160);
+
+    if (seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    evidence.push({
+      source: "landinsights_mls",
+      url: "",
+      searchQuery: "",
+      matchQuality: "possible_match",
+      compRole: evidence.length === 0 ? "anchor" : "weak_context",
+      matchedSignals: ["Visible MLS comp text included price and acreage."],
+      photoObservations: [
+        "Photo/card details were not fully opened by the worker yet; use as preliminary visual evidence.",
+      ],
+      listingFacts: [key],
+      risks: ["Needs Corbin review until MLS photo/detail clicking is fully calibrated."],
+    });
+
+    if (evidence.length >= WORKER_MLS_MAX_COMP_CLICKS) {
+      break;
+    }
+  }
+
+  return evidence;
+}
+
+function normalizeSpace(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function escapeRegExp(value) {
+  return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function cssAttributeEscape(value) {
+  return String(value || "").replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+}
+
 function buildFallbackCapture({ artifact, parcelLink, inspection }) {
   const browserPage = artifact?.request?.browserPage || {};
   const fields = {
     ...(browserPage.extractedFields || {}),
     ...extractFieldsFromText(inspection.pageText),
   };
+  const comparableRows = browserPage.comparableRows || artifact?.result?.comparableRows || [];
+  const externalListingEvidence = [
+    ...(inspection.mlsCompEvidence || []),
+    ...buildFallbackExternalEvidenceFromRows(comparableRows),
+  ].slice(0, Math.max(WORKER_MLS_MAX_COMP_CLICKS, 3));
 
   return {
     schemaVersion: "claude-mcp-li-table-v1",
@@ -303,9 +555,9 @@ function buildFallbackCapture({ artifact, parcelLink, inspection }) {
       confidence: value ? "medium" : "low",
       notes: "Captured by local worker fallback extraction.",
     })),
-    comparableRows: browserPage.comparableRows || artifact?.result?.comparableRows || [],
+    comparableRows,
     listingLinks: browserPage.listingLinks || artifact?.request?.listingLinks || [],
-    externalListingEvidence: [],
+    externalListingEvidence,
     visualClassification: {
       areaType: inferAreaType(inspection.pageText),
       terrainType: inferTerrainType(inspection.pageText),
@@ -322,6 +574,7 @@ function buildFallbackCapture({ artifact, parcelLink, inspection }) {
     },
     navigationLog: [
       "Local worker opened the Land Insights parcel link.",
+      ...(inspection.navigationLog || []),
       "Local worker captured visible text and a screenshot.",
       ANTHROPIC_API_KEY
         ? "Anthropic vision refinement was enabled."
@@ -334,6 +587,36 @@ function buildFallbackCapture({ artifact, parcelLink, inspection }) {
     rawObservationNotes:
       "Local worker generated this source packet automatically. Treat as MCP-style evidence, not final valuation.",
   };
+}
+
+function buildFallbackExternalEvidenceFromRows(rows) {
+  return (rows || [])
+    .filter((row) => row && (row.price || row.acreage || row.pricePerAcre || row.rawCells?.length))
+    .slice(0, WORKER_MLS_MAX_COMP_CLICKS)
+    .map((row, index) => ({
+      source: row.source === "redfin" || row.source === "zillow" || row.source === "realtor"
+        ? row.source
+        : "landinsights_mls",
+      url: row.listingUrl || "",
+      searchQuery: row.rawCells?.join(" ") || "",
+      matchQuality: "possible_match",
+      compRole: index === 0 ? "anchor" : "weak_context",
+      matchedSignals: [
+        row.price ? `Price: ${row.price}` : "",
+        row.acreage ? `Acreage: ${row.acreage}` : "",
+        row.pricePerAcre ? `PPA: ${row.pricePerAcre}` : "",
+        row.status ? `Status: ${row.status}` : "",
+      ].filter(Boolean),
+      photoObservations: [
+        "Comp row captured, but worker did not fully verify photos yet.",
+      ],
+      listingFacts: [
+        row.city ? `City: ${row.city}` : "",
+        row.daysOnMarket ? `DOM: ${row.daysOnMarket}` : "",
+        ...(row.rawCells || []).slice(0, 6),
+      ].filter(Boolean),
+      risks: ["Treat as preliminary until MLS/card photos are reviewed."],
+    }));
 }
 
 function extractFieldsFromText(text) {
@@ -432,6 +715,10 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
     "Use the screenshot and page text only as source evidence.",
     "If the screenshot does not clearly show a fact, mark it unclear.",
     "Preserve unusual comp evidence as floor/ceiling/context instead of rejecting it automatically.",
+    "Use the MLS/map screenshots to identify whether MLS comps or comp cards are visible.",
+    "When comp rows/cards/photos/details are visible, fill externalListingEvidence with 1-3 strongest comps.",
+    "Every externalListingEvidence item must include compRole: anchor, price_floor, price_ceiling, weak_context, or unrelated.",
+    "If only a row is visible but photos are not opened, say that in photoObservations and risks.",
     "",
     "Parcel link:",
     parcelLink,
@@ -441,6 +728,12 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
     "",
     "Existing comparable rows:",
     JSON.stringify(artifact?.request?.browserPage?.comparableRows || [], null, 2).slice(0, 12000),
+    "",
+    "Local worker heuristic MLS evidence:",
+    JSON.stringify(inspection.mlsCompEvidence || [], null, 2).slice(0, 8000),
+    "",
+    "Local worker navigation log:",
+    JSON.stringify(inspection.navigationLog || [], null, 2).slice(0, 4000),
     "",
     "Visible page text excerpt:",
     String(inspection.pageText || "").slice(0, 18000),
@@ -465,14 +758,9 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
           role: "user",
           content: [
             { type: "text", text: prompt },
-            {
-              type: "image",
-              source: {
-                type: "base64",
-                media_type: "image/png",
-                data: inspection.screenshotBase64,
-              },
-            },
+            ...buildAnthropicImageBlocks(inspection.screenshots || [
+              { label: "final_worker_view", data: inspection.screenshotBase64 },
+            ]),
           ],
         },
       ],
@@ -500,6 +788,23 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
       "Anthropic vision JSON generated by local worker.",
     ],
   };
+}
+
+function buildAnthropicImageBlocks(screenshots) {
+  return (screenshots || [])
+    .filter((item) => item?.data)
+    .slice(0, 4)
+    .flatMap((item) => [
+      { type: "text", text: `Screenshot: ${item.label || "worker_view"}` },
+      {
+        type: "image",
+        source: {
+          type: "base64",
+          media_type: "image/png",
+          data: item.data,
+        },
+      },
+    ]);
 }
 
 function extractJsonObject(value) {

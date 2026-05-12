@@ -31,6 +31,8 @@ Required `.env` values:
 - `EXTENSION_INTAKE_TOKEN`: must match Render's extension token.
 - `ANTHROPIC_API_KEY`: optional but recommended for vision-based JSON generation.
 - `WORKER_LOGIN_WAIT_MS`: how long the worker waits on a Land Insights login screen. Default is 5 minutes.
+- `WORKER_MLS_AUTOMATION_ENABLED`: whether to attempt Land Insights MLS layer setup. Default is true.
+- `WORKER_MLS_MAX_COMP_CLICKS`: maximum comp evidence items to summarize/classify. Default is 3.
 
 ## Internal User Flow
 
@@ -40,6 +42,19 @@ Required `.env` values:
 4. Click the CompTool extension on a parcel/report page.
 5. The dashboard opens immediately.
 6. If the worker is running, the same dashboard artifact gets enhanced in the background.
+
+## MLS Comp Evidence
+
+The worker now attempts a first-pass Corbin-style MLS setup:
+
+1. Open the Data Platform map when the button is available.
+2. Click Data Layers.
+3. Try to enable All Hazards, Standard Due Diligence, MLS Data, and MLS Comps.
+4. Capture before/after screenshots.
+5. Ask the model to classify visible comp evidence as anchor, floor, ceiling, weak context, or unrelated.
+
+This is still an MVP. If Land Insights changes button text or the map is canvas-only,
+the worker will log which control was not found and continue safely.
 
 ## First Login
 

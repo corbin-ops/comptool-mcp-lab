@@ -625,6 +625,7 @@ function buildDewClawQa(args: {
   comparableRows: VisualComparableRow[];
   listingPagesReached: number;
   listingPagesAttempted: number;
+  hasClassifiedCompEvidence: boolean;
   browserPage?: VisualBrowserPageSnapshot | null;
 }): VisualDewClawQa {
   const checks: VisualDewClawQaCheck[] = [];
@@ -801,16 +802,28 @@ function buildDewClawQa(args: {
     nextFixes.push("Turn on MLS comps / capture the comp table before running valuation.");
   }
 
-  checks.push(
-    buildQaCheck(
-      "comp_quality_classification",
-      "Comp quality classified",
-      "warning",
-      "Comp rows are captured but not yet classified as anchor, floor, ceiling, weak context, or unrelated.",
-      "Family transfers, quit claims, landlocked cases, acreage issues, and major problems should be kept but weighted correctly.",
-    ),
-  );
-  nextFixes.push("Classify top comps as anchor, floor, ceiling, weak context, or unrelated before trusting the final value.");
+  if (args.hasClassifiedCompEvidence) {
+    checks.push(
+      buildQaCheck(
+        "comp_quality_classification",
+        "Comp quality classified",
+        "pass",
+        "At least one comp evidence item was classified as anchor, floor, ceiling, weak context, or unrelated.",
+        "Still review the role labels before final pricing, especially if photos were not fully opened.",
+      ),
+    );
+  } else {
+    checks.push(
+      buildQaCheck(
+        "comp_quality_classification",
+        "Comp quality classified",
+        "warning",
+        "Comp rows are captured but not yet classified as anchor, floor, ceiling, weak context, or unrelated.",
+        "Family transfers, quit claims, landlocked cases, acreage issues, and major problems should be kept but weighted correctly.",
+      ),
+    );
+    nextFixes.push("Classify top comps as anchor, floor, ceiling, weak context, or unrelated before trusting the final value.");
+  }
 
   const hasFail = checks.some((check) => check.status === "fail");
   const hasWarning = checks.some((check) => check.status === "warning" || check.status === "unknown");
@@ -1024,6 +1037,15 @@ export async function runVisualParcelInspector(
 
   diagnostics.push(`parcel: comparableRows=${parcelPage?.comparableRows?.length ?? 0}`);
   const comparableRows = parcelPage?.comparableRows ?? [];
+  const classifiedCompEvidenceText = [
+    browserPage?.pageText ?? "",
+    ...listingPages.listingSignals,
+    input.notes ?? "",
+  ].join(" ");
+  const hasClassifiedCompEvidence =
+    /\b(comp role|external comp role)\s*:\s*(anchor|price_floor|price ceiling|price_ceiling|floor|ceiling|weak_context|weak context|unrelated)/i.test(
+      classifiedCompEvidenceText,
+    );
   const dewClawQa = buildDewClawQa({
     parcelPageReached: Boolean(parcelPage?.ok),
     parcelQuality,
@@ -1032,10 +1054,12 @@ export async function runVisualParcelInspector(
     comparableRows,
     listingPagesReached: listingPages.listingPagesReached,
     listingPagesAttempted: normalizedListingLinks.length,
+    hasClassifiedCompEvidence,
     browserPage,
   });
 
   diagnostics.push(`qa: overallStatus=${dewClawQa.overallStatus}`);
+  diagnostics.push(`qa: classifiedCompEvidence=${hasClassifiedCompEvidence ? "yes" : "no"}`);
 
   return {
     pageStatus: {
