@@ -31,8 +31,11 @@ Required `.env` values:
 - `EXTENSION_INTAKE_TOKEN`: must match Render's extension token.
 - `ANTHROPIC_API_KEY`: optional but recommended for vision-based JSON generation.
 - `WORKER_LOGIN_WAIT_MS`: how long the worker waits on a Land Insights login screen. Default is 5 minutes.
+- `WORKER_CAPTCHA_WAIT_MS`: how long the worker waits when Land Insights asks for a manual "I am not a robot" check. Default is 10 minutes.
+- `WORKER_KEEP_OPEN_ON_DETECT`: keeps the worker browser open after a human check is detected so you can confirm the page state. Default is true.
 - `WORKER_MLS_AUTOMATION_ENABLED`: whether to attempt Land Insights MLS layer setup. Default is true.
 - `WORKER_MLS_MAX_COMP_CLICKS`: maximum comp evidence items to summarize/classify. Default is 3.
+- `WORKER_EXTERNAL_LISTING_MAX_PAGES`: maximum Redfin/Zillow/Realtor listing or search pages to open for photo/detail evidence. Default is 4.
 
 ## Internal User Flow
 
@@ -56,6 +59,16 @@ The worker now attempts a first-pass Corbin-style MLS setup:
 This is still an MVP. If Land Insights changes button text or the map is canvas-only,
 the worker will log which control was not found and continue safely.
 
+## Required Redfin/Zillow Evidence
+
+Every run now attempts an external listing evidence pass. The worker opens listing links
+captured from Land Insights first. If no listing links are available, it builds Zillow and
+Redfin search pages from the property address or APN. These captures are passed to the
+model as weak/confirmable evidence instead of being treated as final valuation data.
+
+If Redfin, Zillow, or Realtor shows a human check, complete it manually in the worker
+browser. The worker waits for the page to clear and keeps the browser open for review.
+
 ## First Login
 
 The worker uses its own Playwright browser profile. On the first run it may open a
@@ -63,6 +76,13 @@ Land Insights login page. Log in there once. The worker will wait up to 5 minute
 then reload the parcel and continue automatically.
 
 If login takes longer than 5 minutes, run the same parcel again after logging in.
+
+## Human Check / Captcha
+
+If Land Insights shows an "I am not a robot" or security check, complete it manually in
+the worker browser. The worker will pause, wait for the check to clear, then continue the
+MLS setup. When `WORKER_KEEP_OPEN_ON_DETECT=true`, the browser stays open after this
+happens so you can verify what Land Insights showed before closing it yourself.
 
 ## Health Check
 

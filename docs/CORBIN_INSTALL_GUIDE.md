@@ -33,6 +33,9 @@ The worker now attempts to prepare the Land Insights MLS comp view automatically
 - Turn on All Hazards, Standard Due Diligence, MLS Data, and MLS Comps
 - Capture screenshots/text after MLS setup
 - Classify visible comp evidence as anchor, floor, ceiling, weak context, or unrelated
+- Open Redfin/Zillow/Realtor listing links when Land Insights captures them
+- If no listing link is available, search Redfin/Zillow from the APN or property address
+- Feed those external photos/details/search captures into the evidence packet every time
 
 ## First Land Insights Login
 
@@ -45,6 +48,19 @@ If that happens:
 2. Do not close the worker terminal.
 3. The worker will wait up to 5 minutes, reload the parcel, and continue.
 4. If it times out, click the CompTool extension on the parcel again after login.
+
+## Land Insights Human Check
+
+Sometimes Land Insights may show an "I am not a robot" check when the worker opens
+Data Layers, MLS controls, Redfin, Zillow, or Realtor. That is expected behavior from
+those platforms.
+
+If it appears:
+
+1. Complete the check manually in the worker browser.
+2. Keep the worker terminal open.
+3. The worker will wait, continue after the page clears, and keep the browser open for review.
+4. Close the worker browser manually after you confirm the page is done.
 
 ## Confirm It Is Running
 

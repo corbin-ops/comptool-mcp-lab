@@ -16,14 +16,30 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || "";
 const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-6";
 const WORKER_HEADLESS = /^true$/i.test(process.env.WORKER_HEADLESS || "");
 const WORKER_LOGIN_WAIT_MS = Number(process.env.WORKER_LOGIN_WAIT_MS || 5 * 60 * 1000);
+const WORKER_CAPTCHA_WAIT_MS = Number(process.env.WORKER_CAPTCHA_WAIT_MS || 10 * 60 * 1000);
+const WORKER_CAPTCHA_SETTLE_MS = Number(process.env.WORKER_CAPTCHA_SETTLE_MS || 6000);
+const WORKER_CAPTCHA_INTERIM_POST = !/^false$/i.test(
+  process.env.WORKER_CAPTCHA_INTERIM_POST || "true",
+);
+const WORKER_KEEP_BROWSER_OPEN_ON_BLOCK = !/^false$/i.test(
+  process.env.WORKER_KEEP_BROWSER_OPEN_ON_BLOCK || "true",
+);
+const WORKER_KEEP_OPEN_ON_DETECT = !/^false$/i.test(
+  process.env.WORKER_KEEP_OPEN_ON_DETECT || "true",
+);
 const WORKER_MLS_AUTOMATION_ENABLED = !/^false$/i.test(process.env.WORKER_MLS_AUTOMATION_ENABLED || "true");
 const WORKER_MLS_MAX_COMP_CLICKS = Number(process.env.WORKER_MLS_MAX_COMP_CLICKS || 3);
+const WORKER_MLS_COMP_CLICKS_ENABLED = !/^false$/i.test(
+  process.env.WORKER_MLS_COMP_CLICKS_ENABLED || "true",
+);
+const WORKER_EXTERNAL_LISTING_MAX_PAGES = Number(process.env.WORKER_EXTERNAL_LISTING_MAX_PAGES || 4);
 const WORKER_BROWSER_PROFILE =
   process.env.WORKER_BROWSER_PROFILE ||
   path.join(os.homedir(), "AppData", "Local", "DewClawCompTool", "browser-profile");
 
 const jobs = new Map();
 let activeJob = Promise.resolve();
+let retainedBrowserContext = null;
 
 function trimTrailingSlash(value) {
   return String(value || "").replace(/\/+$/, "");
@@ -85,6 +101,10 @@ function createJob(payload) {
     error: "",
     payload,
     result: null,
+    currentStep: null,
+    captchaState: null, // "detected" | "resolved" | "timeout" | null
+    captchaSteps: [],
+    keepBrowserOpen: false,
   };
 
   jobs.set(job.id, job);
@@ -96,19 +116,19 @@ function createJob(payload) {
 async function processJob(job) {
   job.status = "running";
   job.startedAt = new Date().toISOString();
-  console.log(`Worker job ${job.id} started for ${job.payload?.parcelLink || "unknown parcel"}`);
+  console.log(`[job] ${job.id} started for ${job.payload?.parcelLink || "unknown parcel"}`);
 
   try {
-    const result = await runVisualEnrichment(job.payload);
+    const result = await runVisualEnrichment(job.payload, job);
     job.status = "completed";
     job.completedAt = new Date().toISOString();
     job.result = result;
-    console.log(`Worker job ${job.id} completed.`);
+    console.log(`[job] ${job.id} completed (captchaState=${job.captchaState || "none"}).`);
   } catch (error) {
     job.status = "failed";
     job.completedAt = new Date().toISOString();
     job.error = error instanceof Error ? error.message : String(error || "Unknown worker error.");
-    console.error(`Worker job ${job.id} failed: ${job.error}`);
+    console.error(`[job] ${job.id} failed: ${job.error}`);
   }
 }
 
@@ -161,7 +181,30 @@ async function postMcpCapture(
   return payload;
 }
 
-async function runVisualEnrichment(payload) {
+function createWorkerJobContext(job) {
+  if (!job) {
+    return null;
+  }
+
+  return {
+    markStep(step) {
+      job.currentStep = step;
+    },
+    markCaptcha(state, label, waitedMs = 0) {
+      job.captchaState = state;
+      job.currentStep = `human-check:${label}`;
+      job.keepBrowserOpen = state !== "resolved" || WORKER_KEEP_OPEN_ON_DETECT;
+      job.captchaSteps.push({
+        state,
+        label,
+        waitedMs,
+        at: new Date().toISOString(),
+      });
+    },
+  };
+}
+
+async function runVisualEnrichment(payload, job = null) {
   const artifactId = String(payload.artifactId || "").trim();
   const parcelLink = String(payload.parcelLink || "").trim();
   const baseUrl = trimTrailingSlash(payload.baseUrl || COMPTOOL_BASE_URL);
@@ -178,7 +221,8 @@ async function runVisualEnrichment(payload) {
   }
 
   const artifact = await fetchArtifact(artifactId, baseUrl, intakeToken);
-  const inspection = await inspectParcelInBrowser(parcelLink);
+  const workerCtx = createWorkerJobContext(job);
+  const inspection = await inspectParcelInBrowser(parcelLink, workerCtx, artifact);
   const fallbackCapture = buildFallbackCapture({ artifact, parcelLink, inspection });
   const capture = ANTHROPIC_API_KEY
     ? await buildVisionCapture({ artifact, parcelLink, inspection, fallbackCapture })
@@ -194,20 +238,44 @@ async function runVisualEnrichment(payload) {
   };
 }
 
-async function inspectParcelInBrowser(parcelLink) {
+async function getWorkerBrowserContext() {
+  if (retainedBrowserContext) {
+    try {
+      retainedBrowserContext.pages();
+      return retainedBrowserContext;
+    } catch {
+      retainedBrowserContext = null;
+    }
+  }
+
   await mkdir(WORKER_BROWSER_PROFILE, { recursive: true });
   const context = await chromium.launchPersistentContext(WORKER_BROWSER_PROFILE, {
     headless: WORKER_HEADLESS,
     viewport: { width: 1440, height: 1000 },
   });
 
+  retainedBrowserContext = context;
+  context.on("close", () => {
+    if (retainedBrowserContext === context) {
+      retainedBrowserContext = null;
+    }
+  });
+
+  return context;
+}
+
+async function inspectParcelInBrowser(parcelLink, ctx = null, artifact = null) {
+  const context = await getWorkerBrowserContext();
   const page = context.pages()[0] || (await context.newPage());
+  let keepBrowserOpen = false;
 
   try {
+    ctx?.markStep?.("open parcel");
     await page.goto(parcelLink, { waitUntil: "domcontentloaded", timeout: 60000 });
     await page.waitForTimeout(3000);
 
     const diagnostics = [];
+    const navigationLog = [];
     let finalUrl = page.url();
     let pageText = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
     let loginRequired = isLoginRequired(finalUrl, pageText);
@@ -217,6 +285,15 @@ async function inspectParcelInBrowser(parcelLink) {
       pageText: "",
       screenshots: [],
       compEvidence: [],
+      keepBrowserOpen: false,
+    };
+    let externalListingWorkflow = {
+      diagnostics: [],
+      navigationLog: [],
+      pageText: "",
+      screenshots: [],
+      evidence: [],
+      keepBrowserOpen: false,
     };
 
     if (loginRequired && !WORKER_HEADLESS && WORKER_LOGIN_WAIT_MS > 0) {
@@ -233,8 +310,14 @@ async function inspectParcelInBrowser(parcelLink) {
       loginRequired = isLoginRequired(finalUrl, pageText);
     }
 
-    if (!loginRequired && WORKER_MLS_AUTOMATION_ENABLED) {
-      mlsWorkflow = await runLandInsightsMlsWorkflow(page);
+    const initialHumanCheck = await waitForHumanCheck(page, diagnostics, navigationLog, "parcel load", ctx);
+    if (initialHumanCheck.detected && WORKER_KEEP_OPEN_ON_DETECT) {
+      keepBrowserOpen = true;
+    }
+
+    if (!loginRequired && !initialHumanCheck.blocked && WORKER_MLS_AUTOMATION_ENABLED) {
+      mlsWorkflow = await runLandInsightsMlsWorkflow(page, ctx);
+      keepBrowserOpen = keepBrowserOpen || Boolean(mlsWorkflow.keepBrowserOpen);
       finalUrl = page.url();
       pageText = [
         pageText,
@@ -242,6 +325,29 @@ async function inspectParcelInBrowser(parcelLink) {
       ]
         .filter(Boolean)
         .join("\n\n");
+    }
+
+    if (!initialHumanCheck.blocked) {
+      const fieldsForListingSearch = {
+        ...(artifact?.request?.browserPage?.extractedFields || {}),
+        ...extractFieldsFromText(pageText),
+      };
+      const listingTargets = collectExternalListingTargets(artifact, fieldsForListingSearch);
+      externalListingWorkflow = await runExternalListingWorkflow(context, listingTargets, ctx);
+      keepBrowserOpen = keepBrowserOpen || Boolean(externalListingWorkflow.keepBrowserOpen);
+      pageText = [
+        pageText,
+        externalListingWorkflow.pageText
+          ? `External Redfin/Zillow listing evidence:\n${externalListingWorkflow.pageText}`
+          : "",
+      ]
+        .filter(Boolean)
+        .join("\n\n");
+    } else {
+      externalListingWorkflow.diagnostics.push(
+        "External listing workflow: skipped because initial Land Insights human check did not clear.",
+      );
+      externalListingWorkflow.navigationLog.push("External listing pass skipped until Land Insights human check clears.");
     }
 
     const title = await page.title().catch(() => "Land Insights");
@@ -256,26 +362,142 @@ async function inspectParcelInBrowser(parcelLink) {
       screenshotBase64,
       screenshots: [
         { label: "final_worker_view", data: screenshotBase64 },
+        ...externalListingWorkflow.screenshots,
         ...mlsWorkflow.screenshots,
       ].filter((item) => item.data),
       mlsCompEvidence: mlsWorkflow.compEvidence,
+      externalListingEvidence: externalListingWorkflow.evidence,
       loginRequired,
       diagnostics: [
         ...diagnostics,
         ...mlsWorkflow.diagnostics,
+        ...externalListingWorkflow.diagnostics,
         `Worker opened parcel: ${finalUrl}`,
         `Worker captured visible text length: ${pageText.length}`,
         `Worker screenshot captured: ${screenshotBase64 ? "yes" : "no"}`,
       ],
-      navigationLog: mlsWorkflow.navigationLog,
+      navigationLog: [...navigationLog, ...mlsWorkflow.navigationLog, ...externalListingWorkflow.navigationLog],
     };
   } finally {
-    await context.close();
+    if (keepBrowserOpen && WORKER_KEEP_BROWSER_OPEN_ON_BLOCK) {
+      console.log("Worker browser left open for manual Land Insights verification.");
+    } else {
+      await context.close();
+    }
   }
 }
 
 function isLoginRequired(finalUrl, pageText) {
   return /\/login/i.test(finalUrl || "") || /\b(sign in|log in|login)\b/i.test(pageText || "");
+}
+
+async function isHumanCheckRequired(page) {
+  const finalUrl = page.url();
+  const pageText = await page.locator("body").innerText({ timeout: 3000 }).catch(() => "");
+  const frameUrls = page.frames().map((frame) => frame.url()).join(" ");
+  const combined = `${finalUrl}\n${pageText}\n${frameUrls}`.toLowerCase();
+
+  const textHit = /\b(i am not a robot|captcha|recaptcha|hcaptcha|turnstile|verify you are human|human verification|checking if the site connection is secure|press & hold|complete the security check)\b/i.test(
+    combined,
+  );
+
+  if (textHit) {
+    return true;
+  }
+
+  // Selector-based detection (cheap; short timeouts so we don't stall).
+  const selectorHits = await Promise.all([
+    page.locator('iframe[src*="recaptcha"]').first().isVisible({ timeout: 400 }).catch(() => false),
+    page.locator('iframe[src*="hcaptcha"]').first().isVisible({ timeout: 400 }).catch(() => false),
+    page.locator('iframe[src*="challenges.cloudflare.com"]').first().isVisible({ timeout: 400 }).catch(() => false),
+    page.locator('iframe[title*="captcha" i]').first().isVisible({ timeout: 400 }).catch(() => false),
+    page.locator('[data-sitekey]').first().isVisible({ timeout: 400 }).catch(() => false),
+    page.locator('#challenge-form, #cf-challenge-running').first().isVisible({ timeout: 400 }).catch(() => false),
+  ]);
+
+  return selectorHits.some(Boolean);
+}
+
+async function waitForHumanCheck(page, diagnostics, navigationLog, label, ctx = null) {
+  if (!(await isHumanCheckRequired(page))) {
+    return { blocked: false, resolved: false, detected: false, waitedMs: 0 };
+  }
+
+  const waitSeconds = Math.round(WORKER_CAPTCHA_WAIT_MS / 1000);
+  const startedAt = Date.now();
+  console.log(`[captcha] detected at step="${label}" - pausing up to ${waitSeconds}s for manual solve`);
+  diagnostics.push(`[captcha] detected during ${label}; waiting up to ${waitSeconds} seconds for manual solve.`);
+  navigationLog.push(`Pause for manual human check during ${label}.`);
+
+  if (ctx?.markCaptcha) {
+    try {
+      ctx.markCaptcha("detected", label);
+    } catch {
+      // Never let job-state callbacks break captcha flow.
+    }
+  }
+
+  if (ctx?.postInterim) {
+    try {
+      await ctx.postInterim(label);
+    } catch (error) {
+      console.log(`[post] interim captcha-pending failed: ${error instanceof Error ? error.message : "unknown"}`);
+    }
+  }
+
+  const deadline = startedAt + WORKER_CAPTCHA_WAIT_MS;
+  let lastTickLogged = 0;
+
+  while (Date.now() < deadline) {
+    await page.waitForTimeout(3000);
+
+    const elapsedSec = Math.round((Date.now() - startedAt) / 1000);
+    if (elapsedSec - lastTickLogged >= 15) {
+      console.log(`[captcha] waiting (${elapsedSec}s / ${waitSeconds}s) at step="${label}"`);
+      lastTickLogged = elapsedSec;
+    }
+
+    if (!(await isHumanCheckRequired(page))) {
+      // Settle: wait for any redirect/load to complete, then re-check.
+      await page.waitForLoadState("domcontentloaded", { timeout: 8000 }).catch(() => {});
+      await page.waitForTimeout(WORKER_CAPTCHA_SETTLE_MS);
+
+      if (await isHumanCheckRequired(page)) {
+        // False clearance: challenge reappeared, so keep waiting.
+        continue;
+      }
+
+      const waitedMs = Date.now() - startedAt;
+      console.log(`[captcha] resolved after ${waitedMs}ms at step="${label}"`);
+      diagnostics.push(`[captcha] resolved during ${label} after ${waitedMs}ms; continuing worker flow.`);
+      navigationLog.push(`Human check resolved during ${label}.`);
+
+      if (ctx?.markCaptcha) {
+        try {
+          ctx.markCaptcha("resolved", label, waitedMs);
+        } catch {
+          // ignore
+        }
+      }
+
+      return { blocked: false, resolved: true, detected: true, waitedMs };
+    }
+  }
+
+  const waitedMs = Date.now() - startedAt;
+  console.log(`[captcha] timeout at step="${label}" after ${waitedMs}ms - browser left open for manual recovery`);
+  diagnostics.push(`[captcha] timeout during ${label} after ${waitedMs}ms. Browser left open for manual recovery.`);
+  navigationLog.push(`Human check timeout during ${label}.`);
+
+  if (ctx?.markCaptcha) {
+    try {
+      ctx.markCaptcha("timeout", label, waitedMs);
+    } catch {
+      // ignore
+    }
+  }
+
+  return { blocked: true, resolved: false, detected: true, waitedMs };
 }
 
 async function waitForManualLogin(page, parcelLink) {
@@ -305,11 +527,18 @@ async function waitForManualLogin(page, parcelLink) {
   return { loggedIn: false, diagnostics };
 }
 
-async function runLandInsightsMlsWorkflow(page) {
+async function runLandInsightsMlsWorkflow(page, ctx = null) {
   const diagnostics = [];
   const navigationLog = [];
   const screenshots = [];
   const compEvidence = [];
+  let keepBrowserOpen = false;
+
+  function noteHumanCheck(result) {
+    if (result.detected && WORKER_KEEP_OPEN_ON_DETECT) {
+      keepBrowserOpen = true;
+    }
+  }
 
   async function capture(label) {
     const data = await page.screenshot({ type: "png", fullPage: false }).then((buffer) =>
@@ -325,6 +554,20 @@ async function runLandInsightsMlsWorkflow(page) {
   try {
     navigationLog.push("MLS workflow: start Land Insights visual comp setup.");
     await openDataPlatformIfAvailable(page, diagnostics, navigationLog);
+    const platformHumanCheck = await waitForHumanCheck(page, diagnostics, navigationLog, "Data Platform load", ctx);
+    noteHumanCheck(platformHumanCheck);
+    if (platformHumanCheck.blocked) {
+      keepBrowserOpen = true;
+      return {
+        diagnostics,
+        navigationLog,
+        pageText: await page.locator("body").innerText({ timeout: 5000 }).catch(() => ""),
+        screenshots,
+        compEvidence,
+        keepBrowserOpen,
+      };
+    }
+
     await capture("before_mls_layer_setup");
 
     const dataLayersOpened = await clickFirstVisibleText(page, [
@@ -345,6 +588,37 @@ async function runLandInsightsMlsWorkflow(page) {
     );
 
     await page.waitForTimeout(1200);
+    const dataLayerHumanCheck = await waitForHumanCheck(page, diagnostics, navigationLog, "Data Layers", ctx);
+    noteHumanCheck(dataLayerHumanCheck);
+    if (dataLayerHumanCheck.blocked) {
+      keepBrowserOpen = true;
+      return {
+        diagnostics,
+        navigationLog,
+        pageText: await page.locator("body").innerText({ timeout: 5000 }).catch(() => ""),
+        screenshots,
+        compEvidence,
+        keepBrowserOpen,
+      };
+    }
+    if (dataLayerHumanCheck.resolved) {
+      const reopened = await clickFirstVisibleText(page, [
+        "Data Layers",
+        "Layers",
+        "Map Layers",
+      ]);
+      diagnostics.push(
+        reopened
+          ? "MLS workflow: reopened Data Layers after human check."
+          : "MLS workflow: could not reopen Data Layers after human check.",
+      );
+      navigationLog.push(
+        reopened
+          ? "Reopen Data Layers after human check."
+          : "Data Layers reopen after human check was not visible.",
+      );
+      await page.waitForTimeout(1200);
+    }
 
     for (const layer of [
       "All Hazards",
@@ -364,6 +638,19 @@ async function runLandInsightsMlsWorkflow(page) {
           : `Could not find layer/control: ${layer}.`,
       );
       await page.waitForTimeout(700);
+      const layerHumanCheck = await waitForHumanCheck(page, diagnostics, navigationLog, layer, ctx);
+      noteHumanCheck(layerHumanCheck);
+      if (layerHumanCheck.blocked) {
+        keepBrowserOpen = true;
+        return {
+          diagnostics,
+          navigationLog,
+          pageText: await page.locator("body").innerText({ timeout: 5000 }).catch(() => ""),
+          screenshots,
+          compEvidence,
+          keepBrowserOpen,
+        };
+      }
     }
 
     const acreageClicked = await clickFirstVisibleText(page, [
@@ -384,6 +671,20 @@ async function runLandInsightsMlsWorkflow(page) {
 
     await page.keyboard.press("Escape").catch(() => {});
     await page.waitForTimeout(1500);
+    const finalHumanCheck = await waitForHumanCheck(page, diagnostics, navigationLog, "MLS layer setup", ctx);
+    noteHumanCheck(finalHumanCheck);
+    if (finalHumanCheck.blocked) {
+      keepBrowserOpen = true;
+      return {
+        diagnostics,
+        navigationLog,
+        pageText: await page.locator("body").innerText({ timeout: 5000 }).catch(() => ""),
+        screenshots,
+        compEvidence,
+        keepBrowserOpen,
+      };
+    }
+
     await capture("after_mls_layer_setup");
 
     const mlsText = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
@@ -397,6 +698,7 @@ async function runLandInsightsMlsWorkflow(page) {
       pageText: mlsText,
       screenshots,
       compEvidence,
+      keepBrowserOpen,
     };
   } catch (error) {
     diagnostics.push(
@@ -409,6 +711,7 @@ async function runLandInsightsMlsWorkflow(page) {
       pageText: await page.locator("body").innerText({ timeout: 5000 }).catch(() => ""),
       screenshots,
       compEvidence,
+      keepBrowserOpen,
     };
   }
 }
@@ -462,6 +765,342 @@ async function clickFirstVisibleText(page, labels) {
   }
 
   return false;
+}
+
+function collectExternalListingTargets(artifact, fields = {}) {
+  const browserPage = artifact?.request?.browserPage || {};
+  const comparableRows = browserPage.comparableRows || artifact?.result?.comparableRows || [];
+  const rawListingLinks = [
+    ...(browserPage.listingLinks || []),
+    ...(artifact?.request?.listingLinks || []),
+    ...comparableRows.map((row) => row?.listingUrl || ""),
+  ];
+  const targets = [];
+  const seen = new Set();
+
+  for (const link of rawListingLinks) {
+    const url = normalizeExternalListingUrl(link);
+
+    if (!url || seen.has(url)) {
+      continue;
+    }
+
+    seen.add(url);
+    targets.push({
+      url,
+      source: inferExternalListingSource(url),
+      kind: "listing",
+      searchQuery: "",
+    });
+
+    if (targets.length >= WORKER_EXTERNAL_LISTING_MAX_PAGES) {
+      return targets;
+    }
+  }
+
+  const searchQuery = buildExternalListingSearchQuery(fields);
+
+  if (!searchQuery) {
+    return targets;
+  }
+
+  for (const target of buildExternalListingSearchTargets(searchQuery)) {
+    if (seen.has(target.url)) {
+      continue;
+    }
+
+    seen.add(target.url);
+    targets.push(target);
+
+    if (targets.length >= WORKER_EXTERNAL_LISTING_MAX_PAGES) {
+      break;
+    }
+  }
+
+  return targets;
+}
+
+function normalizeExternalListingUrl(value) {
+  const raw = String(value || "").trim();
+
+  if (!raw) {
+    return "";
+  }
+
+  try {
+    const url = new URL(raw);
+
+    if (!/(\.|^)(redfin|zillow|realtor)\.com$/i.test(url.hostname)) {
+      return "";
+    }
+
+    url.hash = "";
+    return url.toString();
+  } catch {
+    return "";
+  }
+}
+
+function inferExternalListingSource(url) {
+  const value = String(url || "").toLowerCase();
+
+  if (value.includes("redfin.com")) {
+    return "redfin";
+  }
+
+  if (value.includes("zillow.com")) {
+    return "zillow";
+  }
+
+  if (value.includes("realtor.com")) {
+    return "realtor";
+  }
+
+  return "unknown";
+}
+
+function buildExternalListingSearchQuery(fields = {}) {
+  const address = String(fields.address || fields.propertyAddress || "").trim();
+  const apn = String(fields.apn || "").trim();
+  const county = String(fields.county || "").trim();
+  const state = String(fields.state || "").trim();
+
+  if (apn) {
+    return [apn, county, state].filter(Boolean).join(" ");
+  }
+
+  if (address) {
+    return [address, county, state].filter(Boolean).join(" ");
+  }
+
+  return [county, state].filter(Boolean).join(" ");
+}
+
+function buildExternalListingSearchTargets(searchQuery) {
+  const encoded = encodeURIComponent(searchQuery);
+  const zillowPath = encodeURIComponent(searchQuery).replace(/%20/g, "-");
+
+  return [
+    {
+      url: `https://www.zillow.com/homes/${zillowPath}_rb/`,
+      source: "zillow",
+      kind: "search",
+      searchQuery,
+    },
+    {
+      url: `https://www.redfin.com/?searchInputBox=${encoded}`,
+      source: "redfin",
+      kind: "search",
+      searchQuery,
+    },
+  ];
+}
+
+async function runExternalListingWorkflow(context, targets, ctx = null) {
+  const diagnostics = [];
+  const navigationLog = [];
+  const screenshots = [];
+  const evidence = [];
+  const pageTextParts = [];
+  let keepBrowserOpen = false;
+
+  if (!targets.length) {
+    diagnostics.push("External listing workflow: required Redfin/Zillow pass had no listing URL, APN, or address target.");
+    navigationLog.push("External listing pass skipped because no Redfin/Zillow search target was available.");
+    return { diagnostics, navigationLog, screenshots, evidence, pageText: "", keepBrowserOpen };
+  }
+
+  diagnostics.push(`External listing workflow: inspecting ${targets.length} Redfin/Zillow/Realtor target(s).`);
+  navigationLog.push("Start required external listing evidence pass.");
+
+  for (const [index, target] of targets.entries()) {
+    const page = await context.newPage();
+    let pageKeptOpen = false;
+
+    try {
+      ctx?.markStep?.(`external-listing:${target.source}`);
+      navigationLog.push(
+        target.kind === "search"
+          ? `Open ${target.source} search for ${target.searchQuery}.`
+          : `Open ${target.source} listing: ${target.url}.`,
+      );
+
+      await page.goto(target.url, { waitUntil: "domcontentloaded", timeout: 60000 });
+      await page.waitForTimeout(3500);
+
+      const humanCheck = await waitForHumanCheck(
+        page,
+        diagnostics,
+        navigationLog,
+        `${target.source} ${target.kind}`,
+        ctx,
+      );
+
+      if (humanCheck.detected && WORKER_KEEP_OPEN_ON_DETECT) {
+        keepBrowserOpen = true;
+        pageKeptOpen = true;
+      }
+
+      if (humanCheck.blocked) {
+        keepBrowserOpen = true;
+        pageKeptOpen = true;
+        evidence.push(buildBlockedExternalListingEvidence(target));
+        continue;
+      }
+
+      const title = await page.title().catch(() => target.source);
+      const finalUrl = page.url();
+      const text = await page.locator("body").innerText({ timeout: 10000 }).catch(() => "");
+      const screenshotBase64 = await page.screenshot({ type: "png", fullPage: false }).then((buffer) =>
+        buffer.toString("base64"),
+      ).catch(() => "");
+      const label = `external_listing_${index + 1}_${target.source}_${target.kind}`;
+
+      if (screenshotBase64) {
+        screenshots.push({ label, data: screenshotBase64 });
+      }
+
+      pageTextParts.push([
+        `External target ${index + 1}: ${target.source} ${target.kind}`,
+        `URL: ${finalUrl}`,
+        `Title: ${title}`,
+        String(text || "").slice(0, 3500),
+      ].join("\n"));
+      evidence.push(buildExternalListingEvidenceFromPage({ target, finalUrl, title, text }));
+      diagnostics.push(
+        `External listing workflow: captured ${target.source} ${target.kind} (${text.length} chars, screenshot=${screenshotBase64 ? "yes" : "no"}).`,
+      );
+    } catch (error) {
+      diagnostics.push(
+        `External listing workflow: ${target.source} ${target.kind} failed safely: ${
+          error instanceof Error ? error.message : "unknown error"
+        }`,
+      );
+      evidence.push(buildFailedExternalListingEvidence(target, error));
+    } finally {
+      if (!pageKeptOpen) {
+        await page.close().catch(() => {});
+      }
+    }
+  }
+
+  return {
+    diagnostics,
+    navigationLog,
+    screenshots,
+    evidence,
+    pageText: pageTextParts.join("\n\n---\n\n"),
+    keepBrowserOpen,
+  };
+}
+
+function buildExternalListingEvidenceFromPage({ target, finalUrl, title, text }) {
+  const value = String(text || "");
+  const facts = extractListingFacts(value, title);
+  const photoSignals = extractPhotoSignals(value);
+  const isSearch = target.kind === "search";
+
+  return {
+    source: target.source,
+    url: finalUrl || target.url,
+    searchQuery: target.searchQuery || "",
+    matchQuality: isSearch ? "possible_match" : "confirmed_match",
+    compRole: "weak_context",
+    matchedSignals: [
+      isSearch ? "Opened required APN/address search page." : "Opened listing URL captured from Land Insights.",
+      ...facts.slice(0, 4),
+    ],
+    photoObservations: photoSignals.length
+      ? photoSignals
+      : ["External page was opened and screenshotted for visual review; visible photo details may require model review."],
+    listingFacts: facts,
+    risks: [
+      isSearch
+        ? "Search result page may contain multiple properties; model should not treat it as a confirmed comp without visible match signals."
+        : "Listing page capture still needs DewClaw comp-role classification.",
+    ],
+  };
+}
+
+function buildBlockedExternalListingEvidence(target) {
+  return {
+    source: target.source,
+    url: target.url,
+    searchQuery: target.searchQuery || "",
+    matchQuality: "possible_match",
+    compRole: "weak_context",
+    matchedSignals: ["External listing page required manual human verification."],
+    photoObservations: ["External photos could not be captured until the human check clears."],
+    listingFacts: [],
+    risks: ["Human check blocked full Redfin/Zillow evidence capture."],
+  };
+}
+
+function buildFailedExternalListingEvidence(target, error) {
+  return {
+    source: target.source,
+    url: target.url,
+    searchQuery: target.searchQuery || "",
+    matchQuality: "possible_match",
+    compRole: "weak_context",
+    matchedSignals: [],
+    photoObservations: [],
+    listingFacts: [],
+    risks: [
+      `External listing capture failed: ${error instanceof Error ? error.message : "unknown error"}`,
+    ],
+  };
+}
+
+function extractListingFacts(text, title = "") {
+  const value = normalizeSpace(`${title || ""} ${text || ""}`);
+  const facts = [];
+  const patterns = [
+    /\$[\d,]+(?:\.\d+)?/g,
+    /\b\d+(?:\.\d+)?\s*ac(?:res?)?\b/gi,
+    /\b(active|pending|sold|for sale|off market)\b/gi,
+    /\b\d+\s*days?\s+on\s+(?:market|zillow|redfin)\b/gi,
+    /\b(?:wooded|pasture|cleared|vacant land|mobile home|house|barn|shed|waterfront|road frontage)\b/gi,
+  ];
+
+  for (const pattern of patterns) {
+    for (const match of value.matchAll(pattern)) {
+      const fact = normalizeSpace(match[0]);
+
+      if (fact && !facts.includes(fact)) {
+        facts.push(fact);
+      }
+
+      if (facts.length >= 10) {
+        return facts;
+      }
+    }
+  }
+
+  return facts;
+}
+
+function extractPhotoSignals(text) {
+  const value = String(text || "").toLowerCase();
+  const observations = [];
+
+  if (/\bphotos?\b|\bimage\b|\bgallery\b/.test(value)) {
+    observations.push("Listing page exposes a photo/gallery section in the captured view.");
+  }
+
+  if (/\bwooded|trees?|timber\b/.test(value)) {
+    observations.push("Text suggests wooded/tree coverage.");
+  }
+
+  if (/\bpasture|cleared|field|open land\b/.test(value)) {
+    observations.push("Text suggests cleared, pasture, field, or open land.");
+  }
+
+  if (/\bhouse|home|cabin|mobile home|barn|shed|structure\b/.test(value)) {
+    observations.push("Text may indicate a structure signal; verify whether this contaminates vacant-land comping.");
+  }
+
+  return observations;
 }
 
 function buildHeuristicCompEvidenceFromText(text) {
@@ -533,9 +1172,10 @@ function buildFallbackCapture({ artifact, parcelLink, inspection }) {
   };
   const comparableRows = browserPage.comparableRows || artifact?.result?.comparableRows || [];
   const externalListingEvidence = [
+    ...(inspection.externalListingEvidence || []),
     ...(inspection.mlsCompEvidence || []),
     ...buildFallbackExternalEvidenceFromRows(comparableRows),
-  ].slice(0, Math.max(WORKER_MLS_MAX_COMP_CLICKS, 3));
+  ].slice(0, Math.max(WORKER_MLS_MAX_COMP_CLICKS + WORKER_EXTERNAL_LISTING_MAX_PAGES, 6));
 
   return {
     schemaVersion: "claude-mcp-li-table-v1",
@@ -556,7 +1196,7 @@ function buildFallbackCapture({ artifact, parcelLink, inspection }) {
       notes: "Captured by local worker fallback extraction.",
     })),
     comparableRows,
-    listingLinks: browserPage.listingLinks || artifact?.request?.listingLinks || [],
+    listingLinks: collectExternalListingTargets(artifact, fields).map((target) => target.url),
     externalListingEvidence,
     visualClassification: {
       areaType: inferAreaType(inspection.pageText),
@@ -716,6 +1356,9 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
     "If the screenshot does not clearly show a fact, mark it unclear.",
     "Preserve unusual comp evidence as floor/ceiling/context instead of rejecting it automatically.",
     "Use the MLS/map screenshots to identify whether MLS comps or comp cards are visible.",
+    "Redfin/Zillow/Realtor evidence is a required pass, not optional.",
+    "Use external listing screenshots/text to inspect visible photos, descriptions, acreage, status, and comp fit.",
+    "If an external target is only a search page, treat it as weak context unless the visible page clearly confirms the matching property.",
     "When comp rows/cards/photos/details are visible, fill externalListingEvidence with 1-3 strongest comps.",
     "Every externalListingEvidence item must include compRole: anchor, price_floor, price_ceiling, weak_context, or unrelated.",
     "If only a row is visible but photos are not opened, say that in photoObservations and risks.",
@@ -731,6 +1374,9 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
     "",
     "Local worker heuristic MLS evidence:",
     JSON.stringify(inspection.mlsCompEvidence || [], null, 2).slice(0, 8000),
+    "",
+    "Local worker external Redfin/Zillow/Realtor evidence:",
+    JSON.stringify(inspection.externalListingEvidence || [], null, 2).slice(0, 10000),
     "",
     "Local worker navigation log:",
     JSON.stringify(inspection.navigationLog || [], null, 2).slice(0, 4000),
@@ -791,9 +1437,8 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
 }
 
 function buildAnthropicImageBlocks(screenshots) {
-  return (screenshots || [])
+  return selectScreenshotsForVision(screenshots || [])
     .filter((item) => item?.data)
-    .slice(0, 4)
     .flatMap((item) => [
       { type: "text", text: `Screenshot: ${item.label || "worker_view"}` },
       {
@@ -805,6 +1450,31 @@ function buildAnthropicImageBlocks(screenshots) {
         },
       },
     ]);
+}
+
+function selectScreenshotsForVision(screenshots) {
+  const available = (screenshots || []).filter((item) => item?.data);
+  const selected = [];
+
+  for (const group of [
+    available.filter((item) => /final_worker_view/i.test(item.label || "")),
+    available.filter((item) => /external_listing/i.test(item.label || "")),
+    available.filter((item) => /after_mls_layer_setup/i.test(item.label || "")),
+    available.filter((item) => /before_mls_layer_setup/i.test(item.label || "")),
+    available,
+  ]) {
+    for (const item of group) {
+      if (!selected.includes(item)) {
+        selected.push(item);
+      }
+
+      if (selected.length >= 6) {
+        return selected;
+      }
+    }
+  }
+
+  return selected;
 }
 
 function extractJsonObject(value) {
