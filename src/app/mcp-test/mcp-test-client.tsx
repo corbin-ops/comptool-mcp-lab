@@ -3,7 +3,10 @@
 import { useMemo, useState, useTransition } from "react";
 import { useSearchParams } from "next/navigation";
 
-import { buildClaudeMcpCapturePrompt } from "@/phase2/claude-mcp-prompt";
+import {
+  buildClaudeMcpCapturePrompt,
+  type ClaudeMcpPromptContext,
+} from "@/phase2/claude-mcp-prompt";
 
 type IntakeResult = {
   ok?: boolean;
@@ -127,15 +130,52 @@ export function McpTestClient() {
     searchParams.get("source") ||
     "";
   const sourceArtifactId = searchParams.get("artifact") || "";
-  const mcpPrompt = useMemo(
-    () => buildClaudeMcpCapturePrompt(parcelLinkFromQuery),
-    [parcelLinkFromQuery],
+  const promptContext: ClaudeMcpPromptContext = {
+    parcelLink: parcelLinkFromQuery,
+    apn: searchParams.get("apn") || "",
+    address: searchParams.get("address") || "",
+    county: searchParams.get("county") || "",
+    state: searchParams.get("state") || "",
+    acreage: searchParams.get("acreage") || "",
+    searchQuery: searchParams.get("searchQuery") || "",
+    searchSource: searchParams.get("searchSource") || "",
+    zillowUrl: searchParams.get("zillowUrl") || "",
+    redfinUrl: searchParams.get("redfinUrl") || "",
+    extensionStatus: searchParams.get("extensionStatus") || "",
+  };
+  const hasGuidedContext = Boolean(
+    searchParams.get("flow") === "guided-claude-capture" ||
+      promptContext.apn ||
+      promptContext.address ||
+      promptContext.searchQuery,
   );
-  const [jsonText, setJsonText] = useState(prettySamplePayload);
+  const mcpPrompt = useMemo(
+    () => buildClaudeMcpCapturePrompt(promptContext),
+    [
+      promptContext.acreage,
+      promptContext.address,
+      promptContext.apn,
+      promptContext.county,
+      promptContext.extensionStatus,
+      promptContext.parcelLink,
+      promptContext.redfinUrl,
+      promptContext.searchQuery,
+      promptContext.searchSource,
+      promptContext.state,
+      promptContext.zillowUrl,
+    ],
+  );
+  const [jsonText, setJsonText] = useState(() =>
+    parcelLinkFromQuery ? "" : prettySamplePayload(),
+  );
   const [result, setResult] = useState<IntakeResult | null>(null);
   const [status, setStatus] = useState<"idle" | "valid" | "error" | "success">("idle");
-  const [message, setMessage] = useState("Load the sample or paste Claude MCP JSON.");
-  const [copyMessage, setCopyMessage] = useState("Ready to copy into Claude MCP.");
+  const [message, setMessage] = useState(
+    parcelLinkFromQuery
+      ? "Copy the prompt into Claude in Chrome, then paste Claude's raw JSON here."
+      : "Load the sample or paste Claude JSON.",
+  );
+  const [copyMessage, setCopyMessage] = useState("Ready to copy into Claude in Chrome.");
   const [openInNewTab, setOpenInNewTab] = useState(true);
   const [isPending, startTransition] = useTransition();
 
@@ -222,11 +262,11 @@ export function McpTestClient() {
         <div className="panel-heading">
           <div>
             <p className="eyebrow">Step 1</p>
-            <h2>Copy this prompt into Claude MCP</h2>
+            <h2>Copy this prompt into Claude in Chrome</h2>
             <p className="muted-copy">
               {parcelLinkFromQuery
-                ? "The parcel link is already inserted. Paste this into Claude MCP, let Claude inspect Land Insights, then paste the returned raw JSON below."
-                : "Replace the parcel-link placeholder inside Claude, let Claude inspect Land Insights, then paste the returned raw JSON below."}
+                ? "The parcel link and DewClaw extension context are already inserted. Paste this into Claude, let it inspect the open LI/Redfin/Zillow tabs, then paste the returned raw JSON below."
+                : "Replace the parcel-link placeholder inside Claude, let Claude inspect Land Insights and listing tabs, then paste the returned raw JSON below."}
             </p>
           </div>
 
@@ -237,17 +277,41 @@ export function McpTestClient() {
               onClick={async () => {
                 try {
                   await navigator.clipboard.writeText(mcpPrompt);
-                  setCopyMessage("Prompt copied. Paste it into Claude MCP.");
+                  setCopyMessage("Prompt copied. Paste it into Claude side panel.");
                 } catch {
                   setCopyMessage("Copy blocked by browser. Select the prompt text manually.");
                 }
               }}
             >
-              Copy MCP prompt
+              Copy Claude prompt
             </button>
             <span className="source-pill">{copyMessage}</span>
           </div>
         </div>
+
+        {hasGuidedContext ? (
+          <div className="guided-context-card">
+            <div>
+              <span>APN</span>
+              <strong>{promptContext.apn || "Not captured"}</strong>
+            </div>
+            <div>
+              <span>Address</span>
+              <strong>{promptContext.address || "Not captured"}</strong>
+            </div>
+            <div>
+              <span>County / State</span>
+              <strong>
+                {[promptContext.county, promptContext.state].filter(Boolean).join(", ") ||
+                  "Not captured"}
+              </strong>
+            </div>
+            <div>
+              <span>Search query</span>
+              <strong>{promptContext.searchQuery || "Not captured"}</strong>
+            </div>
+          </div>
+        ) : null}
 
         {parcelLinkFromQuery || sourceArtifactId ? (
           <div className="mcp-handoff-banner">
@@ -271,8 +335,8 @@ export function McpTestClient() {
 
         <div className="mcp-prompt-steps">
           <span>1. Copy prompt</span>
-          <span>2. Paste into Claude MCP</span>
-          <span>3. Replace parcel link</span>
+          <span>2. Open Claude side panel</span>
+          <span>3. Paste prompt</span>
           <span>4. Paste JSON below</span>
         </div>
 
@@ -290,7 +354,7 @@ export function McpTestClient() {
           <div className="panel-heading">
             <div>
               <p className="eyebrow">Step 2</p>
-              <h2>Claude MCP JSON</h2>
+              <h2>Claude JSON</h2>
               <p className="muted-copy">
                 Paste the raw JSON object only. Avoid markdown fences like <code>```json</code>.
               </p>

@@ -66,6 +66,10 @@ captured from Land Insights first. If no listing links are available, it builds 
 Redfin search pages from the property address or APN. These captures are passed to the
 model as weak/confirmable evidence instead of being treated as final valuation data.
 
+When the Chrome extension opens Redfin/Zillow tabs in the user's trusted browser session,
+the local worker does not open a duplicate external browser pass. It records those tabs as
+pending user-review evidence until the correct listing/photo page is captured.
+
 If Redfin, Zillow, or Realtor shows a human check, complete it manually in the worker
 browser. The worker waits for the page to clear and keeps the browser open for review.
 

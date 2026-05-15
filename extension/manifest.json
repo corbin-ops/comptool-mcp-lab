@@ -13,6 +13,9 @@
   "host_permissions": [
     "https://app.landinsights.com/*",
     "https://app.landinsights.co/*",
+    "https://www.redfin.com/*",
+    "https://www.zillow.com/*",
+    "https://www.realtor.com/*",
     "https://comptool-mcp-lab.onrender.com/*",
     "http://127.0.0.1:4777/*",
     "http://localhost:4777/*"

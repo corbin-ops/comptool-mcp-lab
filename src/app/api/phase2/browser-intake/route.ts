@@ -4,6 +4,7 @@ import { createPendingPhase2Artifact } from "@/phase2/artifact-runner";
 import type {
   VisualBrowserPageSnapshot,
   VisualComparableRow,
+  VisualExternalSearchTarget,
   VisualExtractedParcelFields,
   VisualParcelInspectorRequest,
 } from "@/phase2/types";
@@ -117,6 +118,43 @@ function readExtractedFields(value: unknown): VisualExtractedParcelFields {
   return fields;
 }
 
+function readExternalSearchTargets(value: unknown): VisualExternalSearchTarget[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value.reduce<VisualExternalSearchTarget[]>((targets, item) => {
+    const record = item && typeof item === "object" ? (item as Record<string, unknown>) : null;
+
+    if (!record) {
+      return targets;
+    }
+
+    const url = readString(record.url);
+
+    if (!url) {
+      return targets;
+    }
+
+    targets.push({
+      source: readString(record.source),
+      searchSource: readString(record.searchSource),
+      searchQuery: readString(record.searchQuery),
+      url,
+      tabId: typeof record.tabId === "number" ? record.tabId : null,
+      reused: Boolean(record.reused),
+      status: readString(record.status),
+      finalUrl: readString(record.finalUrl),
+      listingState: readString(record.listingState),
+      offMarketDetected: Boolean(record.offMarketDetected),
+      abortComping: Boolean(record.abortComping),
+      detectionText: readString(record.detectionText),
+    });
+
+    return targets;
+  }, []);
+}
+
 function readBrowserSnapshot(value: unknown): VisualBrowserPageSnapshot | null {
   const record = value && typeof value === "object" ? (value as Record<string, unknown>) : null;
 
@@ -144,6 +182,9 @@ function readBrowserSnapshot(value: unknown): VisualBrowserPageSnapshot | null {
     hasCompReportButton: Boolean(record.hasCompReportButton),
     hasKmlButton: Boolean(record.hasKmlButton),
     extractionError: readString(record.extractionError),
+    externalSearchOpenedByExtension: Boolean(record.externalSearchOpenedByExtension),
+    externalSearchLaunchStatus: readString(record.externalSearchLaunchStatus),
+    externalSearchTargets: readExternalSearchTargets(record.externalSearchTargets),
     listingLinks: readListingLinks(record.listingLinks),
     extractedFields: readExtractedFields(record.extractedFields),
     comparableRows: readComparableRows(record.comparableRows),

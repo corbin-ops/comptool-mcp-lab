@@ -98,6 +98,21 @@ export interface VisualDewClawQa {
   nextFixes: string[];
 }
 
+export interface VisualExternalSearchTarget {
+  source: string;
+  searchSource?: string;
+  searchQuery?: string;
+  url: string;
+  tabId?: number | null;
+  reused?: boolean;
+  status?: string;
+  finalUrl?: string;
+  listingState?: string;
+  offMarketDetected?: boolean;
+  abortComping?: boolean;
+  detectionText?: string;
+}
+
 export interface VisualBrowserPageSnapshot {
   sourceUrl: string;
   finalUrl?: string;
@@ -112,6 +127,9 @@ export interface VisualBrowserPageSnapshot {
   hasCompReportButton?: boolean;
   hasKmlButton?: boolean;
   extractionError?: string;
+  externalSearchOpenedByExtension?: boolean;
+  externalSearchLaunchStatus?: string;
+  externalSearchTargets?: VisualExternalSearchTarget[];
   listingLinks?: string[];
   extractedFields?: VisualExtractedParcelFields;
   comparableRows?: VisualComparableRow[];

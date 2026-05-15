@@ -1,11 +1,60 @@
 export const CLAUDE_MCP_PARCEL_LINK_PLACEHOLDER = "{{PASTE_LAND_INSIGHTS_PARCEL_LINK_HERE}}";
+export const CLAUDE_MCP_CONTEXT_PLACEHOLDER = "{{DEWCLAW_EXTENSION_CONTEXT}}";
 
-export const CLAUDE_MCP_CAPTURE_PROMPT = `You are helping test the DewClaw CompTool MCP lab.
+export type ClaudeMcpPromptContext = {
+  parcelLink?: string;
+  apn?: string;
+  address?: string;
+  county?: string;
+  state?: string;
+  acreage?: string;
+  searchQuery?: string;
+  searchSource?: string;
+  zillowUrl?: string;
+  redfinUrl?: string;
+  extensionStatus?: string;
+};
+
+function cleanPromptValue(value: string | undefined) {
+  return value?.trim() ?? "";
+}
+
+function buildContextLine(label: string, value: string | undefined) {
+  const cleanValue = cleanPromptValue(value);
+
+  return cleanValue ? `- ${label}: ${cleanValue}` : "";
+}
+
+function buildExtensionContext(context?: ClaudeMcpPromptContext) {
+  const lines = [
+    buildContextLine("APN", context?.apn),
+    buildContextLine("Property address", context?.address),
+    buildContextLine("County", context?.county),
+    buildContextLine("State", context?.state),
+    buildContextLine("Acreage", context?.acreage),
+    buildContextLine("Redfin/Zillow search query", context?.searchQuery),
+    buildContextLine("Search source", context?.searchSource),
+    buildContextLine("Zillow tab", context?.zillowUrl),
+    buildContextLine("Redfin tab", context?.redfinUrl),
+    buildContextLine("DewClaw extension status", context?.extensionStatus),
+  ].filter(Boolean);
+
+  if (!lines.length) {
+    return "- No extra DewClaw extension context was provided.";
+  }
+
+  return lines.join("\n");
+}
+
+export const CLAUDE_MCP_CAPTURE_PROMPT = `You are helping test the DewClaw CompTool guided Claude capture flow.
 
 Your job is to visually inspect a Land Insights parcel and return structured source data for our dashboard.
 
 Parcel link:
 ${CLAUDE_MCP_PARCEL_LINK_PLACEHOLDER}
+
+DewClaw extension context:
+${CLAUDE_MCP_CONTEXT_PLACEHOLDER}
 
 Critical rules:
 - Return raw JSON only.
@@ -41,7 +90,7 @@ Browser workflow:
 7. Inspect map context for access/frontage, parcel shape, structures, wooded vs pasture/cleared land, slope/topography clues, flood/wetlands clues, hazard overlays, flood/wetland overlays, and nearby development.
 8. Click nearby MLS comp properties directly inside Land Insights. Inspect the comp popup/report and any available MLS photos before using the comp.
 9. For each useful Land Insights MLS comp, capture price, acreage, PPA, status, DOM, source link if visible, photo observations, and why it is useful.
-10. If Land Insights MLS photos/details are enough, do not force Redfin/Zillow. If they are missing or unclear, then use APN/address/listing link to inspect Redfin/Zillow as fallback.
+10. If Land Insights MLS photos/details are enough, do not force Redfin/Zillow. If they are missing or unclear, inspect the Redfin/Zillow tabs that DewClaw opened using the APN/address search query.
 11. For every Land Insights MLS, Redfin, Zillow, or original listing evidence item you inspect, decide match quality:
     - confirmed_match: APN/address/map/acreage strongly matches the subject.
     - possible_match: some details match, but not enough to rely on it.
@@ -168,12 +217,25 @@ Important:
 - externalListingEvidence should prioritize inspected Land Insights MLS comp photo/detail evidence. It can be empty only if no useful comp detail/photos are visible.
 - rawObservationNotes should be short, practical, and useful for land comping.`;
 
-export function buildClaudeMcpCapturePrompt(parcelLink?: string) {
-  const cleanParcelLink = parcelLink?.trim();
+export function buildClaudeMcpCapturePrompt(
+  parcelLinkOrContext?: string | ClaudeMcpPromptContext,
+  explicitContext?: ClaudeMcpPromptContext,
+) {
+  const context =
+    typeof parcelLinkOrContext === "object" ? parcelLinkOrContext : explicitContext;
+  const cleanParcelLink =
+    typeof parcelLinkOrContext === "string"
+      ? parcelLinkOrContext.trim()
+      : cleanPromptValue(context?.parcelLink);
+  const contextBlock = buildExtensionContext(context);
+  const prompt = CLAUDE_MCP_CAPTURE_PROMPT.replace(
+    CLAUDE_MCP_CONTEXT_PLACEHOLDER,
+    contextBlock,
+  );
 
   if (!cleanParcelLink) {
-    return CLAUDE_MCP_CAPTURE_PROMPT;
+    return prompt;
   }
 
-  return CLAUDE_MCP_CAPTURE_PROMPT.replace(CLAUDE_MCP_PARCEL_LINK_PLACEHOLDER, cleanParcelLink);
+  return prompt.replace(CLAUDE_MCP_PARCEL_LINK_PLACEHOLDER, cleanParcelLink);
 }

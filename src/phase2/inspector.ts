@@ -1012,6 +1012,9 @@ export async function runVisualParcelInspector(
 
   const diagnostics = [...parcelQuality.diagnostics, ...listingPages.diagnostics];
   const browserPage = input.browserPage;
+  const offMarketTargets = (browserPage?.externalSearchTargets ?? []).filter(
+    (target) => target.abortComping || target.offMarketDetected || /off[\s-]*market/i.test(target.status ?? ""),
+  );
 
   if (browserPage?.compReportUrl) {
     diagnostics.push(`extension: compReportUrl=${browserPage.compReportUrl}`);
@@ -1019,6 +1022,23 @@ export async function runVisualParcelInspector(
 
   if (browserPage?.kmlCaptureStatus) {
     diagnostics.push(`extension: ${browserPage.kmlCaptureStatus}`);
+  }
+
+  if (browserPage?.externalSearchLaunchStatus) {
+    diagnostics.push(`extension: ${browserPage.externalSearchLaunchStatus}`);
+  }
+
+  for (const target of browserPage?.externalSearchTargets ?? []) {
+    diagnostics.push(
+      `extension: ${target.source || "external"} search tab ${target.reused ? "reused" : "opened"} for ${target.searchQuery || target.url}; ${target.status || "review tab ready"}${target.detectionText ? ` (${target.detectionText})` : ""}`,
+    );
+  }
+
+  if (offMarketTargets.length) {
+    const sources = offMarketTargets.map((target) => target.source || "external").join(", ");
+    diagnostics.push(`extension: abortComping=true because Off Market was detected on ${sources}.`);
+    visualRisks.unshift("Abort comping: Redfin/Zillow showed Off Market. Select a usable active/sold/pending comp before pricing.");
+    verifyNext.unshift("Open a different usable listing/comp; do not price from the Off Market page.");
   }
 
   if (browserPage?.kmlUrl) {

@@ -36,6 +36,7 @@ The worker now attempts to prepare the Land Insights MLS comp view automatically
 - Open Redfin/Zillow/Realtor listing links when Land Insights captures them
 - If no listing link is available, search Redfin/Zillow from the APN or property address
 - Feed those external photos/details/search captures into the evidence packet every time
+- The Chrome extension also opens Redfin and Zillow APN search tabs in the user's normal Chrome session so the user does not need to copy/paste the APN manually
 
 ## First Land Insights Login
 

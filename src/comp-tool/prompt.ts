@@ -168,6 +168,7 @@ export function buildCompPromptPackage(
     "- Land Insights parcel fields, hazard layers, due diligence layers, MLS comp rows, and MLS comp photos may be used as property/visual evidence when captured.",
     "- Land Insights MLS comp photos/details can reduce or replace Redfin/Zillow inspection when they show enough APN/status/acreage/photo evidence, but label the evidence source clearly.",
     "- Redfin/Zillow/APN/photo observations may be used as visual/property evidence only when matchQuality is confirmed_match or clearly labeled possible_match.",
+    "- If Redfin/Zillow/Realtor evidence says Off Market, do not use it as a comp anchor. Treat it as rejected/unrelated and abort/verify before final pricing unless another usable active/sold/pending comp is provided.",
     "- Do not automatically reject family transfers, quit claim deeds, landlocked cases, acreage discrepancies, or major-issue comps. Classify them as clean anchor, price floor, price ceiling, weak context, or unrelated.",
     "- Weak or unusual comps should not anchor market value unless their weakness matches the subject. They can still be useful as floor/ceiling/context evidence when clearly labeled.",
     "",

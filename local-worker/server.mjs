@@ -222,7 +222,19 @@ async function runVisualEnrichment(payload, job = null) {
 
   const artifact = await fetchArtifact(artifactId, baseUrl, intakeToken);
   const workerCtx = createWorkerJobContext(job);
-  const inspection = await inspectParcelInBrowser(parcelLink, workerCtx, artifact);
+  const extensionOpenedExternalSearchTabs = Boolean(
+    payload.extensionOpenedExternalSearchTabs ||
+    payload.browserPage?.externalSearchOpenedByExtension,
+  );
+  const extensionExternalSearchTargets = Array.isArray(payload.externalSearchTargets)
+    ? payload.externalSearchTargets
+    : Array.isArray(payload.browserPage?.externalSearchTargets)
+      ? payload.browserPage.externalSearchTargets
+      : [];
+  const inspection = await inspectParcelInBrowser(parcelLink, workerCtx, artifact, {
+    skipExternalListings: extensionOpenedExternalSearchTabs,
+    extensionExternalSearchTargets,
+  });
   const fallbackCapture = buildFallbackCapture({ artifact, parcelLink, inspection });
   const capture = ANTHROPIC_API_KEY
     ? await buildVisionCapture({ artifact, parcelLink, inspection, fallbackCapture })
@@ -264,7 +276,7 @@ async function getWorkerBrowserContext() {
   return context;
 }
 
-async function inspectParcelInBrowser(parcelLink, ctx = null, artifact = null) {
+async function inspectParcelInBrowser(parcelLink, ctx = null, artifact = null, options = {}) {
   const context = await getWorkerBrowserContext();
   const page = context.pages()[0] || (await context.newPage());
   let keepBrowserOpen = false;
@@ -327,7 +339,17 @@ async function inspectParcelInBrowser(parcelLink, ctx = null, artifact = null) {
         .join("\n\n");
     }
 
-    if (!initialHumanCheck.blocked) {
+    if (!initialHumanCheck.blocked && options.skipExternalListings) {
+      externalListingWorkflow.diagnostics.push(
+        "External listing workflow: skipped in worker because the extension opened Redfin/Zillow tabs in the user's trusted Chrome session.",
+      );
+      externalListingWorkflow.navigationLog.push(
+        "Extension opened Redfin/Zillow search tabs in the user's browser; worker did not duplicate them.",
+      );
+      externalListingWorkflow.evidence.push(
+        ...buildExtensionOpenedExternalEvidence(options.extensionExternalSearchTargets || []),
+      );
+    } else if (!initialHumanCheck.blocked) {
       const fieldsForListingSearch = {
         ...(artifact?.request?.browserPage?.extractedFields || {}),
         ...extractFieldsFromText(pageText),
@@ -896,6 +918,42 @@ function buildExternalListingSearchTargets(searchQuery) {
   ];
 }
 
+function buildExtensionOpenedExternalEvidence(targets) {
+  return (targets || [])
+    .filter((target) => target?.url)
+    .slice(0, WORKER_EXTERNAL_LISTING_MAX_PAGES)
+    .map((target) => {
+      const offMarket = Boolean(target.abortComping || target.offMarketDetected);
+
+      return {
+        source: inferExternalListingSource(target.url),
+        url: String(target.finalUrl || target.url || ""),
+        searchQuery: String(target.searchQuery || ""),
+        matchQuality: offMarket ? "rejected_match" : "possible_match",
+        compRole: offMarket ? "unrelated" : "weak_context",
+        matchedSignals: [
+          `Extension opened ${target.source || inferExternalListingSource(target.url)} search tab from ${target.searchSource || "property"} query.`,
+          target.listingState ? `External listing state: ${target.listingState}` : "",
+          target.detectionText ? `Detected text: ${target.detectionText}` : "",
+        ].filter(Boolean),
+        photoObservations: [
+          offMarket
+            ? "Off Market detected. Do not use this page as comp evidence."
+            : "Opened in the user's trusted Chrome session for manual photo/listing review.",
+        ],
+        listingFacts: [
+          target.reused ? "Existing browser tab reused." : "New browser tab opened.",
+          target.status || "",
+        ].filter(Boolean),
+        risks: [
+          offMarket
+            ? "Abort comping until a usable active/sold/pending listing is selected."
+            : "Search tab is not confirmed comp evidence until the user captures the correct listing/photo page.",
+        ],
+      };
+    });
+}
+
 async function runExternalListingWorkflow(context, targets, ctx = null) {
   const diagnostics = [];
   const navigationLog = [];
@@ -999,23 +1057,34 @@ function buildExternalListingEvidenceFromPage({ target, finalUrl, title, text })
   const facts = extractListingFacts(value, title);
   const photoSignals = extractPhotoSignals(value);
   const isSearch = target.kind === "search";
+  const offMarket = isOffMarketText(`${title || ""} ${value}`);
 
   return {
     source: target.source,
     url: finalUrl || target.url,
     searchQuery: target.searchQuery || "",
-    matchQuality: isSearch ? "possible_match" : "confirmed_match",
-    compRole: "weak_context",
+    matchQuality: offMarket ? "rejected_match" : isSearch ? "possible_match" : "confirmed_match",
+    compRole: offMarket ? "unrelated" : "weak_context",
     matchedSignals: [
-      isSearch ? "Opened required APN/address search page." : "Opened listing URL captured from Land Insights.",
+      offMarket
+        ? "Off Market detected on external listing page."
+        : isSearch
+          ? "Opened required APN/address search page."
+          : "Opened listing URL captured from Land Insights.",
       ...facts.slice(0, 4),
     ],
     photoObservations: photoSignals.length
       ? photoSignals
-      : ["External page was opened and screenshotted for visual review; visible photo details may require model review."],
+      : [
+        offMarket
+          ? "Do not use Off Market page photos/details as comp support."
+          : "External page was opened and screenshotted for visual review; visible photo details may require model review.",
+      ],
     listingFacts: facts,
     risks: [
-      isSearch
+      offMarket
+        ? "Abort comping until a usable active/sold/pending comp is selected."
+        : isSearch
         ? "Search result page may contain multiple properties; model should not treat it as a confirmed comp without visible match signals."
         : "Listing page capture still needs DewClaw comp-role classification.",
     ],
@@ -1078,6 +1147,10 @@ function extractListingFacts(text, title = "") {
   }
 
   return facts;
+}
+
+function isOffMarketText(text) {
+  return /\boff[\s-]*market\b/i.test(String(text || ""));
 }
 
 function extractPhotoSignals(text) {
@@ -1358,6 +1431,7 @@ async function buildVisionCapture({ artifact, parcelLink, inspection, fallbackCa
     "Use the MLS/map screenshots to identify whether MLS comps or comp cards are visible.",
     "Redfin/Zillow/Realtor evidence is a required pass, not optional.",
     "Use external listing screenshots/text to inspect visible photos, descriptions, acreage, status, and comp fit.",
+    "If Redfin/Zillow/Realtor evidence says Off Market, mark that external evidence rejected_match/unrelated and say comping should abort until a usable active/sold/pending comp is selected.",
     "If an external target is only a search page, treat it as weak context unless the visible page clearly confirms the matching property.",
     "When comp rows/cards/photos/details are visible, fill externalListingEvidence with 1-3 strongest comps.",
     "Every externalListingEvidence item must include compRole: anchor, price_floor, price_ceiling, weak_context, or unrelated.",

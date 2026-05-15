@@ -14,6 +14,30 @@ import type {
   VisualParcelInspectorResult,
 } from "@/phase2/types";
 
+function getOffMarketAbortReason(parsed: VisualParcelInspectorRequest, result: VisualParcelInspectorResult) {
+  const targets = parsed.browserPage?.externalSearchTargets ?? [];
+  const offMarketTargets = targets.filter(
+    (target) =>
+      target.abortComping ||
+      target.offMarketDetected ||
+      /off[\s-]*market/i.test(`${target.listingState ?? ""} ${target.status ?? ""} ${target.detectionText ?? ""}`),
+  );
+
+  if (offMarketTargets.length) {
+    const sources = offMarketTargets
+      .map((target) => `${target.source || "external"}${target.searchQuery ? ` (${target.searchQuery})` : ""}`)
+      .join(", ");
+
+    return `Comping aborted: Off Market detected on ${sources}. Open a usable active/sold/pending comp before running DewClaw valuation.`;
+  }
+
+  if ((result.diagnostics ?? []).some((item) => /abortComping=true|abort comping:.*off[\s-]*market/i.test(item))) {
+    return "Comping aborted: Off Market was detected in external listing evidence. Open a usable active/sold/pending comp before running DewClaw valuation.";
+  }
+
+  return "";
+}
+
 export async function runCompEvaluationForArtifact(
   artifactId: string,
   parsed: VisualParcelInspectorRequest,
@@ -26,6 +50,18 @@ export async function runCompEvaluationForArtifact(
   });
 
   try {
+    const offMarketAbortReason = getOffMarketAbortReason(parsed, result);
+
+    if (offMarketAbortReason) {
+      await updateVisualBrowserIntakeArtifact(artifactId, {
+        compEvaluationStatus: "failed",
+        compEvaluationStartedAt: startedAt,
+        compEvaluationCompletedAt: new Date().toISOString(),
+        compEvaluationError: offMarketAbortReason,
+      });
+      return;
+    }
+
     const compRequest = buildCompRequestFromPhase2Capture(parsed, result);
     const compEvaluation = await buildCompEvaluationResponse(compRequest, {
       skipParcelEnrichment: true,

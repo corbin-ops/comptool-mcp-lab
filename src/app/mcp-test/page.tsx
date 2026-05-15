@@ -9,11 +9,11 @@ export default function McpTestPage() {
     <main className="page-shell">
       <section className="hero-panel compact-hero-panel">
         <div>
-          <p className="eyebrow">Claude MCP Lab</p>
-          <h1>MCP intake tester</h1>
+          <p className="eyebrow">Guided Claude Capture</p>
+          <h1>Claude handoff + JSON intake</h1>
           <p>
-            Paste a Claude MCP JSON return, submit it to the lab intake endpoint, and open the
-            generated visual comp dashboard.
+            Copy the prepared prompt into Claude in Chrome, paste Claude&apos;s raw JSON return
+            here, and let CompTool generate the DewClaw result.
           </p>
         </div>
 

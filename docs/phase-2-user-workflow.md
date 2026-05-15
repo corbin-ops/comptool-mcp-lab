@@ -22,20 +22,25 @@ Legacy folders remain useful as backups, but should not receive new feature work
 - `/sop`: user testing SOP
 - `/references`: DewClaw reference view
 
-## Recommended Sales User Flow
+## Recommended Sales User Flow: Guided Claude Capture
 
 1. Open the Land Insights parcel page or comp report.
 2. Click the Chrome extension.
-3. The extension extracts visible parcel fields, comparable rows, links, and diagnostics.
-4. The extension sends the capture into `/api/phase2/browser-intake`.
-5. The extension opens `/phase2/loading?artifact=<id>`.
-6. The dashboard opens `/phase2?artifact=<id>` with the preliminary DewClaw result.
-7. The user reviews the decision, market value, offer range, risks, and next action.
-8. The user saves feedback if Corbin wants to calibrate the result.
+3. The extension extracts visible parcel fields such as APN, address, county, state, and acreage.
+4. The extension opens/searches Redfin and Zillow in the same Chrome window using APN first, then address context.
+5. The extension opens `/mcp-test` with a Claude in Chrome prompt already prepared.
+6. The user handles login/captcha manually if Land Insights, Redfin, or Zillow asks for it.
+7. The user opens the Claude in Chrome side panel and pastes the prepared prompt.
+8. Claude visually inspects the open Land Insights, Redfin, and Zillow tabs and returns raw JSON only.
+9. The user pastes Claude's JSON into `/mcp-test`.
+10. CompTool validates the JSON, runs the DewClaw evaluator, and opens `/phase2?artifact=<id>`.
+11. The user reviews the decision, market value, offer range, risks, and next action.
+12. The user saves feedback if Corbin wants to calibrate the result.
 
 ## Analyst MCP Enrichment Flow
 
-Use this only when the result needs deeper visual inspection.
+This is now the default path for high-trust comping. Use the old direct dashboard path only
+for debugging or quick browser-capture experiments.
 
 1. Open the dashboard result.
 2. Click **Improve with Claude MCP**.
@@ -60,7 +65,7 @@ heavily on user-provided facts.
 
 - Land Insights does not provide API access.
 - The Chrome extension can capture visible DOM/table data, but does not visually reason by itself.
-- Claude MCP is the current visual reasoning layer for terrain, MLS photos, and map context.
+- Claude in Chrome is the current visual reasoning layer for terrain, MLS photos, Redfin/Zillow photos, and map context.
 - KML auto-attach can be blocked by Chrome blob/download behavior, so manual KML upload may still be needed.
 - Render local JSON storage is not durable unless a persistent disk is attached.
 
