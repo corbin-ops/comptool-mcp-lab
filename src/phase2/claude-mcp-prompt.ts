@@ -61,8 +61,9 @@ Critical rules:
 - Do not wrap the JSON in markdown fences.
 - Do not include commentary before or after the JSON.
 - Do not use Land Insights AI comp / AI pricing numbers as market value.
-- Land Insights parcel fields, map layers, MLS comp rows, MLS comp photos, and comp detail popups may be used as factual/visual evidence.
-- Treat Redfin/Zillow as fallback or bonus evidence. Start with Land Insights Data Platform + MLS comp photos first.
+- Land Insights parcel fields, map layers, MLS comp rows, MLS comp photos, and comp detail popups may be used as factual/visual evidence, but do not rely on Land Insights AI price numbers.
+- Redfin and Zillow are required listing-evidence checks when DewClaw opens/searches those tabs. Use their photos, descriptions, status labels, acreage, location clues, and listing facts to assess whether the property/comp is usable.
+- If Redfin or Zillow shows Off Market for the candidate listing/page being inspected, discontinue comping. Return JSON only, set the relevant externalListingEvidence item to matchQuality "rejected_match" and compRole "unrelated", add "abortComping=true: Redfin/Zillow Off Market detected" to diagnostics, and explain the reason in visualRisks/rawObservationNotes.
 - Do not assume any MLS comp is a clean market anchor. Classify it by evidence quality and visual similarity.
 - If a field is not visible, use an empty string.
 - If something is visually unclear, mark it as unclear and explain it in diagnostics or visualRisks.
@@ -89,17 +90,19 @@ Browser workflow:
    - accessOrFrontageSignal: present, not_obvious, or unclear
 7. Inspect map context for access/frontage, parcel shape, structures, wooded vs pasture/cleared land, slope/topography clues, flood/wetlands clues, hazard overlays, flood/wetland overlays, and nearby development.
 8. Click nearby MLS comp properties directly inside Land Insights. Inspect the comp popup/report and any available MLS photos before using the comp.
-9. For each useful Land Insights MLS comp, capture price, acreage, PPA, status, DOM, source link if visible, photo observations, and why it is useful.
-10. If Land Insights MLS photos/details are enough, do not force Redfin/Zillow. If they are missing or unclear, inspect the Redfin/Zillow tabs that DewClaw opened using the APN/address search query.
-11. For every Land Insights MLS, Redfin, Zillow, or original listing evidence item you inspect, decide match quality:
+9. Inspect the Redfin and Zillow tabs DewClaw opened. Search by APN first when available, then address/county/state as fallback.
+10. On Redfin/Zillow, inspect listing status, description, facts, acreage, price, photos, map/location clues, and whether the result appears to match the subject or a usable nearby comp.
+11. If Redfin/Zillow shows Off Market, stop the comp investigation and return the discontinue JSON. Do not continue trying to price from that page.
+12. For each useful Land Insights MLS comp, capture price, acreage, PPA, status, DOM, source link if visible, photo observations, and why it is useful.
+13. For every Land Insights MLS, Redfin, Zillow, or original listing evidence item you inspect, decide match quality:
     - confirmed_match: APN/address/map/acreage strongly matches the subject.
     - possible_match: some details match, but not enough to rely on it.
     - rejected_match: does not appear to be the subject or useful comp evidence.
-12. Use photos only as visual/property evidence: wooded vs cleared, pasture, driveway, road access, utility poles/meters, structures, build pad, slope, nearby homes/commercial context, water/creek quality, and signs of active use.
-13. Classify each comp as one of: anchor, price_floor, price_ceiling, weak_context, unrelated. Family transfers, quit claims, landlocked cases, acreage discrepancies, or major-issue comps are not automatically bad; keep them if they help define a floor/ceiling/context.
-14. If comparable rows or original listing links are visible, capture them.
-15. Do not make a final DewClaw valuation here. Return source JSON only.
-16. Record a concise navigationLog and diagnostics, including which map layers were enabled and whether acreage range was Auto/tight/expanded.
+14. Use photos and descriptions as core evidence: wooded vs cleared, pasture, driveway, road access, utility poles/meters, structures, build pad, slope, nearby homes/commercial context, water/creek quality, and signs of active use.
+15. Classify each comp as one of: anchor, price_floor, price_ceiling, weak_context, unrelated. Family transfers, quit claims, landlocked cases, acreage discrepancies, or major-issue comps are not automatically bad; keep them if they help define a floor/ceiling/context.
+16. If comparable rows or original listing links are visible, capture them.
+17. Do not make a final DewClaw valuation here. Return source JSON only.
+18. Record a concise navigationLog and diagnostics, including which map layers were enabled, whether acreage range was Auto/tight/expanded, and whether Redfin/Zillow evidence was usable or discontinued.
 
 Return exactly this JSON shape:
 {
@@ -174,7 +177,7 @@ Return exactly this JSON shape:
   "listingLinks": [],
   "externalListingEvidence": [
     {
-      "source": "landinsights_mls",
+      "source": "redfin",
       "url": "",
       "searchQuery": "",
       "matchQuality": "possible_match",
@@ -214,7 +217,8 @@ Important:
 - fieldCaptures should show where important values came from.
 - comparableRows can be empty if no comps are visible.
 - listingLinks can be empty if no listing URLs are visible.
-- externalListingEvidence should prioritize inspected Land Insights MLS comp photo/detail evidence. It can be empty only if no useful comp detail/photos are visible.
+- externalListingEvidence should prioritize inspected Redfin/Zillow photo and description evidence, then Land Insights MLS photo/detail evidence. It can be empty only if no useful listing/comp detail/photos are visible.
+- If Redfin/Zillow is Off Market, include diagnostics: ["abortComping=true: Redfin/Zillow Off Market detected"] and do not provide anchor/floor/ceiling evidence from that page.
 - rawObservationNotes should be short, practical, and useful for land comping.`;
 
 export function buildClaudeMcpCapturePrompt(

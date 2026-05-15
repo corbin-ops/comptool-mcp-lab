@@ -35,6 +35,16 @@ function getOffMarketAbortReason(parsed: VisualParcelInspectorRequest, result: V
     return "Comping aborted: Off Market was detected in external listing evidence. Open a usable active/sold/pending comp before running DewClaw valuation.";
   }
 
+  const claudeEvidenceText = [
+    parsed.notes ?? "",
+    parsed.browserPage?.pageText ?? "",
+    ...(parsed.browserListings ?? []).map((listing) => listing.pageText ?? ""),
+  ].join("\n");
+
+  if (/abortComping=true|abort comping:.*off[\s-]*market|off[\s-]*market detected/i.test(claudeEvidenceText)) {
+    return "Comping aborted: Claude/Redfin/Zillow evidence detected Off Market. Open a usable active/sold/pending comp before running DewClaw valuation.";
+  }
+
   return "";
 }
 

@@ -265,6 +265,8 @@ function buildPageText(capture: ClaudeMcpLiTableReturn) {
     ...fieldLines,
     ...captureLines,
     ...listingEvidenceLines,
+    ...capture.diagnostics.map((item) => `Claude diagnostic: ${item}`),
+    ...capture.navigationLog.map((item) => `Claude navigation: ${item}`),
     capture.rawObservationNotes ? `Raw observation notes: ${capture.rawObservationNotes}` : "",
   ]
     .filter(Boolean)
@@ -326,6 +328,7 @@ export function buildRequestFromClaudeMcp(
     notes: [
       "Source: Claude MCP LI-table return.",
       capture.rawObservationNotes,
+      ...capture.diagnostics.map((item) => `Claude diagnostic: ${item}`),
       ...capture.externalListingEvidence.flatMap((item) => [
         `External listing ${item.source}: ${item.matchQuality}`,
         item.compRole ? `External comp role: ${item.compRole}` : "",
